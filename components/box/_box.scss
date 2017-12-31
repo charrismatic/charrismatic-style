@@ -1,0 +1,25 @@
+/**
+ * <h2>DEMO BOX</h2>
+ * <div class="box--outer">
+ *   <div class="box--inner">
+ *     CONTENT
+ *   </div>
+ * </div>
+ */
+
+
+.box--outer {
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+  margin: 0 auto;
+  position: relative;
+
+  .box--inner {
+    position: relative;
+    width: 80%;
+    padding: 1em;
+    margin: auto;
+    background: blue;
+  }
+}

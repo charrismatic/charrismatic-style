@@ -1,0 +1,62 @@
+// BASE THEME STRUCTURE AND LAYOUT CLASSES
+
+/***************************************
+ *   TYPICAL PAGE STRUCTURE            *
+ *                                     *
+ *  html > head > body  ...            *
+ *                                     *
+ *  header                             *
+ *   -> nav                            *
+ *  section [ .banner | .main ]        *
+ *   -> .row                           *
+ *     -> .sidebar [ if true ]         *
+ *     -> .content-block               *
+ *       -> .content                   *
+ *         -> .row                     *
+ *         -> .row                     *
+ *     -> .content-block [other]       *
+ *   -> .row                           *
+ *  section [ .special ]               *
+ *   -> .row                           *
+ *  section [ .others ]                *
+ *  footer                             *
+ *                                     *
+ * * * * * * * * * * * * * * * * * * * */
+
+body {
+  min-width: $page_min_width;
+}
+
+
+// A SECTION IS A HIGH LEVEL SEMANTIC BLOCK
+// THAT SPANS 100% OF THE HORIZONTAL SPACE OF ITS PARENT
+// CONTAINER
+section {
+  display: block;
+  margin: 0 auto;
+  padding: 1.5em 0;
+  width: 100%;
+}
+
+
+// A ROW IS AN INNER WRAPPER THAT SETS LAYOUTS, BOUNDARIES, AND PADDING
+.row {
+  display: block;
+  margin: 0 auto;
+  max-width: $row_max_width;
+  padding: 0 5%;
+  width: 90%;
+}
+
+
+// CONTENT BLOCKS ARE CONTAINERS THAT WRAP CMS / STATIC CONTENT
+// USUALLY THAT COME FROM WYSIWYG EDITOR
+.content-block {
+  display: block;
+  padding: 1em 0;
+  width: 100%;
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+}

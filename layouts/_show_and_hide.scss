@@ -1,0 +1,23 @@
+
+// SHOW / HIDE
+.hide {
+   display: none !important;
+
+  &--med {
+    @media ( max-width: $tablet_size ) {
+      display: none !important;
+    }
+  }
+
+   &--mob-lg {
+    @media ( max-width: $width_mobile_device_lg) {
+      display: none !important;
+    }
+  }
+
+  &--mob-sm {
+    @media ( max-width: $width_mobile_device_sm ) {
+      display: none !important;
+    }
+  }
+}

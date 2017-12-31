@@ -1,0 +1,18 @@
+// Utility Mixins / Functions
+@mixin max_width($width) {
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin min_width($width) {
+  @media (min-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin range_width($min_width, $max_width) {
+  @media (min-width: #{$min_width}) and (max-width: #{$max_width}) {
+    @content;
+  }
+}

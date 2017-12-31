@@ -1,0 +1,74 @@
+// A CONSERVATIVE BROWSER RESET STYLESHEET
+
+html,
+body,
+.wrapper {
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+  position: relative;
+}
+
+a {
+  color: inherit;
+
+  &:hover { color: inherit; }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+// DEFAULT LIST ITEMS
+// WE DO NOT WANT LISTS DISPLAYING DECORATION
+// WHILE OUTSIDE OF CONTENT AREAS. WE MANUALLY
+// ENABLE AND DISABLE THEM IN SPECIFIC SCOPES
+
+ol,
+ul {
+  list-style: none;
+}
+
+ol,
+ul,
+li {
+  display: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+// LIST ITEMS IN NAV SHOULD NOT DISPLAY LIST
+nav {
+  ul,
+  ol,
+  li {
+    border: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+}
+
+
+a {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+img { max-width: 100%; }
+
+button,
+.button,
+img {
+  @extend %no-select;
+  @extend %no-drag;
+}

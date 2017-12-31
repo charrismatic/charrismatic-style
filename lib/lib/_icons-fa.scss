@@ -1,0 +1,291 @@
+/*
+ * CREATE CSS ICONS SVG PATHS
+ * SUPPORTS FONT-AWESOME
+ * DEMO: ww.codepen.io/super_thalamus/pen/wdyeGp
+ *
+ * HOW TO USE:
+ *
+ * CREATE AN ICON CLASS
+ *
+ * DEFINE THE CUSTOM ICON CLAS TO SET THE ICON BACKGROUND IMAGE
+ *    SVG PROPERTIES SHOULD BE SET HERE SINCE NOT ALL CSS
+ *    PROPERTIES ARE USED IN SVG'S
+ *
+ * .ic-icon-name:hover { background-image: define_icon( path_variable, fill_color, options }
+ *
+ * OPTIONS:
+ * @paramater $ic_name icon path variable name
+ * @parameter $fill_color svg fill color  [default: black]
+ * @parameter $stroke_color svg stroke color [default: transparent]
+ * @parameter $stroke_width svg stroke width [default: 0]
+ * @parameter $extra_css additional svg styles [default: null]
+ *
+ * YOU CAN ALSO DEFINE ICON STATES AND CLASS MODIFIERS HERE
+ *   :HOVER, :FOCUS, .ACTIVE, ETC.
+ *
+ * CUSTOM ICONS INHERIT THE DEFAULT CSS PROPERTIES FROM
+ * THE i ELEMENT OR THE .icon CLASS
+ *
+ * USE THE i ELEMENT FOR A SIMPLE HTML ELEMENT
+ * APPLY THE .icon CLASS TO MODIFY AN EXTEND AN EXISTING ELEMENT
+ *
+ *  .icon,
+ *  i {
+ *    display: inline-block;
+ *    font-size: 0;
+ *    width: 50px;
+ *    height: 50px;
+ *    margin: 10px 20px;
+ *    background-size: 80%;
+ *    background-repeat: no-repeat;
+ *    background-position: 50% 50%;
+ *    transition: .2s linear;
+ *    cursor: pointer;
+ *  }
+ *
+ *
+ * #PLACEHOLDER
+ * TO INCORORATE YOUR OWN SYTNAX AND THEME ELEMENTS
+ * EXTEND %svg_icon THE SASS PLACEHOLDER
+ *
+ *   .mydiv {
+ *     @extend %svg_icon;
+ *
+ *     //other-css-properties ...
+ *   }
+
+ * THEN DEFINE YOUR OWN PLACEHOLDER TO APPLY THE ICON SHAPE
+ *
+ * CSS STYLE
+ * %ic-search--light { background-image: define_icon(search, rgb(225,225,225)); }
+ * %ic-search--light:hover { transform: scale(1.1); }
+ * %ic-search--light.active {
+ *   background-image: define_icon(search, rgb(0,255,255));
+ *   background-color: rgb(255,0.255);
+ * }
+ *
+ * OR DEFINE A SET OF RELATED ICONS AT ONCE WITH NESTED STYLE
+ * NESTED STYLE
+ *
+ * %ic-monster {
+ *   background-image: define_icon(monsters, rgb(255,0,0));
+ *   &--frankenstein {
+ *     background-image: define_icon(frankenstein, rgb(0,255,0));
+ *     &.running { animation: running-frankenstein; }
+ *     &.alive {
+ *       transform: scale(2);
+ *       transition: transform 4000ms linear 50ms;
+ *
+ *       &:hover { content: "HEEEESSS ALIIIVE!! ALIIIVEEE!" }
+ *     }
+ *   }
+ *
+ *   &--chupacabra { background-image: define_icon(goats, rgb(74, 23, 186)); }
+ * }
+ *
+ * ADD NEW FONTS TO THE PATH MAP:
+ * VISIT https://github.com/encharm/Font-Awesome-SVG-PNG/tree/master/black/svg
+ * SELECT THE FONT
+ * CLICK ON 'VIEW SOURCE'
+ * COPY THE VECTOR PATH AND ADD IT TO $ic_path_map IN _get_icon_path()
+ * * PLEASE USE THE FONTS ORIGINAL NAME AS THE VARIABLE IDENTIFIER INSIDE
+ *   THAT PATH MAP FOR CONSISTENCY
+ *
+ * YOU CAN ALSO EXPORT A CUSTOM SET USING FONT-AWESOME-SVG NODE PACKAGE
+ * https://www.npmjs.com/package/font-awesome-svg
+ *
+ * BROWSER SUPPORT: HIGH
+ * http://caniuse.com/#feat=svg-css
+ * */
+
+@function _get_icon_path($ic_name) {
+
+  // NOTE: USING DIFFERENT NAMING CONVENTION FROM FA TO AVOID CONFUSION WHERE THOSE
+  // CLASSES MIGHT ALSO BE IN USE
+
+  // FONT AWESOME
+  $ic_path_map: (
+    caret-down: "M1408 704q0 26-19 45l-448 448q-19 19-45 19t-45-19l-448-448q-19-19-19-45t19-45 45-19h896q26 0 45 19t19 45z",
+    chevron-circle-up:"M1293 1139l102-102q19-19 19-45t-19-45l-454-454q-19-19-45-19t-45 19l-454 454q-19 19-19 45t19 45l102 102q19 19 45 19t45-19l307-307 307 307q19 19 45 19t45-19zm371-243q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z",
+    chevron-down: "M1683 808l-742 741q-19 19-45 19t-45-19l-742-741q-19-19-19-45.5t19-45.5l166-165q19-19 45-19t45 19l531 531 531-531q19-19 45-19t45 19l166 165q19 19 19 45.5t-19 45.5z",
+    fa-times-circle: "M1277 1122q0-26-19-45l-181-181 181-181q19-19 19-45 0-27-19-46l-90-90q-19-19-46-19-26 0-45 19l-181 181-181-181q-19-19-45-19-27 0-46 19l-90 90q-19 19-19 46 0 26 19 45l181 181-181 181q-19 19-19 45 0 27 19 46l90 90q19 19 46 19 26 0 45-19l181-181 181 181q19 19 45 19 27 0 46-19l90-90q19-19 19-46zm387-226q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z",
+    fa-times-circle-o: "M1225 1079l-146 146q-10 10-23 10t-23-10l-137-137-137 137q-10 10-23 10t-23-10l-146-146q-10-10-10-23t10-23l137-137-137-137q-10-10-10-23t10-23l146-146q10-10 23-10t23 10l137 137 137-137q10-10 23-10t23 10l146 146q10 10 10 23t-10 23l-137 137 137 137q10 10 10 23t-10 23zm215-183q0-148-73-273t-198-198-273-73-273 73-198 198-73 273 73 273 198 198 273 73 273-73 198-198 73-273zm224 0q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z",
+    fbook-f: "M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z",
+    fbook-sqr: "M1376 128q119 0 203.5 84.5t84.5 203.5v960q0 119-84.5 203.5t-203.5 84.5h-188v-595h199l30-232h-229v-148q0-56 23.5-84t91.5-28l122-1v-207q-63-9-178-9-136 0-217.5 80t-81.5 226v171h-200v232h200v595h-532q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960z",
+    lnkd-in: "M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z",
+    lnkd-sqr: "M365 1414h231v-694h-231v694zm246-908q-1-52-36-86t-93-34-94.5 34-36.5 86q0 51 35.5 85.5t92.5 34.5h1q59 0 95-34.5t36-85.5zm585 908h231v-398q0-154-73-233t-193-79q-136 0-209 117h2v-101h-231q3 66 0 694h231v-388q0-38 7-56 15-35 45-59.5t74-24.5q116 0 116 157v371zm468-998v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z",
+    search: "M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z",
+    twtr: "M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z",
+    twtr-sqr: "M1408 610q-56 25-121 34 68-40 93-117-65 38-134 51-61-66-153-66-87 0-148.5 61.5t-61.5 148.5q0 29 5 48-129-7-242-65t-192-155q-29 50-29 106 0 114 91 175-47-1-100-26v2q0 75 50 133.5t123 72.5q-29 8-51 8-13 0-39-4 21 63 74.5 104t121.5 42q-116 90-261 90-26 0-50-3 148 94 322 94 112 0 210-35.5t168-95 120.5-137 75-162 24.5-168.5q0-18-1-27 63-45 105-109zm256-194v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z",
+  );
+
+  // OTHERS
+  $ic_extra_paths_map: (
+    sfp_logo: "M181.5 469.4c8 10.4 22.8 20.5 36.7 20.5 9.2 0 20.3-4.4 21.3-17.1 0.6-8.3-9.3-13.6-20.3-19 -18.2-9.2-38.3-20.5-36-48 2.8-35.2 36-54.5 64.6-54.5 21.9 0 43.9 9.5 58.1 25.2l-28.5 26.6c-6.7-7.6-19.3-16.8-31.5-16.8 -9.5 0-18.2 6-19 15.1 -0.6 8.6 8.7 13.3 20.3 19.3 18.5 9.5 40.1 21.3 37.8 49.7 -2.9 36.1-37.3 54.8-70.5 54.8 -24.6 0-49.7-11.3-61.8-34.4L181.5 469.4zM438.2 321.2c-6.4-3.2-13.5-4.1-19.4-4.1 -14.4 0-21.7 7.3-26.3 25.6l-2.8 10.9h41.6l-9.5 37.8h-41.9l-34.4 134.3h-46.1l34.4-134.3h-17l9.5-37.8h17.3l3.7-14.4c10.3-39.9 29.5-61 69.8-61 14.7 0 28.9 2.9 40.2 8L438.2 321.2zM486.4 353.5l-1.1 14.4c10.4-9.6 18.1-16.4 35-16.4 37.8 0 62.4 25.7 58.6 75 -4 51.1-32.6 99-84 99 -18.5 0-28.9-7.6-40.7-21.7l-24.8 97.8h-46.1l63-248.2h39.9V353.5zM465.3 460.1c4.6 15.3 13.8 23.7 28.8 23.7 26.5 0 40.2-21.4 42.8-54.5 2-26.2-7-40.9-30-40.9 -6.1 0-11.5 2-16.2 5.2 -6.7 4.6-11.5 11.8-13.5 19.7L465.3 460.1zM595 448.3c0 0 8.3-32.3 1.1-62.7 0 0-7.5-36-42.1-49.9 0 0-32.6-14.4-60.9 2.1 0 0 35.5-41.3 18.5-85.1 0 0-16.4-40.4-71.5-37.8 0 0-52.2-2.9-98.8 40.5 0 0-26.2 23.4-56.8 70.7 0 0 17.4 12.9 23.4 31.4 0 0-27.8-36.1-82.6-26.5 0 0-28.6 3.5-58.1 40.7 0 0-30.3 40.9-79.9 54.2 0 0-38.2 11.2-86.9 1.5 0 0 68.5 6.4 113.1-38.7 0 0 20-20.3 34.3-38.6 0 0 41.5-59.1 111.5-36.1 0 0 45.6-62.6 64.7-77.7 0 0 47.4-47.7 118.6-45.9 0 0 74.2-4.4 97 57.1 0 0 10.6 27.5-1.5 56.5 0 0 40.2 3.1 64.3 42.2C602.1 346.3 628.7 389.1 595 448.3z"
+  );
+
+  @return map-get($ic_path_map, $ic_name);
+}
+
+@function define_icon(
+    $ic_name,
+    $fill_color: black,
+    $stroke_color: transparent,
+    $stroke_width: 0,
+    $extra_css: '' ) {
+
+  $ic_path: _get_icon_path($ic_name);
+  $icon: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1792" height="1792" viewBox="0 0 1792 1792"><path fill="#{$fill_color}" stroke="#{$stroke_color}" stroke-width="#{$stroke_width}" d="#{$ic_path}" /></svg>';
+
+  @return url('data:image/svg+xml;utf8,#{$icon}');
+}
+
+
+// SOCIAL ICONS EXAMPLE SET
+@mixin social_icons_examples {
+
+  // DEAFULT COLOR SET FOR EXAMPLE ICON SET
+  $blu: rgb(0, 108, 244);
+  $grn: rgb(23, 187, 98);
+  $red: rgb(241, 35, 35);
+  $prp: rgb(103, 58, 183);
+
+  .ic-fbook-f.blk { background-image: define_icon(fbook-f, $black); }
+  .ic-fbook-f.red { background-image: define_icon(fbook-f, $red); }
+  .ic-fbook-f.grn { background-image: define_icon(fbook-f, $grn); }
+  .ic-fbook-f.blu { background-image: define_icon(fbook-f, $blu); }
+  .ic-fbook-f.white { background-image: define_icon(fbook-f, $white); }
+  .ic-fbook-f.prp { background-image: define_icon(fbook-f, $prp); }
+
+  .ic-fbook-f.red:hover,
+  .ic-fbook-f.prp:hover,
+  .ic-fbook-f.blk:hover { background-image: define_icon(fbook-f, $white); }
+  .ic-fbook-f.chicklet.bg-blu:hover{ background-image: define_icon(fbook-f, darken($blu, 10%)); }
+
+  .ic-fbook-sqr.blk { background-image: define_icon(fbook-sqr, $black); }
+  .ic-fbook-sqr.red { background-image: define_icon(fbook-sqr, $red); }
+  .ic-fbook-sqr.grn { background-image: define_icon(fbook-sqr, $grn); }
+  .ic-fbook-sqr.blu { background-image: define_icon(fbook-sqr, $blu); }
+  .ic-fbook-sqr.white { background-image: define_icon(fbook-sqr, $white); }
+  .ic-fbook-sqr.prp { background-image: define_icon(fbook-sqr, $prp); }
+
+  .ic-fbook-sqr.red:hover,
+  .ic-fbook-sqr.prp:hover,
+  .ic-fbook-sqr.blk:hover { background-image: define_icon(fbook-sqr, $white); }
+  .ic-fbook-sqr.chicklet.bg-blu:hover { background-image: define_icon(fbook-sqr, darken($blu, 10%)); }
+
+  .ic-lnkd-in.blk { background-image: define_icon(lnkd-in, $black); }
+  .ic-lnkd-in.red { background-image: define_icon(lnkd-in, $red); }
+  .ic-lnkd-in.grn { background-image: define_icon(lnkd-in, $grn); }
+  .ic-lnkd-in.blu { background-image: define_icon(lnkd-in, $blu); }
+  .ic-lnkd-in.white { background-image: define_icon(lnkd-in, $white); }
+  .ic-lnkd-in.prp { background-image: define_icon(lnkd-in, $prp); }
+
+  .ic-lnkd-in.red:hover,
+  .ic-lnkd-in.prp:hover,
+  .ic-lnkd-in.blk:hover { background-image: define_icon(lnkd-in, $white); }
+  .ic-lnkd-in.chicklet.bg-blu:hover { background-image: define_icon(lnkd-in, darken($blu, 10%)); }
+
+  .ic-lnkd-sqr.blk { background-image: define_icon(lnkd-sqr, $black); }
+  .ic-lnkd-sqr.red { background-image: define_icon(lnkd-sqr, $red); }
+  .ic-lnkd-sqr.grn { background-image: define_icon(lnkd-sqr, $grn); }
+  .ic-lnkd-sqr.blu { background-image: define_icon(lnkd-sqr, $blu); }
+  .ic-lnkd-sqr.white { background-image: define_icon(lnkd-sqr, $white); }
+  .ic-lnkd-sqr.prp { background-image: define_icon(lnkd-sqr, $prp); }
+
+  .ic-lnkd-sqr.red:hover,
+  .ic-lnkd-sqr.prp:hover,
+  .ic-lnkd-sqr.blk:hover { background-image: define_icon(lnkd-sqr, $white); }
+  .ic-lnkd-sqr.chicklet.bg-blu:hover { background-image: define_icon(lnkd-sqr, darken($blu, 10%)); }
+
+  .ic-twtr.blk { background-image: define_icon(twtr, $black); }
+  .ic-twtr.red { background-image: define_icon(twtr, $red); }
+  .ic-twtr.grn { background-image: define_icon(twtr, $grn); }
+  .ic-twtr.blu { background-image: define_icon(twtr, $blu); }
+  .ic-twtr.white { background-image: define_icon(twtr, $white); }
+  .ic-twtr.prp { background-image: define_icon(twtr, $prp); }
+
+  .ic-twtr.red:hover,
+  .ic-twtr.prp:hover,
+  .ic-twtr.blk:hover { background-image: define_icon(twtr, $white); }
+  .ic-twtr.chicklet.bg-blu:hover { background-image: define_icon(twtr, darken($blu, 10%)); }
+
+  .ic-twtr-sqr.blk { background-image: define_icon(twtr-sqr, $black); }
+  .ic-twtr-sqr.red { background-image: define_icon(twtr-sqr, $red); }
+  .ic-twtr-sqr.grn { background-image: define_icon(twtr-sqr, $grn); }
+  .ic-twtr-sqr.blu { background-image: define_icon(twtr-sqr, $blu); }
+  .ic-twtr-sqr.white { background-image: define_icon(twtr-sqr, $white); }
+  .ic-twtr-sqr.prp { background-image: define_icon(twtr-sqr, $prp); }
+
+  .ic-twtr-sqr.red:hover,
+  .ic-twtr-sqr.prp:hover,
+  .ic-twtr-sqr.blk:hover { background-image: define_icon(twtr-sqr, $white); }
+  .ic-twtr-sqr.chicklet.bg-blu:hover { background-image: define_icon(twtr-sqr, darken($blu, 10%)); }
+
+  //FORMATTING EXAMPLES
+  i.border{ border: 1px solid; }
+  i.shadow{ box-shadow: 3px 4px 5px $black; }
+  i.circle{ border-radius: 50%; background-size: 60%; }
+  i.chicklet{ box-shadow: 4px 2px 8px #000, inset -2px -1px 8px #3c3c3c; border-radius: 7px; background-size: 60%; }
+
+  // BACKGROUND COLOR
+  i.bg-grn{ background-color: $grn; }
+  i.bg-red{ background-color: $red; }
+  i.bg-blu{ background-color: $blu; }
+  i.bg-blk{ background-color: $black; }
+  i.bg-prp{ background-color: $prp; }
+  i.bg-white{ background-color: $white; }
+
+  // COLOR EFFECTS
+  i.prp { color: $prp; }
+  i.red:hover{ background-color: $red; }
+  i.blk:hover{ background-color: $black; }
+  i.prp:hover{ background-color: $prp; }
+  i.bg-grn.circle:hover{ border-radius: 0; }
+  i.bg-blu.chicklet:hover{ background-color: lighten( $blu, 20%);}
+}
+
+
+// DEFAULT ICON PLACEHOLDER
+%svg_icon {
+  display: inline-block;
+  font-size: 0;
+  width: 50px;
+  height: 50px;
+  margin: 10px 20px;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: .2s linear;
+  cursor: pointer;
+}
+
+
+// DEFAULT ICON HOVER EFFECT PLACEHOLDER
+%svg_icon_hover {
+  background-color: $black;
+  transform: scale(1.15, 1.15) rotate(-5deg);
+  transition: .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+
+// ICON BASE ELEMENT AND CLASS
+.icon,
+i { @extend %svg_icon; }
+
+
+// SEARCH ICON
+%ic-search { background-image: define_icon(search, $black_10); }
+%ic-search--white { background-image: define_icon(search, $white); }
+
+
+// UP/DOWN INDICATORS
+.ic-caret-down.red { background-image: define_icon(caret-down, $accent_red); }
+.ic-caret-down { background-image: define_icon(caret-down, $white); }
+.ic-caret-down.orange-light { background-image: define_icon(caret-down, lighten($accent_orange, 15%)); }
+
+.ic-chevron-circle-up { background-image: define_icon(chevron-circle-up, $black_30); }
+.ic-chevron-circle-up:hover { background-image: define_icon(chevron-circle-up, $accent_orange); }
+
+// COLLAPSIBLE LIST EXPAND BUTTON
+.mob-collapsible .sm-section-title::before { background-image: define_icon(chevron-down, lighten($accent_orange, 15%)) }

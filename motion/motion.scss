@@ -1,0 +1,30 @@
+/**
+*  MOTION NOTES:
+*
+*  USING CHROMES DEVTOOL TO DEBUG ANIMATION AND RENDERING PERFORMANCE
+*https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
+*https://developers.google.com/web/updates/2016/09/re-rastering-composite
+*https://developers.google.com/web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas
+*
+* WHAT PROPERTIES TRIGGER LAYOUT, PAINT, AND COMPOSITOR PER ENGINE
+* https://csstriggers.com/
+*
+*
+*
+* USING WILL-CHANGE PROPERTY TO OPTIMIZE RENDERING
+* https://developer.mozilla.org/en-US/docs/Web/CSS/will-change
+* https://css-tricks.com/almanac/properties/w/will-change/
+*/
+
+// DEFINITIONS
+@import "easing";
+@import "material_motion";
+
+// FUNCTIONS
+@import "motion_mixins";
+@import "transition";
+
+// ANIMATIONS
+@import "animations/anim_slide_in_left";
+
+@import "zoom";

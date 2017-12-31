@@ -1,0 +1,228 @@
+// FLEX SHORTHAND NOTES:
+// flex: 1        ->  flex: 1 1 0%    // GROW, SHRINK, MINIMUM SIZE - AUTOFIT
+// flex: auto     ->  flex: 1 1 auto  // GROW, SHRINK, AVERAGE SIZE - EQUAL SIZE
+// flex: initial  ->  flex: 0 1 auto  // NOT GROW, SHRINK, AVERAGE SIZE OR SMALLER -- SHRINK
+
+/**
+ *  NOTES:
+ *  THE > * SELECTOR GETS ALL DIRECT DESCENDANTS OF THE FLEX CONTAINER
+ *  WHICH IS IMPLICIT TO THE FLEX PROPERTIES
+ *
+ *  BE CAREFUL NOT TO ADD TOO MANY PROPERTIES INSIDE PLACEHOLDERS BECAUSE IT
+ *  CAN BECOME COMPEX TO DEBUG LATER.
+ *
+ *  DON'T ADD DISPLAY:BLOCK / INLINE-BLOCK / ETC. TO > * BECAUSE YOU WILL OFTEN
+ *  NEED MULTIPLE LEVELS OF FLEX NESTED FLEXBILE BOXES TO CREATE COMPLEX LAYOUTS
+ *  AND THIS WILL BE SOMETHING EASILY OVERLOOKED
+ *
+ * 1. ADD THE CLASS DIRECTLY IN HTML OR
+ *
+ *
+ * http://thesassway.com/intermediate/understanding-placeholder-selectors
+ * 2. EXTEND THE PLACEHOLDERS TO CREATE NEW CLASSES IN THE STYLESHEET
+ *
+ * EXAMPLE:
+ * .class {
+ *   @extend %awesome_stuff;
+ * }
+ *
+ * SASS BUG:
+ * -  PLACEHOLDER INSIDE MEDIA QUERY DOES NOT WORK CURRENTLY
+ * -  INSTEAD INCLUDE MEDIA QUERY IN PLACEHOLDER
+ *
+ *  FLEX BUG: https://github.com/philipwalton/flexbugs
+ * - Minimum content sizing of flex items not honored
+ * - Column flex items set to align-items:center overflow their container
+ * - min-height on a flex container won't apply to its flex items
+ * - flex shorthand declarations with unitless flex-basis values are ignored
+ * - Column flex items don't always preserve intrinsic aspect ratios
+ * - The default flex value has changed
+ * - flex-basis doesn't account for box-sizing:border-box
+ * - flex-basis doesn't support calc()
+ * - Some HTML elements can't be flex containers
+ * - align-items: baseline doesn't work with nested flex containers
+ * - Min and max size declarations are ignored when wrapping flex items
+ * - Inline elements are not treated as flex-items
+ * - Importance is ignored on flex-basis when using flex shorthand
+ * - Flex containers with wrapping the container is not sized to contain its items
+ */
+
+
+// GENERAL FLEX PARENT
+%flex {
+  display: flex;
+  > * {
+    flex: 0 1 auto;
+    margin: 0 1em;
+  }
+}
+
+.flex { @extend %flex; }
+
+
+// SINGLE ROW FLEX CONTAINER
+%fl_row {
+  display: flex;
+  flex-direction: row;
+  > * {
+    flex: 1 1 auto;
+    margin: 0 1em;
+    &:first-child { margin-left: 0; }
+    &:last-child { margin-right: 0; }
+  }
+}
+.flex-row {  @extend %fl_row; }
+
+
+// VERTICAL FLEXIBLE BOX
+%_fl_col-parent {
+  flex-direction: column;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin: .5em 0 0 0;
+  padding: 0 0 0 0;
+  position: relative;
+}
+
+%_fl_col-child {
+  position: relative;
+  width: 94%;
+  flex: 0 1 auto;
+  margin: 0 auto 0 auto;
+  padding: .5em 0 .5em 0;
+}
+
+%fl_col {
+  @extend %_fl_col-parent;
+
+  > * {
+    @extend %_fl_col-child;
+
+    // FIRST ELEMENT STICKY TO TOP
+    &:first-child {
+      flex: 0 0 auto;
+      padding: 0 0 .5em 0;
+    }
+    // LAST ELEMENT STICKY TO BOTTOM
+    &:last-child {
+      flex: 0 0 auto;
+      padding: 0.5em 0 0 0;
+    }
+  }
+}
+.flex-col { @extend %fl_col; }
+
+
+%flex_mobile_stacked {
+  flex-wrap: wrap;
+  > * {
+    flex-basis: 100%;
+    margin: 0.5em 0;
+  }
+}
+
+%fl_parent--push_last_child-after {
+  > *:last-child::after {
+    content:"";
+    display: block;
+    flex-basis: 100;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+}
+
+%fl_parent--push_last_child-before {
+  > *:last-child::before {
+    content:"";
+    display: block;
+    flex-basis: 100;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+}
+
+%fl_child--push_self--before {
+  &::before {
+    display: block;
+    flex-basis: 100;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+}
+
+%fl_child--push_self--after {
+  &::after {
+    display: block;
+    flex-basis: 100;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+}
+
+
+%fl-base--fit { > * { flex-basis: 100%; } }
+%fl-base--equal { > * { flex-basis: 0; } }
+
+%fl-flex--none {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+%fl_col--equal-ht {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.flex-base {
+  &--fill {  flex-basis: 100%; }
+  &--equal {  flex-basis: 0; }
+  &--auto {  flex-basis: auto; }
+}
+
+
+.flex-self {
+  &--end { justify-self: flex-end; }
+  &--start { justify-self: flex-start; }
+  &--center { justify-self: center; }
+  &--top { align-self: flex-start; }
+  &--bottom { align-self: flex-end; }
+  &--middle { align-self: center; }
+}
+
+.flex-align {
+  &--stretch { align-items: stretch; }
+  &--center { align-items: center; }
+  &--start { align-items: flex-start; }
+  &--end { align-items: flex-end; }
+}
+
+.flex-justify {
+  &--distribute { justify-content: space-around;}
+  &--spread { justify-content: space-between;}
+  &--start { justify-content: flex-start;}
+  &--end { justify-content: flex-end;}
+}
+
+.flex--wrap { flex-wrap: wrap; }
+.flex--nowrap { flex-wrap: nowrap; }
+
+
+// CHILD CLASSES
+.flex-grow { flex-grow: 1; }
+.flex-shrink { flex-shrink: 1; }
+
+
+// WEIGHTED ELEMENTS
+// .fl0 { flex: 0; }
+// .fl1 { flex: 1; }
+// .fl2 { flex: 2; }
+// .fl3 { flex: 3; }
+// .fl4 { flex: 4; }
+// .fl5 { flex: 5; }
+// .fl6 { flex: 6; }
+// .fl7 { flex: 7; }
+// .fl8 { flex: 8; }
+// .fl9 { flex: 9; }

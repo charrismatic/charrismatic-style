@@ -1,0 +1,11 @@
+
+@mixin list_c($list) {
+  // example:
+  // $buttonConfig: 'save' 50px, 'cancel' 50px, 'help' 100px;
+
+  @each $tuple in $list {
+    .button-#{nth($tuple, 1)} {
+      width: nth($tuple, 2);
+    }
+  }
+}

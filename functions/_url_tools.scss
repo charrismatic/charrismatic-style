@@ -1,0 +1,4 @@
+
+@function imageUrl($base, $path) {
+  @return url('#{$base}/#{$path}');
+}

@@ -1,0 +1,22 @@
+
+
+/**
+* @mixin
+* @name tranistion
+* @description Include multiple transition with a single fu
+* @example
+* .class {
+*   color: gray;
+*   @include transition(color .3s ease);
+*   &:hover {
+*     color: black;
+*   }
+* }
+**/
+@mixin transition($args...) {
+   transition: $args;
+}
+
+@function _trans($prop: all, $dur: 600, $trans: ease-in-out, $delay: 0) {
+  @return #{$prop} #{$dur}ms #{$trans} #{$delay}ms;
+}

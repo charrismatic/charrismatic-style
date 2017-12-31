@@ -1,0 +1,10 @@
+
+%zoomout {
+  transform: scale(0.8);
+  transition: 300ms;
+  transform-origin: top;
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.zoomout { @extend %zoomout; }

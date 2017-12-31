@@ -1,0 +1,25 @@
+/**
+ *  UTILITY CLASSES
+ *
+ * <span>test</span>
+ *
+*/
+
+
+.bg {
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.bg-contain  { background-size:contain; }
+
+// Helpers
+.static      { position:static; }
+
+.fa { text-rendering: optimizeLegibility; }
+.overflow-hide  { overflow: hidden; }
+
+.cf   { zoom:1; }
+.cf:after       { clear:both; }
+.cf:before,
+.cf:after       { content:""; display:table; }

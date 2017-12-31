@@ -1,0 +1,51 @@
+/**
+*  GOOGLE MATERIAL GUIDLINES FOR MOVEMENT AND MOTION:
+*
+*  @source: https://material.io/guidelines/motion/duration-easing.html
+*
+*  Entering the screen
+*  Elements entering the screen use the deceleration curve for a speedy entrance,
+*  indicating that they had been travelling at peak velocity.
+*
+*  Permanently leaving the screen
+*  Elements permanently leaving the screen use the acceleration curve
+*  to speed off-screen over a slightly shorter duration,
+*  as they will not be returning and require less user focus.
+*
+*  Temporarily leaving the screen
+*  Elements temporarily leaving the screen should use the sharp curve,
+*  as they may return to the screen at any time and should appear nearby
+*  and within reach.
+*
+*  Relative movement
+*  Entering or exiting elements that move other on-screen elements do so
+*  along a smooth easing curve, so that they remain minimally disruptive
+*  and avoid eye-catching, dramatic movement.
+*  The standard curve is used for moving elements both in and out of the
+*  bounds of the screen. This curve has a slightly longer duration compared
+*  to independent elements.
+*/
+
+// RECOMMENDED DURATIONS
+$material_timing_mobile: 300ms;
+$material_timing_mobile_enter: 225ms;
+$material_timing_mobile_exit: 195ms;
+$material_timing_tablet: 390ms;
+$material_timing_desktop: 200ms;
+
+// Google Material Standard Curve
+// Ease in out
+$material_standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+
+// Deceleration curve
+$material_decel: cubic-bezier(0.0, 0.0, 0.2, 1);
+
+// Acceleration curve
+$material_accel: cubic-bezier(0.4, 0.0, 1, 1);
+
+// Ease in out - for exiting elements
+$material_sharp_exit: cubic-bezier(0.4, 0.0, 0.6, 1);
+
+@mixin material_transition( $prop, $timing: $material_timing_mobile, $trans: $material_standard, $delay: 0ms ){
+  transition: $prop $timing $trans $delay;
+}

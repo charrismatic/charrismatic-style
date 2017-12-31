@@ -1,0 +1,25 @@
+@import "../../lib/colors";
+
+header {
+
+  nav {
+      flex: 0 1 auto;
+      display: flex;
+      padding: 0.5em 0.5em;
+
+    .nav-item {
+      flex: 0 1 auto;
+      display: inline-block;
+      padding: .2em .5em;
+      color: #ffffff;
+      border-radius: 4px;
+      transition: background, color  150ms ease-in-out 0ms;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $theme_primary;
+        background: rgba(255,255,255,0.2);
+      }
+    }
+  }
+}
