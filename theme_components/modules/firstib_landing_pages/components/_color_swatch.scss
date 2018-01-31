@@ -1,0 +1,58 @@
+/**
+ *
+ <div class="color_swatch_group">
+   ...
+   <div class="color_swatch">
+     <span class="color_swatch__name">THE COLOR CLASSNAME</span>
+     <div class="color_swatch__color color--class"></div>
+     <span class="color_swatch__description">#HEX CODE OR RGBA VALUE </span>
+   </div>
+   ....
+ </div>
+ *
+ */
+
+.color_swatch_group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+
+  .color_swatch {
+    display: block;
+    position: relative;
+    margin: 1em;
+    text-align: center;
+    font-size: 1em;
+
+    &__name {
+      font-size: 0.9em;
+      margin: 1em;
+    }
+
+    &__color {
+      border: 1px solid;
+      margin: 0.1em 0 0.5em;
+    }
+
+    &__color::before {
+      content: "Content Text";
+      color: inherit;
+      display: block;
+    }
+
+
+    &__bg_color {
+      margin: 0.1em 0 0.5em;
+    }
+
+    &__bg_color::before {
+      content: "Container Background";
+      color:inherit;
+      border: 1px solid transparent;
+      display: block;
+    }
+
+    &__description {}
+
+  }
+}

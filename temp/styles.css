@@ -1,0 +1,135 @@
+
+
+/* TOOLS & FUNCITONS */ 
+.clearfix {display: inline-block;}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+/* DISABLE SELECTION */
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* Internet Explorer/Edge */
+	-o-user-select: none;
+	user-select: none;           /* Non-prefixed version, currently
+									not supported by any browser */
+}
+
+/* DISABLE SCROLLING */
+.noscroll{
+	overflow: hidden;
+}
+
+/* CRISP IMAGES WHEN UPSCALING */
+.crisp-image{
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -o-crisp-edges;
+	image-rendering: -webkit-optimize-contrast;
+	-ms-interpolation-mode: nearest-neighbor;
+}
+
+.lightbox{
+	display: none;
+    width: 100%;
+    height: 100%;
+	background: rgb(41, 41, 41); /* IE FALLBACK */
+	background: rgba(41, 41, 41, 0.81);
+    position: fixed;
+    top: 0;
+    left: 0;
+	cursor: pointer;
+	cursor: hand;
+    z-index: 999;
+}
+
+.lightbox:before {
+    content: "Click to close";
+    color: #fff;
+    position: fixed;
+    left: 50%;
+    margin-left: -47px;
+    bottom: 14%;
+    font-style: italic;
+    font-size: 16px;
+    text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.75);
+}
+
+.lightbox:after{
+	content: "";
+    width: 80%;
+    height: 70%;
+    position: fixed;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	top: 10%;
+    background-color: #fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 10px solid #fff;
+    border-radius: 10px;
+    box-shadow: 7px 5px 20px rgba(41, 41, 41, 0.62);
+	z-index: 1;
+}
+/* #productID.lightbox:after{ background-image: url(img/product-IMAGE.png); } */
+
+
+/* MAIN BLOCKS */
+
+section{
+	width: 100%;
+	display: block;
+	position: relative;
+	padding: 30px 0;
+    background: #f1f1f1;
+}
+
+.section-inner{
+	max-width: 1300px;
+	width:90%;
+	margin: auto;
+}
+
+.split-section-left {
+	width: 40%;
+	margin-left: 5%;
+	margin-right: 5%;
+	float: left;
+	position: relative;
+}
+
+.split-section-right{
+	width: 40%;
+	margin-right: 5%;
+	margin-left: 5%;
+	float: right;
+	position: relative;
+}
+
+@media (max-width: 800px){
+
+	.split-section-left,
+	.split-section-right {
+	    width: 100%;
+		margin: 15px 0 15px 0;
+		float:none;
+	}
+}
+

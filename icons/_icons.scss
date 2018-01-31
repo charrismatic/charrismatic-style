@@ -1,0 +1,45 @@
+
+// REFERENCE https://codepen.io/noahblon/pen/qEByrR
+
+@function _build_icon($icon) {
+  $icon: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24">#{$icon}</svg>';
+
+  @return $icon;
+}
+
+@function icon( $icon-name, $color, $stroke-color: transparent, $stroke-width: 0, $css: '' ) {
+  $icons: (
+    home: '<path fill="#{$color}" stroke="#{$stroke-color}" stroke-width="#{$stroke-width}" style="#{$css}" d="M10 20v-6h4v6h5v-8h3l-10-9-10 9h3v8z"/>',
+    star: '<path fill="#{$color}" stroke="#{$stroke-color}" stroke-width="#{$stroke-width}" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>',
+    heart:'<path fill="#{$color}" stroke="#{$stroke-color}" stroke-width="#{$stroke-width}" style="#{$css}" d="M12 21.35l-1.45-1.32c-5.15-4.67-8.55-7.75-8.55-11.53 0-3.08 2.42-5.5 5.5-5.5 1.74 0 3.41.81 4.5 2.09 1.09-1.28 2.76-2.09 4.5-2.09 3.08 0 5.5 2.42 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54l-1.45 1.31z"/>'
+  );
+
+  $icon: _build_icon(map-get($icons, $icon-name));
+
+  @return url('data:image/svg+xml;utf8,#{$icon}');
+
+}
+
+.icon {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  display: inline-block;
+  font-size: 0;
+  height: 50px;
+  margin: 0 auto;
+  width: 50px;
+}
+
+.icon-lg {
+  width: 75px;
+  height: 75px;
+}
+
+.icon-home { background-image: icon(home, blue); }
+.icon-heart { background-image: icon(heart, red); }
+.icon-star { background-image: icon(star, yellow); }
+
+.icon-home-stroke { background-image: icon(home, transparent, blue, 1); }
+.icon-heart-stroke { background-image: icon(heart, transparent, red, 1); }
+.icon-star-stroke { background-image: icon(star, transparent, yellow, 1); }

@@ -1,0 +1,51 @@
+// COLOR CLASSES
+
+.color {
+  &--white { color: $white !important; }
+  &--black { color: $black !important; }
+  &--light-grey-05 { color: $white_05 !important; }
+  &--light-grey-10 { color: $white_10 !important; }
+  &--light-grey-15 { color: $white_15 !important; }
+  &--light-grey-20 { color: $white_20 !important; }
+  &--light-grey-25 { color: $white_25 !important; }
+  &--light-grey-30 { color: $white_30 !important; }
+  &--light-grey-35 { color: $white_35 !important; }
+  &--light-grey-40 { color: $white_40 !important; }
+  &--light-grey-45 { color: $white_45 !important; }
+  &--light-grey-50 { color: $white_50 !important; }
+  &--dark-grey-00 { color: $black_00 !important; }
+  &--dark-grey-10 { color: $black_10 !important; }
+  &--dark-grey-15 { color: $black_15 !important; }
+  &--dark-grey-20 { color: $black_20 !important; }
+  &--dark-grey-25 { color: $black_25 !important; }
+  &--dark-grey-30 { color: $black_30 !important; }
+  &--dark-grey-35 { color: $black_35 !important; }
+  &--dark-grey-40 { color: $black_40 !important; }
+  &--dark-grey-45 { color: $black_45 !important; }
+  &--dark-grey-50 { color: $black_50 !important; }
+}
+
+.bg_color {
+  &--white { background-color: $white !important; }
+  &--black { background-color: $black !important; }
+  &--light-grey-05 { background-color: $white_05 !important; }
+  &--light-grey-10 { background-color: $white_10 !important; }
+  &--light-grey-15 { background-color: $white_15 !important; }
+  &--light-grey-20 { background-color: $white_20 !important; }
+  &--light-grey-25 { background-color: $white_25 !important; }
+  &--light-grey-30 { background-color: $white_30 !important; }
+  &--light-grey-35 { background-color: $white_35 !important; }
+  &--light-grey-40 { background-color: $white_40 !important; }
+  &--light-grey-45 { background-color: $white_45 !important; }
+  &--light-grey-50 { background-color: $white_50 !important; }
+  &--dark-grey-00 { background-color: $black_00 !important; }
+  &--dark-grey-10 { background-color: $black_10 !important; }
+  &--dark-grey-15 { background-color: $black_15 !important; }
+  &--dark-grey-20 { background-color: $black_20 !important; }
+  &--dark-grey-25 { background-color: $black_25 !important; }
+  &--dark-grey-30 { background-color: $black_30 !important; }
+  &--dark-grey-35 { background-color: $black_35 !important; }
+  &--dark-grey-40 { background-color: $black_40 !important; }
+  &--dark-grey-45 { background-color: $black_45 !important; }
+  &--dark-grey-50 { background-color: $black_50 !important; }
+}

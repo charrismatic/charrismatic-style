@@ -1,0 +1,105 @@
+/*******************
+*  HELPER CLASSES *
+ *******************/
+
+
+%crisp-img {
+  image-rendering:optimizeSpeed;             /* Legal fallback */
+  image-rendering:-moz-crisp-edges;          /* Firefox        */
+  image-rendering:-o-crisp-edges;            /* Opera          */
+  image-rendering:-webkit-optimize-contrast; /* Safari         */
+  image-rendering:optimize-contrast;         /* CSS3 Proposed  */
+  image-rendering:crisp-edges;               /* CSS4 Proposed  */
+  image-rendering:pixelated;                 /* CSS4 Proposed  */
+  -ms-interpolation-mode:nearest-neighbor;   /* IE8+           */
+}
+.crisp-img { @extend %crisp-img; }
+
+// GENERAL
+.block {
+  display: block;
+}
+
+// TYPOGRAPHY
+.bold { font-weight: bold; }
+.price { white-space: nowrap; }
+
+.caret {
+  border-color: $font_color_base transparent transparent;
+  border-style: solid solid none;
+  border-width: 6px 6px 0;
+  content: '';
+  display: inline-block;
+  height: 0;
+  margin-bottom: 2px;
+  vertical-align: middle;
+  width: 0;
+}
+
+// TEXT IS HIDDEN BUT USED BY ROBOTS - SCREEN READERS FOR DOCUMENT STRUCTURE
+%screen_assist_text {
+  font-size: 0;
+  height: 0;
+  left: -999em;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  top: -999em;
+  position: absolute;
+  width: 0;
+}
+.helper-text {
+  @extend %screen_assist_text;
+}
+
+
+// BACKGROUND IMAGE DEFAULT
+.bg-img {
+  background-image: url('');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+// PREVENT SCROLLING WHILE AN ITEM IS FOCUSED SUCH AN OVERLAY
+// COULD BE COMBINED WITH HTML BODY PROPERTY
+// <body scroll="no" style="overflow: hidden">
+.noscroll {
+  overflow-y: hidden !important;
+  max-height: 100vh;
+}
+
+// PLACEHOLDERS
+// ELEMENT OR TEXT IS IS NOT ABLE TO BE SELECTED, HIGHLIGHTED, OR COPIED
+%no-select {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.no-select {  @extend %no-select; }
+
+// PREVENT GHOST DRAGGING ON BUTTONS AND UI ELEMENTS NOT MEANT FOR CLICK AND DRAG.
+%no-drag {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+.no-drag { @extend %no-drag; }
+
+
+
+.bg {
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+.bg-contain { background-size: contain; }
+
+.cf { zoom:1; }
+.cf:after { clear:both; }
+.cf:before,
+.cf:after { content:""; display:table; }

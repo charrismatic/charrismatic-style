@@ -1,0 +1,31 @@
+
+$width_tablet_device_lg: 850px;
+$width_tablet_device_sm: 660px;
+$width_mobile_device_lg: 420px;
+$width_mobile_device_sm: 360px;
+
+$grid_tablet : 850px;
+$grid_mobile : 625px;
+
+// HOME PAGE
+$banner_break_mid: 850px;
+$banner_break_sm1: 560px;
+
+
+@mixin max_width($width) {
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin min_width($width) {
+  @media (min-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin range_width($min_width, $max_width) {
+  @media (min-width: #{$min_width}) and (max-width: #{$max_width}) {
+    @content;
+  }
+}
