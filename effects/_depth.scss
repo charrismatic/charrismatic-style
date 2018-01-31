@@ -4,8 +4,6 @@
 // TO ADD DEPTH TO AN ELEMENT
 // ADD HOVERABLE TO MAKE IT INTERACTIVE
 
-
-
 // PLACEHOLDERS CAN BE EXTENDED BY OTHER ELEMENTS
 %z_depth_0 { box-shadow: none !important; }
 
@@ -30,18 +28,11 @@
 }
 
 // CLASSES ADDED TO STYLESHEET
-.z_depth_0 { @extend %z_depth_0; }
-
-.z_depth_1 { @extend %z_depth_1; }
-
-.z_depth_1_half { @extend %z_depth_1_half; }
-
-.z_depth_2 { @extend %z_depth_2; }
-
-.z_depth_3 { @extend %z_depth_3; }
-
-.z_depth_4 { @extend %z_depth_4; }
-
-.z_depth_5 { @extend %z_depth_5; }
-
-.z_hover { @extend %z_hover; }
+.z-depth-0 { @extend %z_depth_0; }
+.z-depth-1 { @extend %z_depth_1; }
+.z-depth-1p { @extend %z_depth_1_half; }
+.z-depth-2 { @extend %z_depth_2; }
+.z-depth-3 { @extend %z_depth_3; }
+.z-depth-4 { @extend %z_depth_4; }
+.z-depth-5 { @extend %z_depth_5; }
+.z-hover { @extend %z_hover; }

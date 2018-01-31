@@ -30,21 +30,21 @@ $white_50: darken($white, 50%); // #808080
 
 
 $accent_red:               rgb(185,38,47);
-$anchor_link:              rgb(250,76,6);
+$desturated_red:           rgb(154,42,49);
+$desturated_red_darker:    rgb(125,22,29);
 $logo_accent_orange:       rgb(250,76,6);
 $logo_accent_orange_light: rgb(253,123,64);
 $accent_orange:            rgb(253,166,48);
-$accent_yellow:            rgb(255,205,85);      //#ffcd55
+$accent_yellow:            rgb(255,205,85);    //#ffcd55
 
-$desturated_red:           rgb(154,42,49);
-$desturated_red_darker:    rgb(125,22,29);
 
+$anchor_link:              rgb(250,76,6);
 $mob_nav_border_color:     darken($accent_red, 8%);
 
 // FORMS
 $form_good:                rgb(19,198,7);
 
-// MESSAGESA
+// MESSAGES
 $error:        #ff7e7e;
 $success:      #68d388;
 
@@ -59,6 +59,6 @@ $blue:         #0575af;
 // SOCIAL
 $facebook:     #3460a1;
 $twitter:      #28aae1;
-$linked-in:    #136d9d;
-$google-plus:  #de5543;
+$linkedin:    #136d9d;
+$google_plus:  #de5543;
 $youtube:      #ee3138;

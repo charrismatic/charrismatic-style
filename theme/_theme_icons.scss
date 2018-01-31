@@ -2,58 +2,36 @@
  EXTEND %svg_icon
  TO APPLY THE DEFAULT SVG ICON STYLES
  OR CREATE YOUR OWN CLASS BELOW
-
  */
- @import "../icons/icon_svg_factory";
 
+@import "../icons/icon_svg_factory";
 
 // ICON BASE ELEMENT AND CLASS
-i.icon { @extend %svg_icon; }
-
-i.sfp {
-  @extend %custom_svg_icons;
+i.svg_icon {
+  @extend %svg_icon;
+  &--circle {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: 70%;
+  }
 }
 
-.logo {
-
-}
+i.sfp { @extend %custom_svg_icons; }
 
 // SFP LOGO
 i.sfp {
-  background-image: define_icon(custom, sfp_logo, $black);
-  &.white   { background-image: define_icon(custom, sfp_logo, $white); }
-  &.light   { background-image: define_icon(custom, sfp_logo, $theme_light); }
-  &.base    { background-image: define_icon(custom, sfp_logo, $theme_base); }
-  &.dark    { background-image: define_icon(custom, sfp_logo, $theme_dark); }
-  &.black   { background-image: define_icon(custom, sfp_logo, $black); }
+  &--white   { background-image: define_icon(sfp, sfp_logo, $white); }
+  &--black   { background-image: define_icon(sfp, sfp_logo, $black); }
 }
 
-
-// SEARCH ICON
-// %ic-search                                 { background-image: define_icon(font-awesome, search, $black_10); }
-%ic-search--white                          { background-image: define_icon(font-awesome, search, $white); }
-// DIRECTINO INDICATORS
-.ic-caret-down                             { background-image: define_icon(font-awesome, caret-down, $white); }
-.ic-caret-down.red                         { background-image: define_icon(font-awesome, caret-down, $accent_red); }
-.ic-caret-down.orange-light                { background-image: define_icon(font-awesome, caret-down, lighten($accent_orange, 15%)); }
-.ic-chevron-circle-up                      { background-image: define_icon(font-awesome, chevron-circle-up, $black_30); }
-.ic-chevron-circle-up:hover                { background-image: define_icon(font-awesome, chevron-circle-up, $accent_orange); }
-
-%ic_ui_indicator_next { background-image: define_icon(font-awesome, chevron-down, $black_10) }
-
-// COLLAPSIBLE LIST EXPAND BUTTON
-.mob-collapsible .sm-section-title::before { background-image: define_icon(font-awesome, chevron-down, lighten($accent_orange, 15%)) }
-
-// COMMENT BUBBLES
-%comment_bubbles                           { background-image: define_icon(font-awesome, comments, lighten($accent_orange, 5%)) }
-%comment-bubbles-outline                   { background-image: define_icon(font-awesome, comments-o, lighten($accent_orange, 15%)) }
-
-.comment-bubbles {
-  @extend %comment_bubbles;
-}
-
-.report-url::before { background-image:define_icon(font-awesome, plus-square-o , $white) }
-
-.cbox-expandable:checked ~ .report-url::before {
-  background-image:define_icon(font-awesome, minus-square-o , $white)
-}
+.icon--facebook { background-image: define_icon(font-awesome, facebook, $white); background-color: $facebook; }
+.icon--twitter { background-image: define_icon(font-awesome, twitter, $white);  background-color: $twitter; }
+.icon--linkedin { background-image: define_icon(font-awesome, linkedin, $white);  background-color: $linkedin; }
+.icon--googleplus { background-image: define_icon(font-awesome, google-plus, $white);  background-color: $google_plus; }
+ 
+.icon--newspaper { background-image: imageUrl( $media_url, "newspaper.png"); }
+.icon--shipping { background-image:  imageUrl( $media_url, "shipping-black.png"); }
+.icon--cursor { background-image:  imageUrl( $media_url, "cursor.png");}
+.icon--shirt { background-image:  imageUrl( $media_url, "shirt.png");}
+.icon--shipping-white { background-image:  imageUrl( $media_url, "shipping-black.png"); }

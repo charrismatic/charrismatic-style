@@ -1,4 +1,6 @@
 
+// RETURNS URL GIVEN BASE URL AND FILE PATH
+// SET THEME URL VARIABLES IN THEME/URLS.SCSS
 @function imageUrl($base, $path) {
   @return url('#{$base}/#{$path}');
 }

@@ -1,4 +1,4 @@
-@import "../lib/colors";
+@import "../base/color_definitions";
 
 // Theme Styelsheet
 
@@ -38,62 +38,17 @@
   left: 1em;
 }
 
-/* THEME COLORS */
-
-.bg {
-  &-white { background: #fff; }
-  &-light { background: $theme_light; }
-  &-base  { background: $theme_base; }
-  &-dark  { background: $theme_dark; }
-  &-black { background: #000; }
-}
-
 .z-shadow-1 {
   box-shadow: -4px 7px 24px 3px rgba(0,0,0,.6);
 }
 
-.color {
-  &-white   { color: #fff !important; }
-  &-light   { color: $theme_light !important; }
-  &-neutral { color: $theme_base !important; }
-  &-dark    { color: $theme_dark !important; }
-  &-black   { color: #000 !important; }
-}
+/* THEME COLORS */
 
 .swatch {
   padding: 0.8em;
   text-align: center;
   color: inherit;
   font-weight: 400;
-}
-
-/* LAYOUT */
-.flex {
-  display: flex;
-  &-start { justify-content: flex-start; }
-  &-end { justify-content: flex-end; }
-  &-center { jusify-content: center; }
-  &-between { justify-content: space-between; }
-  &-around { justify-content: space-around; }
-  &-grow { flex-grow: 1; }
-  &-shrink { flex-shrink: 1; }
-  &-basis-none { flex-basis: 0; }
-  &-basis-max { flex-basis: 100%; }
-}
-
-.flex-row {
-  display: flex;
-  &:first-child { margin-left: 0; }
-  &:last-child {margin-right: 0;}
-}
-
-
-
-.flex-item {
-  flex: 0 1 auto;
-  margin: 0 1em;
-  &:first-child { margin-left: 0; }
-  &:last-child { margin-right: 0; }
 }
 
 
@@ -113,7 +68,6 @@ section {
     color: $white;
   }
 
-
   &.dark-theme-alt {
     background: $black;
     color: $theme-light;
@@ -129,6 +83,7 @@ section {
     color: $theme-light;
   }
 }
+
 
 .features {
   .logo-container {

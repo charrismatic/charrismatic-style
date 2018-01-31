@@ -1,27 +1,10 @@
-// BASE THEME STRUCTURE AND LAYOUT CLASSES
-
-/***************************************
- *   TYPICAL PAGE STRUCTURE            *
- *                                     *
- *  html > head > body  ...            *
- *                                     *
- *  header                             *
- *   -> nav                            *
- *  section [ .banner | .main ]        *
- *   -> .row                           *
- *     -> .sidebar [ if true ]         *
- *     -> .content-block               *
- *       -> .content                   *
- *         -> .row                     *
- *         -> .row                     *
- *     -> .content-block [other]       *
- *   -> .row                           *
- *  section [ .special ]               *
- *   -> .row                           *
- *  section [ .others ]                *
- *  footer                             *
- *                                     *
- * * * * * * * * * * * * * * * * * * * */
+html, body {
+  position: relative;
+  display: block;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
 
 body {
   min-width: $page_min_width;
@@ -36,6 +19,16 @@ section {
   margin: 0 auto;
   padding: 1.5em 0;
   width: 100%;
+  position: relative;
+}
+
+header,
+footer {
+  display: block;
+  position: relative;
+  // padding: .7em 0;
+  width: auto;
+  // margin: 0 auto;
 }
 
 

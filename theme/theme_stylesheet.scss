@@ -1,4 +1,13 @@
-@import 'theme_config';
+// @import 'theme_config';
 
 @import "theme_icons";
 @import "theme_elements";
+@import "theme_color_classes";
+
+
+@import "theme_components/titlebar";
+@import "theme_components/controlbar";
+@import "theme_components/panel";
+@import "theme_components/social_bar";
+
+@import "theme_overrides/layouts";

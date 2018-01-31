@@ -9,7 +9,6 @@
 @import "theme/theme_config";
 
 
-
 // LIBRARY FUNCTIONS AND MIXINS
 @import "functions/functions";
 
@@ -20,7 +19,7 @@
 
 // SHADOWS
 @import "effects/effects";
-
+ 
 
 // INCLUDE ANIMATNION AND TRANSITIONS'
 @import "motion/motion";
@@ -30,5 +29,18 @@
 @import "icons/icons";
 
 
+// COMPONENT LIBRARY
+@import "components/components";
+
+@import "templates/templates";
+
+
+// IMPORTED STYLES FROM STUDIOEMMA MAGENTO2 THEME (FOR COMPATIBILITY)
+@import "theme/studioemma/index";
+
+
 // TMEME STYLESHEETS
 @import "theme/theme_stylesheet";
+
+ 
+ 

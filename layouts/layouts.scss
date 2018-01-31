@@ -1,15 +1,19 @@
 //  PAGE STRUCTURE AND LAYOUT CLASSES
 
 // RESPONSIVE TOOLS
-@import "responsive_breakpoints";
-@import "responsive_mixins";
+// @import 'responsive_breakpoints';
+@import '../base/responsive_definitions';
+@import 'responsive_mixins';
+@import 'page_structure';
 
 
 // FUNCTIONS
-@import "aspect_ratio";
-@import "show_and_hide";
+@import 'aspect_ratio';
+// @import 'show_and_hide';
 
 
 // LAYOUT DEFINITIONS AND CLASSES
-@import "flex";
-@import "columns";
+@import 'flex';
+@import 'flex_grid';
+@import 'flex_utilities';
+@import 'columns';

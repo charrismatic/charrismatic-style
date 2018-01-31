@@ -1,0 +1,16 @@
+
+.bg {
+  &-light { background: $theme_light; }
+  &-base  { background: $theme_base; }
+  &-dark  { background: $theme_dark; }
+  &-accent-dark  { background: $theme_dark_red; }
+  &-accent-light { background: $theme_light_red; }
+}
+
+.color {
+  &-light   { color: $theme_light !important; }
+  &-neutral { color: $theme_base !important; }
+  &-dark    { color: $theme_dark !important; }
+  &-accent-dark  { color: $theme_dark_red; }
+  &-accent-light { color: $theme_light_red; }
+}
