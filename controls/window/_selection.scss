@@ -1,0 +1,11 @@
+
+// TEXT HIGHLIGHT
+::-moz-selection {
+    color: $white;
+    background: $theme_primary;
+}
+
+::selection {
+    color: $white;
+    background: $theme_primary;
+}

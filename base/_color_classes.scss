@@ -1,3 +1,67 @@
+/*---
+title: Color Classes
+section: color
+---
+
+Color Utility Classses
+
+Color
+.color
+
+<div class="swatch color-black">.color-black <span class="color_value">#000000</span></div>
+<div class="swatch color-white">.color-white <span class="color_value">#ffffff</span></div>
+<div class="swatch color-grey-03">.color-grey-03 <span class="color_value">#f7f7f7</span></div>
+<div class="swatch color-grey-05">.color-grey-05 <span class="color_value">#f2f2f2</span></div>
+<div class="swatch color-grey-10">.color-grey-10 <span class="color_value">#e6e6e6</span></div>
+<div class="swatch color-grey-15">.color-grey-15 <span class="color_value">#d9d9d9</span></div>
+<div class="swatch color-grey-20">.color-grey-20 <span class="color_value">#cccccc</span></div>
+<div class="swatch color-grey-25">.color-grey-25 <span class="color_value">#bfbfbf</span></div>
+<div class="swatch color-grey-30">.color-grey-30 <span class="color_value">#b3b3b3</span></div>
+<div class="swatch color-grey-35">.color-grey-35 <span class="color_value">#a6a6a6</span></div>
+<div class="swatch color-grey-40">.color-grey-40 <span class="color_value">#999999</span></div>
+<div class="swatch color-grey-45">.color-grey-45 <span class="color_value">#8c8c8c</span></div>
+<div class="swatch color-grey-50">.color-grey-50 <span class="color_value">#808080</span></div>
+<div class="swatch color-grey-55">.color-grey-55 <span class="color_value">#737373</span></div>
+<div class="swatch color-grey-60">.color-grey-60 <span class="color_value">#666666</span></div>
+<div class="swatch color-grey-65">.color-grey-65 <span class="color_value">#595959</span></div>
+<div class="swatch color-grey-70">.color-grey-70 <span class="color_value">#4d4d4d</span></div>
+<div class="swatch color-grey-75">.color-grey-75 <span class="color_value">#404040</span></div>
+<div class="swatch color-grey-80">.color-grey-80 <span class="color_value">#333333</span></div>
+<div class="swatch color-grey-85">.color-grey-85 <span class="color_value">#262626</span></div>
+<div class="swatch color-grey-90">.color-grey-90 <span class="color_value">#1a1a1a</span></div>
+<div class="swatch color-grey-95">.color-grey-95 <span class="color_value">#0d0d0d</span></div>
+
+
+Background Color
+.bg-color
+
+```example:html
+<div class="swatch bg-black">.bg-black<span class="color_value">#000000</span></div>
+<div class="swatch bg-white">.bg-white<span class="color_value">#ffffff</span></div>
+<div class="swatch bg-grey-03">.bg-grey-03<span class="color_value"> #f7f7f7</span></div>
+<div class="swatch bg-grey-05">.bg-grey-05<span class="color_value"> #f2f2f2</span></div>
+<div class="swatch bg-grey-10">.bg-grey-10<span class="color_value"> #e6e6e6</span></div>
+<div class="swatch bg-grey-15">.bg-grey-15<span class="color_value"> #d9d9d9</span></div>
+<div class="swatch bg-grey-20">.bg-grey-20<span class="color_value"> #cccccc</span></div>
+<div class="swatch bg-grey-25">.bg-grey-25<span class="color_value"> #bfbfbf</span></div>
+<div class="swatch bg-grey-30">.bg-grey-30<span class="color_value"> #b3b3b3</span></div>
+<div class="swatch bg-grey-35">.bg-grey-35<span class="color_value"> #a6a6a6</span></div>
+<div class="swatch bg-grey-40">.bg-grey-40<span class="color_value"> #999999</span></div>
+<div class="swatch bg-grey-45">.bg-grey-45<span class="color_value"> #8c8c8c</span></div>
+<div class="swatch bg-grey-50">.bg-grey-50<span class="color_value"> #808080</span></div>
+<div class="swatch bg-grey-55">.bg-grey-55<span class="color_value"> #737373</span></div>
+<div class="swatch bg-grey-60">.bg-grey-60<span class="color_value"> #666666</span></div>
+<div class="swatch bg-grey-65">.bg-grey-65<span class="color_value"> #595959</span></div>
+<div class="swatch bg-grey-70">.bg-grey-70<span class="color_value"> #4d4d4d</span></div>
+<div class="swatch bg-grey-75">.bg-grey-75<span class="color_value"> #404040</span></div>
+<div class="swatch bg-grey-80">.bg-grey-80<span class="color_value"> #333333</span></div>
+<div class="swatch bg-grey-85">.bg-grey-85<span class="color_value"> #262626</span></div>
+<div class="swatch bg-grey-90">.bg-grey-90<span class="color_value"> #1a1a1a</span></div>
+<div class="swatch bg-grey-95">.bg-grey-95<span class="color_value"> #0d0d0d</span></div>
+```
+*/
+
+
 .color {
   &-black   { color: $black   ; }
   &-white   { color: $white   ; }

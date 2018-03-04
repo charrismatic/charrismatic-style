@@ -1,0 +1,9 @@
+
+
+.box_display {
+  &--block { display: block; }
+  &--inblock { display: inline-block; }
+}
+
+.show { display: initial; }
+.hide { display: none !important; }

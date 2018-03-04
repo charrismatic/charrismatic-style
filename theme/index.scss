@@ -1,0 +1,38 @@
+//// 
+/// @group Theme 
+////  
+
+
+/// The purpose of this package is for theme configuration  
+/// - override or extend current variable values  
+/// - set new theme specific variables  
+/// - declare theme settings or meta data that would not be appropriate elsewhere  
+///  
+///  This is not the best place to define many new features and components as they will 
+///  not likely make it back to the main library 
+/// @example  
+///    theme:  
+///      primary-color: "blue"
+///      secondary-color: "light-blue"
+///      theme-name: "demo-them"  
+///      fonts: 
+///        heading: "Strong Font Bold"
+///        body: "Nice Font Light" 
+///      icons: [fa-plus, fa-socialmedia, fa-logo]
+/// 
+/// @name $theme_configuration  
+$theme_configuration: ""; 
+
+
+
+
+// INDEPENDENT - VARIABLES 
+@import "theme_urls";
+@import "theme_color_variables";
+@import "theme_fonts";
+@import "theme_icons";
+@import "theme_responsive_variables";
+
+
+@import "theme_color_classes";
+@import "theme_templates";

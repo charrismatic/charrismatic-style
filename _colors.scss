@@ -1,32 +1,5 @@
-@import 'base/color_definitions';
 
-// DEFAULT
-$font_color_base: $black_10;
-
-// THEME COLOR
-$theme_font_color: $font_color_base;
-
-$fnt_clr_dkst: darken($theme_font_color, 10%);
-$fnt_clr_dker: darken($theme_font_color, 20%);
-
-a:hover { color: lighten($theme_font_color, 10%); }
-
-.bg-accent-red {
-  background: $accent_red;
-  color: $white_00;
-}
-
-.fnt-accent-red {
-  color: $accent_red;
-}
-
-.bg-accent-orange {
-  background: $accent_orange;
-  color: $white_00;
-}
-
-.fnt-accent-orange {
-  color: $accent_orange;
-}
-
-.red { color: $accent_red; }
+// LOAD BASE AND THEME COLORS FROM PROJECT ROOT  
+// FOR STAND ALONE PACKAGES  
+@import "base/color_variables";
+@import "theme/theme_color_variables";

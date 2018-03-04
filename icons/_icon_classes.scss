@@ -1,0 +1,92 @@
+/*---
+title: SVG ICONS
+section: icons
+----
+
+## DEFAULT PLACEHOLDER  
+These icon placeholders allow us to define several extendable classes without polluting the stylesheet with unused
+It also can be used to apply the effect t things which are not always icons, when the situation necessitate it
+ 
+```example 
+// Setup An Icon Base Class  
+.my_icon_class {  
+  @extend %svg_icon;   
+  // my-icon-properties ...  
+}  
+```
+
+// Define Specific Icons Image as well As Shape, Color, etc ...  
+// This Class by itself does not produce an icon as it still requires an icon selection which still needs to be defined  
+
+
+```
+// COMMENT BUBBLES
+.comment_bubbles {
+  background-image: define_icon( font-awesome, comments, lighten( #000, 5%));  
+  // ADD A UTILITY CLASS TO TOGGLE THE BAGROUND ICONS OUTLIE STATES   
+  &.outline { background-image: define_icon( font-awesome, comments-o, lighten($accent_orange, 15%)); }  
+}
+
+```   
+// BASIC HTML EXAMPLE  
+```example:html
+<i class="my_icon_class comment_bubbles"></i>  
+```  
+*/
+
+
+
+/// DEFAULT SVG ICON CLASS  
+/// @group icons 
+/// @name svg_icon 
+/// @example  
+///    // Setup An Icon Base Class  
+///    .my_icon_class {  
+///      @extend %svg_icon;   
+///      // my-icon-properties ...  
+///    }  
+
+%svg_icon {
+  display: inline-block;
+  font-size: 0;
+  width: 50px;
+  height: 50px;
+  margin: 10px 20px;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: color 200ms linear 0ms;
+  cursor: pointer;
+  vertical-align: middle;
+  shape-rendering: crispEdges;
+}
+
+/// DEFAULT ICON HOVER EFFECT PLACEHOLDER   
+/// @group icons 
+%svg_icon_hover {
+  background-color: $black;
+  transform: scale(1.15, 1.15) rotate(-5deg);
+  transition: .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/// ICON PLACEHOLDER FOR DYNAMICALLY SIZED ICON  
+/// @group icons 
+%flexible_svg_icons {
+  display: inline-block;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  cursor: pointer;
+}
+
+// ICON BASE ELEMENT AND CLASS
+.icon,
+i { @extend %svg_icon; }
+
+.flexible_svg_icons {
+  @extend %flexible_svg_icons;
+}

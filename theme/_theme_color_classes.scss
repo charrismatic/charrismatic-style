@@ -1,4 +1,7 @@
 
+@import "theme_color_variables";
+
+
 .bg {
   &-light { background: $theme_light; }
   &-base  { background: $theme_base; }
@@ -13,4 +16,24 @@
   &-dark    { color: $theme_dark !important; }
   &-accent-dark  { color: $theme_dark_red; }
   &-accent-light { color: $theme_light_red; }
+}
+
+
+// THEME SPECIFIC COLOR CLASSES
+.color {
+  &--theme-dark-blue { color: $fib_blue_dark !important; }
+  &--theme-bright-blue { color: $fib_blue_bright !important; }
+  &--theme-light-blue { color: $fib_blue_light !important; }
+  &--theme-blue-grey { color: $fib_blue_grey !important; }
+  &--theme-green { color: $fib_green !important; }
+  &--theme-green-light { color: $fib_green_light !important; }
+}
+
+.bg_color {
+  &--theme-dark-blue { background-color: $fib_blue_dark !important; }
+  &--theme-bright-blue { background-color: $fib_blue_bright !important; }
+  &--theme-light-blue { background-color: $fib_blue_light !important; }
+  &--theme-blue-grey { background-color: $fib_blue_grey !important; }
+  &--theme-green { background-color: $fib_green !important; }
+  &--theme-light-green { background-color: $fib_green_light !important; }
 }

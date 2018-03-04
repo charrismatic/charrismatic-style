@@ -1,46 +1,46 @@
 // CUSTOMIZE YOUR PROJECTS LIBRARY HERE
 
-
 // CORE LIBRARY
-@import "base/base";
+@import "base/index";
 
+@import "lib/index";
 
 // THEME VARIABLE DEFINITIONS
-@import "theme/theme_config";
+@import "theme/index";
 
 
 // LIBRARY FUNCTIONS AND MIXINS
-@import "functions/functions";
+@import "functions/index";
 
 
 // PAGE STRUCTURE AND LAYOUT CLASSES
 @import "layouts/layouts";
+@import "formatting/index";
 
 
 // SHADOWS
 @import "effects/effects";
- 
+
 
 // INCLUDE ANIMATNION AND TRANSITIONS'
 @import "motion/motion";
 
 
 // ICONS AND SVG TOOLS
-@import "icons/icons";
+@import "icons/index";
 
 
 // COMPONENT LIBRARY
-@import "components/components";
-
-@import "templates/templates";
+@import "components/index";
 
 
-// IMPORTED STYLES FROM STUDIOEMMA MAGENTO2 THEME (FOR COMPATIBILITY)
-@import "theme/studioemma/index";
+@import "controls/index";
+
+// OFFLOADING TEMPLATES TO CORE THEME
+// @import "templates/templates";
 
 
-// TMEME STYLESHEETS
-@import "theme/theme_stylesheet";
+@import "utilities/index";
 
- 
- 
+// THEME STYLESHEETS
+// @import "theme/theme_stylesheet";

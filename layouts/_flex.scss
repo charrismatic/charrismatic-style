@@ -18,11 +18,11 @@
 %fl_row {
   display: flex;
   flex-direction: row;
-  > * {
+   > * {
     flex: 0 1 auto;
     margin: 0 1em;
     &:first-child { margin-left: 0; }
-    &:last-child { margin-right: 0; }
+    &:last-child { margin-right: 0;}
   }
 }
 // .flex-row {  @extend %fl_row; }
@@ -137,8 +137,6 @@
 
 .flex-row {
   @extend %fl_row;
-  &:first-child { margin-left: 0; }
-  &:last-child {margin-right: 0;}
 }
 
 .flex-item {

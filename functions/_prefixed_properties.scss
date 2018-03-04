@@ -48,55 +48,6 @@
           filter: invert($parameters);
 }
 
-@mixin border-radius($parameters...) {
-  -webkit-border-radius: $parameters;
-     -moz-border-radius: $parameters;
-      -ms-border-radius: $parameters;
-          border-radius: $parameters;
-}
-
-@mixin box-sizing($parameters...) {
-  -webkit-box-sizing: $parameters;
-     -moz-box-sizing: $parameters;
-      -ms-box-sizing: $parameters;
-          box-sizing: $parameters;
-}
-
-@mixin box-shadow($parameters) {
-   -webkit-box-shadow: $parameters;
-      -moz-box-shadow: $parameters;
-       -ms-box-shadow: $parameters;
-        -o-box-shadow: $parameters;
-           box-shadow: $parameters;
-}
-@mixin multi-box-shadow($p1, $p2) {
-   -webkit-box-shadow: $p1, $p2;
-      -moz-box-shadow: $p1, $p2;
-       -ms-box-shadow: $p1, $p2;
-        -o-box-shadow: $p1, $p2;
-           box-shadow: $p1, $p2;
-}
-
-@mixin text-shadow($parameters) {
-   -webkit-text-shadow: $parameters;
-      -moz-text-shadow: $parameters;
-       -ms-text-shadow: $parameters;
-        -o-text-shadow: $parameters;
-           text-shadow: $parameters;
-}
-
-@mixin transform($parameters) {
-   -webkit-transform: $parameters;
-      -moz-transform: $parameters;
-       -ms-transform: $parameters;
-        -o-transform: $parameters;
-           transform: $parameters;
-}
-
-@mixin transform-delay($delay: 0s) {
-   -webkit-transition-delay: $delay;
-           transition-delay: $delay;
-}
 
 @mixin gradient($start, $stop){
   background: -moz-linear-gradient(top,  $start 0%, $stop 100%);

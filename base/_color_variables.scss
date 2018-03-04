@@ -1,0 +1,129 @@
+/*---
+title: Color Library
+name: color_library
+---
+
+Greyscale 
+
+```example:color
+@color: #ffffff  @name: white
+@color: #f7f7f7  @name: grey_03
+@color: #f2f2f2  @name: grey_05
+@color: #e6e6e6  @name: grey_10
+@color: #d9d9d9  @name: grey_15
+@color: #cccccc  @name: grey_20
+@color: #bfbfbf  @name: grey_25
+@color: #b3b3b3  @name: grey_30
+@color: #a6a6a6  @name: grey_35
+@color: #999999  @name: grey_40
+@color: #8c8c8c  @name: grey_45
+@color: #808080  @name: grey_50
+@color: #737373  @name: grey_55
+@color: #666666  @name: grey_60
+@color: #595959  @name: grey_65
+@color: #4d4d4d  @name: grey_70
+@color: #404040  @name: grey_75
+@color: #333333  @name: grey_80
+@color: #262626  @name: grey_85
+@color: #1a1a1a  @name: grey_90
+@color: #0d0d0d  @name: grey_95
+@color: #000000  @name: black
+```
+
+Named Colors 
+
+```example:color
+@color: rgb(185,38,47)  @name: accent_red              
+@color: rgb(154,42,49)  @name: desturated_red          
+@color: rgb(125,22,29)  @name: desturated_red_darker   
+@color: rgb(250,76,6)   @name: accent_orange           
+@color: rgb(253,123,64) @name: accent_orange_light     
+@color: rgb(253,166,48) @name: accent_orange           
+@color: rgb(255,205,85) @name: accent_yellow           
+@color: rgb(250,76,6)   @name: anchor_link             
+@color: rgb(19,198,7)   @name: form_good               
+@color: #ff7e7e         @name: error                   
+@color: #68d388         @name: success                 
+@color: #f1f1f1         @name: ltgray                  
+@color: #5f5f5f         @name: gray                    
+@color: #3d3d3d         @name: charcoal                
+@color: #0575af         @name: blue                    
+@color: #3460a1         @name: facebook                
+@color: #28aae1         @name: twitter                 
+@color: #136d9d         @name: linkedin                
+@color: #de5543         @name: google_plus             
+@color: #ee3138         @name: youtube                 
+```
+*/
+
+// COLOR VARIABLE DEFINITIONS
+$black: rgba(0,0,0,1);
+$black_00: $black;              // #000000;
+
+$white: rgba(255,255,255,1);
+$white_00: $white;              // #ffffff;
+
+$grey_01: darken($white, 01%); 
+$grey_02: darken($white, 02%); //
+$grey_03: darken($white, 03%); // grey_03 #f7f7f7 
+$grey_04: darken($white, 04%); // 
+$grey_05: darken($white, 05%); // grey_05: #f2f2f2  
+$grey_10: darken($white, 10%); // grey_10: #e6e6e6 
+$grey_15: darken($white, 15%); // grey_15: #d9d9d9 
+$grey_20: darken($white, 20%); // grey_20: #cccccc 
+$grey_25: darken($white, 25%); // grey_25: #bfbfbf 
+$grey_30: darken($white, 30%); // grey_30: #b3b3b3 
+$grey_35: darken($white, 35%); // grey_35: #a6a6a6 
+$grey_40: darken($white, 40%); // grey_40: #999999 
+$grey_45: darken($white, 45%); // grey_45: #8c8c8c 
+$grey_50: darken($white, 50%); // grey_50: #808080 
+$grey_55: darken($white, 55%); // grey_55: #737373 
+$grey_60: darken($white, 60%); // grey_60: #666666 
+$grey_65: darken($white, 65%); // grey_65: #595959 
+$grey_70: darken($white, 70%); // grey_70: #4d4d4d 
+$grey_75: darken($white, 75%); // grey_75: #404040 
+$grey_80: darken($white, 80%); // grey_80: #333333 
+$grey_85: darken($white, 85%); // grey_85: #262626
+$grey_90: darken($white, 90%); // grey_90: #1a1a1a 
+$grey_95: darken($white, 95%); // grey_95: #0d0d0d 
+$grey_96: darken($white, 96%); //
+$grey_97: darken($white, 97%); //
+$grey_98: darken($white, 98%); //
+$grey_99: darken($white, 99%); //
+
+$accent_red:            rgb(185,38,47);
+$desturated_red:        rgb(154,42,49);
+$desturated_red_darker: rgb(125,22,29);
+$accent_orange:         rgb(250,76,6);
+$anchor_link:           rgb(250,76,6);
+$accent_orange_light:   rgb(253,123,64);
+$accent_orange:         rgb(253,166,48);
+$accent_yellow:         rgb(255,205,85);
+
+$mob_nav_border_color:  darken($accent_red, 8%);
+
+$scroll_accent: $grey_80;
+$scroll_bg: $grey_20;
+
+
+// FORMS
+$form_good:    rgb(19,198,7);
+
+// MESSAGES
+$error:        #ff7e7e;
+$warning:      #ff7e7e;
+$notice:       #ff7e7e;
+$success:      #68d388;
+
+// COLOR DEFINITIONS
+$lt-gray:      #f1f1f1;
+$gray:         #5f5f5f;
+$charcoal:     #3d3d3d;
+$blue:         #0575af;
+ 
+// SOCIAL
+$facebook:     #3460a1;
+$twitter:      #28aae1;
+$linkedin:     #136d9d;
+$google_plus:  #de5543;
+$youtube:      #ee3138;

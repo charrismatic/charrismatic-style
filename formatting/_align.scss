@@ -1,0 +1,18 @@
+
+
+
+// OBJECT ALIGNMENT
+.align {
+  &--top { align-items: flex-start; }
+  &--center { align-items: center; }
+  &--bottom { align-items: flex-end; }
+}
+
+
+// TEXT ALIGNMENT  
+.text { 
+  &--left { text-align: left; }
+  &--right { text-align: right; }
+  &--center { text-align: center; }
+  &--justify { text-align: justify; }
+}

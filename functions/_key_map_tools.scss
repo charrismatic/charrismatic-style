@@ -1,9 +1,19 @@
-/// Map deep get
-/// @author Hugo Giraudel
-/// @access public
-/// @param {Map} $map - Map
-/// @param {Arglist} $keys - Key chain
-/// @return {*} - Desired value
+////
+/// @group functions  
+////
+
+/// Map deep get    
+///   
+/// @example  
+///    $m-breakpoint: map-deep-get( $o-grid-default-config, "layouts", "M");  
+///    -> 610px  
+///
+/// @author Hugo Giraudel  
+/// @access public  
+/// @param {Map} $map - Map  
+/// @param {Arglist} $keys - Key chain  
+/// @return {*} - Desired value  
+
 @function map-deep-get($map, $keys...) {
     @each $key in $keys {
         $map: map-get($map, $key);
@@ -11,22 +21,17 @@
     @return $map;
 }
 
-// EXAMPLE
-// $m-breakpoint: map-deep-get($o-grid-default-config, "layouts", "M");
-// -> 610px
-
-
-
-/// Deep set function to set a value in nested maps
-/// @author Hugo Giraudel
-/// @access public
-/// @param {Map} $map - Map
-/// @param {List} $keys -  Key chaine
-/// @param {*} $value - Value to assign
-/// @return {Map}
+/// Deep set function to set a value in nested maps  
+/// 
+/// @author Hugo Giraudel  
+/// @access public  
+/// @param {Map} $map - Map  
+/// @param {List} $keys -  Key chaine  
+/// @param {*} $value - Value to assign  
+/// @return {Map}  
 ///
-// EXAMPLE
-// $o-grid-default-config: map-deep-set($o-grid-default-config, "layouts" "M", 650px);
+/// @example  
+///    $o-grid-default-config: map-deep-set($o-grid-default-config, "layouts" "M", 650px);  
 
 @function map-deep-set($map, $keys, $value) {
   $maps: ($map,);

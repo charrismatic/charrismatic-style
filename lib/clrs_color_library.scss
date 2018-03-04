@@ -1,0 +1,166 @@
+/*---
+section: lib 
+title: Clrs.cc Color Library 
+source: http://clrs.cc/
+---  
+
+Better default colors for the web
+Available Classes
+- Background Color  - .bg_{color}
+- Color             - .color_{color}
+- Border colors     - .border_{color}
+- SVG fills         - .fill_{color}
+- SVG Strokes       - .stroke_{color}
+
+```example:color
+@color: #001F3F  @name: clrs_navy  
+@color: #0074D9  @name: clrs_blue  
+@color: #7FDBFF  @name: clrs_aqua  
+@color: #39CCCC  @name: clrs_teal  
+@color: #3D9970  @name: clrs_olive  
+@color: #2ECC40  @name: clrs_green  
+@color: #01FF70  @name: clrs_lime  
+@color: #FFDC00  @name: clrs_yellow  
+@color: #FF851B  @name: clrs_orange  
+@color: #FF4136  @name: clrs_red  
+@color: #F012BE  @name: clrs_fuchsia  
+@color: #B10DC9  @name: clrs_purple  
+@color: #85144B  @name: clrs_maroon  
+@color: #FFFFFF  @name: clrs_white  
+@color: #DDDDDD  @name: clrs_silver  
+@color: #AAAAAA  @name: clrs_gray  
+@color: #111111  @name: clrs_black  
+```
+*/
+
+$clrs_navy    : #001F3F;
+$clrs_blue    : #0074D9;
+$clrs_aqua    : #7FDBFF;
+$clrs_teal    : #39CCCC;
+$clrs_olive   : #3D9970;
+$clrs_green   : #2ECC40;
+$clrs_lime    : #01FF70;
+$clrs_yellow  : #FFDC00;
+$clrs_orange  : #FF851B;
+$clrs_red     : #FF4136;
+$clrs_fuchsia : #F012BE;
+$clrs_purple  : #B10DC9;
+$clrs_maroon  : #85144B;
+$clrs_white   : #FFFFFF;
+$clrs_silver  : #DDDDDD;
+$clrs_gray    : #AAAAAA;
+$clrs_black   : #111111;
+
+
+/* Backgrounds */
+.bg {
+  &_navy               { background-color: $clrs_navy; }   
+  &_blue               { background-color: $clrs_blue; }   
+  &_aqua               { background-color: $clrs_aqua; }   
+  &_teal               { background-color: $clrs_teal; }  
+  &_olive              { background-color: $clrs_olive; }  
+  &_green              { background-color: $clrs_green; }  
+  &_lime               { background-color: $clrs_lime; }  
+  &_yellow             { background-color: $clrs_yellow; }  
+  &_orange             { background-color: $clrs_orange; }   
+  &_red                { background-color: $clrs_red; }   
+  &_fuchsia            { background-color: $clrs_fuchsia; }   
+  &_purple             { background-color: $clrs_purple; }   
+  &_maroon             { background-color: $clrs_maroon; }   
+  &_white              { background-color: $clrs_white; }   
+  &_gray               { background-color: $clrs_silver; }   
+  &_silver             { background-color: $clrs_gray; }   
+  &_black              { background-color: $clrs_black; }     
+}
+
+
+/* Colors */
+.color {
+  &_navy                  { color: $clrs_navy; }
+  &_blue                  { color: $clrs_blue; }
+  &_aqua                  { color: $clrs_aqua; }
+  &_teal                  { color: $clrs_teal; }
+  &_olive                 { color: $clrs_olive; }
+  &_green                 { color: $clrs_green; }
+  &_lime                  { color: $clrs_lime; }
+  &_yellow                { color: $clrs_yellow; }
+  &_orange                { color: $clrs_orange; }
+  &_red                   { color: $clrs_red; }
+  &_fuchsia               { color: $clrs_fuchsia; }
+  &_purple                { color: $clrs_purple; }
+  &_maroon                { color: $clrs_maroon; }
+  &_white                 { color: $clrs_white; }
+  &_silver                { color: $clrs_silver; }
+  &_gray                  { color: $clrs_gray; }
+  &_black                 { color: $clrs_black; }
+}
+
+
+/* Border colors
+   Use with another border utility that sets border-width and style
+   i.e .border            { border-width: 1px); border-style: solid); }
+*/
+.border {
+  &_navy                  { border-color: $clrs_navy; } 
+  &_blue                  { border-color: $clrs_blue; }
+  &_aqua                  { border-color: $clrs_aqua; }
+  &_teal                  { border-color: $clrs_teal; }
+  &_olive                 { border-color: $clrs_olive; }
+  &_green                 { border-color: $clrs_green; }
+  &_lime                  { border-color: $clrs_lime; }
+  &_yellow                { border-color: $clrs_yellow; }
+  &_orange                { border-color: $clrs_orange; }
+  &_red                   { border-color: $clrs_red; }
+  &_fuchsia               { border-color: $clrs_fuchsia; }
+  &_purple                { border-color: $clrs_purple; }
+  &_maroon                { border-color: $clrs_maroon; }
+  &_white                 { border-color: $clrs_white; }
+  &_gray                  { border-color: $clrs_silver; }
+  &_silver                { border-color: $clrs_gray; }
+  &_black                 { border-color: $clrs_black; }
+}
+
+
+/* Fills for SVG */
+.fill {
+  &_navy             { fill: $clrs_navy; }
+  &_blue             { fill: $clrs_blue; }
+  &_aqua             { fill: $clrs_aqua; }
+  &_teal             { fill: $clrs_teal; }
+  &_olive            { fill: $clrs_olive; }
+  &_green            { fill: $clrs_green; }
+  &_lime             { fill: $clrs_lime; }
+  &_yellow           { fill: $clrs_yellow; }
+  &_orange           { fill: $clrs_orange; }
+  &_red              { fill: $clrs_red; }
+  &_fuchsia          { fill: $clrs_fuchsia; }
+  &_purple           { fill: $clrs_purple; }
+  &_maroon           { fill: $clrs_maroon; }
+  &_white            { fill: $clrs_white; }
+  &_gray             { fill: $clrs_silver; }
+  &_silver           { fill: $clrs_gray; }
+  &_black            { fill: $clrs_black; }
+}
+
+
+
+/* Strokes for SVG */
+.stroke {
+  &_navy             { stroke: $clrs_navy; }
+  &_blue             { stroke: $clrs_blue; }
+  &_aqua             { stroke: $clrs_aqua; }
+  &_teal             { stroke: $clrs_teal; }
+  &_olive            { stroke: $clrs_olive; }
+  &_green            { stroke: $clrs_green; }
+  &_lime             { stroke: $clrs_lime; }
+  &_yellow           { stroke: $clrs_yellow; }
+  &_orange           { stroke: $clrs_orange; }
+  &_red              { stroke: $clrs_red; }
+  &_fuchsia          { stroke: $clrs_fuchsia; }
+  &_purple           { stroke: $clrs_purple; }
+  &_maroon           { stroke: $clrs_maroon; }
+  &_white            { stroke: $clrs_white; }
+  &_gray             { stroke: $clrs_silver; }
+  &_silver           { stroke: $clrs_gray; }
+  &_black            { stroke: $clrs_black; }
+}

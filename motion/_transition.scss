@@ -1,21 +1,41 @@
+////
+/// @group Motion  
+////
 
 
-/**
-* @mixin
-* @name tranistion
-* @description Include multiple transition with a single fu
-* @example
-* .class {
-*   color: gray;
-*   @include transition(color .3s ease);
-*   &:hover {
-*     color: black;
-*   }
-* }
-**/
+/// -----------------  
+/// Transition 
+/// - Generic multi argument transition builder  
+/// - Include multiple transition with a single include 
+///  
+/// @name transition  
+/// @param { property | duration | transition | delay } transition - include multiple transitions using an array   
+/// ```  
+/// @example scss  
+///   .class {  
+///     color: gray;  
+///     @include transition(color .3s ease);   
+///     &:hover {   
+///       color: black;   
+///     }  
+///   }
+/// ```  
+ 
 @mixin transition($args...) {
    transition: $args;
 }
+
+/// -------------  
+/// Transition Building Function 
+/// - Assembles transitions from ordered inputs   
+/// - Use that as inputs to the tranition `@mixin`  
+///
+/// @param {string} $prop  - property  [all]  
+/// @param {int}    $dur   - duration  [600]  
+/// @param {string} $trans - transtion [ease-in-out]  
+/// @param {int}    $delay - delay     [0]  
+/// @see   {mixin}  transition  
+/// 
 
 @function _trans($prop: all, $dur: 600, $trans: ease-in-out, $delay: 0) {
   @return #{$prop} #{$dur}ms #{$trans} #{$delay}ms;

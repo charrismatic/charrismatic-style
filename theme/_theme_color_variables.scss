@@ -1,0 +1,73 @@
+////
+/// @group Theme  
+////
+
+//  DEFAULT
+$body_bg:              #F6F6F6;
+$font_color_base:      $grey_90;
+
+$blue_grey:            rgb(237, 243, 247);
+$bright_blue:          rgb(0, 151, 212);
+$dark_blue:            rgb(24, 97, 146);
+$green:                rgb(84, 150, 36);
+$light_blue:           rgb(213, 236, 246);
+$light_green:          rgb(125, 182, 88);
+
+// THEME COLORS  
+$theme_base:           rgb(0, 148, 225);
+$theme_dark:           rgb(0, 111, 225);
+$theme_dark_red:       rgb(185,34,40);
+$theme_light:          rgb(0, 196, 225);
+$theme_light_red:      rgb(232,63,69);
+
+$theme_blue_dark:      $dark_blue;
+$theme_blue_light:     $bright_blue;
+$theme_font_color:     $font_color_base;
+$theme_green:          $green;
+$theme_primary:        $dark_blue;
+
+$fib_blue_bright:      $bright_blue;
+$fib_blue_dark:        $dark_blue;
+$fib_blue_grey:        $blue_grey;
+$fib_blue_light:       $light_blue;
+$fib_green_light:      $light_green;
+$fib_green:            $green;
+
+
+
+// SFP STYLEGUIDE
+// @JFONTES
+// https://codepen.io/super_thalamus/pen/Bdzzxx
+$theme_dark:           rgb(0,111,225);
+$theme_base:           rgb(0,148,225);
+$theme_light:          rgb(0,196,225);
+
+// ACCENT COLORS FROM SFP.NET
+$sfp_blue:             rgb(83,179,243);
+$sfp_off_blue:         rgb(75,157,194);
+$sfp_off_blue_hover:   rgb(94,141,161);
+
+$sfp_orange:           rgb(238,133,54);
+
+$brand-primary:        #3097D1;
+$brand-info:           #8eb4cb;
+$brand-success:        #2ab27b;
+$brand-warning:        #cbb956;
+$brand-danger:         #bf5329;
+
+// Typography
+$text-color:           #636b6f;
+
+// Navbar
+$navbar-default-bg:    #f5f8fa;
+
+// Buttons
+$btn-default-color:    $text-color;
+
+// Inputs
+$input-border:            lighten($text-color, 40%);
+$input-border-focus:      lighten($brand-primary, 25%);
+$input-color-placeholder: lighten($text-color, 30%);
+
+// Panels
+$panel-default-heading-bg: #fff;
