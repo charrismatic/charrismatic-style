@@ -1,8 +1,39 @@
+/*--- 
+title: Spacing 
+section: Formatting 
+---
+
+Based on the Tachyons Framework
+http://tachyons.io
+
+__Margin__  
+
+- margin-0  - no margins
+- margin-t0 - top    = 0
+- margin-r0 - right  = 0
+- margin-b0 - bottom = 0
+- margin-l0 - left   = 0
+- margin-x0 - left + right = 0
+- margin-y0 - top + bottom = 0
+- margin-autox - left + right = auto
+- margin-autoy - top + bottom = auto
+- margin-auto  - margin auto
+
+
+__Extras__
+
+- auto_margin - auto !important 
+- no_margin   - auto !important 
+
+__Vertical Spacer__
+
+- spacer - padding 1.5em 0
+
+
+*/
 
 
 
-// Based on the Tachyons Framework
-// http://tachyons.io
 .margin {
   &-0  { margin:        0 }
   &-t0 { margin-top:    0 }

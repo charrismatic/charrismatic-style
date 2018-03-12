@@ -19,35 +19,28 @@ i.svg_icon {
 
 
 // IMAGE ICONS 
-.icon--shipping-white { background-image:imageUrl( $media_url, "shipping-black.png")}
-.icon--newspaper      { background-image:imageUrl( $media_url, "newspaper.png")}
-.icon--shipping       { background-image:imageUrl( $media_url, "shipping-black.png")}
-.icon--cursor         { background-image:imageUrl( $media_url, "cursor.png")}
-.icon--shirt          { background-image:imageUrl( $media_url, "shirt.png")}
-
-.icon--twitter        { background-image: define_icon(font-awesome,     twitter, $white);     background-color: $twitter; }
-.icon--facebook       { background-image: define_icon(font-awesome,    facebook, $white);    background-color: $facebook; }
-.icon--linkedin       { background-image: define_icon(font-awesome,    linkedin, $white);    background-color: $linkedin; }
-.icon--googleplus     { background-image: define_icon(font-awesome, google-plus, $white); background-color: $google_plus; }
- 
-.ic-caret-down                       { background-image: define_icon(font-awesome, caret-down, $white); }
-.ic-caret-down.red                   { background-image: define_icon(font-awesome, caret-down, $accent_red); }
-.ic-caret-down.orange-light          { background-image: define_icon(font-awesome, caret-down, lighten($accent_orange, 15%)); }
-.ic-chevron-circle-up                { background-image: define_icon(font-awesome, chevron-circle-up, $grey_70); }
-.ic-chevron-circle-up:hover          { background-image: define_icon(font-awesome, chevron-circle-up, $accent_orange); }
+.icon--twitter                { background-image: define_icon(font-awesome,     twitter, $white); background-color: $twitter; }
+.icon--facebook               { background-image: define_icon(font-awesome,    facebook, $white); background-color: $facebook; }
+.icon--linkedin               { background-image: define_icon(font-awesome,    linkedin, $white); background-color: $linkedin; }
+.icon--googleplus             { background-image: define_icon(font-awesome, google-plus, $white); background-color: $google_plus; }
+.ic-caret-down                { background-image: define_icon(font-awesome, caret-down,  $grey_30); }
+.ic-caret-down.red            { background-image: define_icon(font-awesome, caret-down,  $desturated_red); }
+.ic-caret-down.orange-light   { background-image: define_icon(font-awesome, caret-down,  lighten($accent_orange, 15%)); }
+.ic-chevron-circle-up         { background-image: define_icon(font-awesome, chevron-circle-up,  $grey_70); }
+.ic-chevron-circle-up:hover   { background-image: define_icon(font-awesome, chevron-circle-up,  $accent_orange); }
 
 // COMMENT BUBBLES
-%comment_bubbles                     { background-image: define_icon(font-awesome, comments,   lighten($accent_orange, 5%)) }
-%comment-bubbles-outline             { background-image: define_icon(font-awesome, comments-o, lighten($accent_orange, 15%)) }
+%comment_bubbles              { background-image: define_icon(font-awesome, comments,   lighten($accent_orange, 5%)) }
+%comment-bubbles-outline      { background-image: define_icon(font-awesome, comments-o, lighten($accent_orange, 15%)) }
 
 .comment-bubbles {
   @extend %comment_bubbles;
 }
 
-%ic-search--white                    { background-image: define_icon(font-awesome,       search,  $white) }
-%ic_ui_indicator_next                { background-image: define_icon(font-awesome, chevron-down, $grey_90) }
+%ic-search--white             { background-image: define_icon(font-awesome,       search,  $white) }
+%ic_ui_indicator_next         { background-image: define_icon(font-awesome, chevron-down, $grey_90) }
 
-.report-url::before                  { background-image:define_icon(font-awesome, plus-square-o ,  $white) }
+.report-url::before           { background-image:define_icon(font-awesome, plus-square-o ,  $white) }
 
 
 // COLLAPSIBLE LIST EXPAND BUTTON

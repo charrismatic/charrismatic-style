@@ -31,15 +31,22 @@ section {
         background: #fff;
       }
     }
+
+  .item__label {
+    white-space: nowrap;
+    background: white;
+    padding: 3px;
+  }
 }
 
 .debug_outline_structure {
-  * { outline: 1px solid #123; }
+  > * { outline: 1px solid #123; }
 }
 
 .wireframe_guides {
   * { outline: 1px dashed rgb(194, 129, 129); }
 }
+
 code {
   padding: 2px 4px;
   font-size: 90%;

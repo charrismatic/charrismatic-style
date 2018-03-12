@@ -1,8 +1,83 @@
-/* FLEX.SCSS */
+/*---
+title: Flex Classes 
+section: Layout 
+---
 
-//---------------
-//   DEFINITIONS
-//---------------
+
+Flex Class Groups 
+
+These classes modify the parent and children elements 
+
+
+### .flex
+
+__flex (Parent)__
+
+```
+display: flex;
+```
+
+__flex > * (Direct Descendant Children)__
+
+```
+flex: 0 1 auto;
+margin: 0 1em;
+```
+
+### flex-row 
+
+
+__flex-row (Parent)__
+
+INTENDED FOR A SINGLE ROW OR ITEMS STRETCHING LEFT TO RIGHT 
+
+```
+display: flex;
+flex-direction: row;
+```  
+  
+
+__flex-row > * (Direct Descendant Children)__
+
+```
+flex: 0 1 auto;
+margin: 0 1em;
+```
+
+LETS FIRST AND LAST ELEMENTS REACH CONTAINER EDGES 
+```
+&:first-child { margin-left: 0; }
+&:last-child { margin-right: 0;}
+```
+  
+\*MODIFIER
+
+__flex-wrap__
+
+ADDING FLEX WRAP BREAKS THE ROW INTO A GRID AFTER THE CONTAINER   
+REACHES 100%, IT ALSO RESETS THE FIRST AND LAST CHILD MARGINS TO MATCH THE   
+REST OF THE ELEMENTS  
+
+
+### flex-col 
+
+CHANGE FLEX DIRECTION FROM ROW TO COLUMN AND ADJUST CHILD PROPERTIES TO PREVENT 
+VERTICAL COLLAPSE 
+
+
+
+### EXTRAS 
+
+| Class | Description | 
+| ----- | ----------- |
+| flex-item  | Manually add the properties of a flex > child descedant  |
+| flex_fit   | Force all child nodes to take up space as required (autofit)  |
+| flex_equal | Force all child nodes to take up the minimum space possible (equal fit) |
+| flex_none  | This element will not stretch or shrink  |
+ 
+
+*/
+
 // GENERAL FLEX PARENT
 %flex {
   display: flex;
@@ -11,8 +86,6 @@
     margin: 0 1em;
   }
 }
-// .flex { @extend %flex; }
-
 
 // SINGLE ROW FLEX CONTAINER
 %fl_row {
@@ -25,16 +98,13 @@
     &:last-child { margin-right: 0;}
   }
 }
-// .flex-row {  @extend %fl_row; }
 
 
 // VERTICAL FLEXIBLE BOX
 %_fl_col-parent {
   flex-direction: column;
-
   justify-content: space-between;
   align-items: center;
-
   margin: .5em 0 0 0;
   padding: 0 0 0 0;
   position: relative;
@@ -66,77 +136,74 @@
     }
   }
 }
-// .flex-col { @extend %fl_col; }
 
 
-%flex_mobile_stacked {
-  flex-wrap: wrap;
-  > * {
-    flex-basis: 100%;
-    margin: 0.5em 0;
-  }
-}
-
-%fl_parent--push_last_child-after {
-  > *:last-child::after {
-    content:"";
-    display: block;
-    flex-basis: 100;
-    flex-grow: 1;
-    flex-shrink: 1;
-  }
-}
-
-%fl_parent--push_last_child-before {
-  > *:last-child::before {
-    content:"";
-    display: block;
-    flex-basis: 100;
-    flex-grow: 1;
-    flex-shrink: 1;
-  }
-}
-
-%fl_child--push_self--before {
-  &::before {
-    display: block;
-    flex-basis: 100;
-    flex-grow: 1;
-    flex-shrink: 1;
-  }
-}
-
-%fl_child--push_self--after {
-  &::after {
-    display: block;
-    flex-basis: 100;
-    flex-grow: 1;
-    flex-shrink: 1;
-  }
-}
-
-
-%fl-base--fit { > * { flex-basis: 100%; } }
-%fl-base--equal { > * { flex-basis: 0; } }
-
-%fl-flex--none {
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-
-%fl_col--equal-ht {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-}
 
 //---------------
 //   CLASSES
 //---------------
-.flex { @extend %flex; }
+.flex { 
+  display: flex;
+  > * {
+    flex: 0 1 auto;
+    margin: 0 1em;
+  }
+}
 
+// INTENDED FOR A SINGLE ROW OR ITEMS STRETCHING LEFT TO RIGHT 
 .flex-row {
-  @extend %fl_row;
+  display: flex;
+  flex-direction: row;
+  
+   > * {
+    flex: 0 1 auto;
+    margin: 0 1em;
+    // LET FIRST AND LAST ELEMENTS REACH CONTAINER EDGES 
+    &:first-child { margin-left: 0; }
+    &:last-child { margin-right: 0;}
+  }
+  
+  &.flex_wrap {
+    > * {
+     flex: 0 1 auto;
+     margin: 0 1em;
+     // FIRST AND LAST ARE NO LONGER ROW START AND ROW END
+     &:first-child { margin-left: 1em; }
+     &:last-child { margin-right: 1em;}
+   }
+  }
+}
+
+
+
+// FLEX COLUMN PARENT 
+.flex-col { 
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: .5em 0 0 0;
+  padding: 0 0 0 0;
+  position: relative; 
+  
+  // FLEX COLUMN CHILD 
+  > * {
+    position: relative;
+    width: 94%;
+    flex: 0 1 auto;
+    margin: 0 auto 0 auto;
+    padding: .5em 0 .5em 0;
+
+    // FIRST ELEMENT STICKY TO TOP
+    &:first-child {
+      flex: 0 0 auto;
+      padding: 0 0 .5em 0;
+    }
+    // LAST ELEMENT STICKY TO BOTTOM
+    &:last-child {
+      flex: 0 0 auto;
+      padding: 0.5em 0 0 0;
+    }
+  }
 }
 
 .flex-item {
@@ -146,4 +213,15 @@
   &:last-child { margin-right: 0; }
 }
 
-.flex-col { @extend %fl_col; }
+.flex_fit { 
+  > * {  flex-basis: 100%; } 
+}
+
+.flex_equal { 
+  > * { flex-basis: 0; } 
+}
+
+.flex_none {
+  flex-grow: 0;
+  flex-shrink: 0;
+}

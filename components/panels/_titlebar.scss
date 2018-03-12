@@ -1,19 +1,33 @@
-/*
+/*---
+title: title bar
+section: components 
+---
 
-# EXAMPLE HTML
-```
+
+```example:html
 <div class="titlebar">
   <div class="titlebar__marker"><i class="titlebar__icon icon--cursor"></i></div>
-  <h3 class="titlebar__title">Customer Care</h3>
+  <h3 class="titlebar__title">Section Title</h3>
 </div>
 ```
 */
 
+.icon--cursor { background-image: define_icon( font-awesome, search, $grey_80); }
 
 .titlebar {
   background-color: $grey_03;
   position: relative;
   display: flex;
+  
+  .titlebar__icon {  
+      @extend %svg_icon;   
+      height: 2rem;
+      width: 2rem;
+      background-size: 100% 100%;
+      margin: 0;
+  }  
+  
+
   
   &__marker {
     background-image: imageUrl( $media_url, "titlebar-marker.png");

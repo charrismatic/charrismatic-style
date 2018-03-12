@@ -1,7 +1,23 @@
+/*--- 
+title: Border Radius 
+section: Formatting 
+---
 
-.box_rounded {
-  &--1 { border-radius: 1em; }
-  &--2 { border-radius: 2em; }
-  &--3 { border-radius: 3em; }
-  &--50 { border-radius: 50%; }
+__BORDER RADIUS__ 
+
+- br_1   - border-radius: 1rem
+- br_2   - border-radius: 2rem
+- br_3   - border-radius: 3rem
+- br_50  - border-radius: 50%
+- br_100 - border-radius: 100%
+
+*/
+
+
+.br {
+  &_1 { border-radius: 1rem; }
+  &_2 { border-radius: 2rem; }
+  &_3 { border-radius: 3rem; }
+  &_50 { border-radius: 50%; }
+  &_100 { border-radius: 100%; }
 }

@@ -4,31 +4,59 @@ name: components_box
 section: components 
 ---
 
-DEMO BOX
+Basic Wrapped Box 
 
 ```example:html  
-<div class="box--outer">
- <div class="box--inner">
-   CONTENT
+<div class="box__outer">
+ <div class="box__inner">
+   <span class="box__title">CONTENT</span>
  </div>
 </div>
 ```
+
+```example:html  
+<section class="flex-row">
+<div class="box__outer">
+ <div class="box__inner">
+   <span class="box__title">CONTENT</span>
+ </div>
+</div>
+<div class="box__outer">
+ <div class="box__inner">
+   <span class="box__title">CONTENT</span>
+ </div>
+</div>
+<div class="box__outer">
+ <div class="box__inner">
+   <span class="box__title">CONTENT</span>
+ </div>
+</div>
+</section>
+```
+
 */
 
  
 .box {
-  &--outer {
-    width: 200px;
-    height: 200px;
-    border: 1px solid red; 
+  position: relative;
+  
+  &__outer {
+    padding: 1em;
     margin: 0 auto;
-    position: relative;
+    border: 1px solid $grey_20;
  
-    .box--inner {
+    .box__inner {
       position: relative;
-      width: 80%;
+      max-width: 90%;
       padding: 1em;
       margin: auto;
+      border: 1px solid $grey_10;
+    }
+    
+    .box__title {
+      text-align: center;
+      display: block;
+      color: inherit;
     }
   }
 }

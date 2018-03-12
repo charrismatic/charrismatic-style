@@ -1,39 +1,73 @@
 
-@import "theme_color_variables";
-
+// @import "theme_color_variables";
 
 .bg {
-  &-light { background: $theme_light; }
-  &-base  { background: $theme_base; }
-  &-dark  { background: $theme_dark; }
-  &-accent-dark  { background: $theme_dark_red; }
-  &-accent-light { background: $theme_light_red; }
+  &_light                { background-color: $theme_light !important; }
+  &_neutral              { background-color: $theme_base !important; }
+  &_dark                 { background-color: $theme_dark !important; }
+  &_theme-dark-blue      { background-color: $fib_blue_dark !important; }
+  &_theme-bright-blue    { background-color: $fib_blue_bright !important; }
+  &_theme-light-blue     { background-color: $fib_blue_light !important; }
+  &_theme-blue-grey      { background-color: $fib_blue_grey !important; }
+  &_theme-green          { background-color: $fib_green !important; }
+  &_theme-green-light    { background-color: $fib_green_light !important; }
+  &_accent-dark          { background-color: $theme_dark_red; }
+  &_accent-light         { background-color: $theme_light_red; }
+  &_theme_dark           { background-color: $theme_dark; }
+  &_theme_dark_red       { background-color: $theme_dark_red; }
+  &_theme_light          { background-color: $theme_light; }
+  &_theme_light_red      { background-color: $theme_light_red; }
+  &_theme_blue_dark      { background-color: $theme_blue_dark; }
+  &_theme_blue_light     { background-color: $theme_blue_light; }
+  &_theme_font_color     { background-color: $theme_font_color; }
+  &_theme_green          { background-color: $theme_green; }
+  &_theme_primary        { background-color: $theme_primary; }
+  &_font_color_base      { background-color: $font_color_base }
+  &_blue_grey            { background-color: $blue_grey;  }
+  &_bright_blue          { background-color: $bright_blue;  }
+  &_dark_blue            { background-color: $dark_blue;  }
+  &_light_blue           { background-color: $light_blue;  }
+  &_light_green          { background-color: $light_green;  }
+  &_theme_base           { background-color: $theme_base;  }
+  &_primary              { background-color: $theme_primary;  }
+  &_info                 { background-color: $theme_info;  }
+  &_success              { background-color: $theme_success;  }
+  &_warning              { background-color: $theme_warning;  }
+  &_danger               { background-color: $theme_danger;  }
 }
-
-.color {
-  &-light   { color: $theme_light !important; }
-  &-neutral { color: $theme_base !important; }
-  &-dark    { color: $theme_dark !important; }
-  &-accent-dark  { color: $theme_dark_red; }
-  &-accent-light { color: $theme_light_red; }
-}
-
 
 // THEME SPECIFIC COLOR CLASSES
 .color {
-  &--theme-dark-blue { color: $fib_blue_dark !important; }
-  &--theme-bright-blue { color: $fib_blue_bright !important; }
-  &--theme-light-blue { color: $fib_blue_light !important; }
-  &--theme-blue-grey { color: $fib_blue_grey !important; }
-  &--theme-green { color: $fib_green !important; }
-  &--theme-green-light { color: $fib_green_light !important; }
-}
-
-.bg_color {
-  &--theme-dark-blue { background-color: $fib_blue_dark !important; }
-  &--theme-bright-blue { background-color: $fib_blue_bright !important; }
-  &--theme-light-blue { background-color: $fib_blue_light !important; }
-  &--theme-blue-grey { background-color: $fib_blue_grey !important; }
-  &--theme-green { background-color: $fib_green !important; }
-  &--theme-light-green { background-color: $fib_green_light !important; }
+  &_light                { color: $theme_light !important; }
+  &_neutral              { color: $theme_base !important; }
+  &_dark                 { color: $theme_dark !important; }
+  &_theme-dark-blue      { color: $fib_blue_dark !important; }
+  &_theme-bright-blue    { color: $fib_blue_bright !important; }
+  &_theme-light-blue     { color: $fib_blue_light !important; }
+  &_theme-blue-grey      { color: $fib_blue_grey !important; }
+  &_theme-green          { color: $fib_green !important; }
+  &_theme-green-light    { color: $fib_green_light !important; }
+  &_accent-dark          { color: $theme_dark_red; }
+  &_accent-light         { color: $theme_light_red; }
+  &_theme_dark           { color: $theme_dark; }
+  &_theme_dark_red       { color: $theme_dark_red; }
+  &_theme_light          { color: $theme_light; }
+  &_theme_light_red      { color: $theme_light_red; }
+  &_theme_blue_dark      { color: $theme_blue_dark; }
+  &_theme_blue_light     { color: $theme_blue_light; }
+  &_theme_font_color     { color: $theme_font_color; }
+  &_theme_green          { color: $theme_green; }
+  &_theme_primary        { color: $theme_primary; }
+  &_font_color_base      { color: $font_color_base }
+  &_blue_grey            { color: $blue_grey;  }
+  &_bright_blue          { color: $bright_blue;  }
+  &_dark_blue            { color: $dark_blue;  }
+  &_light_blue           { color: $light_blue;  }
+  &_light_green          { color: $light_green;  }
+  &_theme_base           { color: $theme_base;  }
+  &_primary              { color: $theme_primary;  }
+  &_info                 { color: $theme_info;  }
+  &_success              { color: $theme_success;  }
+  &_warning              { color: $theme_warning;  }
+  &_danger               { color: $theme_danger;  }
 }

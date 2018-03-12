@@ -1,27 +1,13 @@
-/*---
-title: Typography 
-name: base_typography  
----
+.font_wt {
+  &-reg { font-weight: $font_weight--regular; }
+  &-med { font-weight: $font_weight--medium; }
+  &-sem { font-weight: $font_weight--semibold; }
+  &-bld { font-weight: $font_weight--bold; }
+  &-ext { font-weight: $font_weight--extrabold; }
+}
 
-Typography and Scale 
-Fonts
-Body - proxima-nova
-Headings - Lato
 
-```example:html
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>
-```
 
-```example:html
-<p>This is just a sample section. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis asperiores temporibus beatae fugit totam pariatur, aliquam commodi consequuntur id error ipsam suscipit quas doloremque perferendis quam! Ullam, debitis ab maiores.</p>
-```
-*/
- 
 // Altered visual appearance but semantically correct headings
 .h {
   &1 { font-size: 2.000rem; line-height: 1.25em; }
@@ -57,7 +43,7 @@ Headings - Lato
   &-14 { font-size: 5.202em;} // 83.225px
   &-15 { font-size: 5.852em;} // 93.628px
   &-16 { font-size: 6.583em;} // 105.332px
-  
+
   // DECREASING SCALE (MINUS)
   &-m1 { font-size: 0.889em;}  // 14.222px
   &-m2 { font-size: 0.79em ;}  // 12.642px
@@ -88,10 +74,11 @@ Headings - Lato
 // h2 { font-size: 2.5em; /* 16 x 2.5 = 40 */ }
 // h1 { font-size: 4.0em; /* 16 x 4.0 = 64 */ }
 
-// // Golden Ratio ( in Base 10 )  
+// // Golden Ratio ( in Base 10 )
 // ------------------------
 // body { font-size: 10px;   /*font-size: 62.5%;*/ }
 // p  { font-size: 1.6000em; /* 10 x 1.6 = 16   */ }
 // h3 { font-size: 2.5888em; /* 10 x 2.5888em = 25.888 */ }
 // h2 { font-size: 4.1887em; /* 10 x 4.1887em = 41.887 */ }
 // h1 { font-size: 6.7773em; /* 10 x 6.7773em = 67.773 */ }
+// 

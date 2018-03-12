@@ -5,7 +5,7 @@
   position: relative;
   overflow-x: hidden;
 
-  @include max_width( $width_tablet_device_sm ) {
+  @include max_width( _size(tablet_sm)) {
     padding: 5em 0 0 0;
   }
 
@@ -51,7 +51,7 @@
       flex-basis: 30%;
       flex-basis: 30vw;
       margin: 1.5em 0 0 1.5em;
-      @include max_width ($nav_break_md) { }
+      @include max_width (  _size(tablet_sm) ) { }
       img {
         box-shadow: 4px 1px 10px 0px rgba(66, 66, 66, 0.78);
         position: relative;

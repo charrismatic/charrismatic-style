@@ -1,8 +1,9 @@
-
-
-// FONT FAMILY NAMES 
+// FONT FAMILY NAMES
 $font_family--prox: 'proxima-nova';
 $font_family--lato: 'Lato';
+
+$default_font_heading: $font_family--lato;
+$default_font_body: $font_family--prox;
 
 //Font Weights
 $font_weight--regular:   400;
@@ -10,9 +11,4 @@ $font_weight--medium:    500;
 $font_weight--semibold:  600;
 $font_weight--bold:      700;
 $font_weight--extrabold: 800;
-
-// Desktop
-body {
-  font-size: 16px;
-  line-height: 1.375em;
-}
+ 

@@ -4,14 +4,12 @@ html,
 body,
 .wrapper {
   margin: 0;
-  overflow: auto;
   padding: 0;
   position: relative;
 }
 
 a {
   color: inherit;
-
   &:hover { color: inherit; }
 }
 
