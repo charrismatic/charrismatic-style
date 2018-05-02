@@ -5,7 +5,7 @@ section: Layout
 
 Max Width Wrapper Class
 
-Use on inner section rows/wraps to keep content from extending to the browser wall 
+Use on inner section rows/wraps to keep content from extending to the browser wall
 
 | class           | width  | class      | width |
 | --------------- | ------ | ---------- | ---- |
@@ -31,7 +31,7 @@ Use on inner section rows/wraps to keep content from extending to the browser wa
   <div class="row box__outer max_width--1000"><span class="item__label">max_width--1000</span> </div>
   <div class="row box__outer max_width--1200"><span class="item__label">max_width--1200</span> </div>
   <div class="row box__outer max_width--none"><span class="item__label">max_width--none</span> </div>
-</section> 
+</section>
 
 <section class="styleguide_section wireframe_guides">
   <div class="row box__outer width--10p "><span class="item__label">width--10p</span>   </div>
@@ -44,22 +44,23 @@ Use on inner section rows/wraps to keep content from extending to the browser wa
   <div class="row box__outer width--80p "><span class="item__label">width--80p</span> </div>
   <div class="row box__outer width--90p "><span class="item__label">width--90p</span> </div>
   <div class="row box__outer width--100p"><span class="item__label">width--100p</span> </div>
-</section> 
+</section>
 
 */
 
 .max_width {
-  &--500  { max-width: 500px !important; margin: auto; }
-  &--600  { max-width: 600px !important; margin: auto; }
-  &--700  { max-width: 700px !important; margin: auto; }
-  &--800  { max-width: 800px !important; margin: auto; }
-  &--900  { max-width: 900px !important; margin: auto; }
-  &--1000 { max-width: 1000px !important; margin: auto; }
-  &--1200 { max-width: 1100px !important; margin: auto; }
-  &--1300 { max-width: 1300px !important; margin: auto; }
-  &--1400 { max-width: 1400px !important; margin: auto; }
-  &--1500 { max-width: 1500px !important; margin: auto; }
-  &--none { max-width: none !important; }
+  &--500  { max-width: 500px !important;  }
+  &--600  { max-width: 600px !important;  }
+  &--700  { max-width: 700px !important;  }
+  &--800  { max-width: 800px !important;  }
+  &--900  { max-width: 900px !important;  }
+  &--1000 { max-width: 1000px !important; }
+  &--1100 { max-width: 1100px !important; }
+  &--1200 { max-width: 1200px !important; }
+  &--1300 { max-width: 1300px !important; }
+  &--1400 { max-width: 1400px !important; }
+  &--1500 { max-width: 1500px !important; }
+  &--none { max-width: none !important;   }
 }
 
 

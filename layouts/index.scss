@@ -7,7 +7,7 @@
 
 @import 'base_layout';
 
-// FUNCTIONS & HELPERS 
+// FUNCTIONS & HELPERS
 
 @import 'layout_classes__aspect_ratio';
 
@@ -25,3 +25,7 @@
 @import 'flex_utilities';
 
 // @import 'columns';
+
+
+// HELPERS FOR CMS CONTENT
+@import 'section_layouts';

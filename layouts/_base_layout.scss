@@ -1,6 +1,7 @@
-// BASE 
+// BASE
 
-html, body {
+html,
+body {
   position: relative;
   min-height: 100%;
   display: block;
@@ -10,26 +11,29 @@ html, body {
 
 
 // A SECTION IS A HIGH LEVEL SEMANTIC BLOCK
-// SECTIONS SHOULD SPAN 100% OF THE HORIZONTAL SPACE 
+// SECTIONS SHOULD SPAN 100% OF THE HORIZONTAL SPACE
 // OF ITS PARENT CONTAINER
 // HEADER AND FOOTER ARE SECTIONS WITH SPECIFIC CONTEXT
 header,
 footer,
 section {
   display: block;
-  padding: .6em 0;
   position: relative;
-  margin: 0 auto;
+  margin: initial;
   max-width: 100%;
 }
 
 
 // A ROW IS AN INNER WRAPPER THAT SETS LAYOUTS, BOUNDARIES, AND PADDING
 .row {
-  padding: 0 1em; 
+  margin-left: 2em;
+  margin-right: 2em;
   display: block;
-  margin: 0 auto;
+  max-width: $default_row_max_width
 }
+
+.vpad  { padding-top: 2em; padding-bottom: 2em; }
+.hpad  { padding-left: 2em; padding-right: 2em; }
 
 
 // CONTENT BLOCKS ARE CONTAINERS THAT WRAP CMS / STATIC CONTENT
@@ -45,8 +49,4 @@ section {
 }
 
 
-
 body { min-width: $default_page_min_width; }
-
-.row { max-width: $default_row_max_width; }
- 

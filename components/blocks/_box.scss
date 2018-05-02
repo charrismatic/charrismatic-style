@@ -1,12 +1,12 @@
 /*---
 title: box
 name: components_box
-section: components 
+section: components
 ---
 
-Basic Wrapped Box 
+Basic Wrapped Box
 
-```example:html  
+```example:html
 <div class="box__outer">
  <div class="box__inner">
    <span class="box__title">CONTENT</span>
@@ -14,7 +14,7 @@ Basic Wrapped Box
 </div>
 ```
 
-```example:html  
+```example:html
 <section class="flex-row">
 <div class="box__outer">
  <div class="box__inner">
@@ -36,15 +36,15 @@ Basic Wrapped Box
 
 */
 
- 
+
 .box {
   position: relative;
-  
+
   &__outer {
     padding: 1em;
     margin: 0 auto;
     border: 1px solid $grey_20;
- 
+
     .box__inner {
       position: relative;
       max-width: 90%;
@@ -52,11 +52,23 @@ Basic Wrapped Box
       margin: auto;
       border: 1px solid $grey_10;
     }
-    
+
     .box__title {
       text-align: center;
       display: block;
       color: inherit;
     }
+  }
+}
+
+.theme_box {
+  .box__outer {
+    border: none;
+  }
+
+  .box__inner {
+    border: none;
+    background: #232322;
+    color: white;
   }
 }

@@ -1,6 +1,6 @@
 /*---
 title: title bar
-section: components 
+section: components
 ---
 
 
@@ -18,17 +18,15 @@ section: components
   background-color: $grey_03;
   position: relative;
   display: flex;
-  
-  .titlebar__icon {  
-      @extend %svg_icon;   
+
+  .titlebar__icon {
+      @extend %svg_icon;
       height: 2rem;
       width: 2rem;
       background-size: 100% 100%;
       margin: 0;
-  }  
-  
+  }
 
-  
   &__marker {
     background-image: imageUrl( $media_url, "titlebar-marker.png");
     background-size: 100% 100%;
@@ -40,7 +38,7 @@ section: components
     height: 100%;
     width: 3.2rem;
   }
-  
+
   &__icon {
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -49,7 +47,7 @@ section: components
     height: 2rem;
     width: 2rem;
   }
-  
+
   &__title {
     text-transform: uppercase;
     margin: 0 0 0 5rem;

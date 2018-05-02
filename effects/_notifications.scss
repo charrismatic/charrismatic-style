@@ -1,0 +1,44 @@
+
+.success { color:#3d6611; font-weight:bold; }
+.error { color:#ee001c; font-weight:bold; }
+.notice { color:#ccc; }
+
+.messages,
+.messages ul { list-style:none !important; margin:0; padding:0; }
+.messages { overflow:hidden; margin:0 0 10px; }
+.messages li { margin:0 0 1%; }
+.messages > li:last-child { margin-bottom:0; }
+.messages li li { margin:0; }
+.messages a { text-decoration:underline; }
+.catalog-category-view .messages { margin-top:15px; margin-bottom:15px; }
+.cms-index-index .messages,
+.cms-home .messages { margin:20px 0 20px; }
+
+.error-msg,
+.success-msg,
+.note-msg,
+.notice-msg {
+	background-position:25px center !important;
+	background-repeat:no-repeat !important;
+	padding:25px 25px 25px 80px !important;
+	font-size:12px !important;
+}
+.error-msg {
+	border-color:#c02230;
+	background-color:#F5DAD3;
+	background-image:url(/skin/frontend/fortis/default/images/i_msg-error.png);
+	color:#c02230;
+}
+.success-msg {
+	border-color:#296a23;
+	background-color:#e9ffca;
+	background-image:url(/skin/frontend/fortis/default/images/i_msg-success.png);
+	color:#296a23;
+}
+.note-msg,
+.notice-msg {
+	border-color:#7c622a;
+	background-color:#FDEDA4;
+	background-image:url(/skin/frontend/fortis/default/images/i_msg-note.png);
+	color:#7c622a;
+}

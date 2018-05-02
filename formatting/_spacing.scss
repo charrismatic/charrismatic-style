@@ -1,12 +1,12 @@
-/*--- 
-title: Spacing 
-section: Formatting 
+/*---
+title: Margins
+section: Formatting
 ---
 
 Based on the Tachyons Framework
 http://tachyons.io
 
-__Margin__  
+__Margin__
 
 - margin-0  - no margins
 - margin-t0 - top    = 0
@@ -15,15 +15,18 @@ __Margin__
 - margin-l0 - left   = 0
 - margin-x0 - left + right = 0
 - margin-y0 - top + bottom = 0
-- margin-autox - left + right = auto
-- margin-autoy - top + bottom = auto
-- margin-auto  - margin auto
+- auto_marginx - left + right = auto
+- auto_marginy - top + bottom = auto
+- auto_margin  - margin auto
+- no_marginx - left + right = auto
+- no_marginy - top + bottom = auto
+- no_margin  - margin auto
 
 
 __Extras__
 
-- auto_margin - auto !important 
-- no_margin   - auto !important 
+- auto_margin - auto !important
+- no_margin   - auto !important
 
 __Vertical Spacer__
 
@@ -31,7 +34,6 @@ __Vertical Spacer__
 
 
 */
-
 
 
 .margin {
@@ -44,9 +46,13 @@ __Vertical Spacer__
   &-y0 { margin-top:    0; margin-bottom: 0 }
 }
 
+.auto_margin {  margin: auto !important; }
+.auto_marginy { margin-top: auto !important; margin-bottom: auto !important; }
+.auto_marginx { margin-left: auto !important; margin-right: auto !important; }
 
-.auto_margin { margin: auto !important; }
-.no_margin { margin: auto !important; }
+.no_margin {  margin: 0 !important; }
+.no_marginy { margin-top: 0 !important; margin-bottom: 0 !important; }
+.no_marginx { margin-left: 0 !important; margin-right: 0 !important; }
 
 
 
@@ -54,3 +60,51 @@ __Vertical Spacer__
 .spacer {
   padding: 1.5em 0;
 }
+
+
+
+/*---
+title: Padding
+section: Formatting
+---
+
+Based on the Tachyons Framework
+http://tachyons.io
+
+__Padding__
+
+- pad-0  - no paddings
+- pad-t0 - top    = 0
+- pad-r0 - right  = 0
+- pad-b0 - bottom = 0
+- pad-l0 - left   = 0
+- pad-x0 - left + right = 0
+- pad-y0 - top + bottom = 0
+- no_pad  - padding auto
+- no_padx  - padding auto
+- no_pady  -   left + right = 0
+- auto_pad  -  top + bottom = 0
+- auto_padx - left + right = auto
+- auto_pady - top + bottom = auto
+
+*/
+
+
+.pad {
+  &-0  { padding:        0 }
+  &-t0 { padding-top:    0 }
+  &-r0 { padding-right:  0 }
+  &-b0 { padding-bottom: 0 }
+  &-l0 { padding-left:   0 }
+  &-x0 { padding-left:   0; padding-right:  0 }
+  &-y0 { padding-top:    0; padding-bottom: 0 }
+  &-autox { padding: 0 auto }
+  &-autoy { padding: auto 0 }
+}
+
+.auto_pad { padding: auto !important; }
+.auto_padx { padding-left:auto !important; padding-right: auto !important; }
+.auto_pady { padding-top: auto !important; padding-bottom: auto !important; }
+.no_pad { padding: 0 !important; }
+.no_padx { padding-left: 0 !important; padding-right: 0 !important; }
+.no_pady { padding-top: 0 !important; padding-bottom: 0 !important; }

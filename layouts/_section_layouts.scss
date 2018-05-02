@@ -1,7 +1,6 @@
 
 // CORE STRUCTURE
 section {
-  padding: 1em 0;
 
   // CHILD SELECTOR
   &:first-child { .page-wrap { padding-top: 0; } }
@@ -15,6 +14,15 @@ section {
   &.row_width--full { .page-wrap { max-width: none; width: 100%; } }
 }
 
+
+.section__full {
+  > .row {
+    padding: 0;
+    margin: 0;
+    max-width: none;
+  }
+}
+
 .page-wrap {
   width: 90%;
   min-height: 0;
@@ -22,18 +30,18 @@ section {
   overflow: unset;
 
   // 700
-  @include max_width($tablet_size) {
+  @include max_width(_size(tablet_lg)) {
     padding: 1em 0;
   }
 
   // > 490
-  @include max_width($theme_mobile_xl) {
+  @include max_width(_size(tablet_sm)) {
     width: auto;
     padding: 1em 1.5em;
   }
 
   // > 375
-  @include max_width($width_mobile_md) {
+  @include max_width(_size(mobile_lg)) {
     padding: 1em 1em;
   }
 }
@@ -44,7 +52,7 @@ section {
 
   .page-wrap {
     display: block;
-    @include max_width( $theme_tablet_md ) {
+    @include max_width(_size(tablet_sm) ) {
       width: auto;
       margin: 0;
       padding: 0;
@@ -57,13 +65,13 @@ section {
   }
 
   .lp-section-image-wrap {
-    @include max_width( $theme_tablet_md ) {
+    @include max_width( _size(tablet_sm)) {
 
     }
   }
 
   // DESKTOP
-  @include min_width($theme_tablet_md) {
+  @include min_width(_size(tablet_sm)) {
     .page-wrap {
       display: flex;
     }
@@ -130,14 +138,14 @@ section {
 .banner_image {
   padding: 2em 0 1em;
 
-  @include max_width($tablet_size) {
+  @include max_width(_size(tablet_lg)) {
     padding: 0;
     .lp-section-image-wrap { margin: 0; }
   }
 
   .page-wrap {
     padding: 0;
-    @include max_width($tablet_size) {
+    @include max_width(_size(tablet_sm)) {
       width: 100%;
     }
   }
