@@ -1,24 +1,37 @@
 /*---
-title: Hamburger Menu Button
+title: Hamburger  
+section: Controls
 description: Tasty CSS-animated hamburgers
 author: Jonathan Suh @jonsuh
-site: https://jonsuh.com/hamburgers
 link: https://github.com/jonsuh/hamburgers
 ---
 
+source: https://jonsuh.com/hamburgers
+
+Menu Indicator Hamburger 
+
 Dynamic Hamburger Menu Button
 
-```example:html
+
+<section class="styleguide_section">
   <button class='hamburger hamburger--squeeze' type='button'>
     <span class='hamburger-box'>
       <span class='hamburger-inner'>
       </span>
     </span>
   </button>
-```
+  <button class='hamburger hamburger--squeeze active' type='button'>
+    <span class='hamburger-box'>
+      <span class='hamburger-inner'>
+      </span>
+    </span>
+  </button>
+</section> 
+
 */
 
-@import "../../colors";
+
+// @import "../../colors";
 
 .hamburger {
   padding: 15px;
@@ -39,7 +52,7 @@ Dynamic Hamburger Menu Button
   .hamburger-inner::before,
   .hamburger-inner::after,
   .hamburger-inner {
-    background-color: $grey_30;
+    background-color: $grey_60;
   }
 }
 
@@ -63,7 +76,7 @@ Dynamic Hamburger Menu Button
 .hamburger-inner::after {
   width: 40px;
   height: 4px;
-  background-color: $white;
+  background-color: $grey_30;
   border-radius: 4px;
   position: absolute;
   transition-property: transform;

@@ -4,6 +4,27 @@ section: controls
 ---
 
 Checkbox Filters 
+<li class="report" data-errors-count="1" data-warnings-count="4" data-notices-count="9">
+<section id="controls">
+  <div class="filters flex-row">
+    <input id="filter_errors"  class="cbox-filters errors" type="radio" onclick="toggleFilter('errors')" name="notification-type" checked>
+    <label for="filter_errors" class="errors">Errors</label>
+    <input id="filter_warnings"  class="cbox-filters warnings" type="radio" onclick="toggleFilter('warnings')" name="notification-type">
+    <label for="filter_warnings" class="warnings">Warnings</label>
+    <input id="filter_notices"  class="cbox-filters notices" type="radio" onclick="toggleFilter('notices')" name="notification-type">
+    <label for="filter_notices" class="notices">Notices</label>
+  </div>
+</section>
+<script>
+// TOGGLE FILTER STATE FOR NOTIFICATION LIST
+function toggleFilter(name) {
+  var container = document.querySelector('#reports');
+  container.setAttribute('data-filter','show-' + name);
+}</script>
+
+
+
+
 
 */
 

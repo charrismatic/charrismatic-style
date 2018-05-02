@@ -1,3 +1,15 @@
+/*---
+title: Forms 
+section: components 
+---
+
+Forms 
+
+
+*/
+
+
+
 // FORMS
 label {
   display: block;
@@ -53,7 +65,7 @@ input[type="submit"] {
     margin: 0;
     margin-top: 26px;
     padding: 15px 20px;
-    background: $white_10;
+    background: $grey_10;
     line-height: 1em;
   }
 
@@ -96,7 +108,7 @@ input[type="submit"] {
   .options {
     display: flex;
     padding-top: 2em;
-    border-top: 1px solid $white_15;
+    border-top: 1px solid $grey_15;
     font-size: 1em;
     line-height: 2em;
 

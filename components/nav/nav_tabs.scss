@@ -1,5 +1,5 @@
 /*---
-title: NAV | NAV-TABS
+title: Nav-Tabs
 name: nav_tabs
 section: components 
 ---
@@ -18,12 +18,13 @@ section: components
 */
 
 .nav-tabs {
-  padding-left: 0;
+  padding-left: 0em;
   list-style: none;
   margin-bottom: 1em;
   background: #efefef;
   border-bottom: 1px solid lighten($theme_primary, 20%);
   display: flex;
+  color: $theme_primary;
 
   > .nav-item > a {
     position: relative;

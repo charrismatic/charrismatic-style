@@ -1,0 +1,80 @@
+/*---
+title: Aspect Ratio
+section: Layout
+---
+
+Max Width Wrapper Class
+
+Use on inner section rows/wraps to keep content from extending to the browser wall
+
+| class           | width  | class      | width |
+| --------------- | ------ | ---------- | ---- |
+| max_width--none | none   | width--0    | 0    |
+| max_width--500  | 500px  | width--10p  | 10%  |
+| max_width--600  | 600px  | width--20p  | 20%  |
+| max_width--700  | 700px  | width--30p  | 30%  |
+| max_width--800  | 800px  | width--40p  | 40%  |
+| max_width--900  | 900px  | width--50p  | 50%  |
+| max_width--1000 | 1000px | width--60p  | 60%  |
+| max_width--1100 | 1100px | width--70p  | 70%  |
+| max_width--1200 | 1200px | width--80p  | 80%  |
+| max_width--1300 | 1300px | width--90p  | 90%  |
+| max_width--1400 | 1400px | width--100p | 100% |
+| max_width--1500 | 1500px | width--auto | auto |
+
+<section class="styleguide_section wireframe_guides">
+  <div class="row box__outer max_width--500"><span class="item__label">max_width--500</span>   </div>
+  <div class="row box__outer max_width--600"><span class="item__label">max_width--600</span>   </div>
+  <div class="row box__outer max_width--700"><span class="item__label">max_width--700</span>   </div>
+  <div class="row box__outer max_width--800"><span class="item__label">max_width--800</span>   </div>
+  <div class="row box__outer max_width--900"><span class="item__label">max_width--900</span>   </div>
+  <div class="row box__outer max_width--1000"><span class="item__label">max_width--1000</span> </div>
+  <div class="row box__outer max_width--1200"><span class="item__label">max_width--1200</span> </div>
+  <div class="row box__outer max_width--none"><span class="item__label">max_width--none</span> </div>
+</section>
+
+<section class="styleguide_section wireframe_guides">
+  <div class="row box__outer width--10p "><span class="item__label">width--10p</span>   </div>
+  <div class="row box__outer width--20p "><span class="item__label">width--20p</span>   </div>
+  <div class="row box__outer width--30p "><span class="item__label">width--30p</span>   </div>
+  <div class="row box__outer width--40p "><span class="item__label">width--40p</span>   </div>
+  <div class="row box__outer width--50p "><span class="item__label">width--50p</span>   </div>
+  <div class="row box__outer width--60p "><span class="item__label">width--60p</span> </div>
+  <div class="row box__outer width--70p "><span class="item__label">width--70p</span> </div>
+  <div class="row box__outer width--80p "><span class="item__label">width--80p</span> </div>
+  <div class="row box__outer width--90p "><span class="item__label">width--90p</span> </div>
+  <div class="row box__outer width--100p"><span class="item__label">width--100p</span> </div>
+</section>
+
+*/
+
+.max_width {
+  &--500  { max-width: 500px !important;  }
+  &--600  { max-width: 600px !important;  }
+  &--700  { max-width: 700px !important;  }
+  &--800  { max-width: 800px !important;  }
+  &--900  { max-width: 900px !important;  }
+  &--1000 { max-width: 1000px !important; }
+  &--1100 { max-width: 1100px !important; }
+  &--1200 { max-width: 1200px !important; }
+  &--1300 { max-width: 1300px !important; }
+  &--1400 { max-width: 1400px !important; }
+  &--1500 { max-width: 1500px !important; }
+  &--none { max-width: none !important;   }
+}
+
+
+.width {
+  &--0    { width: 0 !important; }
+  &--10p  { width: 10% !important; }
+  &--20p  { width: 20% !important; }
+  &--30p  { width: 30% !important; }
+  &--40p  { width: 40% !important; }
+  &--50p  { width: 50% !important; }
+  &--60p  { width: 60% !important; }
+  &--70p  { width: 70% !important; }
+  &--80p  { width: 80% !important; }
+  &--90p  { width: 90% !important; }
+  &--100p { width: 100% !important; }
+  &--auto { width: auto !important; }
+}

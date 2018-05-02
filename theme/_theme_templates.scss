@@ -1,6 +1,6 @@
-// Theme Styelsheet
+// Theme Stylesheet
 
-@import "../colors";
+// @import "../colors";
 
 
 /* COMPONENTS */
@@ -38,19 +38,7 @@
   left: 1em;
 }
 
-.z-shadow-1 {
-  box-shadow: -4px 7px 24px 3px rgba(0,0,0,.6);
-}
-
 /* THEME COLORS */
-
-.swatch {
-  padding: 0.8em;
-  text-align: center;
-  color: inherit;
-  font-weight: 400;
-}
-
 
 section {
   &.light-theme {

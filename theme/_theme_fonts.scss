@@ -1,20 +1,18 @@
 
-$icon-font-path: "assets/fonts";
-$font-family-sans-serif: "Lato", sans-serif;
-$font-size-base: 14px;
-$line-height-base: 1.6;
-
-
-
 
 /* <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700" rel="stylesheet"> */
 
 // https://fonts.googleapis.com/css?family=Lato|Marvel|Megrim|Miriam+Libre|Open+Sans+Condensed:300|Reenie+Beanie|Roboto:100,700 
 //
 %heading {
-  font-family: 'Lato', sans-serif;
+  font-family: $default_font_heading, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  @extend %heading;
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: $default_font_body, sans-serif;
 }

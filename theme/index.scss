@@ -1,38 +1,192 @@
-//// 
-/// @group Theme 
-////  
+////
+/// @group Theme
+////
 
 
-/// The purpose of this package is for theme configuration  
-/// - override or extend current variable values  
-/// - set new theme specific variables  
-/// - declare theme settings or meta data that would not be appropriate elsewhere  
-///  
-///  This is not the best place to define many new features and components as they will 
-///  not likely make it back to the main library 
-/// @example  
-///    theme:  
+/// The purpose of this package is for theme configuration
+/// - override or extend current variable values
+/// - set new theme specific variables
+/// - declare theme settings or meta data that would not be appropriate elsewhere
+///
+///  This is not the best place to define many new features and components as they will
+///  not likely make it back to the main library
+/// @example
+///    theme:
 ///      primary-color: "blue"
 ///      secondary-color: "light-blue"
-///      theme-name: "demo-them"  
-///      fonts: 
+///      theme-name: "demo-them"
+///      fonts:
 ///        heading: "Strong Font Bold"
-///        body: "Nice Font Light" 
+///        body: "Nice Font Light"
 ///      icons: [fa-plus, fa-socialmedia, fa-logo]
-/// 
-/// @name $theme_configuration  
-$theme_configuration: ""; 
+///
+/// @name $theme_configuration
+$theme_configuration: "";
 
-
-
-
-// INDEPENDENT - VARIABLES 
+// INDEPENDENT - VARIABLES
 @import "theme_urls";
-@import "theme_color_variables";
-@import "theme_fonts";
-@import "theme_icons";
-@import "theme_responsive_variables";
 
+@import "theme_color_variables";
+
+/*---
+title: Theme Colors
+section: Theme
+---
+
+Theme Specific Variables and Settings
+
+<section class="styleguide_section">
+  <div class="color_swatch_group">
+  <div class="swatch color_dark_blue          "><span class="swatch__name">theme_dark_blue      </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_blue_grey          "><span class="swatch__name">theme_blue_grey      </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_theme-blue-grey    "><span class="swatch__name">theme_blue-grey    </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_theme-bright-blue  "><span class="swatch__name">theme_bright-blue  </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_bright_blue        "><span class="swatch__name">theme_bright_blue    </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_light_blue         "><span class="swatch__name">theme_light_blue     </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_theme-light-blue   "><span class="swatch__name">theme_light-blue   </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_theme_blue_light   "><span class="swatch__name">theme_blue_light   </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_theme-dark-blue    "><span class="swatch__name">theme_dark-blue    </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_theme_blue_dark    "><span class="swatch__name">theme_blue_dark    </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_light_green        "><span class="swatch__name">theme_light_green    </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_theme-green-light  "><span class="swatch__name">theme_green-light  </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_theme_green        "><span class="swatch__name">theme_green        </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_theme_dark_red     "><span class="swatch__name">theme_dark_red     </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_theme_light_red    "><span class="swatch__name">theme_light_red    </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_accent-dark        "><span class="swatch__name">theme_accent-dark  </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_accent-light       "><span class="swatch__name">theme_accent-light </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_theme_dark         "><span class="swatch__name">theme_dark         </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_theme_light        "><span class="swatch__name">theme_light        </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_neutral            "><span class="swatch__name">theme_neutral      </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_theme_base         "><span class="swatch__name">theme_theme_base     </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_theme_primary      "><span class="swatch__name">theme_primary      </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  </div>
+</section>
+
+
+Messaging
+<section class="styleguide_section">
+  <div class="color_swatch_group">
+  <div class="swatch color_info               "><span class="swatch__name">theme_info           </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_primary            "><span class="swatch__name">theme_primary        </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_danger             "><span class="swatch__name">theme_danger         </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_success            "><span class="swatch__name">theme_success        </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+  <div class="swatch color_warning            "><span class="swatch__name">theme_warning        </span>     <span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+</div>
+</section>
+
+
+
+<section class="styleguide_section">
+  <div class="color_swatch_group">
+  <div class="swatch color_blue_bright_highlight"     ><span class="swatch__name">blue_bright_highlight       </span> <span class="swatch__color" data-color="#1d88c7"></span><span class="swatch__bg_color" data-color="#1d88c7"></span></div>
+  <div class="swatch color_blue_dark_bg"              ><span class="swatch__name">blue_dark_bg                </span> <span class="swatch__color" data-color="#1b242e"></span><span class="swatch__bg_color" data-color="#1b242e"></span></div>
+  <div class="swatch color_blue_darker_bg"            ><span class="swatch__name">blue_darker_bg              </span> <span class="swatch__color" data-color="#161b21"></span><span class="swatch__bg_color" data-color="#161b21"></span></div>
+  <div class="swatch color_blue_grey_darker"          ><span class="swatch__name">blue_grey_darker            </span> <span class="swatch__color" data-color="#13171b"></span><span class="swatch__bg_color" data-color="#13171b"></span></div>
+  <div class="swatch color_blue_grey_light_bg"        ><span class="swatch__name">blue_grey_light_bg          </span> <span class="swatch__color" data-color="#2a4b6d"></span><span class="swatch__bg_color" data-color="#2a4b6d"></span></div>
+  <div class="swatch color_blue_grey_light"           ><span class="swatch__name">blue_grey_light             </span> <span class="swatch__color" data-color="#717d8a"></span><span class="swatch__bg_color" data-color="#717d8a"></span></div>
+  <div class="swatch color_blue_grey_lightest"        ><span class="swatch__name">blue_grey_lightest          </span> <span class="swatch__color" data-color="#c4cdd6"></span><span class="swatch__bg_color" data-color="#c4cdd6"></span></div>
+  <div class="swatch color_blue_lighter_pale_text"    ><span class="swatch__name">blue_lighter_pale_text      </span> <span class="swatch__color" data-color="#446d84"></span><span class="swatch__bg_color" data-color="#446d84"></span></div>
+  <div class="swatch color_blue_lighter_text"         ><span class="swatch__name">blue_lighter_text           </span> <span class="swatch__color" data-color="#446d84"></span><span class="swatch__bg_color" data-color="#446d84"></span></div>
+  <div class="swatch color_bright_blue_sky"           ><span class="swatch__name">bright_blue_sky             </span> <span class="swatch__color" data-color="#33a8cf"></span><span class="swatch__bg_color" data-color="#33a8cf"></span></div>
+  <div class="swatch color_dark_grey_blue"            ><span class="swatch__name">dark_grey_blue              </span> <span class="swatch__color" data-color="#1d252d"></span><span class="swatch__bg_color" data-color="#1d252d"></span></div>
+  <div class="swatch color_dark_teal"                 ><span class="swatch__name">dark_teal                   </span> <span class="swatch__color" data-color="#046c69"></span><span class="swatch__bg_color" data-color="#046c69"></span></div>
+  <div class="swatch color_deep_grey_blue"            ><span class="swatch__name">deep_grey_blue              </span> <span class="swatch__color" data-color="#1b2024"></span><span class="swatch__bg_color" data-color="#1b2024"></span></div>
+  <div class="swatch color_deep_grey_header_bg"       ><span class="swatch__name">deep_grey_header_bg         </span> <span class="swatch__color" data-color="#1b2024"></span><span class="swatch__bg_color" data-color="#1b2024"></span></div>
+  <div class="swatch color_elephant_grey"             ><span class="swatch__name">elephant_grey               </span> <span class="swatch__color" data-color="#38516a"></span><span class="swatch__bg_color" data-color="#38516a"></span></div>
+  <div class="swatch color_grey_blue"                 ><span class="swatch__name">grey_blue                   </span> <span class="swatch__color" data-color="#27323d"></span><span class="swatch__bg_color" data-color="#27323d"></span></div>
+  <div class="swatch color_medium_elephant_grey"      ><span class="swatch__name">medium_elephant_grey        </span> <span class="swatch__color" data-color="#38414a"></span><span class="swatch__bg_color" data-color="#38414a"></span></div>
+  <div class="swatch color_menu_top_text_color"       ><span class="swatch__name">menu_top_text_color         </span> <span class="swatch__color" data-color="#ffffff"></span><span class="swatch__bg_color" data-color="#ffffff"></span></div>
+  <div class="swatch color_postbox_header_text"       ><span class="swatch__name">postbox_header_text         </span> <span class="swatch__color" data-color="#0073aa"></span><span class="swatch__bg_color" data-color="#0073aa"></span></div>
+  <div class="swatch color_primary_title"             ><span class="swatch__name">primary_title               </span> <span class="swatch__color" data-color="#095698"></span><span class="swatch__bg_color" data-color="#095698"></span></div>
+  <div class="swatch color_theme_dark_body_bg"        ><span class="swatch__name">theme_dark_body_bg          </span> <span class="swatch__color" data-color="#25292c"></span><span class="swatch__bg_color" data-color="#25292c"></span></div>
+  <div class="swatch color_theme_dark_body_light_text"><span class="swatch__name">theme_dark_body_light_text  </span> <span class="swatch__color" data-color="#72777c"></span><span class="swatch__bg_color" data-color="#72777c"></span></div>
+  </div>
+  </section>
+
+
+*/
 
 @import "theme_color_classes";
+
+
+/*---
+title: Theme Color Classes
+section: Theme
+---
+
+Theme Color Utility Classses
+
+Theme Color and BG Colors
+- bg-color
+- color
+
+*/
+
+
+@import "theme_fonts";
+
+
+/*---
+title: Theme Icons
+section: Theme
+---
+
+Theme Specific Icon Set
+
+Theme Specific Variables and Settings
+
+<section class="styleguide_section">
+  <div class="flex-row flex-wrap">
+    <i class="svg_icon icon--twitter-square"></i>
+    <i class="svg_icon icon--twitter"></i>
+    <i class="svg_icon icon--facebook"></i>
+    <i class="svg_icon icon--linkedin"></i>
+    <i class="svg_icon icon--linkedin-square"></i>
+    <i class="svg_icon icon--googleplus"></i>
+    <i class="svg_icon icon--folder-open"></i>
+    <i class="svg_icon icon--link"></i>
+    <i class="svg_icon icon--tag"></i>
+    <i class="svg_icon ic-caret-down"></i>
+    <i class="svg_icon ic-caret-down red"></i>
+    <i class="svg_icon ic-caret-down orange-light"></i>
+    <i class="svg_icon ic-chevron-circle-up"></i>
+    <i class="svg_icon ic-chevron-circle-up:hover"></i>
+  </div>
+  <div class="flex-row flex-wrap">
+    <i class="svg_icon comment-bubbles"></i>
+    <i class="svg_icon icon--github"></i>
+    <i class="svg_icon icon--github-square"></i>
+    <i class="svg_icon icon--github-alt"></i>
+    <i class="svg_icon icon--flikr"></i>
+    <i class="svg_icon icon--npm"></i>
+    <i class="svg_icon icon--angle-down"></i>
+    <i class="svg_icon icon--angle-left"></i>
+    <i class="svg_icon icon --angle-right"></i>
+    <i class="svg_icon icon--angle-up"></i>
+    <i class="svg_icon icon--folder-open"></i>
+    <i class="svg_icon icon--tag"></i>
+    <i class="svg_icon icon--code"></i>
+    <i class="svg_icon icon--search"></i>
+  </div>
+  <div class="flex-row flex-wrap">
+    <i class="svg_icon icon--chevron-circle-up"></i>
+    <i class="svg_icon icon--chevron-circle-right"></i>
+    <i class="svg_icon icon--chevron-circle-down"></i>
+    <i class="svg_icon icon--chevron-circle-left"></i>
+    <i class="svg_icon icon--chevron-down"></i>
+    <i class="svg_icon icon--chevron-left"></i>
+    <i class="svg_icon icon--chevron-right"></i>
+    <i class="svg_icon icon--chevron-up"></i>
+  </div>
+</section>
+
+*/
+
+
+
+
+
+
+@import "theme_icons";
+
 @import "theme_templates";

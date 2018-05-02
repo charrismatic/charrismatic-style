@@ -1,57 +1,81 @@
 /*---
-title: SVG ICONS
-section: icons
-----
+title: SVG Icons
+section: Icons
+---
 
-## DEFAULT PLACEHOLDER  
+## DEFAULT PLACEHOLDER
 These icon placeholders allow us to define several extendable classes without polluting the stylesheet with unused
 It also can be used to apply the effect t things which are not always icons, when the situation necessitate it
- 
-```example 
-// Setup An Icon Base Class  
-.my_icon_class {  
-  @extend %svg_icon;   
-  // my-icon-properties ...  
-}  
-```
 
-// Define Specific Icons Image as well As Shape, Color, etc ...  
-// This Class by itself does not produce an icon as it still requires an icon selection which still needs to be defined  
-
+__Setup An Icon Base Class__
 
 ```
-// COMMENT BUBBLES
-.comment_bubbles {
-  background-image: define_icon( font-awesome, comments, lighten( #000, 5%));  
-  // ADD A UTILITY CLASS TO TOGGLE THE BAGROUND ICONS OUTLIE STATES   
-  &.outline { background-image: define_icon( font-awesome, comments-o, lighten($accent_orange, 15%)); }  
+.my_icon_class {
+  @extend %svg_icon;
+  // my-icon-properties ...
 }
+```
 
-```   
-// BASIC HTML EXAMPLE  
-```example:html
-<i class="my_icon_class comment_bubbles"></i>  
-```  
+Define Specific Icons Image as well As Shape, Color, etc ...
+
+This Class by itself does not produce an icon as it still requires an icon selection which still needs to be defined
+
+Basic Example
+
+<section class="styleguide_section">
+  <div class="flex-row">
+    <i class="svg_icon icon_times_rect "></i>
+    <i class="svg_icon icon_minus_circle "></i>
+    <i class="svg_icon icon_plus_square "></i>
+  </div>
+</section>
+
+In SASS
+
+```
+.icon_times_rect { background-image: define_icon( font-awesome, times-rectangle, $color_aqua); }
+```
+
+HTML
+
+```
+<i class="svg_icon icon_times_rect "></i>
+<i class="svg_icon icon_minus_circle "></i>
+<i class="svg_icon icon_plus_square "></i>
+```
+
+
+OPTIONAL ACCESSIBILITY TEXT
+
+```
+<i class="svg_icon icon_times_rect ">
+  <span class="icon__tite">Rect Icon</span>
+</i>
+```
+
+
+
+More detailed examples here https://codepen.io/super_thalamus/pen/wdyeGp
+
 */
 
 
-
-/// DEFAULT SVG ICON CLASS  
-/// @group icons 
-/// @name svg_icon 
-/// @example  
-///    // Setup An Icon Base Class  
-///    .my_icon_class {  
-///      @extend %svg_icon;   
-///      // my-icon-properties ...  
-///    }  
+/// DEFAULT SVG ICON CLASS
+/// @group icons
+/// @name svg_icon
+/// @example
+///    // Setup An Icon Base Class
+///    .my_icon_class {
+///      @extend %svg_icon;
+///      // my-icon-properties ...
+///    }
 
 %svg_icon {
   display: inline-block;
   font-size: 0;
   width: 50px;
   height: 50px;
-  margin: 10px 20px;
+  margin: 10px 10px;
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -61,16 +85,16 @@ It also can be used to apply the effect t things which are not always icons, whe
   shape-rendering: crispEdges;
 }
 
-/// DEFAULT ICON HOVER EFFECT PLACEHOLDER   
-/// @group icons 
+/// DEFAULT ICON HOVER EFFECT PLACEHOLDER
+/// @group icons
 %svg_icon_hover {
   background-color: $black;
   transform: scale(1.15, 1.15) rotate(-5deg);
   transition: .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-/// ICON PLACEHOLDER FOR DYNAMICALLY SIZED ICON  
-/// @group icons 
+/// ICON PLACEHOLDER FOR DYNAMICALLY SIZED ICON
+/// @group icons
 %flexible_svg_icons {
   display: inline-block;
   margin: auto;
@@ -84,9 +108,37 @@ It also can be used to apply the effect t things which are not always icons, whe
 }
 
 // ICON BASE ELEMENT AND CLASS
-.icon,
-i { @extend %svg_icon; }
+.icon {
+  @extend %svg_icon;
 
-.flexible_svg_icons {
+  // ICON SIZE UTILITY CLASSES
+  &_size {
+    &--1 { width: 1em; height: 1em; }
+    &--2 { width: 2em; height: 2em; }
+    &--3 { width: 3em; height: 3em; }
+    &--4 { width: 4em; height: 4em; }
+    &--5 { width: 5em; height: 5em; }
+    &--6 { width: 6em; height: 6em; }
+    &--7 { width: 7em; height: 7em; }
+    &--8 { width: 8em; height: 8em; }
+    &--9 { width: 9em; height: 9em; }
+    &--10 { width: 10em; height: 10em; }
+  }
+
+  .__title {
+    @extend %screen_assist_text;
+  }
+}
+
+.flex_icons {
   @extend %flexible_svg_icons;
 }
+
+
+
+
+
+// EXAMPLES
+.icon_times_rect { background-image: define_icon( font-awesome, times-rectangle, $color_aqua); }
+.icon_minus_circle { background-image: define_icon( font-awesome, minus-circle, $color_red); }
+.icon_plus_square { background-image: define_icon( font-awesome, plus-square, $color_olive); }
