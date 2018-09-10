@@ -1,0 +1,63 @@
+/*---
+title: Size Variables 
+section: Layout
+---
+
+| Device | Width | __    | Device | Width |
+| ------ | ----: | ----- | ------ | ----: |
+| hd_laptop | 1440px | | tablet_lg | 850px |
+| laptop    | 1280px | | tablet_sm | 660px |
+| ipad      | 768px  | | mobile_lg | 420px |
+| nexus7    | 600px  | | nexus6p   | 412px |
+| iphone6   | 375px  | | mobile_sm | 360px |
+| iphone5   | 320px  | | galaxys5  | 360px |
+
+*/
+
+$grid_tablet : 850px;
+$grid_mobile : 625px;
+
+
+/// DEVICE SIZES
+/// 
+/// @group layout  
+/// @name _size 
+/// @param {string} $name [] - the name of the device size or breakpoint 
+/// @property {variable} hd_laptop [ 1440px ]     
+/// @property {variable} laptop    [ 1280px ]     
+/// @property {variable} ipad      [ 768px ]   
+/// @property {variable} nexus7    [ 600px ]     
+/// @property {variable} iphone6   [ 375px ]      
+/// @property {variable} iphone5   [ 320px ]      
+/// @property {variable} galaxys5  [ 360px ]       
+/// @property {variable} nexus6p   [ 412px ]      
+/// @property {variable} tablet_lg [ 850px ]        
+/// @property {variable} tablet_sm [ 660px ]        
+/// @property {variable} mobile_lg [ 420px ]        
+/// @property {variable} mobile_sm [ 360px ]        
+
+@function _size($name) {
+  $device_sizes: (
+    hd_laptop  : 1440px,
+    laptop     : 1280px,
+    ipad       : 768px,
+    nexus7     : 600px,
+    iphone6    : 375px,
+    iphone5    : 320px,
+    galaxys5   : 360px,
+    nexus6p    : 412px,
+    tablet_lg  : 850px,
+    tablet_sm  : 660px,
+    mobile_lg  : 420px,
+    mobile_sm  : 360px,
+  );
+
+  @return map-get($device_sizes, $name);
+}
+
+// HOME PAGE - 
+$banner_break_mid: 850px;
+$banner_break_sm1: 560px;
+
+$default_row_max_width: _size(hd_laptop); 
+$default_page_min_width: _size(mobile_sm); 

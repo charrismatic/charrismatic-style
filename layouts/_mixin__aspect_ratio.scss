@@ -1,0 +1,50 @@
+////
+/// @group layout
+////
+
+
+/// Maintain aspect ratio of an element with padding-bottom
+/// - Useful for responsive grids, videos
+///
+/// @link https://gist.github.com/brianmcallister/2932463
+/// @param {string} $ratio - Ratio the element needs to maintain.
+/// @example
+///     // 16:9 ratio
+///     .element {
+///       @include maintain-ratio(16 9);
+///     }
+@mixin maintain-ratio($ratio: 1 1) {
+  padding-bottom: $height;
+  width: $width;
+  height: 0;
+
+  $width: 100%;
+  $height: percentage(nth($ratio, 2) / nth($ratio, 1));
+  @if length($ratio) < 2 or length($ratio) > 2 {
+    @warn "$ratio must be a list with two values.";
+  }
+}
+
+/// Maintain aspect ratio of parent > *.children
+/// - inner elements are absolutely positioned
+/// @param {number} $width   [] width
+/// @param {number} $height  [] height
+/// @link https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+///
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    padding-top: ($height / $width) * 100%;
+    width: 100%;
+    content: "";
+  }
+
+  > * {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

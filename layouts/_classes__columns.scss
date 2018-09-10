@@ -1,0 +1,17 @@
+// TODO: CONVERT TO USING COLUMNS PROPERTY
+// FLEX SYSTEM ALREADY HANDLES ANY NUMBER OF COLUMNS
+
+%split_col2 {
+  justify-content: flex-start;
+  > * { flex-basis: 50%; }
+}
+
+%split_col3 {
+  justify-content: flex-start;
+  > * { flex-basis: 3%; }
+}
+
+.two-column {
+  @extend %flex;
+  @extend %fl_row;
+}

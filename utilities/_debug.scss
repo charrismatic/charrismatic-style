@@ -1,0 +1,56 @@
+
+// ADD TO AN ELEMENT SUCH AS BODY TO OUTLINE ALL INNER ELEMENTS
+.debug_highlight {
+  * {
+    outline: 2px solid red !important;
+    outline-offset: 0px;
+    z-index: 1 !important;
+  }
+  > * {
+    outline: 1px solid red !important;
+    outline-offset: 2px !important;;
+    z-index: 2 !important;
+    > * {
+      outline-color: blue !important;;
+      outline-offset: 2px !important;;
+      > * {
+        outline-color: yellow !important;;
+        outline-offset: 4px !important;;
+        z-index: 3 !important;
+        > * {
+          outline-color: orange !important;;
+          outline-offset: 6px !important;;
+          z-index: 4 !important;
+          > * {
+            outline-color: green !important;;
+            outline-offset: 8px !important;;
+            z-index: 5 !important;
+            > * {
+              outline-color: cyan  !important;;
+              outline-offset: 10px !important;;
+              z-index: 6 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.debug_zoomOut{
+  transform: scale(.8) !important;
+}
+
+.debug_showall {
+  * {
+    outline: 1px solid red !important;
+    visibility: visible !important;
+    display: block !important;
+    position: relative !important;
+  }
+}
+
+.debug_all_off {
+  // TAKE EVERYTHING AND TURN IT OFF
+  // @include resetAll;
+}

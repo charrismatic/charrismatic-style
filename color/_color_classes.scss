@@ -1,0 +1,138 @@
+// COLOR OVERRIDE
+.color {
+  &_inherit { color: inherit !important; }
+
+  &_black { color: $black; }
+  &_white { color: $white; }
+  &_grey-03 { color: $grey_03; }
+  &_grey-05 { color: $grey_05; }
+  &_grey-10 { color: $grey_10; }
+  &_grey-15 { color: $grey_15; }
+  &_grey-20 { color: $grey_20; }
+  &_grey-25 { color: $grey_25; }
+  &_grey-30 { color: $grey_30; }
+  &_grey-35 { color: $grey_35; }
+  &_grey-40 { color: $grey_40; }
+  &_grey-45 { color: $grey_45; }
+  &_grey-50 { color: $grey_50; }
+  &_grey-55 { color: $grey_55; }
+  &_grey-60 { color: $grey_60; }
+  &_grey-65 { color: $grey_65; }
+  &_grey-70 { color: $grey_70; }
+  &_grey-75 { color: $grey_75; }
+  &_grey-80 { color: $grey_80; }
+  &_grey-85 { color: $grey_85; }
+  &_grey-90 { color: $grey_90; }
+  &_grey-95 { color: $grey_95; }
+
+  &_navy    { color: $color_navy; }
+  &_blue    { color: $color_blue; }
+  &_aqua    { color: $color_aqua; }
+  &_teal    { color: $color_teal; }
+  &_olive   { color: $color_olive; }
+  &_green   { color: $color_green; }
+  &_lime    { color: $color_lime; }
+  &_yellow  { color: $color_yellow; }
+  &_orange  { color: $color_orange; }
+  &_red     { color: $color_red; }
+  &_fuchsia { color: $color_fuchsia; }
+  &_purple  { color: $color_purple; }
+  &_maroon  { color: $color_maroon; }
+
+  &_accent_red { color: $accent_red; }
+  &_desturated_red { color: $desturated_red; }
+  &_desturated_red_darker { color: $desturated_red_darker; }
+  &_accent_orange { color: $accent_orange; }
+  &_anchor_link { color: $anchor_link; }
+  &_accent_orange_light { color: $accent_orange_light; }
+  &_accent_orange { color: $accent_orange; }
+  &_accent_yellow { color: $accent_yellow; }
+  &_mob_nav_border_color { color: $mob_nav_border_color; }
+  &_scroll_accent { color: $scroll_accent; }
+  &_scroll_bg { color: $scroll_bg; }
+  &_form_good { color: $form_good; }
+  &_error { color: $error; }
+  &_warning { color: $warning; }
+  &_notice { color: $notice; }
+  &_success { color: $success; }
+  &_lt-gray { color: $lt-gray; }
+  &_gray { color: $gray; }
+  &_charcoal { color: $charcoal; }
+  &_blue { color: $blue; }
+  &_facebook { color: $facebook; }
+  &_twitter { color: $twitter; }
+  &_linkedin { color: $linkedin; }
+  &_google_plus { color: $google_plus; }
+  &_youtube { color: $youtube; }
+}
+
+
+
+// BACKGROUND COLOR OVERRIDE
+.bg {
+  &_none { background-color: none !important; }
+  &_inherit { background-color: inherit !important; }
+
+  &_black   { background-color: $black   ; }
+  &_white   { background-color: $white   ; }
+  &_grey-03 { background-color: $grey_03 ; }
+  &_grey-05 { background-color: $grey_05 ; }
+  &_grey-10 { background-color: $grey_10 ; }
+  &_grey-15 { background-color: $grey_15 ; }
+  &_grey-20 { background-color: $grey_20 ; }
+  &_grey-25 { background-color: $grey_25 ; }
+  &_grey-30 { background-color: $grey_30 ; }
+  &_grey-35 { background-color: $grey_35 ; }
+  &_grey-40 { background-color: $grey_40 ; }
+  &_grey-45 { background-color: $grey_45 ; }
+  &_grey-50 { background-color: $grey_50 ; }
+  &_grey-55 { background-color: $grey_55 ; }
+  &_grey-60 { background-color: $grey_60 ; }
+  &_grey-65 { background-color: $grey_65 ; }
+  &_grey-70 { background-color: $grey_70 ; }
+  &_grey-75 { background-color: $grey_75 ; }
+  &_grey-80 { background-color: $grey_80 ; }
+  &_grey-85 { background-color: $grey_85 ; }
+  &_grey-90 { background-color: $grey_90 ; }
+  &_grey-95 { background-color: $grey_95 ; }
+
+  &_navy    { background-color: $color_navy; }
+  &_blue    { background-color: $color_blue; }
+  &_aqua    { background-color: $color_aqua; }
+  &_teal    { background-color: $color_teal; }
+  &_olive   { background-color: $color_olive; }
+  &_green   { background-color: $color_green; }
+  &_lime    { background-color: $color_lime; }
+  &_yellow  { background-color: $color_yellow; }
+  &_orange  { background-color: $color_orange; }
+  &_red     { background-color: $color_red; }
+  &_fuchsia { background-color: $color_fuchsia; }
+  &_purple  { background-color: $color_purple; }
+  &_maroon  { background-color: $color_maroon; }
+
+  &_accent_red             { background-color: $accent_red; }
+  &_desturated_red         { background-color: $desturated_red; }
+  &_desturated_red_darker  { background-color: $desturated_red_darker; }
+  &_accent_orange          { background-color: $accent_orange; }
+  &_anchor_link            { background-color: $anchor_link; }
+  &_accent_orange_light    { background-color: $accent_orange_light; }
+  &_accent_orange          { background-color: $accent_orange; }
+  &_accent_yellow          { background-color: $accent_yellow; }
+  &_mob_nav_border_color   { background-color: $mob_nav_border_color; }
+  &_scroll_accent          { background-color: $scroll_accent; }
+  &_scroll_bg              { background-color: $scroll_bg; }
+  &_form_good              { background-color: $form_good; }
+  &_error                  { background-color: $error; }
+  &_warning                { background-color: $warning; }
+  &_notice                 { background-color: $notice; }
+  &_success                { background-color: $success; }
+  &_lt-gray                { background-color: $lt-gray; }
+  &_gray                   { background-color: $gray; }
+  &_charcoal               { background-color: $charcoal; }
+  &_blue                   { background-color: $blue; }
+  &_facebook               { background-color: $facebook; }
+  &_twitter                { background-color: $twitter; }
+  &_linkedin               { background-color: $linkedin; }
+  &_google_plus            { background-color: $google_plus; }
+  &_youtube                { background-color: $youtube; }
+}
