@@ -1,44 +1,44 @@
 ////
-/// @group effects  
+/// @group effects
 ////
 
-///  -----------------------------  
-///  Material Design Shadow Effect  
-///  DEPTH PLACEHOLDERS BORROWED FROM THE MATERIALIZE LIBRARY  
-///  TO ADD DEPTH TO AN ELEMENT   
-///   1. EXTEND A PLACEHOLDER IN SASS  
-///   2. ADD A CLASS DIRECTLY IN HTML  
-/// @example 
-///    <div class="box__outer .z-depth-1">  
-///      <div class="box__inner">  
-///        <h3 class="box__title">CONTENT</h3>  
-///      </div>  
-///    </div>  
-/// @param {string} $depth [depth_1] - Height of the shadow  
-/// @requires {function} get_z_depth_map  
-/// @link http://materializecss.com/shadow.html   
+///  -----------------------------
+///  Material Design Shadow Effect
+///  DEPTH PLACEHOLDERS BORROWED FROM THE MATERIALIZE LIBRARY
+///  TO ADD DEPTH TO AN ELEMENT
+///   1. EXTEND A PLACEHOLDER IN SASS
+///   2. ADD A CLASS DIRECTLY IN HTML
+/// @example
+///    <div class="box__outer .z-depth-1">
+///      <div class="box__inner">
+///        <h3 class="box__title">CONTENT</h3>
+///      </div>
+///    </div>
+/// @param {string} $depth [depth_1] - Height of the shadow
+/// @requires {function} get_z_depth_map
+/// @link http://materializecss.com/shadow.html
 
-@mixin z_depth( $depth:depth_1, $hover: false ) { 
+@mixin z_depth( $depth:depth_1, $hover: false ) {
   box-shadow: get_z_depth_map($depth);
 }
 
 
 
-/// @name get_depth_map 
-/// @param {variable} $depth 
-/// @property {string} depth_0  [none !important]  
-/// @property {string} depth_1  [0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)]  
-/// @property {string} depth_1p [0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2)]  
-/// @property {string} depth_2  [0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3)]  
-/// @property {string} depth_3  [0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px  px -1px rgba(0, 0, 0, 0.3)]  
-/// @property {string} depth_4  [0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px  5px -3px rgba(0, 0, 0, 0.3)]  
-/// @property {string} depth_5  [0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3)]  
-/// @returns {string} css style for box-shadow for given z_depth 
-@function get_z_depth_map($depth) { 
-  
+/// @name get_depth_map
+/// @param {variable} $depth
+/// @property {string} depth_0  [none !important]
+/// @property {string} depth_1  [0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)]
+/// @property {string} depth_1p [0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2)]
+/// @property {string} depth_2  [0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3)]
+/// @property {string} depth_3  [0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px  px -1px rgba(0, 0, 0, 0.3)]
+/// @property {string} depth_4  [0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px  5px -3px rgba(0, 0, 0, 0.3)]
+/// @property {string} depth_5  [0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3)]
+/// @returns {string} css style for box-shadow for given z_depth
+@function get_z_depth_map($depth) {
+
   $color_1: rgba(0, 0, 0, 0.14);
   $color_2: rgba(0, 0, 0, 0.12);
-  
+
   $depth_map: (
     depth_0:  "none !important",
     depth_1:  "0 2px 2px 0 #{$color_1}, 0 1px 5px 0 #{$color_2}, 0 3px 1px -2px rgba(0, 0, 0, 0.2)",
@@ -48,31 +48,23 @@
     depth_4:  "0 8px 10px 1px #{$color_1}, 0 3px 14px 2px #{$color_2}, 0 5px  5px -3px rgba(0, 0, 0, 0.3)",
     depth_5:  "0 16px 24px 2px #{$color_1}, 0 6px 30px 5px #{$color_2}, 0 8px 10px -5px rgba(0, 0, 0, 0.3)",
   );
-   
+
   @return unquote( map-get($depth_map, $depth));
 }
 
 
-
-
 %z_depth_0  { @include z_depth(depth_0); }
-
 %z_depth_1  { @include z_depth(depth_1); }
-
 %z_depth_1p { @include z_depth(depth_1p); }
-
-%z_depth_2  { @include z_depth(depth_2); }  
-
+%z_depth_2  { @include z_depth(depth_2); }
 %z_depth_3  { @include z_depth(depth_3); }
-
 %z_depth_4  { @include z_depth(depth_4); }
-
 %z_depth_5  { @include z_depth(depth_5); }
 
-// HOVER EFFECT 
+
+// HOVER EFFECT
 %z_hover {
   transition: box-shadow 225ms;
-
   &:hover {
     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
@@ -86,14 +78,14 @@ title: Depth
 section: Effects
 ---
 
-DROP SHADOW AND DEPTH 
+DROP SHADOW AND DEPTH
 
-- z-depth-0  
-- z-depth-1  
-- z-depth-2  
-- z-depth-3  
-- z-depth-4  
-- z-depth-5  
+- z-depth-0
+- z-depth-1
+- z-depth-2
+- z-depth-3
+- z-depth-4
+- z-depth-5
 
 
 <section class="styleguide_section">
@@ -127,7 +119,7 @@ DROP SHADOW AND DEPTH
 </section>
 
 
-With Hover Effect 
+With Hover Effect
 
 ___z-hover___
 
@@ -164,11 +156,11 @@ ___z-hover___
 
 */
 
-// CLASSES ADDED TO STYLESHEET  
-.z-depth-0  { @include z_depth(depth_0); }
-.z-depth-1  { @include z_depth(depth_1); }
-.z-depth-2  { @include z_depth(depth_2); }
-.z-depth-3  { @include z_depth(depth_3); }
-.z-depth-4  { @include z_depth(depth_4); }
-.z-depth-5  { @include z_depth(depth_5); }
-.z-hover    { @extend %z_hover;   }
+// CLASSES ADDED TO STYLESHEET
+.z_depth-0  { @include z_depth(depth_0); }
+.z_depth-1  { @include z_depth(depth_1); }
+.z_depth-2  { @include z_depth(depth_2); }
+.z_depth-3  { @include z_depth(depth_3); }
+.z_depth-4  { @include z_depth(depth_4); }
+.z_depth-5  { @include z_depth(depth_5); }
+.z_hover    { @extend %z_hover;   }

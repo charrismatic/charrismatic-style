@@ -1,15 +1,15 @@
-/*--- 
+/*---
 title: Align
-section: Formatting 
+section: Formatting
 ---
 
-__OBJECT ALIGNMENT__ 
+__OBJECT ALIGNMENT__
 
 - align--top    - align-items: flex-start
 - align--center - align-items: center
 - align--bottom - align-items: flex-end
 
-__TEXT ALIGNMENT__ 
+__TEXT ALIGNMENT__
 
 - text--left    - text-align: left
 - text--right   - text-align: right
@@ -27,8 +27,8 @@ __TEXT ALIGNMENT__
 }
 
 
-// TEXT ALIGNMENT  
-.text { 
+// TEXT ALIGNMENT
+.text {
   &--left { text-align: left; }
   &--right { text-align: right; }
   &--center { text-align: center; }

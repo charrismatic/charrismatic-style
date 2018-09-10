@@ -1,8 +1,8 @@
 /*---
-section: Effects 
+section: Effects
 ---
 
-Special Effects 
+Special Effects
 
 */
 
@@ -10,3 +10,7 @@ Special Effects
 @import "depth";
 
 @import "shadow_mixins";
+
+@import "gradient_mixins";
+
+@import "fadeout";

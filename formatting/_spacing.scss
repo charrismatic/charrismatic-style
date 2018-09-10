@@ -36,7 +36,7 @@ __Vertical Spacer__
 */
 
 
-.margin {
+.m {
   &-0  { margin:        0 }
   &-t0 { margin-top:    0 }
   &-r0 { margin-right:  0 }
@@ -44,15 +44,17 @@ __Vertical Spacer__
   &-l0 { margin-left:   0 }
   &-x0 { margin-left:   0; margin-right:  0 }
   &-y0 { margin-top:    0; margin-bottom: 0 }
-}
+  &-xauto { margin-left: auto !important; margin-right: auto !important; }
+  &-yauto { margin-top: auto !important; margin-bottom: auto !important}
+  }
 
 .auto_margin {  margin: auto !important; }
-.auto_marginy { margin-top: auto !important; margin-bottom: auto !important; }
 .auto_marginx { margin-left: auto !important; margin-right: auto !important; }
-
+.auto_marginy { margin-top: auto !important; margin-bottom: auto !important; }
 .no_margin {  margin: 0 !important; }
 .no_marginy { margin-top: 0 !important; margin-bottom: 0 !important; }
 .no_marginx { margin-left: 0 !important; margin-right: 0 !important; }
+
 
 
 
