@@ -1,0 +1,21 @@
+
+
+$theme_font_family_body: _font_family('default');
+$theme_font_family_heading: _font_family('playfair');
+
+
+
+
+@mixin font_family ($font_family:sans-serif) {
+  font-family: $font_family, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  @include font_family($theme_font_family_heading)
+}
+
+body,
+p {
+  @include font_family($theme_font_family_body)
+}

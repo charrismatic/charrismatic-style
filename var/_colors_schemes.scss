@@ -1,0 +1,120 @@
+////
+/// @group Theme
+////
+
+// COLOR THEMES AND PALLETES
+// DO NOT ASSIGN VARIABLES TO VALUES
+// THIS FILE SHOULD NOT HAVE DEPENDENCIES
+
+/*---
+title: Color Sets
+name: color_library
+---
+
+Named Colors
+
+```example:color
+@color: rgb(250,76,6)   @name: anchor_link
+@color: rgb(19,198,7)   @name: form_good
+@color: #ff7e7e         @name: error
+@color: #68d388         @name: success
+@color: #f1f1f1         @name: ltgray
+@color: #5f5f5f         @name: gray
+@color: #3d3d3d         @name: charcoal
+@color: #0575af         @name: blue
+@color: #3460a1         @name: facebook
+@color: #28aae1         @name: twitter
+@color: #136d9d         @name: linkedin
+@color: #de5543         @name: google_plus
+@color: #ee3138         @name: youtube
+```
+*/
+
+
+
+
+// THEME COLORS
+$theme_base:           rgb(0, 148, 225);
+$theme_dark:           rgb(0, 111, 225);
+$theme_dark_red:       rgb(185,34,40);
+$theme_light:          rgb(0, 196, 225);
+$theme_light_red:      rgb(232,63,69);
+$theme_blue_dark:      $dark_blue;
+$theme_blue_light:     $bright_blue;
+$theme_green:          $green;
+$theme_primary:        $dark_blue;
+
+// SFP STYLEGUIDE
+// https://codepen.io/super_thalamus/pen/Bdzzxx
+$theme_dark:           rgb(0,111,225);
+$theme_base:           rgb(0,148,225);
+$theme_light:          rgb(0,196,225);
+
+$theme-primary:        #3097D1;
+$theme-info:           #8eb4cb;
+$theme-success:        #2ab27b;
+$theme-warning:        #cbb956;
+$theme-danger:         #bf5329;
+
+
+
+// MA.TTHARR.IS THEME
+$blue_bright_highlight:  #1d88c7;
+$blue_dark_bg:           #1b242e;
+$blue_darker_bg:         #161b21;
+$blue_grey_darker:       #13171b;
+$blue_grey_light_bg:     #2a4b6d;
+$blue_grey_light:        #717d8a;
+$blue_grey_lightest:     #c4cdd6;
+$blue_lighter_pale_text: #446d84;
+$blue_lighter_text:      #446d84;
+$bright_blue_sky:        #33a8cf;
+$dark_grey_blue:         #1d252d;
+$dark_teal:              #046c69;
+$deep_grey_blue:         #1b2024;
+$deep_grey_header_bg:    #1b2024;
+$elephant_grey:          #38516a;
+$grey_blue:              #27323d;
+$medium_elephant_grey:   #38414a;
+$menu_top_text_color:    #ffffff;
+$postbox_header_text:    #0073aa;
+$primary_title:          #095698;
+
+
+
+
+$color_schemes: (
+  "fib_theme": (
+    "green":           $green,
+    "blue_dark":       $dark_blue,
+    "blue_grey":       $blue_grey,
+    "green_light":     $light_green,
+    "blue_light":      $light_blue,
+    "blue_bright":     $bright_blue,
+  ),
+  // ACCENT COLORS FROM SFP.NET
+  "sfp_theme": (
+    "orange":         rgb(238,133,54),
+    "dark":           rgb(0,111,225),
+    "base":           rgb(0,148,225),
+    "light":          rgb(0,196,225),
+  )
+);
+
+
+
+
+
+$accent_red:            #b9262f;                  // #b9262f
+$accent_orange:         rgb(253,166,48);
+$accent_orange:         #fda630;                  // #fda630
+$accent_orange:         rgb(250,76,6);
+$accent_orange_light:   rgb(253,123,64);
+$accent_orange_light:   #fd7b40;                  // #fd7b40
+$accent_yellow:         rgb(255,205,85);
+$accent_yellow:         #ffcd55;                  // #ffcd55
+$desturated_red:        #9a2a31;                  // #9a2a31
+$desturated_red_darker: #7d161d;                  // #7d161d
+// $accent_red:            rgb(185,38,47);
+// $desturated_red:        rgb(154,42,49);
+// $desturated_red_darker: rgb(125,22,29);
