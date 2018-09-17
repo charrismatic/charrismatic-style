@@ -4,7 +4,9 @@
 @import 'colors_schemes';
 
 
-
+$body_bg:               $grey_05;
+$scroll_accent:         $grey_80;
+$scroll_bg:             $grey_20;
 $body_bg:              $grey_05;
 $scroll_accent:        $grey_80;
 $scroll_bg:            $grey_20;
@@ -18,6 +20,7 @@ $navbar-default-bg:    #f5f8fa;
 
 
 // Buttons
+
 // Inputs
 $input-border:            lighten($text-color, 40%);
 $input-border-focus:      lighten($theme-primary, 25%);
@@ -38,8 +41,6 @@ $theme_dark_body_light_text: #72777c;
 $btn-default-color:      $text-color;
 $component-active-bg:    $color_olive;
 $input-btn-focus-color:  lighten($text-color, 30%);
-
-
 $top_navigation: $grey_80;
 $top_navigation_txt: $white;
 $top_navigation_submenu: lighten($grey_80, 10%);

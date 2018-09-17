@@ -36,7 +36,6 @@ Greyscale
 $black    : rgba(0,0,0,1);
 $black_00 : $black;              // $black : #000000
 
-
 // WHITE
 $white    : rgba(255,255,255,1);
 $white_00 : $white;              // $white : #ffffff
@@ -65,7 +64,7 @@ $grey_80  : darken($white, 80%); // grey_80: #333333
 $grey_85  : darken($white, 85%); // grey_85: #262626
 $grey_90  : darken($white, 90%); // grey_90: #1a1a1a
 $grey_95  : darken($white, 95%); // grey_95: #0d0d0d
-$grey_96  : darken($white, 96%); // grey_
+$grey_96  : darken($white, 96%); //
 $grey_97  : darken($white, 97%); //
 $grey_98  : darken($white, 98%); //
 $grey_99  : darken($white, 99%); //
