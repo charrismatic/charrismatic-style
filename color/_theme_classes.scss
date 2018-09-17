@@ -31,7 +31,7 @@
 }
 
 // THEME SPECIFIC COLOR CLASSES
-.color {
+.cl {
   &_light                { color: $theme_light !important; }
   &_neutral              { color: $theme_base !important; }
   &_dark                 { color: $theme_dark !important; }
@@ -64,7 +64,7 @@
 
 
 // MA.TTHARR.IS THEME
-.color {
+.cl {
   &_blue_bright_highlight         { color: $blue_bright_highlight;        }  // #1d88c7;
   &_blue_dark_bg                  { color: $blue_dark_bg;                 }  // #1b242e;
   &_blue_darker_bg                { color: $blue_darker_bg;               }  // #161b21;
