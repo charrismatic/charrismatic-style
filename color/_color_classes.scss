@@ -25,45 +25,49 @@
   &_grey-90 { color: $grey_90; }
   &_grey-95 { color: $grey_95; }
 
-  &_navy    { color: $color_navy; }
-  &_blue    { color: $color_blue; }
   &_aqua    { color: $color_aqua; }
-  &_teal    { color: $color_teal; }
-  &_olive   { color: $color_olive; }
+  &_blue    { color: $color_blue; }
+  &_fuchsia { color: $color_fuchsia; }
   &_green   { color: $color_green; }
   &_lime    { color: $color_lime; }
-  &_yellow  { color: $color_yellow; }
-  &_orange  { color: $color_orange; }
-  &_red     { color: $color_red; }
-  &_fuchsia { color: $color_fuchsia; }
-  &_purple  { color: $color_purple; }
   &_maroon  { color: $color_maroon; }
+  &_navy    { color: $color_navy; }
+  &_olive   { color: $color_olive; }
+  &_orange  { color: $color_orange; }
+  &_purple  { color: $color_purple; }
+  &_red     { color: $color_red; }
+  &_teal    { color: $color_teal; }
+  &_yellow  { color: $color_yellow; }
 
+  &_blue       { color: $blue; }
+  &_gray       { color: $gray; }
+  &_lt-gray    { color: $lt-gray; }
+  &_charcoal   { color: $charcoal; }
   &_accent_red { color: $accent_red; }
   &_desturated_red { color: $desturated_red; }
   &_desturated_red_darker { color: $desturated_red_darker; }
-  &_accent_orange { color: $accent_orange; }
-  &_anchor_link { color: $anchor_link; }
+  &_accent_orange  { color: $accent_orange; }
+  &_anchor_link    { color: $anchor_link; }
   &_accent_orange_light { color: $accent_orange_light; }
-  &_accent_orange { color: $accent_orange; }
-  &_accent_yellow { color: $accent_yellow; }
-  &_mob_nav_border_color { color: $mob_nav_border_color; }
-  &_scroll_accent { color: $scroll_accent; }
-  &_scroll_bg { color: $scroll_bg; }
+  &_accent_orange  { color: $accent_orange; }
+  &_accent_yellow  { color: $accent_yellow; }
+  &_scroll_accent  { color: $scroll_accent; }
+  &_scroll_bg      { color: $scroll_bg; }
+  // SOCIAL
+  &_facebook    { color: $facebook; }
+  &_flikr_blue  { color: $flikr_blue; }
+  &_flikr_pink  { color: $flikr_pink; }
+  &_github      { color: $github; }
+  &_google_plus { color: $google_plus; }
+  &_linkedin    { color: $linkedin; }
+  &_twitter     { color: $twitter; }
+  &_youtube     { color: $youtube; }
+  // VALIDATION
   &_form_good { color: $form_good; }
   &_error { color: $error; }
   &_warning { color: $warning; }
   &_notice { color: $notice; }
   &_success { color: $success; }
-  &_lt-gray { color: $lt-gray; }
-  &_gray { color: $gray; }
-  &_charcoal { color: $charcoal; }
-  &_blue { color: $blue; }
-  &_facebook { color: $facebook; }
-  &_twitter { color: $twitter; }
-  &_linkedin { color: $linkedin; }
-  &_google_plus { color: $google_plus; }
-  &_youtube { color: $youtube; }
 }
 
 
@@ -110,6 +114,7 @@
   &_purple  { background-color: $color_purple; }
   &_maroon  { background-color: $color_maroon; }
 
+
   &_accent_red             { background-color: $accent_red; }
   &_desturated_red         { background-color: $desturated_red; }
   &_desturated_red_darker  { background-color: $desturated_red_darker; }
@@ -130,9 +135,14 @@
   &_gray                   { background-color: $gray; }
   &_charcoal               { background-color: $charcoal; }
   &_blue                   { background-color: $blue; }
-  &_facebook               { background-color: $facebook; }
-  &_twitter                { background-color: $twitter; }
-  &_linkedin               { background-color: $linkedin; }
-  &_google_plus            { background-color: $google_plus; }
-  &_youtube                { background-color: $youtube; }
+
+  // SOCIAL
+  &_facebook             { background-color: $facebook; }
+  &_flikr_blue           { background-color: $flikr_blue; }
+  &_flikr_pink           { background-color: $flikr_pink; }
+  &_github               { background-color: $github; }
+  &_google_plus          { background-color: $google_plus; }
+  &_linkedin             { background-color: $linkedin; }
+  &_twitter              { background-color: $twitter; }
+  &_youtube              { background-color: $youtube; }
 }

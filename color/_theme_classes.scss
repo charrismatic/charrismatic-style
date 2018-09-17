@@ -5,12 +5,6 @@
   &_light                { background-color: $theme_light !important; }
   &_neutral              { background-color: $theme_base !important; }
   &_dark                 { background-color: $theme_dark !important; }
-  &_theme_dark_blue      { background-color: $fib_blue_dark !important; }
-  &_theme_bright_blue    { background-color: $fib_blue_bright !important; }
-  &_theme_light_blue     { background-color: $fib_blue_light !important; }
-  &_theme_blue_grey      { background-color: $fib_blue_grey !important; }
-  &_theme_green          { background-color: $fib_green !important; }
-  &_theme_green_light    { background-color: $fib_green_light !important; }
   &_accent-dark          { background-color: $theme_dark_red; }
   &_accent-light         { background-color: $theme_light_red; }
   &_theme_dark           { background-color: $theme_dark; }
@@ -41,12 +35,6 @@
   &_light                { color: $theme_light !important; }
   &_neutral              { color: $theme_base !important; }
   &_dark                 { color: $theme_dark !important; }
-  &_theme_dark_blue      { color: $fib_blue_dark !important; }
-  &_theme_bright_blue    { color: $fib_blue_bright !important; }
-  &_theme_light_blue     { color: $fib_blue_light !important; }
-  &_theme_blue_grey      { color: $fib_blue_grey !important; }
-  &_theme_green          { color: $fib_green !important; }
-  &_theme_green_light    { color: $fib_green_light !important; }
   &_accent-dark          { color: $theme_dark_red; }
   &_accent-light         { color: $theme_light_red; }
   &_theme_dark           { color: $theme_dark; }
@@ -77,28 +65,28 @@
 
 // MA.TTHARR.IS THEME
 .color {
-  &_blue_bright_highlight         { color:  $blue_bright_highlight;           }  // #1d88c7;
-  &_blue_dark_bg                  { color:  $blue_dark_bg;                    }  // #1b242e;
-  &_blue_darker_bg                { color:  $blue_darker_bg;                  }  // #161b21;
-  &_blue_grey_darker              { color:  $blue_grey_darker;                }  // #13171b;
-  &_blue_grey_light_bg            { color:  $blue_grey_light_bg;              }  // #2a4b6d;
-  &_blue_grey_light               { color:  $blue_grey_light;                 }  // #717d8a;
-  &_blue_grey_lightest            { color:  $blue_grey_lightest;              }  // #c4cdd6;
-  &_blue_lighter_pale_text        { color:  $blue_lighter_pale_text;          }  // #446d84;
-  &_blue_lighter_text             { color:  $blue_lighter_text;               }  // #446d84;
-  &_bright_blue_sky               { color:  $bright_blue_sky;                 }  // #33a8cf;
-  &_dark_grey_blue                { color:  $dark_grey_blue;                  }  // #1d252d;
-  &_dark_teal                     { color:  $dark_teal;                       }  // #046c69;
-  &_deep_grey_blue                { color:  $deep_grey_blue;                  }  // #1b2024;
-  &_deep_grey_header_bg           { color:  $deep_grey_header_bg;             }  // #1b2024;
-  &_elephant_grey                 { color:  $elephant_grey;                   }  // #38516a;
-  &_grey_blue                     { color:  $grey_blue;                       }  // #27323d;
-  &_medium_elephant_grey          { color:  $medium_elephant_grey;            }  // #38414a;
-  &_menu_top_text_color           { color:  $menu_top_text_color;             }  // #ffffff;
-  &_postbox_header_text           { color:  $postbox_header_text;             }  // #0073aa;
-  &_primary_title                 { color:  $primary_title;                   }  // #095698;
-  &_theme_dark_body_bg            { color:  $theme_dark_body_bg;              }  // #25292c;
-  &_theme_dark_body_light_text    { color:  $theme_dark_body_light_text;      }  // #72777c;
+  &_blue_bright_highlight         { color: $blue_bright_highlight;        }  // #1d88c7;
+  &_blue_dark_bg                  { color: $blue_dark_bg;                 }  // #1b242e;
+  &_blue_darker_bg                { color: $blue_darker_bg;               }  // #161b21;
+  &_blue_grey_darker              { color: $blue_grey_darker;             }  // #13171b;
+  &_blue_grey_light_bg            { color: $blue_grey_light_bg;           }  // #2a4b6d;
+  &_blue_grey_light               { color: $blue_grey_light;              }  // #717d8a;
+  &_blue_grey_lightest            { color: $blue_grey_lightest;           }  // #c4cdd6;
+  &_blue_lighter_pale_text        { color: $blue_lighter_pale_text;       }  // #446d84;
+  &_blue_lighter_text             { color: $blue_lighter_text;            }  // #446d84;
+  &_bright_blue_sky               { color: $bright_blue_sky;              }  // #33a8cf;
+  &_dark_grey_blue                { color: $dark_grey_blue;               }  // #1d252d;
+  &_dark_teal                     { color: $dark_teal;                    }  // #046c69;
+  &_deep_grey_blue                { color: $deep_grey_blue;               }  // #1b2024;
+  &_deep_grey_header_bg           { color: $deep_grey_header_bg;          }  // #1b2024;
+  &_elephant_grey                 { color: $elephant_grey;                }  // #38516a;
+  &_grey_blue                     { color: $grey_blue;                    }  // #27323d;
+  &_medium_elephant_grey          { color: $medium_elephant_grey;         }  // #38414a;
+  &_menu_top_text_color           { color: $menu_top_text_color;          }  // #ffffff;
+  &_postbox_header_text           { color: $postbox_header_text;          }  // #0073aa;
+  &_primary_title                 { color: $primary_title;                }  // #095698;
+  &_theme_dark_body_bg            { color: $theme_dark_body_bg;           }  // #25292c;
+  &_theme_dark_body_light_text    { color: $theme_dark_body_light_text;   }  // #72777c;
 }
 
 
