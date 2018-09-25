@@ -31,13 +31,21 @@ __Extras__
 */
 
 .m {
-  &-0  { margin:        0 }
-  &-t0 { margin-top:    0 }
-  &-r0 { margin-right:  0 }
-  &-b0 { margin-bottom: 0 }
-  &-l0 { margin-left:   0 }
-  &-x0 { margin-left:   0; margin-right:  0 }
-  &-y0 { margin-top:    0; margin-bottom: 0 }
+  &-0  { margin:        0; }
+  &-t0 { margin-top:    0; }
+  &-r0 { margin-right:  0; }
+  &-b0 { margin-bottom: 0; }
+  &-l0 { margin-left:   0; }
+  &-x0 { margin-left: 0; margin-right:  0; }
+  &-xp5 { margin-left: .5em; margin-right: .5em; }
+  &-x1  { margin-left: 1em; margin-right: 1em; }
+  &-x1p5 { margin-left: 1.5em; margin-right: 1.5em; }
+  &-x2  { margin-left: 2em; margin-right: 2em; }
+  &-y0  { margin-top: 0; margin-bottom: 0; }
+  &-yp5 { margin-top: .5em; margin-bottom: .5em; }
+  &-y1  { margin-top: 1em; margin-bottom: 1em; }
+  &-y1p5 { margin-top: 1.5em; margin-bottom: 1.5em; }
+  &-y2  { margin-top: 2em; margin-bottom: 2em; }
   &-xauto { margin-left: auto !important; margin-right: auto !important; }
   &-yauto { margin-top: auto !important; margin-bottom: auto !important}
   }
@@ -45,9 +53,7 @@ __Extras__
 .auto_margin {  margin: auto !important; }
 .auto_marginx { margin-left: auto !important; margin-right: auto !important; }
 .auto_marginy { margin-top: auto !important; margin-bottom: auto !important; }
+
 .no_margin {  margin: 0 !important; }
 .no_marginy { margin-top: 0 !important; margin-bottom: 0 !important; }
 .no_marginx { margin-left: 0 !important; margin-right: 0 !important; }
-
-
-

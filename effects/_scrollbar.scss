@@ -1,4 +1,5 @@
 
+
 /* SCROLLBAR */
 ::-webkit-resizer          {
   background: #868686;
@@ -18,7 +19,7 @@
   background: #707070;
 }
 ::-webkit-scrollbar-thumb  {
-  background: $theme_primary;
+  background: $scrollbar_bg;
   border-radius: 8px;
 }
 ::-webkit-scrollbar-track  {}

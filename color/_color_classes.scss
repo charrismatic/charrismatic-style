@@ -1,9 +1,8 @@
 // COLOR OVERRIDE
 .cl {
   &_inherit { color: inherit !important; }
-
-  &_black { color: $black; }
-  &_white { color: $white; }
+  &_black   { color: $black; }
+  &_white   { color: $white; }
   &_grey-03 { color: $grey_03; }
   &_grey-05 { color: $grey_05; }
   &_grey-10 { color: $grey_10; }
@@ -38,36 +37,11 @@
   &_red     { color: $color_red; }
   &_teal    { color: $color_teal; }
   &_yellow  { color: $color_yellow; }
+  &_blue2   { color: $blue; }
+  &_gray    { color: $gray; }
+  &_lt-gray { color: $lt-gray; }
+  &_charcoal{ color: $charcoal; }
 
-  &_blue       { color: $blue; }
-  &_gray       { color: $gray; }
-  &_lt-gray    { color: $lt-gray; }
-  &_charcoal   { color: $charcoal; }
-  &_accent_red { color: $accent_red; }
-  &_desturated_red { color: $desturated_red; }
-  &_desturated_red_darker { color: $desturated_red_darker; }
-  &_accent_orange  { color: $accent_orange; }
-  &_anchor_link    { color: $anchor_link; }
-  &_accent_orange_light { color: $accent_orange_light; }
-  &_accent_orange  { color: $accent_orange; }
-  &_accent_yellow  { color: $accent_yellow; }
-  &_scroll_accent  { color: $scroll_accent; }
-  &_scroll_bg      { color: $scroll_bg; }
-  // SOCIAL
-  &_facebook    { color: $facebook; }
-  &_flikr_blue  { color: $flikr_blue; }
-  &_flikr_pink  { color: $flikr_pink; }
-  &_github      { color: $github; }
-  &_google_plus { color: $google_plus; }
-  &_linkedin    { color: $linkedin; }
-  &_twitter     { color: $twitter; }
-  &_youtube     { color: $youtube; }
-  // VALIDATION
-  &_form_good { color: $form_good; }
-  &_error { color: $error; }
-  &_warning { color: $warning; }
-  &_notice { color: $notice; }
-  &_success { color: $success; }
 }
 
 
@@ -100,49 +74,44 @@
   &_grey-90 { background-color: $grey_90 ; }
   &_grey-95 { background-color: $grey_95 ; }
 
-  &_navy    { background-color: $color_navy; }
-  &_blue    { background-color: $color_blue; }
-  &_aqua    { background-color: $color_aqua; }
-  &_teal    { background-color: $color_teal; }
-  &_olive   { background-color: $color_olive; }
-  &_green   { background-color: $color_green; }
-  &_lime    { background-color: $color_lime; }
-  &_yellow  { background-color: $color_yellow; }
-  &_orange  { background-color: $color_orange; }
-  &_red     { background-color: $color_red; }
-  &_fuchsia { background-color: $color_fuchsia; }
-  &_purple  { background-color: $color_purple; }
-  &_maroon  { background-color: $color_maroon; }
+  &_aqua     { background-color: $color_aqua; }
+  &_blue     { background-color: $color_blue; }
+  &_charcoal { background-color: $charcoal; }
+  &_fuchsia  { background-color: $color_fuchsia; }
+  &_gray     { background-color: $gray; }
+  &_green    { background-color: $color_green; }
+  &_lime     { background-color: $color_lime; }
+  &_lt-gray  { background-color: $lt-gray; }
+  &_maroon   { background-color: $color_maroon; }
+  &_navy     { background-color: $color_navy; }
+  &_olive    { background-color: $color_olive; }
+  &_orange   { background-color: $color_orange; }
+  &_purple   { background-color: $color_purple; }
+  &_red      { background-color: $color_red; }
+  &_teal     { background-color: $color_teal; }
+  &_yellow   { background-color: $color_yellow; }
+}
 
+$companies: _get($color_schemes, 'company-colors');
 
-  &_accent_red             { background-color: $accent_red; }
-  &_desturated_red         { background-color: $desturated_red; }
-  &_desturated_red_darker  { background-color: $desturated_red_darker; }
-  &_accent_orange          { background-color: $accent_orange; }
-  &_anchor_link            { background-color: $anchor_link; }
-  &_accent_orange_light    { background-color: $accent_orange_light; }
-  &_accent_orange          { background-color: $accent_orange; }
-  &_accent_yellow          { background-color: $accent_yellow; }
-  &_mob_nav_border_color   { background-color: $mob_nav_border_color; }
-  &_scroll_accent          { background-color: $scroll_accent; }
-  &_scroll_bg              { background-color: $scroll_bg; }
-  &_form_good              { background-color: $form_good; }
-  &_error                  { background-color: $error; }
-  &_warning                { background-color: $warning; }
-  &_notice                 { background-color: $notice; }
-  &_success                { background-color: $success; }
-  &_lt-gray                { background-color: $lt-gray; }
-  &_gray                   { background-color: $gray; }
-  &_charcoal               { background-color: $charcoal; }
-  &_blue                   { background-color: $blue; }
-
-  // SOCIAL
-  &_facebook             { background-color: $facebook; }
-  &_flikr_blue           { background-color: $flikr_blue; }
-  &_flikr_pink           { background-color: $flikr_pink; }
-  &_github               { background-color: $github; }
-  &_google_plus          { background-color: $google_plus; }
-  &_linkedin             { background-color: $linkedin; }
-  &_twitter              { background-color: $twitter; }
-  &_youtube              { background-color: $youtube; }
+.bg {
+  &_facebook    { background-color: _get($companies,'facebook'); }
+  &_flikr_blue  { background-color: _get($companies,'flikr_blue'); }
+  &_flikr_pink  { background-color: _get($companies,'flikr_pink'); }
+  &_github      { background-color: _get($companies,'github'); }
+  &_google_plus { background-color: _get($companies,'google_plus'); }
+  &_linkedin    { background-color: _get($companies,'linkedin'); }
+  &_twitter     { background-color: _get($companies,'twitter'); }
+  &_youtube     { background-color: _get($companies,'youtube'); }
+}
+// SOCIAL
+.cl {
+  &_facebook    { color: _get($companies,'facebook'); }
+  &_flikr_blue  { color: _get($companies,'flikr_blue'); }
+  &_flikr_pink  { color: _get($companies,'flikr_pink'); }
+  &_github      { color: _get($companies,'github'); }
+  &_google_plus { color: _get($companies,'google_plus'); }
+  &_linkedin    { color: _get($companies,'linkedin'); }
+  &_twitter     { color: _get($companies,'twitter'); }
+  &_youtube     { color: _get($companies,'youtube'); }
 }
