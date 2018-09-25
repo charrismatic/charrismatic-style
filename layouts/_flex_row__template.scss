@@ -30,18 +30,19 @@ margin: 0 1em;
 
 */
 
-
 // SINGLE ROW FLEX CONTAINER
-%fl_row {
+@mixin flex_row () {
   display: flex;
   flex-direction: row;
-   > * {
+
+  > * {
     flex: 0 1 auto;
     margin: 0 1em;
     &:first-child { margin-left: 0; }
     &:last-child { margin-right: 0;}
   }
 }
+
 
 // INTENDED FOR A SINGLE ROW OR ITEMS STRETCHING LEFT TO RIGHT
 .flex_row {

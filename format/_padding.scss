@@ -44,9 +44,18 @@ __Vertical Spacer__
   &-b0 { padding-bottom: 0 }
   &-l0 { padding-left:   0 }
   &-x0 { padding-left:   0; padding-right:  0 }
-  &-y0 { padding-top:    0; padding-bottom: 0 }
-  &-autox { padding: 0 auto }
-  &-autoy { padding: auto 0 }
+  &-p2 { padding:        .2em }
+  &-p4 { padding:        .4em }
+  &-p6 { padding:        .6em }
+  &-p8 { padding:        .8em }
+  &-1  { padding:        1em  }
+  &-1p5{ padding:        1.5em }
+  &-2  { padding:        2em }
+  &-3  { padding:        3em }
+  &-y0 { padding-top: 0; padding-bottom: 0 }
+  &-y1 { padding-top: 1em; padding-bottom: 1em; }
+  &-y2 { padding-top: 2em; padding-bottom: 2em; }
+  &-y3 { padding-top: 3em; padding-bottom: 3em; }
 }
 
 .auto_pad { padding: auto !important; }
@@ -60,5 +69,3 @@ __Vertical Spacer__
 .spacer {
   padding: 1.5em 0;
 }
-
-

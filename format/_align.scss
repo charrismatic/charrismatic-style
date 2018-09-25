@@ -15,24 +15,21 @@ __TEXT ALIGNMENT__
 - text--right   - text-align: right
 - text--center  - text-align: center
 - text--justify - text-align: justify
-
 */
 
 
 // OBJECT ALIGNMENT
 .align {
-  &--top { align-items: flex-start; }
-  &--center { align-items: center; }
-  &--bottom { align-items: flex-end; }
-
-
+  &_top { align-items: flex-start; }
+  &_center { align-items: center; }
+  &_bottom { align-items: flex-end; }
 }
 
 
 // TEXT ALIGNMENT
 .text {
-  &--left { text-align: left; }
-  &--right { text-align: right; }
-  &--center { text-align: center; }
-  &--justify { text-align: justify; }
+  &_left { text-align: left; }
+  &_right { text-align: right; }
+  &_center { text-align: center; }
+  &_justify { text-align: justify; }
 }
