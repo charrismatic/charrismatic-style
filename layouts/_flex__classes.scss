@@ -92,10 +92,15 @@ FLEX BASIS
 
 .flex {
   // SIZING
-  &_basis-none { flex-basis: 0; }
+  &_auto {     flex-basis: auto; }
   &_basis-max  { flex-basis: 100%; }
-  &_grow       { flex-grow: 1; }
-  &_shrink     { flex-shrink: 1; }
+  &_basis-none { flex-basis: 0; }
+  &_equal {    flex-basis: 0; }
+  &_fill {     flex-basis: 100%; }
+  &_grow {     flex-grow: 1; }
+  &_nogrow {   flex-grow: 0; }
+  &_noshrink { flex-shrink: 0; }
+  &_shrink {   flex-shrink: 1; }
 
   // ALIGNMENT
   &-start      { justify-content: flex-start; }
@@ -109,21 +114,8 @@ FLEX BASIS
   &-nowrap { flex-wrap: nowrap; }
 }
 
-.flex {
-  // CHILD CLASSES
-  .fl {
-    &_grow {     flex-grow: 1; }
-    &_nogrow {   flex-grow: 0; }
-    &_shrink {   flex-shrink: 1; }
-    &_noshrink { flex-shrink: 0; }
-    &_fill {     flex-basis: 100%; }
-    &_equal {    flex-basis: 0; }
-    &_auto {     flex-basis: auto; }
-  }
-}
-
 // DISTRIBUTION
-.fl {
+.flex {
   &-fill {  flex-basis: 100%; }
   &-equal {  flex-basis: 0; }
   &-auto {  flex-basis: auto; }
@@ -133,8 +125,11 @@ FLEX BASIS
 // PREDEFINED CLASSES
 // ------------------
 // GROW, SHRINK, AS LARGE AS POSSIBLE
-.flexible { flex: 1 1 auto; }
-.shrinkable { flex: 0 1 auto; }
+.flex,
+.flex-row {
+  .flexible { flex: 1 1 auto; }
+  .shrinkable { flex: 0 1 auto; }
+}
 
 
 // SHORTHAND CLASSES
@@ -165,6 +160,7 @@ FLEX BASIS
   &-end { justify-content: flex-end;}
 }
 
+// FLEX WEIGHT
 .flex {
   &-1 { flex: 1 }
   &-2 { flex: 2 }
@@ -177,26 +173,24 @@ FLEX BASIS
   &-9 { flex: 9 }
 }
 
-// WEIGHTED ELEMENTS
-.fl {
-  &_05 { flex-basis: 5% }
-  &_10 { flex-basis: 10% }
-  &_15 { flex-basis: 15% }
-  &_20 { flex-basis: 20% }
-  &_25 { flex-basis: 25% }
-  &_30 { flex-basis: 30% }
-  &_35 { flex-basis: 35% }
-  &_40 { flex-basis: 40% }
-  &_45 { flex-basis: 45% }
-  &_50 { flex-basis: 50% }
-  &_55 { flex-basis: 55% }
-  &_60 { flex-basis: 60% }
-  &_65 { flex-basis: 65% }
-  &_70 { flex-basis: 70% }
-  &_75 { flex-basis: 75% }
-  &_80 { flex-basis: 80% }
-  &_85 { flex-basis: 85% }
-  &_90 { flex-basis: 90% }
-  &_95 { flex-basis: 95% }
-  &_100 { flex-basis: 100% }
+// FLEX PERCENT ELEMENTS
+.flex {
+  &-10 { flex-basis: 10% !important }
+  &-15 { flex-basis: 15% !important }
+  &-20 { flex-basis: 20% !important }
+  &-25 { flex-basis: 25% !important }
+  &-30 { flex-basis: 30% !important }
+  &-35 { flex-basis: 35% !important }
+  &-40 { flex-basis: 40% !important }
+  &-45 { flex-basis: 45% !important }
+  &-50 { flex-basis: 50% !important }
+  &-55 { flex-basis: 55% !important }
+  &-60 { flex-basis: 60% !important }
+  &-65 { flex-basis: 65% !important }
+  &-70 { flex-basis: 70% !important }
+  &-75 { flex-basis: 75% !important }
+  &-80 { flex-basis: 80% !important }
+  &-85 { flex-basis: 85% !important }
+  &-90 { flex-basis: 90% !important }
+  &-100 { flex-basis: 100% !important }
 }

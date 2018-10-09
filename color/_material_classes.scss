@@ -1,3 +1,8 @@
+/*
+  Material Color Classes
+ */
+
+
 // Color Classes
 @each $color_name, $color in $material_colors {
   @each $color_type, $color_value in $color {

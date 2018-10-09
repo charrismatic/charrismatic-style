@@ -31,22 +31,17 @@ VERTICAL COLLAPSE
 */
 
 
-.flex-item {
-  flex: 0 1 auto;
-  margin: 0 1em;
-  &:first-child { margin-left: 0; }
-  &:last-child { margin-right: 0; }
-}
-
-.flex_fit {
-  > * {  flex-basis: 100%; }
-}
-
-.flex_equal {
-  > * { flex-basis: 0; }
-}
-
-.flex_none {
-  flex-grow: 0;
-  flex-shrink: 0;
+.flex {
+  &-item {
+    flex: 0 1 auto;
+    margin: 0 1em;
+    &:first-child { margin-left: 0; }
+    &:last-child { margin-right: 0; }
+  }
+  &-fit { > * {  flex-basis: 100%; }}
+  &-equal { > * { flex-basis: 0; }}
+  &-none {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
 }
