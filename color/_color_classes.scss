@@ -1,117 +1,94 @@
+/*
+  Color Classes
+ */
+
+
+// $greyscale_colors: _get($color_schemes, 'greyscale');
+
+/* <div class="color_swatch_group">
+  <h2 class="swatch_group__title">Greyscale Colors</h2>
+*/
+
+@each $color, $color_value in $greyscale_colors { .cl_#{$color} { color: $color_value !important; }}
+@each $color, $color_value in $greyscale_colors { .bg_#{$color} { background-color: $color_value !important; }}
+
+/* </div> */
+
+
 // COLOR OVERRIDE
 .cl {
-  &_inherit { color: inherit !important; }
   &_black   { color: $black; }
   &_white   { color: $white; }
-  &_grey-03 { color: $grey_03; }
-  &_grey-05 { color: $grey_05; }
-  &_grey-10 { color: $grey_10; }
-  &_grey-15 { color: $grey_15; }
-  &_grey-20 { color: $grey_20; }
-  &_grey-25 { color: $grey_25; }
-  &_grey-30 { color: $grey_30; }
-  &_grey-35 { color: $grey_35; }
-  &_grey-40 { color: $grey_40; }
-  &_grey-45 { color: $grey_45; }
-  &_grey-50 { color: $grey_50; }
-  &_grey-55 { color: $grey_55; }
-  &_grey-60 { color: $grey_60; }
-  &_grey-65 { color: $grey_65; }
-  &_grey-70 { color: $grey_70; }
-  &_grey-75 { color: $grey_75; }
-  &_grey-80 { color: $grey_80; }
-  &_grey-85 { color: $grey_85; }
-  &_grey-90 { color: $grey_90; }
-  &_grey-95 { color: $grey_95; }
-
-  &_aqua    { color: $color_aqua; }
-  &_blue    { color: $color_blue; }
-  &_fuchsia { color: $color_fuchsia; }
-  &_green   { color: $color_green; }
-  &_lime    { color: $color_lime; }
-  &_maroon  { color: $color_maroon; }
-  &_navy    { color: $color_navy; }
-  &_olive   { color: $color_olive; }
-  &_orange  { color: $color_orange; }
-  &_purple  { color: $color_purple; }
-  &_red     { color: $color_red; }
-  &_teal    { color: $color_teal; }
-  &_yellow  { color: $color_yellow; }
-  &_blue2   { color: $blue; }
-  &_gray    { color: $gray; }
-  &_lt-gray { color: $lt-gray; }
-  &_charcoal{ color: $charcoal; }
-
 }
-
-
 
 // BACKGROUND COLOR OVERRIDE
 .bg {
-  &_none { background-color: none !important; }
-  &_inherit { background-color: inherit !important; }
-
   &_black   { background-color: $black   ; }
   &_white   { background-color: $white   ; }
-  &_grey-03 { background-color: $grey_03 ; }
-  &_grey-05 { background-color: $grey_05 ; }
-  &_grey-10 { background-color: $grey_10 ; }
-  &_grey-15 { background-color: $grey_15 ; }
-  &_grey-20 { background-color: $grey_20 ; }
-  &_grey-25 { background-color: $grey_25 ; }
-  &_grey-30 { background-color: $grey_30 ; }
-  &_grey-35 { background-color: $grey_35 ; }
-  &_grey-40 { background-color: $grey_40 ; }
-  &_grey-45 { background-color: $grey_45 ; }
-  &_grey-50 { background-color: $grey_50 ; }
-  &_grey-55 { background-color: $grey_55 ; }
-  &_grey-60 { background-color: $grey_60 ; }
-  &_grey-65 { background-color: $grey_65 ; }
-  &_grey-70 { background-color: $grey_70 ; }
-  &_grey-75 { background-color: $grey_75 ; }
-  &_grey-80 { background-color: $grey_80 ; }
-  &_grey-85 { background-color: $grey_85 ; }
-  &_grey-90 { background-color: $grey_90 ; }
-  &_grey-95 { background-color: $grey_95 ; }
-
-  &_aqua     { background-color: $color_aqua; }
-  &_blue     { background-color: $color_blue; }
-  &_charcoal { background-color: $charcoal; }
-  &_fuchsia  { background-color: $color_fuchsia; }
-  &_gray     { background-color: $gray; }
-  &_green    { background-color: $color_green; }
-  &_lime     { background-color: $color_lime; }
-  &_lt-gray  { background-color: $lt-gray; }
-  &_maroon   { background-color: $color_maroon; }
-  &_navy     { background-color: $color_navy; }
-  &_olive    { background-color: $color_olive; }
-  &_orange   { background-color: $color_orange; }
-  &_purple   { background-color: $color_purple; }
-  &_red      { background-color: $color_red; }
-  &_teal     { background-color: $color_teal; }
-  &_yellow   { background-color: $color_yellow; }
 }
 
-$companies: _get($color_schemes, 'company-colors');
+.cl {
+  &_navy     { color: _get($base_colors, "navy"); }
+  &_blue     { color: _get($base_colors, "blue"); }
+  &_aqua     { color: _get($base_colors, "aqua"); }
+  &_teal     { color: _get($base_colors, "teal"); }
+  &_olive    { color: _get($base_colors, "olive"); }
+  &_green    { color: _get($base_colors, "green"); }
+  &_lime     { color: _get($base_colors, "lime"); }
+  &_yellow   { color: _get($base_colors, "yellow"); }
+  &_orange   { color: _get($base_colors, "orange"); }
+  &_red      { color: _get($base_colors, "red"); }
+  &_fuchsia  { color: _get($base_colors, "fuchsia"); }
+  &_purple   { color: _get($base_colors, "purple"); }
+  &_maroon   { color: _get($base_colors, "maroon"); }
+  &_silver   { color: _get($base_colors, "silver"); }
+}
 
 .bg {
-  &_facebook    { background-color: _get($companies,'facebook'); }
-  &_flikr_blue  { background-color: _get($companies,'flikr_blue'); }
-  &_flikr_pink  { background-color: _get($companies,'flikr_pink'); }
-  &_github      { background-color: _get($companies,'github'); }
-  &_google_plus { background-color: _get($companies,'google_plus'); }
-  &_linkedin    { background-color: _get($companies,'linkedin'); }
-  &_twitter     { background-color: _get($companies,'twitter'); }
-  &_youtube     { background-color: _get($companies,'youtube'); }
+  &_navy     { background-color: _get($base_colors, "navy"); }
+  &_blue     { background-color: _get($base_colors, "blue"); }
+  &_aqua     { background-color: _get($base_colors, "aqua"); }
+  &_teal     { background-color: _get($base_colors, "teal"); }
+  &_olive    { background-color: _get($base_colors, "olive"); }
+  &_green    { background-color: _get($base_colors, "green"); }
+  &_lime     { background-color: _get($base_colors, "lime"); }
+  &_yellow   { background-color: _get($base_colors, "yellow"); }
+  &_orange   { background-color: _get($base_colors, "orange"); }
+  &_red      { background-color: _get($base_colors, "red"); }
+  &_fuchsia  { background-color: _get($base_colors, "fuchsia"); }
+  &_purple   { background-color: _get($base_colors, "purple"); }
+  &_maroon   { background-color: _get($base_colors, "maroon"); }
+  &_silver   { background-color: _get($base_colors, "silver"); }
+}
+
+
+.bg {
+  &_facebook    { background-color: _get($company_colors,'facebook'); }
+  &_flikr_blue  { background-color: _get($company_colors,'flikr_blue'); }
+  &_flikr_pink  { background-color: _get($company_colors,'flikr_pink'); }
+  &_github      { background-color: _get($company_colors,'github'); }
+  &_google_plus { background-color: _get($company_colors,'google_plus'); }
+  &_linkedin    { background-color: _get($company_colors,'linkedin'); }
+  &_twitter     { background-color: _get($company_colors,'twitter'); }
+  &_youtube     { background-color: _get($company_colors,'youtube'); }
 }
 // SOCIAL
 .cl {
-  &_facebook    { color: _get($companies,'facebook'); }
-  &_flikr_blue  { color: _get($companies,'flikr_blue'); }
-  &_flikr_pink  { color: _get($companies,'flikr_pink'); }
-  &_github      { color: _get($companies,'github'); }
-  &_google_plus { color: _get($companies,'google_plus'); }
-  &_linkedin    { color: _get($companies,'linkedin'); }
-  &_twitter     { color: _get($companies,'twitter'); }
-  &_youtube     { color: _get($companies,'youtube'); }
+  &_facebook    { color: _get($company_colors,'facebook'); }
+  &_flikr_blue  { color: _get($company_colors,'flikr_blue'); }
+  &_flikr_pink  { color: _get($company_colors,'flikr_pink'); }
+  &_github      { color: _get($company_colors,'github'); }
+  &_google_plus { color: _get($company_colors,'google_plus'); }
+  &_linkedin    { color: _get($company_colors,'linkedin'); }
+  &_twitter     { color: _get($company_colors,'twitter'); }
+  &_youtube     { color: _get($company_colors,'youtube'); }
+}
+
+.cl {
+  &_none { background-color: none !important; }
+  &_inherit { background-color: inherit !important; }
+}
+.bg {
+  &_none { background-color: none !important; }
+  &_inherit { background-color: inherit !important; }
 }

@@ -1,0 +1,79 @@
+// FUNCTIONS
+@import 'functions';
+// DEFINITIONS
+@import 'var_schemes';
+
+@import 'var_greyscale';
+@import 'var_material';
+@import 'var_translucent';
+
+$base_colors: _get($color_schemes, 'base');
+$company_colors: _get($color_schemes, 'company-colors');
+$message_colors: _get($color_schemes, 'messages');
+$charrismatic: _get($color_schemes, 'mattharris');
+
+// CLASSES
+@import 'theme_classes';
+@import 'material_classes';
+@import 'color_classes';
+@import 'form_classes';
+
+
+@import '../bootstrap/bootstrap';
+
+
+
+
+
+$theme_dark:           rgb(0,111,225);
+$theme_base:           rgb(0,148,225);
+$theme_light:          rgb(0,196,225);
+
+
+$body_bg:              $grey_05;
+$scroll_accent:        $grey_80;
+$scroll_bg:            $grey_20;
+$body_bg:              $grey_05;
+$scroll_accent:        $grey_80;
+$scroll_bg:            $grey_20;
+$anchor_link:          $grey_90;
+$link_color:           $grey_90;
+
+// Typography
+$text-color:           #636b6f;
+// Navbar
+$navbar-default-bg:    #f5f8fa;
+// $theme_blue_dark:      $dark_blue;
+// $theme_blue_light:     $bright_blue;
+// $theme_green:          $green;
+// $theme_primary:        $dark_blue;
+$menu_top_text_color:    #ffffff;
+$postbox_header_text:    #0073aa;
+$primary_title:          #095698;
+
+// Buttons
+
+// Inputs
+// $input-border:            lighten($text-color, 40%);
+// $input-border-focus:      lighten($theme-primary, 25%);
+// $input-color-placeholder: lighten($text-color, 30%);
+
+$font_color_base:       $grey_90;
+$theme_font_color:      $font_color_base;
+
+// Panels
+$panel-default-heading-bg: #fff;
+
+
+$mob_nav_border_color:  darken(red, 8%);
+
+$theme_dark_body_bg:     #25292c;
+$theme_dark_body_light_text: #72777c;
+
+$btn-default-color:      $text-color;
+$component-active-bg:    _get($base_colors, "olive");
+// $input-btn-focus-color:  lighten($text-color, 30%);
+$top_navigation: $grey_80;
+$top_navigation_txt: $white;
+$top_navigation_submenu: lighten($grey_80, 10%);
+$top_navigation_submenu_txt: $grey_05;

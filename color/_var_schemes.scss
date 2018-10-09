@@ -1,33 +1,64 @@
 ////
 /// @group Theme
 ////
+///
+/// // COLOR THEMES AND PALLETES
+/// // DO NOT ASSIGN VARIABLES TO VALUES
+/// // THIS FILE SHOULD NOT HAVE DEPENDENCIES
+///
+/// /*---
+/// title: Color Sets
+/// name: color_library
+/// ---
+///
+/// Named Colors
+///
+/// ```example:color
+///   @color: rgb(250,76,6)   @name: anchor_link
+///   @color: rgb(19,198,7)   @name: form_good
+///   @color: #ff7e7e         @name: error
+///   @color: #68d388         @name: success
+///   @color: #3460a1         @name: facebook
+///   @color: #28aae1         @name: twitter
+///   @color: #136d9d         @name: linkedin
+///   @color: #de5543         @name: google_plus
+///   @color: #ee3138         @name: youtube
+/// ```
+/// */
 
-// COLOR THEMES AND PALLETES
-// DO NOT ASSIGN VARIABLES TO VALUES
-// THIS FILE SHOULD NOT HAVE DEPENDENCIES
-
-/*---
-title: Color Sets
-name: color_library
----
-
-Named Colors
-
-```example:color
-  @color: rgb(250,76,6)   @name: anchor_link
-  @color: rgb(19,198,7)   @name: form_good
-  @color: #ff7e7e         @name: error
-  @color: #68d388         @name: success
-  @color: #3460a1         @name: facebook
-  @color: #28aae1         @name: twitter
-  @color: #136d9d         @name: linkedin
-  @color: #de5543         @name: google_plus
-  @color: #ee3138         @name: youtube
-```
-*/
-
-
+/*
+ Color Schemes
+ */
 $color_schemes: (
+  "greyscale": (
+    "grey-01": darken(rgb(255,255,255),01%),
+    "grey-02": darken(rgb(255,255,255),02%),
+    "grey-03": darken(rgb(255,255,255),03%),
+    "grey-04": darken(rgb(255,255,255),04%),
+    "grey-05": darken(rgb(255,255,255),05%),
+    "grey-10": darken(rgb(255,255,255),10%),
+    "grey-15": darken(rgb(255,255,255),15%),
+    "grey-20": darken(rgb(255,255,255),20%),
+    "grey-25": darken(rgb(255,255,255),25%),
+    "grey-30": darken(rgb(255,255,255),30%),
+    "grey-35": darken(rgb(255,255,255),35%),
+    "grey-40": darken(rgb(255,255,255),40%),
+    "grey-45": darken(rgb(255,255,255),45%),
+    "grey-50": darken(rgb(255,255,255),50%),
+    "grey-55": darken(rgb(255,255,255),55%),
+    "grey-60": darken(rgb(255,255,255),60%),
+    "grey-65": darken(rgb(255,255,255),65%),
+    "grey-70": darken(rgb(255,255,255),70%),
+    "grey-75": darken(rgb(255,255,255),75%),
+    "grey-80": darken(rgb(255,255,255),80%),
+    "grey-85": darken(rgb(255,255,255),85%),
+    "grey-90": darken(rgb(255,255,255),90%),
+    "grey-95": darken(rgb(255,255,255),95%),
+    "grey-96": darken(rgb(255,255,255),96%),
+    "grey-97": darken(rgb(255,255,255),97%),
+    "grey-98": darken(rgb(255,255,255),98%),
+    "grey-99": darken(rgb(255,255,255),99%),
+  ),
   "reds": (
     "r1": rgb(232,63,69),
     "r2": rgb(185,34,40),
@@ -46,6 +77,35 @@ $color_schemes: (
     "y6": rgb(252, 166, 48),
     "y7": rgb(255,205,85),
     "y8": rgb(255, 205, 85),
+  ),
+  "base": (
+    "navy"    : #001F3F,
+    "blue"    : #0074D9,
+    "aqua"    : #7FDBFF,
+    "teal"    : #39CCCC,
+    "olive"   : #3D9970,
+    "green"   : #2ECC40,
+    "lime"    : #01FF70,
+    "yellow"  : #FFDC00,
+    "orange"  : #FF851B,
+    "red"     : #FF4136,
+    "fuchsia" : #F012BE,
+    "purple"  : #B10DC9,
+    "maroon"  : #85144B,
+    "white"   : #FFFFFF,
+    "silver"  : #DDDDDD,
+    "gray"    : #AAAAAA,
+    "black"   : #111111,
+  ),
+  "messages": (
+    "danger"    : #bf5329,
+    "error"     : #8eb4cb,
+    "form_good" : #3097D1,
+    "info"      : #8eb4cb,
+    "notice"    : #3097D1,
+    "primary"   : #3097D1,
+    "success"   : #2ab27b,
+    "warning"   : #cbb956,
   ),
   "mattharris": (
     "blue_bright_highlight":   #1d88c7,
