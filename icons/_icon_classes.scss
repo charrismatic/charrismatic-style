@@ -155,8 +155,7 @@ More detailed examples here https://codepen.io/super_thalamus/pen/wdyeGp
 
 
 
-
 // EXAMPLES
-.icon_times_rect { background-image: define_icon( font-awesome, times-rectangle, $color_aqua); }
-.icon_minus_circle { background-image: define_icon( font-awesome, minus-circle, $color_red); }
-.icon_plus_square { background-image: define_icon( font-awesome, plus-square, $color_olive); }
+.icon_times_rect { background-image: define_icon( font-awesome, times-rectangle, _get($base_colors, "aqua")); }
+.icon_minus_circle { background-image: define_icon( font-awesome, minus-circle, _get($base_colors, "red")); }
+.icon_plus_square { background-image: define_icon( font-awesome, plus-square, _get($base_colors, "olive")); }

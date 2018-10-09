@@ -24,12 +24,17 @@ section {
 }
 
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 // A ROW IS AN INNER WRAPPER THAT SETS LAYOUTS, BOUNDARIES, AND PADDING
 .row {
-  margin-left: 2em;
-  margin-right: 2em;
+  margin-left: auto;
+  margin-right: auto;
   display: block;
-  max-width: $default_row_max_width
+  width: 90%
 }
 
 .vpad  { padding-top: 2em; padding-bottom: 2em; }

@@ -1,0 +1,29 @@
+{
+  "name": "charrismatic-style-library",
+  "version": "1.0.1",
+  "description": "Design System Utilities and Core Classes",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "sync": "browser-sync .build/dev --server  --browser --reload-debounce --watch --files *.css",
+    "colorguide": "node-sass --output-style expanded ./color/guide.scss --output .build/colorguide.css",
+    "build": "node-sass --output-style compressed --output .build/styles.css style.scss",
+    "styles": "node-sass -w --output-style expanded --output .build/styles.css style.scss",
+    "dev": "npm run sync && npm run styles"
+  },
+  "watch": {
+     "styles": [
+       "**/*.scss"
+     ]
+   },
+   "repository": {
+    "type": "git",
+    "url": "https://code.soyo.soy/tools/charrismatic-style-library.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "npm-watch": "^0.4.0"
+  }
+}

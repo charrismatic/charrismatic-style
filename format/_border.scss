@@ -1,23 +1,55 @@
-/*--- 
-title: Border Radius 
-section: Formatting 
+/*---
+title: Border
+section: Formatting
 ---
 
-__BORDER RADIUS__ 
+__BORDER__
 
-- br_1   - border-radius: 1rem
-- br_2   - border-radius: 2rem
-- br_3   - border-radius: 3rem
-- br_50  - border-radius: 50%
-- br_100 - border-radius: 100%
+- bd-0   border: 0 !important
+- bd-1   border: 1px solid
+- bd-2   border: 2px solid
+- bd-3   border: 3px solid
+- bd-t1  border-top: 1px solid
+- bd-b1  border-bottom: 1px solid
+- bd-l1  border-left: 1px solid
+- bd-r1  border-right: 1px solid
+- bd-x1  border-right: 1px solid, border-left: 1px solid
+- bd-y1  border-top: 1px solid, border-bottom: 1px solid
+*/
+
+.bd {
+  &-0 { border: 0 !important; }
+  &-1 { border: 1px solid; }
+  &-2 { border: 2px solid; }
+  &-3 { border: 3px solid; }
+  &-t1 {border-top: 1px solid }
+  &-b1 {border-bottom: 1px solid }
+  &-l1 {border-left: 1px solid }
+  &-r1 {border-right: 1px solid }
+  &-x1 {border-right: 1px solid; border-left: 1px solid; }
+  &-y1 {border-top: 1px solid; border-bottom: 1px solid; }
+}
+
+/*---
+title: Border Radius
+---
+
+__BORDER RADIUS__
+
+- br-0   - border-radius: 0
+- br-1   - border-radius: 1rem
+- br-2   - border-radius: 2rem
+- br-3   - border-radius: 3rem
+- br-50  - border-radius: 50%
+- br-100 - border-radius: 100%
 
 */
 
-
 .br {
-  &_1 { border-radius: 1rem; }
-  &_2 { border-radius: 2rem; }
-  &_3 { border-radius: 3rem; }
-  &_50 { border-radius: 50%; }
-  &_100 { border-radius: 100%; }
+  &-0 { border-radius: 0 !important; }
+  &-1 { border-radius: 1rem; }
+  &-2 { border-radius: 2rem; }
+  &-3 { border-radius: 3rem; }
+  &-50 { border-radius: 50%; }
+  &-100 { border-radius: 100%; }
 }

@@ -1,0 +1,75 @@
+/*!
+Charrismatic Style Library
+Author: Matt Harris
+Author URI: https://ma.ttharr.is
+Author Email: m@ttHarr.is
+Description: Atomic style library and design system
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+// EACH PACKAGE SHOULD BE ABLE TO BUILD INDEPENDENTLY
+// BY INCLUDING THE FOLDER INDEX FILE
+
+@import "color/index";
+
+$theme_primary: $grey_05;
+$brown: hsla(42, 78%, 10%, 0.57);
+$brick_red: rgb(153, 81, 81);
+// FROM ATTORNEY PAGES
+$blue_green: rgb(0, 131, 143);
+$blue_teal: rgb(48, 120, 135);
+$copper_red: rgb(118, 65, 65);
+$clr_bronze: rgb(120, 109, 38);
+$clr_bright_gold: rgb(252, 225, 164);
+$theme_primary: $grey_05;
+$site_header_bg: _get(_get($material_colors, 'cyan'),'dk3');
+// $scrollbar_bg: $theme_primary;
+// $selection_bg: $theme_primary;
+// $selection_color: $white;
+$success_color: #3d6611;
+$error_color: #c02230;
+$notice_color: #7c622a;
+$message_error_color: $error_color;
+$message_error_border_color: $error_color;
+$message_error_bg: #F5DAD3;
+$message_success_color: $success_color;
+$message_success_border_color: $success_color;
+$message_success_bg: #e9ffca;
+$message_notice_color: $notice_color;
+$message_notice_border_color: $notice_color;
+$message_notice_bg: #FDEDA4;
+// $grad_start: rgba( $white, 100%);
+// $grad_end: rgba( $white, 0% );
+// $fadeout_start: $grad_start  0%;
+// $fadeout_end: $grad_end 100%;
+$sidebar_bg_color: _get(_get($material_colors, 'cyan'),'dk3');
+$archive_accent_color: $site_header_bg;
+$archive_accent_border_color: $site_header_bg;
+
+
+@import "fonts/index";
+@import "var/responsive";
+@import "effects/index";
+@import "format/index";
+@import "layouts/index";
+@import "icons/html_entities";
+@import "icons/icon_classes";
+
+// @import '../../library/bootstrap/scss/bootstrap.scss';
+// @import "wp";
+
+@import "../components/blocks/index";
+@import "../components/lists/list";
+@import "../components/lists/definition_list";
+@import "../components/lists/directory_list";
+@import "../components/card/index";
+// @import "charrismatic/post/post_card";
+// @import "charrismatic/post/post_small_card";
+// @import "charrismatic/page/banner_sections";
+// @import "charrismatic/page/navigation";
+// @import "charrismatic/templates/archive_pages";
+// @import "charrismatic/templates/site_header";
+// @import "charrismatic/page/header";
+// @import "charrismatic/templates/page_front";

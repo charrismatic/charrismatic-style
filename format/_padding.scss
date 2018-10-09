@@ -38,15 +38,24 @@ __Vertical Spacer__
 
 
 .pad {
-  &-0  { padding:        0 }
-  &-t0 { padding-top:    0 }
-  &-r0 { padding-right:  0 }
-  &-b0 { padding-bottom: 0 }
-  &-l0 { padding-left:   0 }
-  &-x0 { padding-left:   0; padding-right:  0 }
-  &-y0 { padding-top:    0; padding-bottom: 0 }
-  &-autox { padding: 0 auto }
-  &-autoy { padding: auto 0 }
+  &-0  { padding:        0 !important; }
+  &-t0 { padding-top:    0 !important; }
+  &-r0 { padding-right:  0 !important; }
+  &-b0 { padding-bottom: 0 !important; }
+  &-l0 { padding-left:   0 !important; }
+  &-x0 { padding-left:   0 !important; padding-right: 0 !important; }
+  &-p2 { padding: .2em !important; }
+  &-p4 { padding: .4em !important; }
+  &-p6 { padding: .6em !important; }
+  &-p8 { padding: .8em !important; }
+  &-1  { padding: 1em !important;  }
+  &-1p5{ padding: 1.5em !important; }
+  &-2  { padding: 2em !important; }
+  &-3  { padding: 3em !important; }
+  &-y0 { padding-top: 0 !important; padding-bottom: 0 !important; }
+  &-y1 { padding-top: 1em !important; padding-bottom: 1em !important; }
+  &-y2 { padding-top: 2em !important; padding-bottom: 2em !important; }
+  &-y3 { padding-top: 3em !important; padding-bottom: 3em !important; }
 }
 
 .auto_pad { padding: auto !important; }
@@ -57,8 +66,4 @@ __Vertical Spacer__
 .no_pady { padding-top: 0 !important; padding-bottom: 0 !important; }
 
 
-.spacer {
-  padding: 1.5em 0;
-}
-
-
+.spacer {  padding: 1.5em 0;}

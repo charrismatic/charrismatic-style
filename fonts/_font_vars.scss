@@ -51,7 +51,8 @@
     "proxima": "proxima-nova",
     "lato": "Lato",
   );
-  @return map_get($font_fam_map, $input);
+  $font_string: map_get($font_fam_map, $input);
+  @return #{$font_string};
 }
 
 

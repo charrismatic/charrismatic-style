@@ -3,7 +3,6 @@ title: Flex Classes
 section: Layout
 ---
 
-
 Flex Class Templates
 
 These classes automatically modify the parent and children elements
@@ -29,12 +28,14 @@ margin: 0 1em;
 
 
 // GENERAL FLEX CONTAINER
-
-// PLACEHOLDER
-%flex {
+@mixin flex($flex_child: "> *", $flex_properties:"" ) {
   display: flex;
-  > * {
-    margin: 0 1em;
+  // @if ($flex_properties) {
+    // #{$flex_properties};
+  // }
+  #{$flex_child} {
+    margin-left: 1em;
+    margin-right: 1em;
   }
 }
 
@@ -42,6 +43,7 @@ margin: 0 1em;
 .flex {
   display: flex;
   > * {
-    margin: 0 1em;
+    margin-left: 1em;
+    margin-right: 1em;
   }
 }
