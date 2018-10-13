@@ -6,24 +6,34 @@
   "scripts": {
     "test": "test",
     "sync": "browser-sync .build/dev --server  --browser --reload-debounce --watch --files *.css",
-    "colorguide": "node-sass --output-style expanded ./color/guide.scss --output .build/colorguide.css",
+    "wp:styles:editor": "node-sass --output-style expanded ./color/guide.scss --output .build/colorguide.css",
+    "wp:colorguide": "node-sass --output-style expanded ./color/guide.scss --output .build/colorguide.css",
+    "wp:styles:admin": "node-sass --output-style expanded ./color/guide.scss --output .build/colorguide.css",
     "build": "node-sass --output-style compressed --output .build/styles.css style.scss",
+    "styledocs:forms": "node-sass -w --output-style expanded --output ./styledocs/components .build/groups/forms.scss",
     "styles": "node-sass -w --output-style expanded --output .build/styles.css style.scss",
-    "dev": "npm run sync && npm run styles"
+    "style:doc": "node-sass -w --output-style expanded --output ./styledocs/.vuepress/dist style.scss",
+    "dev": "npm run sync && npm run styles",
+    "docs:build": "vuepress build --dest styledocs/.vuepress/dist ./styledocs",
+    "docs:cleanbuild": "vuepress build --no-cache styledocs",
+    "docs:dev": "vuepress dev styledocs"
   },
   "watch": {
-     "styles": [
-       "**/*.scss"
-     ]
-   },
-   "repository": {
+    "styles": [
+      "**/*.scss"
+    ]
+  },
+  "repository": {
     "type": "git",
     "url": "https://code.soyo.soy/tools/charrismatic-style-library.git"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.24.7",
-    "npm-watch": "^0.4.0"
-  }
+    "browser-sync": "^2.26.0",
+    "npm-watch": "^0.4.0",
+    "postcss-single-line":"latest",
+    "vuepress": "^0.14.4"
+  },
+  "dependencies": {}
 }

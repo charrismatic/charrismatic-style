@@ -1,0 +1,100 @@
+
+$base_colors: _get($color_schemes, 'base');
+$company_colors: _get($color_schemes, 'company-colors');
+$message_colors: _get($color_schemes, 'messages');
+$charrismatic: _get($color_schemes, 'mattharris');
+
+
+$theme_dark:           rgb(0,111,225);
+$theme_base:           rgb(0,148,225);
+$theme_light:          rgb(0,196,225);
+
+
+$body_bg:              $grey_05;
+$scroll_accent:        $grey_80;
+$scroll_bg:            $grey_20;
+$body_bg:              $grey_05;
+$scroll_accent:        $grey_80;
+$scroll_bg:            $grey_20;
+$anchor_link:          $grey_90;
+$link_color:           $grey_90;
+
+// Typography
+$text-color:           #636b6f;
+// Navbar
+$navbar-default-bg:    #f5f8fa;
+// $theme_blue_dark:      $dark_blue;
+// $theme_blue_light:     $bright_blue;
+// $theme_green:          $green;
+// $theme_primary:        $dark_blue;
+$menu_top_text_color:    #ffffff;
+$postbox_header_text:    #0073aa;
+$primary_title:          #095698;
+
+// Buttons
+
+// Inputs
+// $input-border:            lighten($text-color, 40%);
+// $input-border-focus:      lighten($theme-primary, 25%);
+// $input-color-placeholder: lighten($text-color, 30%);
+
+$font_color_base:       $grey_90;
+$theme_font_color:      $font_color_base;
+// Panels
+$panel-default-heading-bg: #fff;
+
+
+$mob_nav_border_color:  darken(red, 8%);
+
+$theme_dark_body_bg:     #25292c;
+$theme_dark_body_light_text: #72777c;
+
+$btn-default-color:      $text-color;
+$component-active-bg:    _get($base_colors, "olive");
+// $input-btn-focus-color:  lighten($text-color, 30%);
+$top_navigation: $grey_80;
+$top_navigation_txt: $white;
+$top_navigation_submenu: lighten($grey_80, 10%);
+$top_navigation_submenu_txt: $grey_05;
+
+$theme_primary: $grey_05;
+
+$brown: hsla(42, 78%, 10%, 0.57);
+$brick_red: rgb(153, 81, 81);
+// FROM ATTORNEY PAGES
+$blue_green: rgb(0, 131, 143);
+$blue_teal: rgb(48, 120, 135);
+$copper_red: rgb(118, 65, 65);
+$clr_bronze: rgb(120, 109, 38);
+$clr_bright_gold: rgb(252, 225, 164);
+$theme_primary: $grey_05;
+$site_header_bg: _get(_get($material_colors, 'cyan'),'dk3');
+
+// $scrollbar_bg: $theme_primary;
+// $selection_bg: $theme_primary;
+// $selection_color: $white;
+
+$success_color: #3d6611;
+$error_color: #c02230;
+$notice_color: #7c622a;
+
+$message_error_color: $error_color;
+$message_error_border_color: $error_color;
+$message_error_bg: #F5DAD3;
+
+$message_success_color: $success_color;
+$message_success_border_color: $success_color;
+$message_success_bg: #e9ffca;
+
+$message_notice_color: $notice_color;
+$message_notice_border_color: $notice_color;
+$message_notice_bg: #FDEDA4;
+
+
+// $grad_start: rgba( $white, 100%);
+// $grad_end: rgba( $white, 0% );
+// $fadeout_start: $grad_start  0%;
+// $fadeout_end: $grad_end 100%;
+$sidebar_bg_color: _get(_get($material_colors, 'cyan'),'dk3');
+$archive_accent_color: $site_header_bg;
+$archive_accent_border_color: $site_header_bg;
