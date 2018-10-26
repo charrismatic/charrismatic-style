@@ -1,0 +1,26 @@
+/*
+/// ### UI Feedback Color Classes
+*/
+
+
+.cl {
+  &_danger     { color: _get($message_colors, "danger");  }
+  &_error      { color: _get($message_colors, "error"); }
+  &_form_good  { color: _get($message_colors, "form_good"); }
+  &_info       { color: _get($message_colors, "info");  }
+  &_notice     { color: _get($message_colors, "notice"); }
+  &_primary    { color: _get($message_colors, "primary");  }
+  &_success    { color: _get($message_colors, "success");  }
+  &_warning    { color: _get($message_colors, "warning");  }
+}
+
+.bg {
+  &_danger     { color: _get($message_colors, "danger");  }
+  &_error      { color: _get($message_colors, "error"); }
+  &_form_good  { color: _get($message_colors, "form_good"); }
+  &_info       { color: _get($message_colors, "info");  }
+  &_notice     { color: _get($message_colors, "notice"); }
+  &_primary    { color: _get($message_colors, "primary");  }
+  &_success    { color: _get($message_colors, "success");  }
+  &_warning    { color: _get($message_colors, "warning");  }
+}

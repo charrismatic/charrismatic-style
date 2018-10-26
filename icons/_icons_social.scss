@@ -1,0 +1,13 @@
+$default_icon_color: #ffffff;
+
+.icon--twitter                { background-image: define_icon('fontawesome', 'twitter',         $default_icon_color); }
+.icon--twitter-square         { background-image: define_icon('fontawesome', 'twitter-square',  $default_icon_color); }
+.icon--facebook               { background-image: define_icon('fontawesome', 'facebook',        $default_icon_color); }
+.icon--linkedin               { background-image: define_icon('fontawesome', 'linkedin',        $default_icon_color); }
+.icon--linkedin-square        { background-image: define_icon('fontawesome', 'linkedin-square', $default_icon_color); }
+.icon--github                 { background-image: define_icon('fontawesome', 'github',          $default_icon_color); }
+.icon--github_2               { background-image: define_icon('fontawesome', 'github',          $default_icon_color); }
+.icon--github-alt             { background-image: define_icon('fontawesome', 'github-alt',      $default_icon_color); }
+.icon--github-alt_2           { background-image: define_icon('fontawesome', 'github-alt',      $default_icon_color); }
+.icon--github-alt_3           { background-image: define_icon('fontawesome', 'github-alt',      $default_icon_color); }
+.icon--github-alt_4           { background-image: define_icon('fontawesome', 'github-alt',      $default_icon_color); }

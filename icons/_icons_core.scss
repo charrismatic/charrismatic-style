@@ -1,0 +1,37 @@
+$default_icon_color: #444444;
+
+.icon--caret-down                          { background-image: define_icon('fontawesome', 'caret-down',           $default_icon_color); }
+.icon--caret-down.red                      { background-image: define_icon('fontawesome', 'caret-down',           $default_icon_color); }
+.icon--caret-down.lightorange              { background-image: define_icon('fontawesome', 'caret-down',           $default_icon_color); }
+
+.icon--folder-open                         { background-image: define_icon('fontawesome', 'folder-open',          $default_icon_color); }
+
+.icon--tag                                 { background-image: define_icon('fontawesome', 'tag',                  $default_icon_color); }
+.icon--code                                { background-image: define_icon('fontawesome', 'code',                 $default_icon_color); }
+.icon--link                                { background-image: define_icon('fontawesome', 'link',                 $default_icon_color); }
+.icon--search                              { background-image: define_icon('fontawesome', 'search',               $default_icon_color); }
+.icon--search--white                       { background-image: define_icon('fontawesome', 'search',               $default_icon_color); }
+
+.icon--angle-left                          { background-image: define_icon('fontawesome', 'angle-left',           $default_icon_color); }
+.icon--angle-right                         { background-image: define_icon('fontawesome', 'angle-right',          $default_icon_color); }
+.icon--angle-down                          { background-image: define_icon('fontawesome', 'angle-down',           $default_icon_color); }
+.icon--angle-up                            { background-image: define_icon('fontawesome', 'angle-up',             $default_icon_color); }
+
+.icon--chevron-left                        { background-image: define_icon('fontawesome', 'chevron-left',         $default_icon_color); }
+.icon--chevron-up                          { background-image: define_icon('fontawesome', 'chevron-up',           $default_icon_color); }
+.icon--chevron-down                        { background-image: define_icon('fontawesome', 'chevron-down',         $default_icon_color); }
+.icon--chevron-right                       { background-image: define_icon('fontawesome', 'chevron-right',        $default_icon_color); }
+
+.icon--chevron-circle-up                   { background-image: define_icon('fontawesome', 'chevron-circle-up',    $default_icon_color); }
+.icon--chevron-circle-right                { background-image: define_icon('fontawesome', 'chevron-circle-right', $default_icon_color); }
+.icon--chevron-circle-down                 { background-image: define_icon('fontawesome', 'chevron-circle-down',  $default_icon_color); }
+.icon--chevron-circle-left                 { background-image: define_icon('fontawesome', 'chevron-circle-left',  $default_icon_color); }
+
+.icon--ui_indicator_next                   { background-image: define_icon('fontawesome', 'chevron-down',         $default_icon_color); }
+
+.icon--comment_bubbles                     { background-image: define_icon('fontawesome', 'comments',             $default_icon_color); }
+.icon--comment-bubbles-outline             { background-image: define_icon('fontawesome', 'comments-o',           $default_icon_color); }
+.icon--report-url::before                  { background-image: define_icon('fontawesome', 'plus-square-o' ,       $default_icon_color); }
+
+.icon--collapsible .title::before          { background-image: define_icon('fontawesome', 'chevron-down',         $default_icon_color); }
+.icon--expandable:checked ~ .title::before { background-image: define_icon('fontawesome', 'minus-square-o',       $default_icon_color); }

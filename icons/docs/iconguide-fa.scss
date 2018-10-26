@@ -1,0 +1,35 @@
+@import "index";
+
+$prefix: 'icon';
+$icon_color: #444444;
+$demo_iconset: get_iconset($icon_map, 'fontawesome');
+$iconset_config: map-get($demo_iconset, 'config');
+$iconset_paths: map-get($demo_iconset,  'paths');
+$viewbox: map-get($iconset_config, 'viewBox');
+
+
+/*
+/// <section class="styleguide_section">
+///   <div class="flex flex-wrap">
+*/
+
+@each $icon, $path in $iconset_paths {
+
+.#{$prefix}--#{$icon} {
+  color: inherit;
+  background-image: _icon($path, $viewbox, $icon_color);
+}
+
+/*
+/// <div class="icon_card">
+///   <div class="icon_card__caption">#{$icon}--#{$icon}</div>
+///   <div class="icon_card__content icon_card--raised"><i class="icon #{$prefix}--#{$icon}"></i></div>
+/// </div>
+*/
+
+}
+
+/*
+///   </div>
+/// </section>
+*/

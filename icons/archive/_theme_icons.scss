@@ -1,0 +1,27 @@
+.icon,
+i.svg_icon {
+  @extend %svg_icon;
+}
+
+.ic-search { background-image: define_icon( font-awesome, search, $grey_90);}
+.ic-search--white { background-image: define_icon( font-awesome, search, $white); }
+.caret-down { background-image: define_icon( font-awesome, caret-down, $white); }
+.caret-down.red { background-image: define_icon( font-awesome, caret-down, $accent_red); }
+.caret-down.orange-light { background-image: define_icon( font-awesome, caret-down, lighten($accent_orange, 15%)); }
+.direction_next { background-image: define_icon( font-awesome, angle-right, $black); }
+.direction_prev { background-image: define_icon( font-awesome, angle-left, $black); }
+.ic-chevron-circle-up { background-image: define_icon( font-awesome, chevron-circle-up, $grey_70);
+.ic-chevron-circle-up:hover { background-image: define_icon( font-awesome, chevron-circle-up, $accent_orange); }
+.indicator_next { background-image: define_icon( font-awesome, chevron-down, $grey_90); }
+.mob-collapsible .sm-section-title::before { background-image: define_icon( font-awesome, chevron-down, lighten($accent_orange, 15%)); }
+.comment-bubbles { background-image: define_icon( font-awesome, comments, lighten($accent_orange, 5%)); }
+ .comment-bubbles.outline { background-image: define_icon( font-awesome, comments-o, lighten($accent_orange, 15%)); }
+.times {background-image: define_icon( font-awesome, times, $black);}
+.times.circle { background-image: define_icon( font-awesome, times-circle, $black); }
+.circle-o { background-image: define_icon( font-awesome, times-circle-o, $black); }
+.white { background-image: define_icon( font-awesome, times-circle, $white); }
+.remove { @extend %times; height: 1.3rem; margin: 0; padding: 0; width: 1.3rem; }
+.modal .close { background-image: define_icon( font-awesome, times, $white); }
+.icon_times_rect { background-image: define_icon( font-awesome, times-rectangle, _get($base_colors, "aqua")); }
+.icon_minus_circle { background-image: define_icon( font-awesome, minus-circle, _get($base_colors, "red")); }
+.icon_plus_square { background-image: define_icon( font-awesome, plus-square, _get($base_colors, "olive")); }

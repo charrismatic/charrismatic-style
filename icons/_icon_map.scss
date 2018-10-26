@@ -1,0 +1,7 @@
+@import 'lib/fontawesome';
+@import 'lib/iconicicons';
+
+$icon_map: (
+  'fontawesome': $fontawesome,
+  'iconicicons': $iconicicons
+);

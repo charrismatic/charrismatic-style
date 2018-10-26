@@ -1,14 +1,65 @@
 ////
-///  @group icons
+/// @group icons
 ////
 
+@import "functions";
+@import "mixins";
 
-// ICON TOOLS
+/*
+/// ---
+/// title: SVG Icons
+/// section: Icons
+/// ---
+///
+/// # Icons
+///
+/// ## DEFAULT PLACEHOLDER
+/// These icon placeholders allow us to define several extendable classes without polluting the stylesheet with unused
+/// It also can be used to apply the effect t things which are not always icons, when the situation necessitate it
+///
+/// __Setup An Icon Base Class__
+///
+/// ```
+/// .my_icon_class {
+///   @extend %svg_icon;
+///   // my-icon-properties ...
+/// }
+/// ```
+///
+/// Define Specific Icons Image as well As Shape, Color, etc ...
+///
+/// This Class by itself does not produce an icon as it still requires an icon selection which still needs to be defined
+///
+/// Basic Example
+///
+/// <section class="styleguide_section">
+///   <div class="flex-row">
+///     <i class="svg_icon icon_times_rect "></i>
+///     <i class="svg_icon icon_minus_circle "></i>
+///     <i class="svg_icon icon_plus_square "></i>
+///   </div>
+/// </section>
+///
+/// In SASS
+///
+/// ```
+/// .icon_times_rect { background-image: define_icon( font-awesome, times-rectangle, $color_aqua); }
+/// ```
+///
+/// HTML
+///
+/// ```
+/// <i class="svg_icon icon_times_rect "></i>
+/// <i class="svg_icon icon_minus_circle "></i>
+/// <i class="svg_icon icon_plus_square "></i>
+/// ```
+///
+///
+/// More detailed examples here https://codepen.io/super_thalamus/pen/wdyeGp
+*/
 
-// FUNCTIONS AND VARIABLES
-
-@import "icon_svg_factory";
-@import "icon_classes";
-@import "html_entities";
-
-// @import "icon_factory_example";
+@import "utility_classes";
+@import "icon_map";
+@import "icons_core";
+@import "icons_social";
+@import "icons_htmlentities";

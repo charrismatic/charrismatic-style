@@ -1,0 +1,44 @@
+/*
+/// ### Theme Color Classes
+*/
+
+.cl {
+  &_blue_bright_highlight  { color: _get($charrismatic, "blue_bright_highlight"); }
+  &_blue_dark_bg           { color: _get($charrismatic, "blue_dark_bg"); }
+  &_blue_darker_bg         { color: _get($charrismatic, "blue_darker_bg"); }
+  &_blue_grey_darker       { color: _get($charrismatic, "blue_grey_darker"); }
+  &_blue_grey_light_bg     { color: _get($charrismatic, "blue_grey_light_bg"); }
+  &_blue_grey_light        { color: _get($charrismatic, "blue_grey_light"); }
+  &_blue_grey_lightest     { color: _get($charrismatic, "blue_grey_lightest"); }
+  &_blue_lighter_pale_text { color: _get($charrismatic, "blue_lighter_pale_text"); }
+  &_blue_lighter_text      { color: _get($charrismatic, "blue_lighter_text"); }
+  &_bright_blue_sky        { color: _get($charrismatic, "bright_blue_sky"); }
+  &_dark_grey_blue         { color: _get($charrismatic, "dark_grey_blue"); }
+  &_dark_teal              { color: _get($charrismatic, "dark_teal"); }
+  &_deep_grey_blue         { color: _get($charrismatic, "deep_grey_blue"); }
+  &_deep_grey_header_bg    { color: _get($charrismatic, "deep_grey_header_bg"); }
+  &_elephant_grey          { color: _get($charrismatic, "elephant_grey"); }
+  &_grey_blue              { color: _get($charrismatic, "grey_blue"); }
+  &_medium_elephant_grey   { color: _get($charrismatic, "medium_elephant_grey"); }
+}
+
+// MA.TTHARR.IS THEME
+.bg {
+  &_blue_bright_highlight  { background-color: _get($charrismatic, "blue_bright_highlight"); }
+  &_blue_dark_bg           { background-color: _get($charrismatic, "blue_dark_bg"); }
+  &_blue_darker_bg         { background-color: _get($charrismatic, "blue_darker_bg"); }
+  &_blue_grey_darker       { background-color: _get($charrismatic, "blue_grey_darker"); }
+  &_blue_grey_light_bg     { background-color: _get($charrismatic, "blue_grey_light_bg"); }
+  &_blue_grey_light        { background-color: _get($charrismatic, "blue_grey_light"); }
+  &_blue_grey_lightest     { background-color: _get($charrismatic, "blue_grey_lightest"); }
+  &_blue_lighter_pale_text { background-color: _get($charrismatic, "blue_lighter_pale_text"); }
+  &_blue_lighter_text      { background-color: _get($charrismatic, "blue_lighter_text"); }
+  &_bright_blue_sky        { background-color: _get($charrismatic, "bright_blue_sky"); }
+  &_dark_grey_blue         { background-color: _get($charrismatic, "dark_grey_blue"); }
+  &_dark_teal              { background-color: _get($charrismatic, "dark_teal"); }
+  &_deep_grey_blue         { background-color: _get($charrismatic, "deep_grey_blue"); }
+  &_deep_grey_header_bg    { background-color: _get($charrismatic, "deep_grey_header_bg"); }
+  &_elephant_grey          { background-color: _get($charrismatic, "elephant_grey"); }
+  &_grey_blue              { background-color: _get($charrismatic, "grey_blue"); }
+  &_medium_elephant_grey   { background-color: _get($charrismatic, "medium_elephant_grey"); }
+}
