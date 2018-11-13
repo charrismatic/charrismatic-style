@@ -12,19 +12,23 @@ $owg-threshold: $graceful-usage-threshold;
 $use-legacy-gradient-syntax: false;
 $default-capability-options:"";
 
-@function linear-gradient($angle, $details...) {
+@function compass-linear-gradient($angle, $details...) {
   $legacy-syntax: $use-legacy-gradient-syntax;
+
   @if type-of($angle) != "number" {
     $angle: compact($angle);
     $legacy-syntax: if(index($angle, "to"), false, true);
   }
+
   @if $legacy-syntax {
     @return _linear-gradient_legacy($angle, $details...);
   }
+
   @else {
     @return _linear-gradient($angle, $details...);
   }
 }
+
 @mixin with-browser-ranges($capability, $prefix: $current-prefix) {
   $new-ranges: null;
   @if type-of($capability) == map {
@@ -44,6 +48,7 @@ $default-capability-options:"";
        #{inspect($current-browser-versions)} */
   }
 }
+
 @mixin with-prefix($prefix) {
   @if $current-prefix or $prefix-context {
     @if $current-prefix == $prefix or $prefix-context == $prefix {

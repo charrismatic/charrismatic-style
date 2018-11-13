@@ -1,26 +1,36 @@
 /*
 /// ### UI Feedback Color Classes
+///
+/// <div class="color_swatch_group">
+///   <div class="swatch cl_danger"><span class="swatch__name">Danger Message</span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl_error"><span class="swatch__name">Error Message</span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl_form_good"><span class="swatch__name">Form_good Message</span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl_info"><span class="swatch__name">Info Message</span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl_notice"><span class="swatch__name">Notice Message</span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl_primary"><span class="swatch__name">Primary Message</span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl_success"><span class="swatch__name">Success Message</span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl_warning"><span class="swatch__name">Warning Message</span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+/// </div>
 */
-
-
-.cl {
-  &_danger     { color: _get($message_colors, "danger");  }
-  &_error      { color: _get($message_colors, "error"); }
-  &_form_good  { color: _get($message_colors, "form_good"); }
-  &_info       { color: _get($message_colors, "info");  }
-  &_notice     { color: _get($message_colors, "notice"); }
-  &_primary    { color: _get($message_colors, "primary");  }
-  &_success    { color: _get($message_colors, "success");  }
-  &_warning    { color: _get($message_colors, "warning");  }
-}
-
-.bg {
-  &_danger     { color: _get($message_colors, "danger");  }
-  &_error      { color: _get($message_colors, "error"); }
-  &_form_good  { color: _get($message_colors, "form_good"); }
-  &_info       { color: _get($message_colors, "info");  }
-  &_notice     { color: _get($message_colors, "notice"); }
-  &_primary    { color: _get($message_colors, "primary");  }
-  &_success    { color: _get($message_colors, "success");  }
-  &_warning    { color: _get($message_colors, "warning");  }
-}
+//
+// .cl {
+//   &_danger { color: _get($message_colors, "danger"); }
+//   &_error { color: _get($message_colors, "error"); }
+//   &_form_good { color: _get($message_colors, "good"); }
+//   &_info { color: _get($message_colors, "info"); }
+//   &_notice { color: _get($message_colors, "notice"); }
+//   &_primary { color: _get($message_colors, "primary"); }
+//   &_success { color: _get($message_colors, "success"); }
+//   &_warning { color: _get($message_colors, "warning"); }
+// }
+//
+// .bg {
+//   &_danger { color: _get($message_colors, "danger"); }
+//   &_error { color: _get($message_colors, "error"); }
+//   &_form_good { color: _get($message_colors, "good"); }
+//   &_info { color: _get($message_colors, "info"); }
+//   &_notice { color: _get($message_colors, "notice"); }
+//   &_primary { color: _get($message_colors, "primary"); }
+//   &_success { color: _get($message_colors, "success"); }
+//   &_warning { color: _get($message_colors, "warning"); }
+// }

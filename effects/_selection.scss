@@ -1,17 +1,17 @@
-
-
-$scrollbar_bg: $theme_primary;
-$selection_bg: $theme_primary;
-$selection_color: $white;
-
-
-// TEXT HIGHLIGHT
-::-moz-selection {
-    color: $selection_color;
-    background: $selection_bg;
-}
-
-::selection {
-    color: $selection_color;
-    background: $selection_bg;
-}
+//
+//
+// $scrollbar_bg: $theme_primary;
+// $selection_bg: $theme_primary;
+// $selection_color: $white;
+//
+//
+// // TEXT HIGHLIGHT
+// ::-moz-selection {
+//     color: $selection_color;
+//     background: $selection_bg;
+// }
+//
+// ::selection {
+//     color: $selection_color;
+//     background: $selection_bg;
+// }

@@ -1,34 +1,34 @@
-/*---
-title: Margins
-section: Formatting
----
-
-Based on the Tachyons Framework
-http://tachyons.io
-
-__Margin__
-
-- margin-0  - no margins
-- margin-t0 - top    = 0
-- margin-r0 - right  = 0
-- margin-b0 - bottom = 0
-- margin-l0 - left   = 0
-- margin-x0 - left + right = 0
-- margin-y0 - top + bottom = 0
-- auto_marginx - left + right = auto
-- auto_marginy - top + bottom = auto
-- auto_margin  - margin auto
-- no_marginx - left + right = auto
-- no_marginy - top + bottom = auto
-- no_margin  - margin auto
-
-
-__Extras__
-
-- auto_margin - auto !important
-- no_margin   - auto !important
-
-*/
+////*---
+/// title: Margins
+/// section: Formatting
+/// ---
+///
+/// Based on the Tachyons Framework
+/// http://tachyons.io
+///
+/// __Margin__
+///
+/// - margin-0  - no margins
+/// - margin-t0 - top    = 0
+/// - margin-r0 - right  = 0
+/// - margin-b0 - bottom = 0
+/// - margin-l0 - left   = 0
+/// - margin-x0 - left + right = 0
+/// - margin-y0 - top + bottom = 0
+/// - auto_marginx - left + right = auto
+/// - auto_marginy - top + bottom = auto
+/// - auto_margin  - margin auto
+/// - no_marginx - left + right = auto
+/// - no_marginy - top + bottom = auto
+/// - no_margin  - margin auto
+///
+///
+/// __Extras__
+///
+/// - auto_margin - auto !important
+/// - no_margin   - auto !important
+///
+///*/
 
 .m {
   &-0  { margin:   0 !important; }

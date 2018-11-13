@@ -1,8 +1,0 @@
-.vagrant
-.bak
-.tmp
-node_modules
-.build
-
-\.build/
-.build

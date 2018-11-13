@@ -2,28 +2,26 @@
 
 // SHOW / HIDE
 .hide {
-   display: none !important;
+  display: none !important;
 
   &--med {
-    @media ( max-width: $banner_break_mid ) {
+    @media (max-width: $banner_break_mid) {
       display: none !important;
     }
   }
 
-   &--mob-lg {
-    @media ( max-width: $width_mobile_device_lg) {
+  &--mob-lg {
+    @media (max-width: $width_mobile_device_l) {
       display: none !important;
     }
   }
 
   &--mob-sm {
-    @media ( max-width: $width_mobile_device_sm ) {
+    @media (max-width: $width_mobile_device_sm) {
       display: none !important;
     }
   }
 }
-
-
 
 .show {
   &--desktop-only {

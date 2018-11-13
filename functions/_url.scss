@@ -1,10 +1,13 @@
 
 // RETURNS URL GIVEN BASE URL AND FILE PATH
 // SET THEME URL VARIABLES IN THEME/URLS.SCSS
-// 
+//
 
-$imagesFolder: "../assets/images/" !default;
 
-@function imageUrl($base, $path) {
+@function image_url($path,$base:null) {
   @return url('#{$base}/#{$path}');
 }
+
+// THEME SPECIFIC PATHS
+$imagesFolder: "../assets/images/" !default;
+$base_url: "/";

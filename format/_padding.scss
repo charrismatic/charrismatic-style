@@ -1,49 +1,46 @@
-
-
-/*---
-title: Padding
-section: Formatting
----
-
-Based on the Tachyons Framework
-http://tachyons.io
-
-__Padding__
-
-- pad-0  - no paddings
-- pad-t0 - top    = 0
-- pad-r0 - right  = 0
-- pad-b0 - bottom = 0
-- pad-l0 - left   = 0
-- pad-x0 - left + right = 0
-- pad-y0 - top + bottom = 0
-- no_pad  - padding auto
-- no_padx  - padding auto
-- no_pady  -   left + right = 0
-- auto_pad  -  top + bottom = 0
-- auto_padx - left + right = auto
-- auto_pady - top + bottom = auto
-
-
-
-// UTILITY CLASSES
-
-__Vertical Spacer__
-
-- spacer - padding 1.5em 0
-
-
-
+/*
+/// ---
+/// title: Padding
+/// section: Formatting
+/// ---
+///
+/// Based on the Tachyons Framework
+/// http://tachyons.io
+///
+/// __Padding__
+///
+/// - pad-0  - no paddings
+/// - pad-t0 - top    = 0
+/// - pad-r0 - right  = 0
+/// - pad-b0 - bottom = 0
+/// - pad-l0 - left   = 0
+/// - pad-x0 - left + right = 0
+/// - pad-y0 - top + bottom = 0
+/// - no_pad  - padding auto
+/// - no_padx  - padding auto
+/// - no_pady  -   left + right = 0
+/// - auto_pad  -  top + bottom = 0
+/// - auto_padx - left + right = auto
+/// - auto_pady - top + bottom = auto
+///
+///
+///
+/// // UTILITY CLASSES
+///
+/// __Vertical Spacer__
+///
+/// - spacer - padding 1.5em 0
+///
 */
 
 
 .pad {
-  &-0  { padding:        0 !important; }
-  &-t0 { padding-top:    0 !important; }
-  &-r0 { padding-right:  0 !important; }
+  &-0  { padding: 0 !important; }
+  &-t0 { padding-top: 0 !important; }
+  &-r0 { padding-right: 0 !important; }
   &-b0 { padding-bottom: 0 !important; }
-  &-l0 { padding-left:   0 !important; }
-  &-x0 { padding-left:   0 !important; padding-right: 0 !important; }
+  &-l0 { padding-left: 0 !important; }
+  &-x0 { padding-left: 0 !important; padding-right: 0 !important; }
   &-p2 { padding: .2em !important; }
   &-p4 { padding: .4em !important; }
   &-p6 { padding: .6em !important; }
@@ -65,5 +62,4 @@ __Vertical Spacer__
 .no_padx { padding-left: 0 !important; padding-right: 0 !important; }
 .no_pady { padding-top: 0 !important; padding-bottom: 0 !important; }
 
-
-.spacer {  padding: 1.5em 0;}
+.spacer { padding: 1.5em 0; }

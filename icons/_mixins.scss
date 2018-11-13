@@ -35,7 +35,6 @@
 /// </i>
 /// ```
 
-
 // ACCESSIBILITY
 // TEXT IS HIDDEN BUT USED BY ROBOTS - SCREEN READERS FOR DOCUMENT STRUCTURE
 /// @mixin icon_assist_text include titles and text that does now show visibly
@@ -77,7 +76,7 @@
 }
 
 
-@mixin svg_icon_base (){
+@mixin svg_icon_base () {
   display: inline-block;
   margin: 10px 10px;
   width: 50px;
@@ -93,13 +92,14 @@
 }
 
 
+@mixin make_icon() {}
+
 @mixin svg_icon(
   $name,
   $icon_set:'fontawesome',
   $class_prefix:'icon-',
   $color:currentColor,
   $bg_color:transparent) {
-
   .#{$class_prefix}#{$name} {
     background-image: define_icon($icon_set, $name, $color);
     background-color: $bg_color;

@@ -1,34 +1,34 @@
-/*---
-title: Flex Classes
-section: Layout
----
-
-
-\*MODIFIER
-
-__flex-wrap__
-
-ADDING FLEX WRAP BREAKS THE ROW INTO A GRID AFTER THE CONTAINER
-REACHES 100%, IT ALSO RESETS THE FIRST AND LAST CHILD MARGINS TO MATCH THE
-REST OF THE ELEMENTS
-
-
-### flex-col
-
-CHANGE FLEX DIRECTION FROM ROW TO COLUMN AND ADJUST CHILD PROPERTIES TO PREVENT
-VERTICAL COLLAPSE
-
-### EXTRAS
-
-| Class | Description |
-| ----- | ----------- |
-| flex-item  | Manually add the properties of a flex > child descedant  |
-| flex_fit   | Force all child nodes to take up space as required (autofit)  |
-| flex_equal | Force all child nodes to take up the minimum space possible (equal fit) |
-| flex_none  | This element will not stretch or shrink  |
-
-
-*/
+/// /*---
+/// title: Flex Classes
+/// section: Layout
+/// ---
+///
+///
+/// \*MODIFIER
+///
+/// __flex-wrap__
+///
+/// ADDING FLEX WRAP BREAKS THE ROW INTO A GRID AFTER THE CONTAINER
+/// REACHES 100%, IT ALSO RESETS THE FIRST AND LAST CHILD MARGINS TO MATCH THE
+/// REST OF THE ELEMENTS
+///
+///
+/// ### flex-col
+///
+/// CHANGE FLEX DIRECTION FROM ROW TO COLUMN AND ADJUST CHILD PROPERTIES TO PREVENT
+/// VERTICAL COLLAPSE
+///
+/// ### EXTRAS
+///
+/// | Class | Description |
+/// | ----- | ----------- |
+/// | flex-item  | Manually add the properties of a flex > child descedant  |
+/// | flex_fit   | Force all child nodes to take up space as required (autofit)  |
+/// | flex_equal | Force all child nodes to take up the minimum space possible (equal fit) |
+/// | flex_none  | This element will not stretch or shrink  |
+///
+///
+/// */
 
 
 // VERTICAL FLEXIBLE BOX

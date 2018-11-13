@@ -2,13 +2,13 @@
 // ADD TO AN ELEMENT SUCH AS BODY TO OUTLINE ALL INNER ELEMENTS
 .debug_highlight {
   * {
-    outline: 2px solid red !important;
+    outline: 1px solid red !important;
     outline-offset: 0px;
     z-index: 1 !important;
   }
   > * {
     outline: 1px solid red !important;
-    outline-offset: 2px !important;;
+    outline-offset: 2px !important;
     z-index: 2 !important;
     > * {
       outline-color: blue !important;;
@@ -37,7 +37,7 @@
   }
 }
 
-.debug_zoomOut{
+.debug_zoomout {
   transform: scale(.8) !important;
 }
 
@@ -54,3 +54,62 @@
   // TAKE EVERYTHING AND TURN IT OFF
   // @include resetAll;
 }
+
+
+.hide_it_all_but_the_content {
+  .sidebar__content,
+  .sidebar-container,
+  #sidebar,
+  .sidebar,
+  header,
+  footer,
+  nav,
+  .nav,
+  .site-nav,
+  .modal,
+  sidebar {
+    display: none;
+  }
+}
+
+// debug show all children
+.debug_show_all_children * {
+  display: block !important;
+  color: #111111 !important;
+  outline: 1px solid rgba(127, 197, 255, 0.2) !important;
+  position: relative !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.debug {
+  &__show_all * {
+    width: auto !important;
+    visibility: visible !important;
+    position: relative !important;
+    background-color: transparent;
+    color: #333333 !important;
+    border: 1px solid rgba(255, 100, 100, 0.5) !important;
+    padding: 1px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 1px !important;
+    margin-top: 1px !important;
+    transform: none !important;
+    top: unset !important;
+    left: unset !important;
+    right: unset !important;
+    bottom: unset !important;
+    height: auto !important;
+    font-size: 12px !important;
+    min-width: 3em !important;
+    min-height: 1em;
+  }
+}
+
+.debug__show_all > * { overflow: scroll !important; background-color: rgb(40, 67, 92); height: auto; }
+.debug__show_style style { font-size: 10px !important; whitespace: pre; word-wrap: break-line; }
+.debug__show_script script { font-size: 10px !important; whitespace: pre; word-wrap: break-line; }
+.debug__show_display_lvl1 > * { display: block !important; }
+.debug__show_display_lvl2 > * > * { display: flex !important; }
+.debug__show_display_lvl3 > * > * * { display: inline-block!important; flex:1; }

@@ -9,17 +9,16 @@
 /// @param {string} $search  []
 /// @param {string} $replace []
 @function str-replace($string, $search, $replace: '') {
-    $index: str-index($string, $search);
-    @if $index {
-        @return
-          str-slice($string, 1, $index - 1) + $replace +
-          str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-    }
+  $index: str-index($string, $search);
 
-    @return $string;
+  @if $index {
+    @return
+      str-slice($string, 1, $index - 1) + $replace +
+      str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
 }
-
-
 
 // ---
 ///  __Url Encode SVG Strings__
@@ -33,51 +32,51 @@
 /// @see      {function} define_icon
 /// @return   {string}                url-encoded SVG String
 @function url-encode($string) {
-    $map: (
-        "%": "%25",
-        "<": "%3C",
-        ">": "%3E",
-        " ": "%20",
-        "!": "%21",
-        "*": "%2A",
-        "'": "%27",
-        '"': "%22",
-        "(": "%28",
-        ")": "%29",
-        ";": "%3B",
-        ":": "%3A",
-        "@": "%40",
-        "&": "%26",
-        "=": "%3D",
-        "+": "%2B",
-        "$": "%24",
-        ",": "%2C",
-        "/": "%2F",
-        "?": "%3F",
-        "#": "%23",
-        "[": "%5B",
-        "]": "%5D"
-    );
-    $new: $string;
+  $map: (
+    "%": "%25",
+    "<": "%3C",
+    ">": "%3E",
+    " ": "%20",
+    "!": "%21",
+    "*": "%2A",
+    "'": "%27",
+    '"': "%22",
+    "(": "%28",
+    ")": "%29",
+    ";": "%3B",
+    ":": "%3A",
+    "@": "%40",
+    "&": "%26",
+    "=": "%3D",
+    "+": "%2B",
+    "$": "%24",
+    ",": "%2C",
+    "/": "%2F",
+    "?": "%3F",
+    "#": "%23",
+    "[": "%5B",
+    "]": "%5D"
+  );
+  $new: $string;
 
-    @each $search, $replace in $map {
-        $new: str-replace($new, $search, $replace);
-    }
+  @each $search, $replace in $map {
+    $new: str-replace($new, $search, $replace);
+  }
 
-    @return $new;
+  @return $new;
 }
 
 
 @function get_iconset($icon_map, $key) {
   $iconset: map-get($icon_map, $key);
+
   @return $iconset;
 }
 
-
-
 @function _icon($path, $viewbox, $fill: black, $css: '', $height: '', $width: '', $strokecolor: transparent, $strokewidth: 0) {
-    $icon: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" width="#{$width}" height="#{height}" viewBox="#{$viewbox}"><path fill="#{$fill}" stroke="#{$strokecolor}" stroke-width="#{$strokewidth}" d="#{$path}" /></svg>';
-    @return url('data:image/svg+xml;charset=utf-8,#{url-encode($icon)}');
+  $icon: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" width="#{$width}" height="#{height}" viewBox="#{$viewbox}"><path fill="#{$fill}" stroke="#{$strokecolor}" stroke-width="#{$strokewidth}" d="#{$path}" /></svg>';
+
+  @return url('data:image/svg+xml;charset=utf-8,#{url-encode($icon)}');
 }
 
 
@@ -101,9 +100,11 @@
     'tag': "i",
     'prefix': "icon"
   );
+
   @if ($prop) {
     @return map_get($icon_config, $prop);
   }
+
   @return $icon_config;
 }
 
@@ -119,9 +120,6 @@
     $iconfig:map-get($icon_settings, config);
   }
 }
-
-
-
 
 
 // get_icon_config
@@ -146,10 +144,9 @@
       size: "100",
     )
   );
+
   @return map-get(map-get($icon_config,$icon_set), $param);
 };
-
-
 
 
 /// @name define_icon
@@ -163,35 +160,36 @@
 /// @requires {function}     _get_icon_path
 /// @returns  {string}       SVG Image
 
-
+// * DEPRECATED *
 @function define_icon(
-    $icon_set,
-    $icon_name,
-    $fill_color: black,
-    $stroke_color: transparent,
-    $stroke_width: 0,
-    $extra_css: '' )
-  {
-    $icon_path: _get_icon_path($icon_set, $icon_name);
-    $icon_size: get_icon_config($icon_set, 'size');
-    $icon_viewbox: get_icon_config($icon_set, 'viewbox');
-    $icon: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" class="#{$icon_name}" width="#{$icon_size}" height="#{$icon_size}" viewBox="#{$icon_viewbox}"><path fill="#{$fill_color)}" stroke="#{$stroke_color}" stroke-width="#{$stroke_width}" d="#{$icon_path}" /></svg>';
-    @return url('data:image/svg+xml;charset=utf-8,#{url-encode($icon)}');
+  $icon_set,
+  $icon_name,
+  $fill_color: black,
+  $stroke_color: transparent,
+  $stroke_width: 0,
+  $extra_css: '' )
+{
+  $icon_path: _get_icon_path($icon_set, $icon_name);
+  $icon_size: get_icon_config($icon_set, 'size');
+  $icon_viewbox: get_icon_config($icon_set, 'viewbox');
+  $icon: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" class="#{$icon_name}" width="#{$icon_size}" height="#{$icon_size}" viewBox="#{$icon_viewbox}"><path fill="#{$fill_color)}" stroke="#{$stroke_color}" stroke-width="#{$stroke_width}" d="#{$icon_path}" /></svg>';
+  @return url('data:image/svg+xml;charset=utf-8,#{url-encode($icon)}');
 }
 
 
 @function build_icon(
-    $icon_path,
-    $fill_color: currentColor,
-    $stroke_color: transparent,
-    $stroke_width: 0,
-    $extra_css: 'color: inherit',
-    $icon_width: '500',
-    $icon_height: '500',
-    $icon_viewbox: '0 0 1792 1792'
+  $icon_path,
+  $fill_color: currentColor,
+  $stroke_color: transparent,
+  $stroke_width: 0,
+  $extra_css: 'color: inherit',
+  $icon_width: '500',
+  $icon_height: '500',
+  $icon_viewbox: '0 0 1792 1792'
 ){
   $icon: '<svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" width="#{$icon_width}" height="#{$icon_height}" viewBox="#{$icon_viewbox}"><path fill="#{$fill_color}" stroke="#{$stroke_color}" stroke-width="#{$stroke_width}" d="#{$icon_path}" /></svg>';
-  @return url('data:image/svg+xml;charset=utf-8,#{$icon}');
+  // @return url('data:image/svg+xml;charset=utf-8,#{$icon}');
+  @return url('data:image/svg+xml;charset=utf-8,#{url-encode($icon)}');
 }
 
 
@@ -215,15 +213,15 @@
       'angle-up': "M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z",
       'balance-scale': "M1728 448l-384 704h768zm-1280 0l-384 704h768zm821-192q-14 40-45.5 71.5t-71.5 45.5v1291h608q14 0 23 9t9 23v64q0 14-9 23t-23 9h-1344q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h608v-1291q-40-14-71.5-45.5t-45.5-71.5h-491q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h491q21-57 70-92.5t111-35.5 111 35.5 70 92.5h491q14 0 23 9t9 23v64q0 14-9 23t-23 9h-491zm-181 16q33 0 56.5-23.5t23.5-56.5-23.5-56.5-56.5-23.5-56.5 23.5-23.5 56.5 23.5 56.5 56.5 23.5zm1088 880q0 73-46.5 131t-117.5 91-144.5 49.5-139.5 16.5-139.5-16.5-144.5-49.5-117.5-91-46.5-131q0-11 35-81t92-174.5 107-195.5 102-184 56-100q18-33 56-33t56 33q4 7 56 100t102 184 107 195.5 92 174.5 35 81zm-1280 0q0 73-46.5 131t-117.5 91-144.5 49.5-139.5 16.5-139.5-16.5-144.5-49.5-117.5-91-46.5-131q0-11 35-81t92-174.5 107-195.5 102-184 56-100q18-33 56-33t56 33q4 7 56 100t102 184 107 195.5 92 174.5 35 81z",
       'caret-down': "M1408 704q0 26-19 45l-448 448q-19 19-45 19t-45-19l-448-448q-19-19-19-45t19-45 45-19h896q26 0 45 19t19 45z",
-      caret-left: "M1216 448v896q0 26-19 45t-45 19-45-19l-448-448q-19-19-19-45t19-45l448-448q19-19 45-19t45 19 19 45z",
-      caret-right: "M1152 896q0 26-19 45l-448 448q-19 19-45 19t-45-19-19-45v-896q0-26 19-45t45-19 45 19l448 448q19 19 19 45z",
-      caret-square-o-down: "M1273 675q18 35-5 66l-320 448q-19 27-52 27t-52-27l-320-448q-23-31-5-66 17-35 57-35h640q40 0 57 35zm135 701v-960q0-13-9.5-22.5t-22.5-9.5h-960q-13 0-22.5 9.5t-9.5 22.5v960q0 13 9.5 22.5t22.5 9.5h960q13 0 22.5-9.5t9.5-22.5zm256-960v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z",
-      caret-square-o-left: "M1152 576v640q0 26-19 45t-45 19q-20 0-37-12l-448-320q-27-19-27-52t27-52l448-320q17-12 37-12 26 0 45 19t19 45zm256 800v-960q0-13-9.5-22.5t-22.5-9.5h-960q-13 0-22.5 9.5t-9.5 22.5v960q0 13 9.5 22.5t22.5 9.5h960q13 0 22.5-9.5t9.5-22.5zm256-960v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z",
-      caret-square-o-right: "M1216 896q0 33-27 52l-448 320q-31 23-66 5-35-17-35-57v-640q0-40 35-57 35-18 66 5l448 320q27 19 27 52zm192 480v-960q0-14-9-23t-23-9h-960q-14 0-23 9t-9 23v960q0 14 9 23t23 9h960q14 0 23-9t9-23zm256-960v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z",
-      caret-square-o-up: "M1273 1117q-17 35-57 35h-640q-40 0-57-35-18-35 5-66l320-448q19-27 52-27t52 27l320 448q23 31 5 66zm135 259v-960q0-13-9.5-22.5t-22.5-9.5h-960q-13 0-22.5 9.5t-9.5 22.5v960q0 13 9.5 22.5t22.5 9.5h960q13 0 22.5-9.5t9.5-22.5zm256-960v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z",
-      caret-up: "M1408 1216q0 26-19 45t-45 19h-896q-26 0-45-19t-19-45 19-45l448-448q19-19 45-19t45 19l448 448q19 19 19 45z",
-      cart-arrow-down: "M1344 704q0-26-19-45t-45-19-45 19l-147 146v-293q0-26-19-45t-45-19-45 19-19 45v293l-147-146q-19-19-45-19t-45 19-19 45 19 45l256 256q19 19 45 19t45-19l256-256q19-19 19-45zm-640 832q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm896 0q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm128-1088v512q0 24-16 42.5t-41 21.5l-1044 122q1 7 4.5 21.5t6 26.5 2.5 22q0 16-24 64h920q26 0 45 19t19 45-19 45-45 19h-1024q-26 0-45-19t-19-45q0-14 11-39.5t29.5-59.5 20.5-38l-177-823h-204q-26 0-45-19t-19-45 19-45 45-19h256q16 0 28.5 6.5t20 15.5 13 24.5 7.5 26.5 5.5 29.5 4.5 25.5h1201q26 0 45 19t19 45z",
-      cart-plus: "M1280 704q0-26-19-45t-45-19h-128v-128q0-26-19-45t-45-19-45 19-19 45v128h-128q-26 0-45 19t-19 45 19 45 45 19h128v128q0 26 19 45t45 19 45-19 19-45v-128h128q26 0 45-19t19-45zm-576 832q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm896 0q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm128-1088v512q0 24-16 42.5t-41 21.5l-1044 122q1 7 4.5 21.5t6 26.5 2.5 22q0 16-24 64h920q26 0 45 19t19 45-19 45-45 19h-1024q-26 0-45-19t-19-45q0-14 11-39.5t29.5-59.5 20.5-38l-177-823h-204q-26 0-45-19t-19-45 19-45 45-19h256q16 0 28.5 6.5t20 15.5 13 24.5 7.5 26.5 5.5 29.5 4.5 25.5h1201q26 0 45 19t19 45z",
+      'caret-left': "M1216 448v896q0 26-19 45t-45 19-45-19l-448-448q-19-19-19-45t19-45l448-448q19-19 45-19t45 19 19 45z",
+      'caret-right': "M1152 896q0 26-19 45l-448 448q-19 19-45 19t-45-19-19-45v-896q0-26 19-45t45-19 45 19l448 448q19 19 19 45z",
+      'caret-square-o-down': "M1273 675q18 35-5 66l-320 448q-19 27-52 27t-52-27l-320-448q-23-31-5-66 17-35 57-35h640q40 0 57 35zm135 701v-960q0-13-9.5-22.5t-22.5-9.5h-960q-13 0-22.5 9.5t-9.5 22.5v960q0 13 9.5 22.5t22.5 9.5h960q13 0 22.5-9.5t9.5-22.5zm256-960v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z",
+      'caret-square-o-left': "M1152 576v640q0 26-19 45t-45 19q-20 0-37-12l-448-320q-27-19-27-52t27-52l448-320q17-12 37-12 26 0 45 19t19 45zm256 800v-960q0-13-9.5-22.5t-22.5-9.5h-960q-13 0-22.5 9.5t-9.5 22.5v960q0 13 9.5 22.5t22.5 9.5h960q13 0 22.5-9.5t9.5-22.5zm256-960v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z",
+      'caret-square-o-right': "M1216 896q0 33-27 52l-448 320q-31 23-66 5-35-17-35-57v-640q0-40 35-57 35-18 66 5l448 320q27 19 27 52zm192 480v-960q0-14-9-23t-23-9h-960q-14 0-23 9t-9 23v960q0 14 9 23t23 9h960q14 0 23-9t9-23zm256-960v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z",
+      'caret-square-o-up': "M1273 1117q-17 35-57 35h-640q-40 0-57-35-18-35 5-66l320-448q19-27 52-27t52 27l320 448q23 31 5 66zm135 259v-960q0-13-9.5-22.5t-22.5-9.5h-960q-13 0-22.5 9.5t-9.5 22.5v960q0 13 9.5 22.5t22.5 9.5h960q13 0 22.5-9.5t9.5-22.5zm256-960v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z",
+      'caret-up': "M1408 1216q0 26-19 45t-45 19h-896q-26 0-45-19t-19-45 19-45l448-448q19-19 45-19t45 19l448 448q19 19 19 45z",
+      'cart-arrow-down': "M1344 704q0-26-19-45t-45-19-45 19l-147 146v-293q0-26-19-45t-45-19-45 19-19 45v293l-147-146q-19-19-45-19t-45 19-19 45 19 45l256 256q19 19 45 19t45-19l256-256q19-19 19-45zm-640 832q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm896 0q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm128-1088v512q0 24-16 42.5t-41 21.5l-1044 122q1 7 4.5 21.5t6 26.5 2.5 22q0 16-24 64h920q26 0 45 19t19 45-19 45-45 19h-1024q-26 0-45-19t-19-45q0-14 11-39.5t29.5-59.5 20.5-38l-177-823h-204q-26 0-45-19t-19-45 19-45 45-19h256q16 0 28.5 6.5t20 15.5 13 24.5 7.5 26.5 5.5 29.5 4.5 25.5h1201q26 0 45 19t19 45z",
+      'cart-plus': "M1280 704q0-26-19-45t-45-19h-128v-128q0-26-19-45t-45-19-45 19-19 45v128h-128q-26 0-45 19t-19 45 19 45 45 19h128v128q0 26 19 45t45 19 45-19 19-45v-128h128q26 0 45-19t19-45zm-576 832q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm896 0q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm128-1088v512q0 24-16 42.5t-41 21.5l-1044 122q1 7 4.5 21.5t6 26.5 2.5 22q0 16-24 64h920q26 0 45 19t19 45-19 45-45 19h-1024q-26 0-45-19t-19-45q0-14 11-39.5t29.5-59.5 20.5-38l-177-823h-204q-26 0-45-19t-19-45 19-45 45-19h256q16 0 28.5 6.5t20 15.5 13 24.5 7.5 26.5 5.5 29.5 4.5 25.5h1201q26 0 45 19t19 45z",
       'chain': "M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z",
       'chevron-circle-up':"M1293 1139l102-102q19-19 19-45t-19-45l-454-454q-19-19-45-19t-45 19l-454 454q-19 19-19 45t19 45l102 102q19 19 45 19t45-19l307-307 307 307q19 19 45 19t45-19zm371-243q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z",
       'chevron-circle-right': "M845 1395l454-454q19-19 19-45t-19-45l-454-454q-19-19-45-19t-45 19l-102 102q-19 19-19 45t19 45l307 307-307 307q-19 19-19 45t19 45l102 102q19 19 45 19t45-19zm819-499q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z",

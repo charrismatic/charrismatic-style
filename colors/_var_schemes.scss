@@ -1,13 +1,15 @@
+/*
 /// # Color Schemes
-
-/// // COLOR THEMES AND PALLETES
-/// // DO NOT ASSIGN VARIABLES TO VALUES
-/// // THIS FILE SHOULD NOT HAVE DEPENDENCIES
 ///
 /// ---
 /// title: Color Sets
 /// name: color_library
 /// ---
+///
+/// COLOR THEMES AND PALLETES
+/// DO NOT ASSIGN VARIABLES TO VALUES
+/// THIS FILE SHOULD NOT HAVE DEPENDENCIES
+///
 ///
 /// Named Colors
 ///
@@ -22,7 +24,7 @@
 ///   @color: #de5543         @name: google_plus
 ///   @color: #ee3138         @name: youtube
 /// ```
-
+*/
 
 $color_schemes: (
   "greyscale": (
@@ -65,42 +67,42 @@ $color_schemes: (
   ),
   "yellows": (
     "y1": rgb(250,76,6),
-    "y2": rgb(185, 122, 38),
+    "y2": rgb(185,122,38),
     "y3": rgb(253,123,64),
-    "y4": rgb(252, 123, 64),
+    "y4": rgb(252,123,64),
     "y5": rgb(253,166,48),
-    "y6": rgb(252, 166, 48),
+    "y6": rgb(252,166,48),
     "y7": rgb(255,205,85),
-    "y8": rgb(255, 205, 85),
+    "y8": rgb(255,205,85),
   ),
   "base": (
-    "navy"    : #001F3F,
-    "blue"    : #0074D9,
-    "aqua"    : #7FDBFF,
-    "teal"    : #39CCCC,
-    "olive"   : #3D9970,
-    "green"   : #2ECC40,
-    "lime"    : #01FF70,
-    "yellow"  : #FFDC00,
-    "orange"  : #FF851B,
-    "red"     : #FF4136,
-    "fuchsia" : #F012BE,
-    "purple"  : #B10DC9,
-    "maroon"  : #85144B,
-    "white"   : #FFFFFF,
-    "silver"  : #DDDDDD,
-    "gray"    : #AAAAAA,
+    "navy"    : #001f3f,
+    "blue"    : #0074d9,
+    "aqua"    : #7fdbff,
+    "teal"    : #39cccc,
+    "olive"   : #3d9970,
+    "green"   : #2ecc40,
+    "lime"    : #01ff70,
+    "yellow"  : #ffdc00,
+    "orange"  : #ff851b,
+    "red"     : #ff4136,
+    "fuchsia" : #f012be,
+    "purple"  : #b10dc9,
+    "maroon"  : #85144b,
+    "white"   : #ffffff,
+    "silver"  : #dddddd,
+    "gray"    : #aaaaaa,
     "black"   : #111111,
   ),
   "messages": (
-    "danger"    : #bf5329,
-    "error"     : #8eb4cb,
-    "form_good" : #3097D1,
-    "info"      : #8eb4cb,
-    "notice"    : #3097D1,
-    "primary"   : #3097D1,
-    "success"   : #2ab27b,
-    "warning"   : #cbb956,
+    "success": #2ab27b,
+    "good": #3097d1,
+    "info": #8eb4cb,
+    "primary": #3097d1,
+    "notice": #3097d1,
+    "warning": #cbb956,
+    "error": #8eb4cb,
+    "danger": #bf5329,
   ),
   "mattharris": (
     "blue_bright_highlight":   #1d88c7,
@@ -121,22 +123,20 @@ $color_schemes: (
     "grey_blue":               #27323d,
     "medium_elephant_grey":    #38414a,
   ),
-  // ACCENT COLORS FROM SFP.NET
   "sfp_theme": (
-    "accent_orange":  rgb(238,133,54),
-    "dark":           rgb(0,111,225),
-    "base":           rgb(0,148,225),
-    "light":          rgb(0,196,225),
+    "accent_orange": rgb(238,133,54),
+    "dark": rgb(0,111,225),
+    "base": rgb(0,148,225),
+    "light": rgb(0,196,225),
   ),
-  // https://brandcolors.net
-  "company-colors": (
-    "github"       :  #000000,  // #000000
-    "facebook"     :  #3460a1,  // #3460a1
-    "twitter"      :  #1da1f2,  // #1da1f2
-    "linkedin"     :  #136d9d,  // #136d9d
-    "google_plus"  :  #de5543,  // #de5543
-    "youtube"      :  #ee3138,  // #ee3138
-    "flikr_blue"   :  #0063dc,  // #0063dc
-    "flikr_pink"   :  #ff0084,  // #ff0084
+  "company-colors":(
+    "github": #000000,
+    "facebook": #3460a1,
+    "twitter": #1da1f2,
+    "linkedin": #136d9d,
+    "google_plus": #de5543,
+    "youtube": #ee3138,
+    "flikr_blue": #0063dc,
+    "flikr_pink": #ff0084,
   )
 );

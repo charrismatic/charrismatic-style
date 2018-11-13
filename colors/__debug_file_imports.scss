@@ -1,0 +1,42 @@
+/*/// # Colors */
+
+// ## FUNCTIONS
+@import 'functions.scss';
+
+// ## COLOR DEFINITIONS AND VARIABLES
+@import 'var_schemes';
+
+@debug 'var_schemes';
+@import 'var_greyscale';
+
+@debug 'var_greyscale';
+@import 'var_material';
+
+@debug 'var_material';
+@import 'var_translucent';
+
+@debug 'var_translucent';
+// ## THEME OVERRIDE AND COLOR CONFIG
+@import 'vars_theme';
+
+@debug 'vars_theme';
+@import 'theme_classes';
+
+@debug 'theme_classes';
+// ## COLOR UTILITY CLASSES
+@import 'form_classes';
+
+@debug 'form_classes';
+@import 'color_classes';
+
+@debug 'color_classes';
+@import 'material_classes';
+
+@debug 'material_classes';
+// ## Color Examples
+@import 'color_swatch';
+
+@debug 'color_swatch';
+@import 'examples';
+
+@debug 'examples';

@@ -1,0 +1,72 @@
+////
+///  @group Motion
+////
+
+/// ## Compass Ceaser Easing Timing Transitions
+/// Standard easings timing function from the Compass Ceaser Easings Library
+///
+/// @name easing - direction and function directing the transition
+/// @property {variable} linear          [cubic-bezier(0.250, 0.250, 0.750, 0.750)] - linear
+/// @property {variable} ease            [cubic-bezier(0.250, 0.100, 0.250, 1.000)] - ease
+/// @property {variable} ease-in         [cubic-bezier(0.420, 0.000, 1.000, 1.000)] - ease in
+/// @property {variable} ease-out        [cubic-bezier(0.000, 0.000, 0.580, 1.000)] - ease out
+/// @property {variable} ease-in-out     [cubic-bezier(0.420, 0.000, 0.580, 1.000)] - ease in out
+/// @property {variable} easeInQuad      [cubic-bezier(0.550, 0.085, 0.680, 0.530)] - ease in quad
+/// @property {variable} easeInCubic     [cubic-bezier(0.550, 0.055, 0.675, 0.190)] - ease in cubic
+/// @property {variable} easeInQuart     [cubic-bezier(0.895, 0.030, 0.685, 0.220)] - ease in quart
+/// @property {variable} easeInQuint     [cubic-bezier(0.755, 0.050, 0.855, 0.060)] - ease in quint
+/// @property {variable} easeInSine      [cubic-bezier(0.470, 0.000, 0.745, 0.715)] - ease in sine
+/// @property {variable} easeInExpo      [cubic-bezier(0.950, 0.050, 0.795, 0.035)] - ease in expo
+/// @property {variable} easeInCirc      [cubic-bezier(0.600, 0.040, 0.980, 0.335)] - ease in circ
+/// @property {variable} easeInBack      [cubic-bezier(0.600,-0.280, 0.735, 0.045)] - ease in back
+/// @property {variable} easeOutQuad     [cubic-bezier(0.250, 0.460, 0.450, 0.940)] - ease out quad
+/// @property {variable} easeOutCubic    [cubic-bezier(0.215, 0.610, 0.355, 1.000)] - ease out cubic
+/// @property {variable} easeOutQuart    [cubic-bezier(0.165, 0.840, 0.440, 1.000)] - ease out quart
+/// @property {variable} easeOutQuint    [cubic-bezier(0.230, 1.000, 0.320, 1.000)] - ease out quint
+/// @property {variable} easeOutSine     [cubic-bezier(0.390, 0.575, 0.565, 1.000)] - ease out sine
+/// @property {variable} easeOutExpo     [cubic-bezier(0.190, 1.000, 0.220, 1.000)] - ease out expo
+/// @property {variable} easeOutCirc     [cubic-bezier(0.075, 0.820, 0.165, 1.000)] - ease out circ
+/// @property {variable} easeOutBack     [cubic-bezier(0.175, 0.885, 0.320, 1.275)] - ease out back
+/// @property {variable} easeInOutQuad   [cubic-bezier(0.455, 0.030, 0.515, 0.955)] - ease in out quad
+/// @property {variable} easeInOutCubic  [cubic-bezier(0.645, 0.045, 0.355, 1.000)] - ease in out cubic
+/// @property {variable} easeInOutQuart  [cubic-bezier(0.770, 0.000, 0.175, 1.000)] - ease in out quart
+/// @property {variable} easeInOutQuint  [cubic-bezier(0.860, 0.000, 0.070, 1.000)] - ease in out quint
+/// @property {variable} easeInOutSine   [cubic-bezier(0.445, 0.050, 0.550, 0.950)] - ease in out sine
+/// @property {variable} easeInOutExpo   [cubic-bezier(1.000, 0.000, 0.000, 1.000)] - ease in out expo
+/// @property {variable} easeInOutCirc   [cubic-bezier(0.785, 0.135, 0.150, 0.860)] - ease in out circ
+/// @property {variable} easeInOutBack   [cubic-bezier(0.680,-0.550, 0.265, 1.550)] - ease in out back
+/// @link http://easings.net
+/// @link https://github.com/jhardy/compass-ceaser-easing
+/// @link https://github.com/jhardy/compass-ceaser-easing/blob/master/stylesheets/ceaser-easing/_easing-vars.sass
+
+$easing: (
+  linear: cubic-bezier(0.25, 0.25, 0.75, 0.75),
+  ease: cubic-bezier(0.25, 0.1, 0.25, 1),
+  in_: cubic-bezier(0.42, 0, 1, 1),
+  out: cubic-bezier(0, 0, 0.58, 1),
+  in_out: cubic-bezier(0.42, 0, 0.58, 1),
+  in_cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19),
+  out_cubic: cubic-bezier(0.215, 0.61, 0.355, 1),
+  in_out_cubic: cubic-bezier(0.645, 0.045, 0.355, 1),
+  in_circ: cubic-bezier(0.6, 0.04, 0.98, 0.335),
+  out_circ: cubic-bezier(0.075, 0.82, 0.165, 1),
+  in_out_circ: cubic-bezier(0.785, 0.135, 0.15, 0.86),
+  in_expo: cubic-bezier(0.95, 0.05, 0.795, 0.035),
+  out_expo: cubic-bezier(0.19, 1, 0.22, 1),
+  in_out_expo: cubic-bezier(1, 0, 0, 1),
+  in_quad: cubic-bezier(0.55, 0.085, 0.68, 0.53),
+  out_quad: cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  in_out_quad: cubic-bezier(0.455, 0.03, 0.515, 0.955),
+  in_quart: cubic-bezier(0.895, 0.03, 0.685, 0.22),
+  out_quart: cubic-bezier(0.165, 0.84, 0.44, 1),
+  in_out_quart: cubic-bezier(0.77, 0, 0.175, 1),
+  in_quint: cubic-bezier(0.755, 0.05, 0.855, 0.06),
+  out_quint: cubic-bezier(0.23, 1, 0.32, 1),
+  in_out_quint: cubic-bezier(0.86, 0, 0.07, 1),
+  in_sine: cubic-bezier(0.47, 0, 0.745, 0.715),
+  out_sine: cubic-bezier(0.39, 0.575, 0.565, 1),
+  in_out_sine: cubic-bezier(0.445, 0.05, 0.55, 0.95),
+  in_back: cubic-bezier(0.6, -0.28, 0.735, 0.045),
+  out_back: cubic-bezier(0.175, 0.885, 0.32, 1.275),
+  in_out_back: cubic-bezier(0.68, -0.55, 0.265, 1.55)
+);

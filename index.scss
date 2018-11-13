@@ -1,32 +1,69 @@
-/* LIBRARY INDEX */
-// imports all content
-@import 'var/url';
-@import 'var/easing';
-@import 'var/responsive';
+/// GROUP base
+/// @PACKAGE library core set
+/// ===================================
+
+
+///
+/// FUNCTIONS
+///
+
 @import 'functions/font_face_compass';
 @import 'functions/key_map_tools';
 @import 'functions/tuples';
-@import 'functions/url';
 @import 'functions/window';
+// @import 'functions/url';
+
+// DEFAULULT VAR AHD DEF MAPS
+
 @import 'colors/functions';
 @import 'colors/var_schemes';
 @import 'colors/var_material';
 @import 'colors/var_greyscale';
 @import 'colors/var_translucent';
-@import 'colors/theme_vars';
-@import 'fonts/font_vars';
-@import 'fonts/font_scale';
-@import 'fonts/theme_fonts';
-@import 'layouts/responsive_mixins';
-@import 'layouts/base_layouts';
+@import 'layouts/var_size';
+
+
+/* /// LAYOUTS */
+@import 'layouts/mixin_widths';
+@import 'layouts/classes__base_layout';
 @import 'layouts/flex__template';
 @import 'layouts/flex_row__template';
 @import 'layouts/flex_extras__template';
-// @import 'layouts/flex_columns__template';
 @import 'layouts/template_flex_grid';
 @import 'layouts/template__section_layouts';
-@import 'layouts/template__section_extra_classes';
-@import 'layouts/flex__classes';
+
+/* /// FONTS */
+@import "fonts/functions";
+@import "fonts/var_defaults";
+
+/* /// FORMATTING */
+
+@import 'format/align';
+@import 'format/annotations';
+@import 'format/border';
+@import 'format/margin';
+@import 'format/padding';
+
+/* /// ICONS */
+
+@import 'icons/lib/fontawesome';
+@import 'icons/functions';
+@import 'icons/mixins';
+@import 'icons/icons_core';
+@import 'icons/icons_htmlentities';
+@import 'icons/icons_social';
+@import 'icons/icon_map';
+
+/* /// MOTION */
+
+@import 'motion/var_easing';
+@import 'motion/defs__keyframes';
+@import 'motion/defs__transition';
+@import 'motion/defs__animation_helpers';
+@import 'motion/defs__transitions_material';
+
+/* /// EFFECTS */
+
 @import 'effects/gradients/deep_blues';
 @import 'effects/gradients/hatch_patthens';
 @import 'effects/bg_image';
@@ -38,44 +75,38 @@
 @import 'effects/scrollbar';
 @import 'effects/selection';
 @import 'effects/shadow_mixins';
-@import 'format/align';
-@import 'format/annotations';
-@import 'format/border';
-@import 'format/margin';
-@import 'format/padding';
-// @import 'colors/index';
-// @import 'layouts/index';
-// @import 'format/index';
-// @import 'functions/index';
-@import 'icons/lib/fontawesome';
-@import 'icons/functions';
-@import 'icons/icons_core';
-@import 'icons/icons_htmlentities';
-@import 'icons/icons_social';
-@import 'icons/icon_map';
-@import 'icons/mixins';
-// @import 'icons/index';
-@import 'motion/anim_mixins';
-@import 'motion/material_transitions';
-@import 'motion/transition';
-@import 'motion/anim_animation_slideinleft';
-// @import 'motion/motion';
-// @import 'utilities/debug';
-// @import 'utilities/helpers';
-// @import 'utilities/reset';
-// @import 'utilities/show_hide';
-// @import 'utilities/zoom';
-//  CLASSES
+
+///
+/// CLASSES
+///
+
+@import 'layouts/template__section_extra_classes';
+@import 'layouts/flex__classes';
 @import 'colors/color_classes';
 @import 'colors/form_classes';
 @import 'colors/material_classes';
 @import 'colors/theme_classes';
-@import 'fonts/font_classes';
+@import "fonts/classes_size";
+@import "fonts/classes_headings";
+@import "fonts/classes_families";
 @import 'icons/utility_classes';
 @import 'layouts/classes__aspect_ratio';
 @import 'layouts/classes__display';
 @import 'layouts/classes__width';
-@import 'colors/color_swatch'
+@import 'utilities/assistive_text';
+@import 'utilities/helpers';
+@import 'utilities/debug';
+
+// @import 'colors/color_swatch';
+// @import 'layouts/flex_columns__template';
+// @import 'colors/index';
+// @import 'layouts/index';
+// @import 'format/index';
+// @import 'functions/index';
+// @import 'icons/index';
+// @import 'motion/motion';
+// @import 'utilities/show_hide';
+// @import 'utilities/zoom';
 // @import 'layouts/classes__columns';
 // @import 'colors/examples';
 // @import 'colors/guidebook';
@@ -100,4 +131,3 @@
 // @import 'fonts/index';
 // @import 'functions/archive/font_face_bourbon';
 // @import 'functions/archive/font_loader_google';
-// $page_bg: rgb(255,255,255);

@@ -3,41 +3,25 @@
  *******************/
 
 
-%crisp-img {
-  image-rendering:optimizeSpeed;             /* Legal fallback */
-  image-rendering:-moz-crisp-edges;          /* Firefox        */
-  image-rendering:-o-crisp-edges;            /* Opera          */
-  image-rendering:-webkit-optimize-contrast; /* Safari         */
-  image-rendering:optimize-contrast;         /* CSS3 Proposed  */
-  image-rendering:crisp-edges;               /* CSS4 Proposed  */
-  image-rendering:pixelated;                 /* CSS4 Proposed  */
-  -ms-interpolation-mode:nearest-neighbor;   /* IE8+           */
+.crisp-img {
+  image-rendering: optimizeSpeed;             /* Legal fallback */
+  image-rendering: -moz-crisp-edges;          /* Firefox        */
+  image-rendering: -o-crisp-edges;            /* Opera          */
+  image-rendering: -webkit-optimize-contrast; /* Safari         */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed  */
+  image-rendering: crisp-edges;               /* CSS4 Proposed  */
+  image-rendering: pixelated;                 /* CSS4 Proposed  */
+  -ms-interpolation-mode: nearest-neighbor;   /* IE8+           */
 }
-.crisp-img { @extend %crisp-img; }
+
 
 // GENERAL
 .block { display: block; }
-
+.inline { display: inline; }
 
 // TYPOGRAPHY
 .bold { font-weight: bold; }
 .price { white-space: nowrap; }
-
-
-// ACCESSIBILITY
-// TEXT IS HIDDEN BUT USED BY ROBOTS - SCREEN READERS FOR DOCUMENT STRUCTURE
-%screen_assist_text {
-  font-size: 0;
-  height: 0;
-  left: -999em;
-  line-height: 0;
-  overflow: hidden;
-  text-indent: -999em;
-  top: -999em;
-  position: absolute;
-  width: 0;
-}
-.helper-text { @extend %screen_assist_text; }
 
 
 // BACKGROUND IMAGE DEFAULT
@@ -50,11 +34,13 @@
 }
 
 .bg {
-  background-size:cover;
-  background-repeat:no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.bg-contain { background-size: contain; }
 
+.bg-contain {
+  background-size: contain;
+}
 
 
 // PREVENT SCROLLING WHILE AN ITEM IS FOCUSED SUCH AN OVERLAY
@@ -74,7 +60,9 @@
   -o-user-select: none;
   user-select: none;
 }
-.no-select {  @extend %no-select; }
+
+.no-select { @extend %no-select; }
+
 
 // PREVENT GHOST DRAGGING ON BUTTONS AND UI ELEMENTS NOT MEANT FOR CLICK AND DRAG.
 %no-drag {
