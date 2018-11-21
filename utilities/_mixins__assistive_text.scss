@@ -1,0 +1,73 @@
+
+/*
+/// ---
+/// group: utilities
+/// title: ACCESSIBILITY
+///
+// To hide text visually, but make it available
+// for screen readers use the clip rect offscreen
+// technique made popular by
+// Snook.ca http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+// The technique is to apply a class to the text
+// (on a span inside the label) with the following CSS applied.
+//
+//// ### Current recoomendation
+/// ```
+/// .screen-reader-text {
+///    position: absolute !important;
+///    height: 1px; width: 1px;
+///    overflow: hidden;
+///    clip: rect(1px 1px 1px 1px);
+///    clip: rect(1px, 1px, 1px, 1px);
+///    clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px);
+/// }
+////
+//
+//// ### No longer used
+/// In the past the following CSS has been used but this is not longer recommended
+/// because of focus problems on iOS devices and problems with RTL languages.
+/// ```
+/// .screen-reader-text {
+///   position: absolute !important;
+///   left: -9999em;
+///   top: -9999em;
+/// }
+////
+//
+/// Example using also the clip-path technique with fallbacks for older browsers
+/// ````
+/// <button class="background-image">
+///   <span class="screen-reader-text ">Go</span>
+/// </button>
+/// ```
+*/
+
+// TEXT IS HIDDEN BUT STILL NEEDED FOR CONTEXT
+@mixin assistive_text() {
+  position: absolute;
+  font-size: 0;
+  line-height: 0;
+  height: 0;
+  width: 0;
+  left: -999em;
+  top: -999em;
+  overflow: hidden;
+  text-indent: -999em;
+}
+
+
+// refernce document for  differences
+// https://make.wordpress.org/accessibility/2015/02/09/hiding-text-for-screen-readers-with-wordpress-core/
+@mixin wp_asistive_text() {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  position: absolute !important;
+  word-wrap: normal !important;
+  color: transparent;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}

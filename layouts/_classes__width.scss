@@ -1,4 +1,4 @@
-/* ---
+///* ---
 /// title: Aspect Ratio
 /// section: Layout
 /// ---
@@ -46,7 +46,7 @@
 ///   <div class="row box__outer width--100p"><span class="item__label">width--100p</span> </div>
 /// </section>
 ///
-*/
+///*/
 
 .minw {
   &-100 { min-width: 100px; }
@@ -62,11 +62,19 @@
   &-800 { min-width: 800px; }
   &-900 { min-width: 900px; }
   &-1000 { min-width: 1000px; }
-  &-0 { min-width: none !important; }
+
   &-none { min-width: none !important; }
 }
 
 .maxw {
+
+  &-100 { max-width: 100px; }
+  &-150 { max-width: 150px; }
+  &-200 { max-width: 200px; }
+  &-250 { max-width: 250px; }
+  &-300 { max-width: 300px; }
+  &-350 { max-width: 350px; }
+  &-400 { max-width: 400px; }
   &-500 { max-width: 500px; }
   &-600 { max-width: 600px; }
   &-700 { max-width: 700px; }
@@ -78,11 +86,13 @@
   &-1300 { max-width: 1300px; }
   &-1400 { max-width: 1400px; }
   &-1500 { max-width: 1500px; }
+
   &-none { max-width: none !important; }
 
 }
 
 .w {
+  /// P - PERCENT BASED WIDTH
   &-0    { width: 0    }
   &-10p  { width: 10%  }
   &-20p  { width: 20%  }
@@ -94,5 +104,23 @@
   &-80p  { width: 80%  }
   &-90p  { width: 90%  }
   &-100p { width: 100% }
-  &-auto { width: auto }
+
+  /// 100-1000 - NUMERIC VALUE WIDTH
+  &-100 { width: 100px; }
+  &-150 { width: 150px; }
+  &-200 { width: 200px; }
+  &-250 { width: 250px; }
+  &-300 { width: 300px; }
+  &-350 { width: 350px; }
+  &-400 { width: 400px; }
+  &-500 { width: 500px; }
+  &-600 { width: 600px; }
+  &-700 { width: 700px; }
+  &-800 { width: 800px; }
+  &-900 { width: 900px; }
+  &-1000 { width: 1000px; }
+
+  /// DESCRIPTIVE CLASSES
+  &-full { width: 100%; }
+  &-auto { width: auto; }
 }

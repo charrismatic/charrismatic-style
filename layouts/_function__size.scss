@@ -1,0 +1,53 @@
+///*---
+/// title: Size Variables
+/// section: Layout
+/// ---
+///
+/// | Device | Width | __    | Device | Width |
+/// | ------ | ----: | ----- | ------ | ----: |
+/// | hd_laptop | 1440px | | tablet_lg | 850px |
+/// | laptop    | 1280px | | tablet_sm | 660px |
+/// | ipad      | 768px  | | mobile_lg | 420px |
+/// | nexus7    | 600px  | | nexus6p   | 412px |
+/// | iphone6   | 375px  | | mobile_sm | 360px |
+/// | iphone5   | 320px  | | galaxys5  | 360px |
+/// */
+
+
+/// DEVICE SIZES
+///
+/// @group layout
+/// @name _size
+/// @param {string} $name [] - the name of the device size or breakpoint
+/// @property {variable} laptop_hd [ 1440px ]
+/// @property {variable} laptop_sd [ 1280px ]
+/// @property {variable} ipad      [ 768px ]
+/// @property {variable} nexus7    [ 600px ]
+/// @property {variable} iphone6   [ 375px ]
+/// @property {variable} iphone5   [ 320px ]
+/// @property {variable} galaxys5  [ 360px ]
+/// @property {variable} nexus6p   [ 412px ]
+/// @property {variable} tablet_lg [ 850px ] default
+/// @property {variable} tablet_sm [ 660px ]
+/// @property {variable} mobile_lg [ 420px ]
+/// @property {variable} mobile_sm [ 360px ]
+
+@function _size($name:'tablet_lg') {
+
+  $device_sizes: (
+    'laptop_hd': 1440px,
+    'laptop_sd': 1280px,
+    'tablet_lg': 850px,
+    'mobile_lg': 420px,
+    'mobile'   : 360px,
+    'mobile_sm': 320px,
+    'ipad'     : 768px,
+    'nexus7'   : 600px,
+    'nexus6p'  : 412px,
+    'iphone6'  : 375px,
+    'galaxys5' : 360px,
+    'iphone5'  : 320px,
+  );
+
+  @return map-get($device_sizes, $name);
+}

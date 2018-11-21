@@ -5,7 +5,7 @@
 @import "functions";
 @import "mixins";
 
-/*
+///*
 /// ---
 /// title: SVG Icons
 /// section: Icons
@@ -56,10 +56,12 @@
 ///
 ///
 /// More detailed examples here https://codepen.io/super_thalamus/pen/wdyeGp
-*/
+//*/
 
-@import "utility_classes";
+@import 'lib/fontawesome';
+@import 'lib/iconicicons';
 @import "icon_map";
-@import "icons_core";
-@import "icons_social";
-@import "icons_htmlentities";
+@import "classes_icon";
+@import "classes_icons_core";
+@import "classes_icons_social";
+@import "classes_icons_htmlentities";

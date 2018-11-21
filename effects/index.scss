@@ -1,17 +1,20 @@
-/*---
-section: Effects
----
+/*
+/// ---
+/// section: Effects
+/// ---
+///
+/// Special Effects
+///
+/// */
 
-Special Effects
-
-*/
-
-
-@import "depth";
-@import "shadow_mixins";
-// @import "gradient_mixins";
-@import "bg_image";
-@import "fade_out";
-@import "selection";
-@import "notifications";
-// @import "preload_spinner";
+@import 'mixin__shadow';
+@import 'mixin__gradients_bootstrap4';
+// @import 'mixin__gradient';
+@import 'mixin__depth';
+@import 'classes__window';
+@import 'classes__notifications';
+// @import 'classes__loading_spinner';
+// @import 'classes__gradient_hatch';
+// @import 'classes__gradient_deepblues';
+@import 'classes__fadeout';
+@import 'classes__depth';

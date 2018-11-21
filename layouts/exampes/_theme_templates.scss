@@ -1,0 +1,92 @@
+// Theme Stylesheet
+
+// @import "../colors";
+
+
+/* COMPONENTS */
+.logo {
+  padding: 1rem;
+  width: 100%;
+  flex: 1 1 auto;
+  position: relative;
+  height: 100%;
+}
+
+.divider {
+  &-horiz {
+    width: 1px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid;
+    min-height: 8em;
+    height: 100%;
+    display: block;
+    align-self: center;
+    vertical-align: middle;
+    flex: 0;
+  }
+
+  &-vert {
+
+  }
+}
+
+.template-title {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+/* THEME COLORS */
+
+section {
+  &.light-theme {
+    background: $white;
+    color: $black;
+  }
+
+ &.light-theme-alt {
+    background: $white;
+    color: $theme-dark;
+ }
+
+  &.dark-theme {
+    background: $black;
+    color: $white;
+  }
+
+  &.dark-theme-alt {
+    background: $black;
+    color: $theme-light;
+  }
+
+  &.color-theme {
+    background: $theme-dark;
+    color: $white;
+  }
+
+  &.color-theme-alt {
+    background: $theme-dark;
+    color: $theme-light;
+  }
+}
+
+
+.features {
+  .logo-container {
+    width: 200px;
+
+    i {
+      height: 100%;
+      position: relative;
+    }
+  }
+
+  h2 {
+    margin-bottom: 1em;
+    &.example {
+      margin-bottom: auto;
+    }
+  }
+}

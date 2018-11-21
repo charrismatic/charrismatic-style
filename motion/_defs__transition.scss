@@ -3,6 +3,7 @@
 ////
 
 
+/*
 /// -----------------
 /// Transition
 /// - Generic multi argument transition builder
@@ -20,11 +21,14 @@
 ///     }
 ///   }
 /// ```
+*/
+
 
 @mixin transition($args...) {
   transition: $args;
 }
 
+/*
 /// -------------
 /// Transition Building Function
 /// - Assembles transitions from ordered inputs
@@ -36,6 +40,7 @@
 /// @param {int}    $delay - delay     [0]
 /// @see   {mixin}  transition
 ///
+*/
 
 @function _trans($prop: all, $dur: 600, $trans: ease-in-out, $delay: 0) {
   @return #{$prop} #{$dur}ms #{$trans} #{$delay}ms;

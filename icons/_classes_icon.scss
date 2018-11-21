@@ -1,0 +1,76 @@
+/// DEFAULT SVG ICON CLASS
+/// @group icons
+/// @name svg_icon
+/// @example
+///    // Setup An Icon Base Class
+///    .my_icon_class {_ic
+///      @extend %svg_icon;
+///      // my-icon-properties ...
+///    }
+
+
+.icon-helper-text { @include icon_assist_text(); }
+
+
+/// ## ICON SIZE UTILITY CLASSES
+/// @name icon_size
+/// - icon_size--1  - width:  1em - height:  1em
+/// - icon_size--2  - width:  2em - height:  2em
+/// - icon_size--3  - width:  3em - height:  3em
+/// - icon_size--4  - width:  4em - height:  4em
+/// - icon_size--5  - width:  5em - height:  5em
+/// - icon_size--6  - width:  6em - height:  6em
+/// - icon_size--7  - width:  7em - height:  7em
+/// - icon_size--8  - width:  8em - height:  8em
+/// - icon_size--9  - width:  9em - height:  9em
+/// - icon_size--10 - width: 10em - height: 10em
+
+// ICON BASE ELEMENT AND CLASS
+.icon {
+  @include svg_icon_base();
+
+  // ICON SIZE UTILITY CLASSES
+  &_size {
+    &--1 { width: 1em; height: 1em; }
+    &--2 { width: 2em; height: 2em; }
+    &--3 { width: 3em; height: 3em; }
+    &--4 { width: 4em; height: 4em; }
+    &--5 { width: 5em; height: 5em; }
+    &--6 { width: 6em; height: 6em; }
+    &--7 { width: 7em; height: 7em; }
+    &--8 { width: 8em; height: 8em; }
+    &--9 { width: 9em; height: 9em; }
+    &--10 { width: 10em; height: 10em; }
+  }
+
+  .__title {
+    @include icon_assist_text();
+  }
+}
+
+.flex_icons {
+  @include flexible_svg_icon();
+}
+
+// ICON BASE ELEMENT AND CLASS
+.svg_icon {
+  @include svg_icon_base();
+
+  &--circle {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: 70%;
+  }
+}
+
+// CLEANUP RENDERING AND POSITION BUGS
+.icon {
+  cursor: pointer;
+  fill: currentColor;
+  position: relative;
+  vertical-align: middle;
+  shape-rendering: crispEdges;
+  background-repeat: no-repeat;
+  transition: color 200ms linear 0ms;
+}
