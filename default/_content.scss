@@ -1,0 +1,147 @@
+
+// FROM WORDPRESS
+// .entry-title {
+//   color: $primary_title;
+// }
+// body,
+// button,
+// input,
+// select,
+// textarea {
+//   color: #333333;
+//   font-family: inherit;
+//   font-size: 15px;
+//   font-size: 0.9375rem;
+//   font-weight: 400;
+//   line-height: 1.66;
+// }
+// .home.blog .entry-title {
+//   color: #666666;
+// }
+
+
+
+iframe { border: 0; }
+
+img {
+  max-width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  user-select: none;
+  user-drag: none;
+}
+
+
+.entry_content {
+  ul, ol {
+    display: initial;
+    list-style: initial;
+    margin: initial;
+    padding: initial;
+    text-decoration: initial;
+  }
+
+  li {
+    display: initial;
+    margin: initial;
+    padding: initial;
+    text-decoration: initial;
+  }
+
+  button,
+  .button {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    user-select: none;
+    user-drag: none;
+  }
+}
+
+.entry-content,
+.content-block,
+.content-container {
+  p {
+    margin: 0 0 1.5em;
+    padding: 0;
+  }
+
+  dfn,
+  cite,
+  em,
+  i {
+    font-style: italic;
+  }
+
+  blockquote {
+    color: #666666;
+    font-size: 18px;
+    font-size: 1.125rem;
+    font-style: italic;
+    line-height: 1.7;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  blockquote cite {
+    display: block;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 0.5em;
+  }
+
+  address { margin: 0 0 1.5em; }
+
+  kbd,
+  tt,
+  var {
+    font-size: 15px;
+    font-size: 0.9375rem;
+  }
+
+  abbr,
+  acronym {
+    border-bottom: 1px dotted #666666;
+    cursor: help;
+  }
+
+  mark,
+  ins {
+    background: #eeeeee;
+    text-decoration: none;
+  }
+
+  big { font-size: 125%; }
+
+  blockquote { quotes: "" ""; }
+
+  q { quotes: "“" "”" "‘" "’"; }
+
+  blockquote::before,
+  blockquote::after {
+    content: "";
+  }
+
+  @media screen and (min-width: 30em) {
+    blockquote.alignleft,
+    blockquote.alignright {
+      font-size: 14px;
+      font-size: 0.875rem;
+    }
+
+    // Fix image alignment
+    img.alignleft {
+      float: left;
+      margin-right: 1.5em;
+    }
+
+    img.alignright {
+      float: right;
+      margin-left: 1.5em;
+    }
+  }
+}

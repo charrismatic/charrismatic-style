@@ -9,12 +9,16 @@
 
 @import 'mixin__shadow';
 @import 'mixin__gradients_bootstrap4';
-// @import 'mixin__gradient';
 @import 'mixin__depth';
+@import 'mixin__overlay';
+
 @import 'classes__window';
 @import 'classes__notifications';
+@import 'classes__fadeout';
+@import "classes__overlay";
+@import 'classes__depth';
+
+// @import 'mixin__gradient';
 // @import 'classes__loading_spinner';
 // @import 'classes__gradient_hatch';
 // @import 'classes__gradient_deepblues';
-@import 'classes__fadeout';
-@import 'classes__depth';
