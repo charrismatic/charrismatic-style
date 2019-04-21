@@ -1,3 +1,7 @@
+@import '../template__flex_grid';
+@import '../mixin__flex';
+@import '../mixin__media_widths';
+
 
 /****************************************
  *  SLIDER RESPONSIVE VIEW              *
@@ -5,7 +9,7 @@
 
 // MAIN CONTAINER
 .products-grid {
-  @extend %fl_grid4;
+  @include _fl_grid4;
   padding: 1em 0;
 }
 
@@ -134,6 +138,6 @@
   .special-price{
     margin:0;
     padding:0;
-    color: $accent_red;
+    color: red;
   }
 }

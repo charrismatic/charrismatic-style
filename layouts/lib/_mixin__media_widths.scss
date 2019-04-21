@@ -1,0 +1,50 @@
+////
+/// @group layout
+////
+
+
+///
+///  [Inserts media content when less than target width]
+///  @name max_width
+///  @param  {number} $width [max width value]
+///  @example
+///    .page-wrap {
+///      width: 90%;
+///      padding: 1em 0;
+///      @include max_width(700px) {
+///        padding: 1em 0;
+///      }
+///      @include max_width(490px) {
+///        padding: 1em 1.5em;
+///      }
+///      @include max_width(375px) {
+///        padding: 1em 1em;
+///      }
+///    }
+@mixin max_width($width) {
+  @media screen and (max-width: #{$width}) {
+    @content;
+  }
+}
+
+
+///
+///  [Inserts media content between two widths]
+///  @name range_width
+///  @param  {[type]} $min_width [min width value]
+///  @param  {[type]} $max_width [max width value]
+@mixin range_width($min_width, $max_width) {
+  @media (min-width: #{$min_width}) and (max-width: #{$max_width}) {
+    @content;
+  }
+}
+
+///
+///  [Inserts media content when greater than target width]
+///  @name min_width
+///  @param  {[type]} $width [min width value]
+@mixin min_width($width) {
+  @media screen and (min-width: #{$width}) {
+    @content;
+  }
+}

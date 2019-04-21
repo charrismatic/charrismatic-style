@@ -1,0 +1,30 @@
+
+section {
+  &.no_pad {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  &.page-wrap {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  &.content-wrap {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &.card__title {
+    padding: .4em 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
