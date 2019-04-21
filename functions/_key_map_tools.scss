@@ -1,37 +1,38 @@
 ////
-/// @group functions  
+/// @group functions
 ////
 
-/// Map deep get    
-///   
-/// @example  
-///    $m-breakpoint: map-deep-get( $o-grid-default-config, "layouts", "M");  
-///    -> 610px  
+/// Map deep get
 ///
-/// @author Hugo Giraudel  
-/// @access public  
-/// @param {Map} $map - Map  
-/// @param {Arglist} $keys - Key chain  
-/// @return {*} - Desired value  
+/// @example
+///    $m-breakpoint: map-deep-get( $o-grid-default-config, "layouts", "M");
+///    -> 610px
+///
+/// @author Hugo Giraudel
+/// @access public
+/// @param {Map} $map - Map
+/// @param {Arglist} $keys - Key chain
+/// @return {*} - Desired value
 
 @function map-deep-get($map, $keys...) {
-    @each $key in $keys {
-        $map: map-get($map, $key);
-    }
-    @return $map;
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
 }
 
-/// Deep set function to set a value in nested maps  
-/// 
-/// @author Hugo Giraudel  
-/// @access public  
-/// @param {Map} $map - Map  
-/// @param {List} $keys -  Key chaine  
-/// @param {*} $value - Value to assign  
-/// @return {Map}  
+/// Deep set function to set a value in nested maps
 ///
-/// @example  
-///    $o-grid-default-config: map-deep-set($o-grid-default-config, "layouts" "M", 650px);  
+/// @author Hugo Giraudel
+/// @access public
+/// @param {Map} $map - Map
+/// @param {List} $keys -  Key chaine
+/// @param {*} $value - Value to assign
+/// @return {Map}
+///
+/// @example
+///    $o-grid-default-config: map-deep-set($o-grid-default-config, "layouts" "M", 650px);
 
 @function map-deep-set($map, $keys, $value) {
   $maps: ($map,);
@@ -56,6 +57,7 @@
     $current-key: nth($keys, $i);
     $current-map: nth($maps, -1);
     $current-get: map-get($current-map, $current-key);
+
     @if $current-get == null {
       @error "Key `#{$key}` doesn't exist at current level in map.";
     }

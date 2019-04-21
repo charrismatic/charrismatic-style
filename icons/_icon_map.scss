@@ -1,0 +1,14 @@
+@function get_icon_map(){
+  $icon_map: (
+    'fontawesome': $fontawesome,
+  );
+  @return $icon_map;
+}
+
+$icon_map: get_icon_map();
+
+$ic : get_iconset('fontawesome');
+$icconf: get_iconset_config($ic);
+$icpaths: get_iconset_paths($ic);
+$icon_len: _getopt($ic, 'size');
+$icon_vbox: _getopt($ic, 'viewbox');

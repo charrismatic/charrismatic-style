@@ -1,0 +1,38 @@
+
+// .success { color: $success_color; font-weight:bold; }
+// .error { color: $error_color; font-weight:bold; }
+// .notice { color: $notice_color; }
+// .error-msg {
+//   border-color: $message_error_border_color;
+//   background-color: $message_error_bg;
+//   color: $message_error_color;
+// }
+// .success-msg {
+//   border-color: $message_success_border_color;
+//   background-color: $message_success_bg;
+//   color: $message_success_color;
+// }
+// .note-msg,
+// .notice-msg {
+//   border-color: $message_notice_border_color;
+//   background-color: $message_notice_bg;
+//   color: $message_notice_color;
+// }
+
+.messages { overflow: hidden; margin: 0 0 10px; }
+.messages { list-style: none !important; margin: 0; padding: 0; }
+.messages a { text-decoration: underline; }
+.messages ul { list-style: none !important; margin: 0; padding: 0; }
+.messages li { margin: 0 0 1%; }
+.messages > li:last-child { margin-bottom: 0; }
+.messages li li { margin: 0; }
+
+.error-msg,
+.success-msg,
+.note-msg,
+.notice-msg {
+  background-position: 25px center !important;
+  background-repeat: no-repeat !important;
+  padding: 25px 25px 25px 80px !important;
+  font-size: 12px !important;
+}

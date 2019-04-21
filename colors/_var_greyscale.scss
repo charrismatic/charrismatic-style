@@ -1,0 +1,70 @@
+/*
+/// ---
+/// title: Colors - Greyscale
+/// name: color_library
+/// ---
+///
+/// Greyscale
+///
+/// ```
+///   @color: #ffffff  @name: white
+///   @color: #f7f7f7  @name: grey_03
+///   @color: #f2f2f2  @name: grey_05
+///   @color: #e6e6e6  @name: grey_10
+///   @color: #d9d9d9  @name: grey_15
+///   @color: #cccccc  @name: grey_20
+///   @color: #bfbfbf  @name: grey_25
+///   @color: #b3b3b3  @name: grey_30
+///   @color: #a6a6a6  @name: grey_35
+///   @color: #999999  @name: grey_40
+///   @color: #8c8c8c  @name: grey_45
+///   @color: #808080  @name: grey_50
+///   @color: #737373  @name: grey_55
+///   @color: #666666  @name: grey_60
+///   @color: #595959  @name: grey_65
+///   @color: #4d4d4d  @name: grey_70
+///   @color: #404040  @name: grey_75
+///   @color: #333333  @name: grey_80
+///   @color: #262626  @name: grey_85
+///   @color: #1a1a1a  @name: grey_90
+///   @color: #0d0d0d  @name: grey_95
+///   @color: #000000  @name: black
+/// ```
+*/
+
+$greyscale_colors: _get($color_schemes, 'greyscale');
+
+// BLACK
+$black: rgba(0, 0, 0, 1);
+$black_00: $black;
+// WHITE
+$white: rgba(255, 255, 255, 1);
+$grey_00: $white;
+// GREYSCALE
+$grey_01: _get($greyscale_colors, "grey-01");
+$grey_02: _get($greyscale_colors, "grey-02");
+$grey_03: _get($greyscale_colors, "grey-03");
+$grey_04: _get($greyscale_colors, "grey-04");
+$grey_05: _get($greyscale_colors, "grey-05");
+$grey_10: _get($greyscale_colors, "grey-10");
+$grey_15: _get($greyscale_colors, "grey-15");
+$grey_20: _get($greyscale_colors, "grey-20");
+$grey_25: _get($greyscale_colors, "grey-25");
+$grey_30: _get($greyscale_colors, "grey-30");
+$grey_35: _get($greyscale_colors, "grey-35");
+$grey_40: _get($greyscale_colors, "grey-40");
+$grey_45: _get($greyscale_colors, "grey-45");
+$grey_50: _get($greyscale_colors, "grey-50");
+$grey_55: _get($greyscale_colors, "grey-55");
+$grey_60: _get($greyscale_colors, "grey-60");
+$grey_65: _get($greyscale_colors, "grey-65");
+$grey_70: _get($greyscale_colors, "grey-70");
+$grey_75: _get($greyscale_colors, "grey-75");
+$grey_80: _get($greyscale_colors, "grey-80");
+$grey_85: _get($greyscale_colors, "grey-85");
+$grey_90: _get($greyscale_colors, "grey-90");
+$grey_95: _get($greyscale_colors, "grey-95");
+$grey_96: _get($greyscale_colors, "grey-96");
+$grey_97: _get($greyscale_colors, "grey-97");
+$grey_98: _get($greyscale_colors, "grey-98");
+$grey_99: _get($greyscale_colors, "grey-99");
