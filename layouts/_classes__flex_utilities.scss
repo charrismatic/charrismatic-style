@@ -176,3 +176,55 @@ FLEX BASIS
   &_95 { flex-basis: 95% }
   &_100 { flex-basis: 100% }
 }
+
+/// // RESULTS
+/// .fl--auto { flex-basis: auto; }
+/// .fl--distribute { justify-content: space-around; }
+/// .fl--end { justify-content: flex-end; }
+/// .fl--equal { flex-basis: 0; }
+/// .fl--fill { flex-basis: 100%; }
+/// .fl--spread { justify-content: space-between; }
+/// .fl--start { justify-content: flex-start; }
+/// .fl_10 { flex-basis: 10%; }
+/// .fl_15 { flex-basis: 15%; }
+/// .fl_20 { flex-basis: 20%; }
+/// .fl_25 { flex-basis: 25%; }
+/// .fl_30 { flex-basis: 30%; }
+/// .fl_35 { flex-basis: 35%; }
+/// .fl_40 { flex-basis: 40%; }
+/// .fl_45 { flex-basis: 45%; }
+/// .fl_50 { flex-basis: 50%; }
+/// .fl_55 { flex-basis: 55%; }
+/// .fl_60 { flex-basis: 60%; }
+/// .fl_65 { flex-basis: 65%; }
+/// .fl_70 { flex-basis: 70%; }
+/// .fl_75 { flex-basis: 75%; }
+/// .fl_80 { flex-basis: 80%; }
+/// .fl_85 { flex-basis: 85%; }
+/// .fl_90 { flex-basis: 90%; }
+/// .fl_95 { flex-basis: 95%; }
+/// .fl_100 { flex-basis: 100%; }
+/// .fl_align--center { align-items: center; }
+/// .fl_align--end { align-items: flex-end; }
+/// .fl_align--start { align-items: flex-start; }
+/// .fl_align--stretch { align-items: stretch; }
+/// .fl_self--bottom { align-self: flex-end; }
+/// .fl_self--center { justify-self: center; }
+/// .fl_self--end { justify-self: flex-end; }
+/// .fl_self--middle { align-self: center; }
+/// .fl_self--start { justify-self: flex-start; }
+/// .fl_self--top { align-self: flex-start; }
+/// .flex .fl_grow { flex-grow: 1; }
+/// .flex .fl_shrink { flex-shrink: 1; }
+/// .flex_around { justify-content: space-around; }
+/// .flex_basis-max { flex-basis: 100%; }
+/// .flex_basis-none { flex-basis: 0; }
+/// .flex_between { justify-content: space-between; }
+/// .flex_center { justify-content: center; }
+/// .flex_end { justify-content: flex-end; }
+/// .flex_grow { flex-grow: 1; }
+/// .flex_nowrap { flex-wrap: nowrap; }
+/// .flex_shrink { flex-shrink: 1; }
+/// .flex_start { justify-content: flex-start; }
+/// .flex_wrap { flex-wrap: wrap; }
+/// .flexible { flex: 1 1 auto; }

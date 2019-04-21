@@ -3,12 +3,9 @@ title: Flex Classes
 section: Layout
 ---
 
-
 Flex Class Templates
 
-
-### flex-row
-
+### .flex-row
 
 __flex-row (Parent)__
 
@@ -19,7 +16,6 @@ display: flex;
 flex-direction: row;
 ```
 
-
 __flex-row > * (Direct Descendant Children)__
 
 ```
@@ -27,12 +23,16 @@ flex: 0 1 auto;
 margin: 0 1em;
 ```
 
+__Special Behavior__
+
+ - .child:first-child   Tries to align flush with the left end
+ - .child:last   Tries to align flush with the right end
 
 */
 
 
 // SINGLE ROW FLEX CONTAINER
-%fl_row {
+@mixin _fl_row {
   display: flex;
   flex-direction: row;
    > * {
@@ -45,15 +45,8 @@ margin: 0 1em;
 
 // INTENDED FOR A SINGLE ROW OR ITEMS STRETCHING LEFT TO RIGHT
 .flex_row {
-  display: flex;
-  flex-direction: row;
+  @include _fl_row;
 
-   > * {
-    margin: 0 1em;
-    // LET FIRST AND LAST ELEMENTS REACH CONTAINER EDGES
-    &:first-child { margin-left: 0; }
-    &:last-child { margin-right: 0;}
-  }
 
   &.flex_wrap {
     > * {
