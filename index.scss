@@ -26,15 +26,13 @@
 
 /// /* LAYOUTS */
 
-@import "layouts/function__size";
-@import "layouts/mixin__widths";
-@import "layouts/mixin__flex";
-@import "layouts/mixin__flex_row";
+@import "layouts/functions";
+@import "layouts/mixins";
 
 /// /* FONTS */
 
 @import "fonts/functions";
-@import "fonts/var_defaults";
+@import "fonts/variables";
 
 /// /* FORMATTING */
 
@@ -81,20 +79,18 @@
 @import 'colors/form_classes';
 @import 'colors/material_classes';
 @import 'colors/theme_classes';
-@import "fonts/classes_size";
-@import "fonts/classes_headings";
-@import "fonts/classes_families";
+@import "fonts/classes";
 @import "icons/classes_icon";
 @import "icons/classes_icons_core";
 @import "icons/classes_icons_social";
 @import "icons/classes_icons_htmlentities";
-@import "layouts/classes__base_layout";
-@import "layouts/classes__aspect_ratio";
-@import "layouts/classes__section_layouts";
-@import "layouts/classes__width";
-@import "layouts/classes__flex";
-@import "layouts/classes__display";
+@import "layouts/classes";
 @import "utilities/classes__accessibility";
 @import "utilities/classes__helpers";
 @import "utilities/classes__debug";
 @import "utilities/classes__reset";
+
+///
+/// TEMPLATES
+///
+@import "layouts/templates";
