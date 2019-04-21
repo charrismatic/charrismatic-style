@@ -1,14 +1,3 @@
-
-.font {
-  &-thin { font-weight: $font_weight_thin; }
-  &-light { font-weight: $font_weight_light; }
-  &-regular { font-weight: $font_weight_medium; }
-  &-bold { font-weight: $font_weight_bold; }
-  &-semibold { font-weight: $font_weight_semibold; }
-  &-extrabold { font-weight: $font_weight_extrabold; }
-  &-italic { font-style: italic; }
-}
-
 // INCREMENTAL MODULAR SCALED TYPOGRAPHY SYSTEM
 // Minor Third Scale - 1.2 ratio
 // Sizes generated at http://www.modularscale.com
@@ -42,7 +31,6 @@
   &-m5 { font-size: 0.555em; }  // 8.879px
   &-m6 { font-size: 0.493em; }  // 7.892px
 }
-
 
 .bigger { font-size: 1.7em; }
 .smaller { font-size: 0.8em; }
