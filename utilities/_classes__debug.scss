@@ -1,0 +1,123 @@
+
+// ADD TO AN ELEMENT SUCH AS BODY TO OUTLINE ALL INNER ELEMENTS
+.debug_highlight {
+  * {
+    outline: 1px solid red !important;
+    outline-offset: 0;
+    z-index: 1 !important;
+  }
+
+  > * {
+    outline: 1px solid red !important;
+    outline-offset: 2px !important;
+    z-index: 2 !important;
+  }
+
+  > * > * {
+    outline-color: blue !important;
+    outline-offset: 2px !important;
+  }
+
+  > * > * > * {
+    outline-color: yellow !important;
+    outline-offset: 4px !important;
+    z-index: 3 !important;
+  }
+
+  > * > * > * > * {
+    outline-color: orange !important;
+    outline-offset: 6px !important;
+    z-index: 4 !important;
+  }
+
+  > * > * > * > * > * {
+    outline-color: green !important;
+    outline-offset: 8px !important;
+    z-index: 5 !important;
+  }
+
+  > * > * > * > * > * > * {
+    outline-color: cyan !important;
+    outline-offset: 10px !important;
+    z-index: 6 !important;
+  }
+}
+
+.debug_zoomout {
+  transform: scale(.8) !important;
+}
+
+.debug_showall {
+  * {
+    outline: 1px solid red !important;
+    visibility: visible !important;
+    display: block !important;
+    position: relative !important;
+  }
+}
+
+.hide_it_all_but_the_content {
+  .sidebar__content,
+  .sidebar-container,
+  #sidebar, .sidebar,
+  header, footer, nav,
+  .nav, .site-nav,
+  .modal,
+  sidebar {
+    display: none;
+  }
+}
+
+.debug_show_all_children * {
+  display: block !important;
+  color: #111111 !important;
+  outline: 1px solid rgba(127, 197, 255, 0.2) !important;
+  position: relative !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.debug {
+  &__show_all * {
+    width: auto !important;
+    visibility: visible !important;
+    position: relative !important;
+    background-color: transparent;
+    color: #333333 !important;
+    border: 1px solid rgba(255, 100, 100, 0.5) !important;
+    padding: 1px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 1px !important;
+    margin-top: 1px !important;
+    transform: none !important;
+    top: unset !important;
+    left: unset !important;
+    right: unset !important;
+    bottom: unset !important;
+    height: auto !important;
+    font-size: 12px !important;
+    min-width: 3em !important;
+    min-height: 1em;
+  }
+}
+
+.debug__show_all > * { overflow: scroll !important; background-color: rgb(40, 67, 92); height: auto; }
+.debug__show_style style { font-size: 10px !important; whitespace: pre; word-wrap: break-line; }
+.debug__show_script script { font-size: 10px !important; whitespace: pre; word-wrap: break-line; }
+.debug__show_display_lvl1 > * { display: block !important; }
+.debug__show_display_lvl2 > * > * { display: flex !important; }
+.debug__show_display_lvl3 > * > * * { display: inline-block!important; flex:1; }
+
+
+////
+///  zoomout
+////
+
+.zoomout {
+  transform: scale(0.8);
+  transition: 300ms;
+  transform-origin: top;
+  overflow: hidden;
+  max-height: 100vh;
+}

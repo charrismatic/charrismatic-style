@@ -1,0 +1,9 @@
+// DIRECT HTML; '&#10084;';
+// UTF8 ENCODED'U+2764';
+.html_icons {
+    &::before {}
+    &.heart::before {
+      content: '\2764';
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.65);
+    }
+}

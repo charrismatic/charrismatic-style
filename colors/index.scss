@@ -1,0 +1,33 @@
+/// GROUP colors
+/// @PACKAGE charrismatic-style-library
+/// @DESCRIPTION Color definitions and
+/// utilities
+/// ===================================
+
+
+//// EXT
+
+///   __example_styles.scss
+///   __examples.scss
+///   __debug_file_imports.scss
+
+/// VAR
+
+@import 'var_translucent';
+@import 'var_schemes';
+@import 'var_material';
+@import 'var_greyscale';
+
+/// FN
+
+@import 'functions';
+
+/// CLASSES
+
+@import 'form_classes';
+@import 'color_classes';
+@import 'theme_classes';
+@import 'material_classes';
+
+
+/// end index.scss

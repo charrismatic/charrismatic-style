@@ -1,38 +1,38 @@
-/*---
-title: Align
-section: Formatting
----
-
-__OBJECT ALIGNMENT__
-
-- align--top    - align-items: flex-start
-- align--center - align-items: center
-- align--bottom - align-items: flex-end
-
-__TEXT ALIGNMENT__
-
-- text--left    - text-align: left
-- text--right   - text-align: right
-- text--center  - text-align: center
-- text--justify - text-align: justify
-
+/*
+///
+/// ---
+/// title: Align
+/// section: Formatting
+/// ---
+///
+/// __OBJECT ALIGNMENT__
+///
+/// - align--top    - align-items: flex-start
+/// - align--center - align-items: center
+/// - align--bottom - align-items: flex-end
+///
+/// __TEXT ALIGNMENT__
+///
+/// - text--left    - text-align: left
+/// - text--right   - text-align: right
+/// - text--center  - text-align: center
+/// - text--justify - text-align: justify
+///
 */
 
 
 // OBJECT ALIGNMENT
 .align {
-  &--top { align-items: flex-start; }
-  &--center { align-items: center; }
-  &--bottom { align-items: flex-end; }
-
-
+  &_top { align-items: flex-start; }
+  &_center { align-items: center; }
+  &_bottom { align-items: flex-end; }
 }
 
 
 // TEXT ALIGNMENT
 .text {
-  &--left { text-align: left; }
-  &--right { text-align: right; }
-  &--center { text-align: center; }
-  &--justify { text-align: justify; }
+  &-left { text-align: left; }
+  &-right { text-align: right; }
+  &-center { text-align: center; }
+  &-justify { text-align: justify; }
 }

@@ -1,0 +1,133 @@
+
+/// ## svg icon
+/// $icon_facebook_svg: '<svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/></svg>';
+
+/// ## base 64 encoded
+/// $icon_facebook_base64: 'PHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xMzQzIDEydjI2NGgtMTU3cS04NiAwLTExNiAzNnQtMzAgMTA4djE4OWgyOTNsLTM5IDI5NmgtMjU0djc1OWgtMzA2di03NTloLTI1NXYtMjk2aDI1NXYtMjE4cTAtMTg2IDEwNC0yODguNXQyNzctMTAyLjVxMTQ3IDAgMjI4IDEyeiIvPjwvc3ZnPg==';
+
+/// @mixin iconify_svg  turn svg into url safe icon backgroun image
+/// @param $icon_name,
+/// @param $bg_color,
+/// @param $fill_color,
+@mixin iconify_svg($icon_name, $bg_color, $fill_color) {
+  background-image: url('data:image/svg+xml;utf8',
+      define_icon('fontawesome', $icon_name, $fill_color)
+  );
+  background-color: $bg_color;
+}
+
+
+
+/// @mixin iconify_svg  turn svg into url safe icon backgroun image
+/// @param $icon_name,
+/// @param $bg_color,
+/// @param $fill_color,
+// @mixin iconify_base64($icon_name, $bg_color,$fill_color) {
+//     background-image: url('data:image/svg+xml;utf8',define_icon('fontawesome', $icon_name, $fill_color));
+//     background-color: $bg_color;
+// }
+// <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 32 32">
+// <path class="icon-secondary" d="M30.148 5.588c-2.934-3.42-7.288-5.588-12.148-5.588-8.837 0-16 7.163-16 16s7.163 16 16 16c4.86 0 9.213-2.167 12.148-5.588l-10.148-10.412 10.148-10.412zM22 3.769c1.232 0 2.231 0.999 2.231 2.231s-0.999 2.231-2.231 2.231-2.231-0.999-2.231-2.231c0-1.232 0.999-2.231 2.231-2.231z"></path>
+// </svg>
+///
+/// OPTIONAL ACCESSIBILITY TEXT
+/// ```
+/// <i class="svg_icon icon_times_rect ">
+///   <span class="icon__tite">Rect Icon</span>
+/// </i>
+/// ```
+
+
+// ACCESSIBILITY
+// TEXT IS HIDDEN BUT USED BY ROBOTS - SCREEN READERS FOR DOCUMENT STRUCTURE
+/// @mixin icon_assist_text include titles and text that does now show visibly
+@mixin icon_assist_text() {
+  position: absolute;
+  top: -999em;
+  left: -999em;
+  text-indent: -999em;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+
+
+/// DEFAULT ICON HOVER EFFECT PLACEHOLDER
+/// @group icons
+@mixin svg_icon_hover($effect:null){
+  // complex type $effect
+  background-color: rgba(0,0,0,.1);
+  transition: .3s cubic-bezier(0.68,-0.55,0.27,1.55);
+  transform: scale(1.15, 1.15) rotate(-5deg);
+}
+
+
+/// ICON PLACEHOLDER FOR DYNAMICALLY SIZED ICON
+/// @group icons
+@mixin flexible_svg_icon (){
+  display: inline-block;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+
+@mixin svg_icon_base ($size:100%, $spacing:10px) {
+  display: inline-block;
+  margin: $spacing;
+  width: $size;
+  height: $size;
+  background-position: 50% 50%;
+  background-size: 80%;
+  vertical-align: middle;
+  transition: color 200ms linear 0ms;
+  font-size: 0;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  shape-rendering: crispEdges;
+}
+
+
+
+// CURRENT
+@mixin make_icon($set, $name, $fill:currentColor, $options...){
+  $use_bg:"no";
+  $fillmap: ('fill':$fill);
+  $optionsmap: map-merge($fillmap,$options);
+  background-image: _icon($set, $name, $optionsmap);
+  // @if ($icon_bg_color){ background-color: $icon_bg_color; }
+}
+
+
+
+@mixin make_prefixed_icon(
+    $name,
+    $class_prefix:'icon-',
+    $fill:currentColor,
+    $bg_color:"" )
+{
+    .#{$class_prefix}#{$name} {
+      background-image: define_icon($icon_set, $name, $color);
+      background-color: $bg_color;
+  }
+}
+
+
+@mixin svg_icon(
+  $name,
+  $icon_set:'fontawesome',
+  $class_prefix:'icon-',
+  $color:currentColor,
+  $bg_color:transparent) {
+  .#{$class_prefix}#{$name} {
+    background-image: define_icon($icon_set, $name, $color);
+    background-color: $bg_color;
+  }
+}
