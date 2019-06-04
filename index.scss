@@ -7,10 +7,7 @@
 /// FUNCTIONS
 ///
 
-@import 'functions/key_map_tools';
-@import 'functions/tuples';
-@import 'functions/window';
-@import 'functions/url';
+@import 'functions/index';
 
 ///
 /// DEFAULTS
@@ -24,10 +21,10 @@
 
 
 /// /* LAYOUTS */
+@import "layouts/index";
 
-@import "layouts/function__size";
-@import "layouts/mixin__widths";
-@import "layouts/mixin__flex";
+/// /* FLEX */
+@import "flex/index";
 
 /// /* FONTS */
 

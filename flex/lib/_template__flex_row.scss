@@ -1,6 +1,6 @@
 /*---
-title: Flex Classes
-section: Layout
+title: Flex Row
+section: Flex
 ---
 
 Flex Class Templates
@@ -30,25 +30,8 @@ __Special Behavior__
 
 */
 
+
 // INTENDED FOR A SINGLE ROW OR ITEMS STRETCHING LEFT TO RIGHT
 .flex-row {
-  @include flex-row;
-
-  // AUTOMATIC SPACING FOR ROW ITEMS
-  > .flex-item {
-    flex: 1 1 0%;
-    margin: 0 1em;
-    &:first-child { margin-left: 0; }
-    &:last-child { margin-right: 0; }
-  }
-
-  &.flex-wrap {
-    > .flex-item {
-      margin: 0 1em;
-
-      // FIRST AND LAST ARE NO LONGER ROW START AND ROW END
-      &:first-child { margin-left: 1em; }
-      &:last-child { margin-right: 1em; }
-    }
-  }
+  @include flex-row($flex_child_class, $flex_row_child_flex_prop);
 }

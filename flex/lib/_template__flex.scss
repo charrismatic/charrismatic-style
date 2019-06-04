@@ -1,0 +1,11 @@
+///*---
+/// title: Flex
+/// section: flex
+/// ---
+///
+
+
+// INTENDED FOR A AUTO FIT AND EQUAL SPACED BLOCKS INSIDE THE FLEX BOX
+.flex {
+  @include flex($flex_child_class, $flex_child_flex_prop);
+}

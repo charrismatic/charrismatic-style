@@ -1,0 +1,36 @@
+/*
+/// ### UI Feedback Color Classes
+///
+/// <div class="color_swatch_group">
+///   <div class="swatch cl-ui-danger"><span class="swatch__name"></span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl-ui-error"><span class="swatch__name"></span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl-ui-form_good"><span class="swatch__name"></span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl-ui-info"><span class="swatch__name"></span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl-ui-notice"><span class="swatch__name"></span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl-ui-primary"><span class="swatch__name"></span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl-ui-success"><span class="swatch__name"></span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl-ui-warning"><span class="swatch__name"></span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+/// </div>
+*/
+
+.cl-ui {
+  &-danger { color: _get($message_colors, "danger"); }
+  &-error { color: _get($message_colors, "error"); }
+  &-form_good { color: _get($message_colors, "good"); }
+  &-info { color: _get($message_colors, "info"); }
+  &-notice { color: _get($message_colors, "notice"); }
+  &-primary { color: _get($message_colors, "primary"); }
+  &-success { color: _get($message_colors, "success"); }
+  &-warning { color: _get($message_colors, "warning"); }
+}
+
+.bg-ui {
+  &-danger { color: _get($message_colors, "danger"); }
+  &-error { color: _get($message_colors, "error"); }
+  &-form_good { color: _get($message_colors, "good"); }
+  &-info { color: _get($message_colors, "info"); }
+  &-notice { color: _get($message_colors, "notice"); }
+  &-primary { color: _get($message_colors, "primary"); }
+  &-success { color: _get($message_colors, "success"); }
+  &-warning { color: _get($message_colors, "warning"); }
+}

@@ -33,14 +33,14 @@
 */
 
 $greyscale_colors: _get($color_schemes, 'greyscale');
+$black: rgba(0, 0, 0, 1);
+$white: rgba(255, 255, 255, 1);
+$black_00: $black;
 
 // BLACK
-$black: rgba(0, 0, 0, 1);
-$black_00: $black;
 // WHITE
-$white: rgba(255, 255, 255, 1);
-$grey_00: $white;
 // GREYSCALE
+$grey_00: $white;
 $grey_01: _get($greyscale_colors, "grey-01");
 $grey_02: _get($greyscale_colors, "grey-02");
 $grey_03: _get($greyscale_colors, "grey-03");

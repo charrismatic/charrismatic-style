@@ -1,0 +1,23 @@
+
+// Lookup a named color from the crayola / 'name that color' dataset
+@function color_named($color_name, $group:"standard") {
+  $scheme_set: $crayola_color_scheme;
+
+  @if map-has-key($scheme_set, $group) {
+    $scheme: map-get($scheme_set, $group);
+
+    @if $color_name {
+      @if map-has-key($scheme, $color_name) {
+        $color: map-get($scheme, $color_name);
+
+        @return unquote($color);
+      }
+    }
+
+    @return $scheme;
+  }
+
+  @warn "Unknown `#{$scheme_set}` - `#{$color_scheme}` in $colors.";
+
+  @return null;
+}

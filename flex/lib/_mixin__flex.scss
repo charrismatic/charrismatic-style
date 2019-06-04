@@ -34,15 +34,15 @@
 
 
 // GENERAL FLEX CONTAINER
-@mixin flex($flex_child: "> .flex-item", $flex_properties:"" ) {
+@mixin flex($flex_child: $flex_child_class, $flex_property:1) {
   display: flex;
 
-  // @if ($flex_properties) {
-  // #{$flex_properties};
-  // }
-  // @if ($flex_child)
-  #{$flex_child} {
-    margin-left: 1em;
-    margin-right: 1em;
+  // @if ($flex_properties) {{$flex_properties};}
+  @if ($flex_child) {
+    > #{$flex_child} {
+      flex: $flex_property;
+      margin-left: 1em;
+      margin-right: 1em;
+    }
   }
 }

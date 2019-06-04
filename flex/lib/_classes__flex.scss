@@ -1,0 +1,220 @@
+//* ---
+/// title: Flex Classes
+/// section: flex
+/// ---
+///
+
+/// FLEX
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+
+// FALLBACK IN CASE TEMPLATED ROW AND COLUMN SYSTEMS CAUSE PROBLEMS
+.flex-dir-row { flex-direction: row; }
+.flex-dir-col { flex-direction: column; }
+
+/// GROW, SHRINK, AS LARGE AS POSSIBLE
+.flexible { flex: 1 1 auto; }
+.shrinkable { flex: 0 1 auto; }
+
+.no-flex {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.flex {
+
+  // -------
+  /// SIZING
+  // -------
+
+
+  /// SIZING
+  ///
+  ///- flex-grow           - flex-grow: 1
+  ///- flex-shrink         - flex-shrink: 1
+  ///- flex-equal         - flex-basis: 0
+  ///- flex-fill          - flex-basis: 100%
+  ///- flex-auto          - flex-basis: auto
+  ///- flex-grow         - flex-grow: 1
+  ///- flex-shrink       - flex-shrink: 1
+  ///- flex-basis-none   - flex-basis: 0;
+  ///- flex-basis-max    - flex-basis: 100%
+  ///- flexible          - flex: 1 1 auto
+  ///
+  ///FLEX BASIS
+  ///
+  ///- flex-10  - flex-basis: 10%
+  ///- flex-15  - flex-basis: 15%
+  ///- flex-20  - flex-basis: 20%
+  ///- flex-25  - flex-basis: 25%
+  ///- flex-30  - flex-basis: 30%
+  ///- flex-35  - flex-basis: 35%
+  ///- flex-40  - flex-basis: 40%
+  ///- flex-45  - flex-basis: 45%
+  ///- flex-50  - flex-basis: 50%
+  ///- flex-55  - flex-basis: 55%
+  ///- flex-60  - flex-basis: 60%
+  ///- flex-65  - flex-basis: 65%
+  ///- flex-70  - flex-basis: 70%
+  ///- flex-75  - flex-basis: 75%
+  ///- flex-80  - flex-basis: 80%
+  ///- flex-85  - flex-basis: 85%
+  ///- flex-90  - flex-basis: 90%
+  ///- flex-95  - flex-basis: 95%
+  ///- flex-100 -  flex-basis: 100
+  ///*/
+
+  // FLEX BY WEIGHT
+  &-0 { flex: 0; }
+  &-1 { flex: 1; }
+  &-2 { flex: 2; }
+  &-3 { flex: 3; }
+  &-4 { flex: 4; }
+  &-5 { flex: 5; }
+  &-6 { flex: 6; }
+  &-7 { flex: 7; }
+  &-8 { flex: 8; }
+  &-9 { flex: 9; }
+
+  // FLEX BY PERCENT WIDTH
+  &-10p { flex-basis: 10% !important; }
+  &-15p { flex-basis: 15% !important; }
+  &-20p { flex-basis: 20% !important; }
+  &-25p { flex-basis: 25% !important; }
+  &-30p { flex-basis: 30% !important; }
+  &-35p { flex-basis: 35% !important; }
+  &-40p { flex-basis: 40% !important; }
+  &-45p { flex-basis: 45% !important; }
+  &-50p { flex-basis: 50% !important; }
+  &-55p { flex-basis: 55% !important; }
+  &-60p { flex-basis: 60% !important; }
+  &-65p { flex-basis: 65% !important; }
+  &-70p { flex-basis: 70% !important; }
+  &-75p { flex-basis: 75% !important; }
+  &-80p { flex-basis: 80% !important; }
+  &-85p { flex-basis: 85% !important; }
+  &-90p { flex-basis: 90% !important; }
+  &-100p { flex-basis: 100% !important; }
+
+
+  ///
+  /// ### FLEX EXTRAS
+  ///
+  /// | Class | Description |
+  /// | ----- | ----------- |
+  /// | flex-item  | Manually add the properties of a flex > child descedant  |
+  /// | flex-fit   | Force all child nodes to take up space as required (autofit)  |
+  /// | flex-equal | Force all child nodes to take up the minimum space possible (equal fit) |
+  /// | flex-none  | This element will not stretch or shrink  |
+
+  &-fit { > #{$flex_child} { flex-basis: 100%; } }
+  &-equal { > #{$flex_child} { flex-basis: 0; } }
+
+  &-none {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  /// __flex-wrap__
+  ///
+  /// ## WRAP
+  ///   ADDING FLEX WRAP BREAKS THE ROW INTO A GRID AFTER THE CONTAINER
+  ///   REACHES 100%, IT ALSO RESETS THE FIRST AND LAST CHILD MARGINS TO MATCH THE
+  ///   REST OF THE ELEMENTS
+  ///
+  /// WRAP
+  /// - flex-wrap { flex-wrap: wrap; }
+  /// - flex-nowrap { flex-wrap: nowrap; }
+  ///
+
+
+  &-wrap { flex-wrap: wrap; }
+  &-no-wrap { flex-wrap: nowrap; }
+
+  /// ---------------------------------
+  // SEMANTIC CLASSES
+  // (LONG FORM - NAMED AFTER PROPERTY)
+  /// ---------------------------------
+
+  &-basis-full { flex-basis: 100%; }
+  &-basis-none { flex-basis: 0; }
+  &-basis-auto { flex-basis: auto; }
+
+  &-fill { flex-basis: 100%; }
+  &-auto { flex-basis: auto; }
+  &-equal { flex-basis: 0; }
+
+  &-grow { flex-grow: 1; }
+  &-no-grow { flex-grow: 0; }
+
+  &-shrink { flex-shrink: 1; }
+  &-no-shrink { flex-shrink: 0; }
+
+
+  ///
+  /// FLEX ALIGN AND DISTRIBUTE
+  ///
+  /// SELF
+  ///
+  /// - flex-self-end      - justify-self: flex-end
+  /// - flex-self-start    - justify-self: flex-start
+  /// - flex-self-center   - justify-self: center
+  /// - flex-self-top      - align-self: flex-start
+  /// - flex-self-bottom   - align-self: flex-end
+  /// - flex-self-middle   - align-self: center
+  ///
+  /// ALIGN ITEMS
+  ///
+  /// - flex-align-stretch - align-items: stretch
+  /// - flex-align-center  - align-items: center
+  /// - flex-align-start   - align-items: flex-start
+  /// - flex-align-end     - align-items: flex-end
+  ///
+  /// JUSTIFY CONTENT
+  ///
+  ///
+  /// _Shorthand_
+  ///
+  /// - flex-distribute    - justify-content: space-around
+  /// - flex-spread        - justify-content: space-between
+  /// - flex-start         - justify-content: flex-start
+  /// - flex-end           - justify-content: flex-end
+  ///
+  /// _Full Name_
+  ///
+  /// - flex-start        - justify-content: flex-start
+  /// - flex-end          - justify-content: flex-end
+  /// - flex-center       - justify-content: center
+  /// - flex-between      - justify-content: space-between
+  /// - flex-around       - justify-content: space-around
+  ///
+
+  // ALIGNMENT
+  &-start { justify-content: flex-start; }
+  &-end { justify-content: flex-end; }
+  &-center { justify-content: center; }
+
+  &-between { justify-content: space-between; }
+  &-around { justify-content: space-around; }
+  &-distribute { justify-content: space-around; }
+
+  &-spread { justify-content: space-between; }
+  &-start { justify-content: flex-start; }
+}
+
+
+.flex-self {
+  &-end { justify-self: flex-end; }
+  &-start { justify-self: flex-start; }
+  &-center { justify-self: center; }
+  &-top { align-self: flex-start; }
+  &-bottom { align-self: flex-end; }
+  &-middle { align-self: center; }
+}
+
+.flex-align {
+  &-stretch { align-items: stretch; }
+  &-center { align-items: center; }
+  &-start { align-items: flex-start; }
+  &-end { align-items: flex-end; }
+}

@@ -27,6 +27,26 @@
 */
 
 $color_schemes: (
+  "base": (
+    "navy"    : #001f3f,
+    "blue"    : #0074d9,
+    "aqua"    : #7fdbff,
+    "teal"    : #39cccc,
+    "olive"   : #3d9970,
+    "green"   : #2ecc40,
+    "lime"    : #01ff70,
+    "yellow"  : #ffdc00,
+    "orange"  : #ff851b,
+    "red"     : #ff4136,
+    "fuchsia" : #f012be,
+    "purple"  : #b10dc9,
+    "maroon"  : #85144b,
+    "white"   : #ffffff,
+    "silver"  : #dddddd,
+    "gray"    : #aaaaaa,
+    "black"   : #111111,
+  ),
+
   "greyscale": (
     "grey-01": darken(rgb(255,255,255),01%),
     "grey-02": darken(rgb(255,255,255),02%),
@@ -56,6 +76,7 @@ $color_schemes: (
     "grey-98": darken(rgb(255,255,255),98%),
     "grey-99": darken(rgb(255,255,255),99%),
   ),
+
   "reds": (
     "r1": rgb(232,63,69),
     "r2": rgb(185,34,40),
@@ -65,6 +86,7 @@ $color_schemes: (
     "r6": rgb(154,42,49),
     "r7": rgb(125,22,29),
   ),
+
   "yellows": (
     "y1": rgb(250,76,6),
     "y2": rgb(185,122,38),
@@ -75,25 +97,7 @@ $color_schemes: (
     "y7": rgb(255,205,85),
     "y8": rgb(255,205,85),
   ),
-  "base": (
-    "navy"    : #001f3f,
-    "blue"    : #0074d9,
-    "aqua"    : #7fdbff,
-    "teal"    : #39cccc,
-    "olive"   : #3d9970,
-    "green"   : #2ecc40,
-    "lime"    : #01ff70,
-    "yellow"  : #ffdc00,
-    "orange"  : #ff851b,
-    "red"     : #ff4136,
-    "fuchsia" : #f012be,
-    "purple"  : #b10dc9,
-    "maroon"  : #85144b,
-    "white"   : #ffffff,
-    "silver"  : #dddddd,
-    "gray"    : #aaaaaa,
-    "black"   : #111111,
-  ),
+
   "messages": (
     "success": #2ab27b,
     "good": #3097d1,
@@ -123,12 +127,7 @@ $color_schemes: (
     "grey_blue":               #27323d,
     "medium_elephant_grey":    #38414a,
   ),
-  "sfp_theme": (
-    "accent_orange": rgb(238,133,54),
-    "dark": rgb(0,111,225),
-    "base": rgb(0,148,225),
-    "light": rgb(0,196,225),
-  ),
+
   "brand_colors":(
     "github": #000000,
     "facebook": #3460a1,

@@ -38,11 +38,6 @@
 }
 
 
-// FLEX COLUMN PARENT
-.flex-col {
-  flex-direction: column;
-}
-
 
 .template_flex-col {
   @include _fl_col-parent;
@@ -54,12 +49,12 @@
     // FIRST ELEMENT STICKY TO TOP
     &:first-child {
       flex: 0 0 auto;
-      padding: 0 0 0.5em 0;
+      padding-bottom: 0.5em;
     }
     // LAST ELEMENT STICKY TO BOTTOM
     &:last-child {
       flex: 0 0 auto;
-      padding: 0.5em 0 0 0;
+      padding-top: 0.5em;
     }
   }
 }
