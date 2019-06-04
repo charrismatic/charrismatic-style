@@ -13,14 +13,14 @@
 
 // COLOR OVERRIDE
 .cl {
-  &_black { color: $black; }
-  &_white { color: $white; }
+  &-black { color: $black; }
+  &-white { color: $white; }
 }
 
 // BACKGROUND COLOR OVERRIDE
 .bg {
-  &_black { background-color: $black; }
-  &_white { background-color: $white; }
+  &-black { background-color: $black; }
+  &-white { background-color: $white; }
 }
 
 /*
@@ -82,11 +82,11 @@
 */
 
 .cl {
-  &_none { background-color: none !important; }
-  &_inherit { background-color: inherit !important; }
+  &-none { color: none !important; }
+  &-inherit { color: inherit !important; }
 }
 
 .bg {
-  &_none { background-color: none !important; }
-  &_inherit { background-color: inherit !important; }
+  &-none { background-color: none !important; }
+  &-inherit { background-color: inherit !important; }
 }

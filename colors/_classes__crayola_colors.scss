@@ -1,0 +1,16 @@
+// ### Crayloa Color Classes
+
+// Color BG Classes
+@each $color_name, $color in $crayola_color_schemes {
+  @each $color_type, $color_value in $color {
+    @if $color_type == "base" { .bg__#{$color_name} { background-color: $color_value !important; }}
+    @else if $color_name != "shades" { .bg__#{$color_name}-#{$color_type} { background-color: $color_value !important; } }
+  }
+}
+// Color Classes
+@each $color_name, $color in $crayola_color_schemes {
+  @each $color_type, $color_value in $color {
+    @if $color_type == "base" { .cl__#{$color_name} { color: $color_value !important; } }
+    @else if $color_name != "shades" { .cl__#{$color_name}-#{$color_type} { color: $color_value !important; } }
+  }
+}
