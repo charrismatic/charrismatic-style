@@ -1,60 +1,41 @@
 ////
-///  @group Motion
-////
+/// @name keyframes
+/// @description Mixin to to define animation keyframes
+///
+/// @example
+///
+/// @include keyframes(slide-down) {
+///   0% { opacity: 1; }
+///   90% { opacity: 0; }
+///  }
+///
+///  .element {
+///  width: 100px;
+///  height: 100px;
+///  background: black;
+///  @include animation('slide-down 5s 3');
+///  }
 
 
-// ANIMATE.SCSS 
-// @name slideInLeft 
-// @author Animate.scss  
-// @link https://github.com/geoffgraham/animate.scss
-
-@-webkit-keyframes slideInLeft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-2000px);
+// PREFIXED
+@mixin keyframes_prefixed($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
   }
 
-  100% {
-    -webkit-transform: translateX(0);
-  }
-}
-
-@-moz-keyframes slideInLeft {
-  0% {
-    opacity: 0;
-    -moz-transform: translateX(-2000px);
+  @-moz-keyframes #{$animation-name} {
+    @content;
   }
 
-  100% {
-    -moz-transform: translateX(0);
-  }
-}
-
-@-o-keyframes slideInLeft {
-  0% {
-    opacity: 0;
-    -o-transform: translateX(-2000px);
-  }
-
-  100% {
-    -o-transform: translateX(0);
+  @keyframes #{$animation-name} {
+    @content;
   }
 }
 
-@keyframes slideInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-2000px);
-  }
 
-  100% {
-    transform: translateX(0);
+// NON-PREFIXED
+@mixin keyframes($animation_name) {
+  @keyframes #{$animation_name} {
+    @content;
   }
-}
-
-.slideInLeft {
-  -webkit-animation-name: slideInLeft;
-  -moz-animation-name: slideInLeft;
-  -o-animation-name: slideInLeft;
-  animation-name: slideInLeft;
 }

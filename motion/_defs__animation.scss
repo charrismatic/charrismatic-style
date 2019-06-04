@@ -28,11 +28,11 @@
 */
 
 @mixin animation(
-    $name,
-    $duration,
-    $transition,
-    $iteration
-  ){
+  $name,
+  $duration,
+  $transition,
+  $iteration
+) {
   animation-name: $name;
   animation-duration: $duration;
   animation-timing-function: $transition;
@@ -68,42 +68,4 @@
   animation-duration: $duration;
   animation-timing-function: $transition;
   animation-iteration-count: $iteration;
-}
-
-
-
-// Keyframes
-// ----------
-/// Define animation keyframes without browser prefixes
-///
-/// @param {string} $animation_name - the name of an animation
-///
-/// @example scss
-///   @include keyframes(slide-down) {
-///     0% { opacity: 1; }
-///     90% { opacity: 0; }
-///   }
-@mixin keyframes($animation_name) {
-  @keyframes #{$animation_name} {
-    @content;
-  }
-}
-
-
-// Browser Prefixed Keyframes
-// --------------------------
-/// Define animation keyframes with browser prefixes
-///
-/// @param {string} $animation_name - the name of an animation
-/// @see {mixin} keyframes
-@mixin keyframes_prefixed($animation_name) {
-  @-webkit-keyframes #{$animation_name} {
-    @content;
-  }
-  @-moz-keyframes #{$animation_name} {
-    @content;
-  }
-  @keyframes #{$animation_name} {
-    @content;
-  }
 }
