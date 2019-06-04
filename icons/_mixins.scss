@@ -9,10 +9,14 @@
 /// @param $icon_name,
 /// @param $bg_color,
 /// @param $fill_color,
-@mixin iconify_svg($icon_name,$bg_color,$fill_color) {
-  background-image: url('data:image/svg+xml;utf8',define_icon('fontawesome', $icon_name, $fill_color));
+@mixin iconify_svg($icon_name, $bg_color, $fill_color) {
+  background-image: url('data:image/svg+xml;utf8',
+      define_icon('fontawesome', $icon_name, $fill_color)
+  );
   background-color: $bg_color;
 }
+
+
 
 /// @mixin iconify_svg  turn svg into url safe icon backgroun image
 /// @param $icon_name,
@@ -22,18 +26,17 @@
 //     background-image: url('data:image/svg+xml;utf8',define_icon('fontawesome', $icon_name, $fill_color));
 //     background-color: $bg_color;
 // }
-
 // <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 32 32">
 // <path class="icon-secondary" d="M30.148 5.588c-2.934-3.42-7.288-5.588-12.148-5.588-8.837 0-16 7.163-16 16s7.163 16 16 16c4.86 0 9.213-2.167 12.148-5.588l-10.148-10.412 10.148-10.412zM22 3.769c1.232 0 2.231 0.999 2.231 2.231s-0.999 2.231-2.231 2.231-2.231-0.999-2.231-2.231c0-1.232 0.999-2.231 2.231-2.231z"></path>
 // </svg>
 ///
-
 /// OPTIONAL ACCESSIBILITY TEXT
 /// ```
 /// <i class="svg_icon icon_times_rect ">
 ///   <span class="icon__tite">Rect Icon</span>
 /// </i>
 /// ```
+
 
 // ACCESSIBILITY
 // TEXT IS HIDDEN BUT USED BY ROBOTS - SCREEN READERS FOR DOCUMENT STRUCTURE
@@ -53,7 +56,7 @@
 
 /// DEFAULT ICON HOVER EFFECT PLACEHOLDER
 /// @group icons
-@mixin svg_icon_hover($effect){
+@mixin svg_icon_hover($effect:null){
   // complex type $effect
   background-color: rgba(0,0,0,.1);
   transition: .3s cubic-bezier(0.68,-0.55,0.27,1.55);
@@ -76,23 +79,46 @@
 }
 
 
-@mixin svg_icon_base () {
+@mixin svg_icon_base ($size:100%, $spacing:10px) {
   display: inline-block;
-  margin: 10px 10px;
-  width: 50px;
-  height: 50px;
+  margin: $spacing;
+  width: $size;
+  height: $size;
   background-position: 50% 50%;
   background-size: 80%;
-  background-repeat: no-repeat;
   vertical-align: middle;
+  transition: color 200ms linear 0ms;
   font-size: 0;
   cursor: pointer;
-  transition: color 200ms linear 0ms;
+  background-repeat: no-repeat;
   shape-rendering: crispEdges;
 }
 
 
-@mixin make_icon() {}
+
+// CURRENT
+@mixin make_icon($set, $name, $fill:currentColor, $options...){
+  $use_bg:"no";
+  $fillmap: ('fill':$fill);
+  $optionsmap: map-merge($fillmap,$options);
+  background-image: _icon($set, $name, $optionsmap);
+  // @if ($icon_bg_color){ background-color: $icon_bg_color; }
+}
+
+
+
+@mixin make_prefixed_icon(
+    $name,
+    $class_prefix:'icon-',
+    $fill:currentColor,
+    $bg_color:"" )
+{
+    .#{$class_prefix}#{$name} {
+      background-image: define_icon($icon_set, $name, $color);
+      background-color: $bg_color;
+  }
+}
+
 
 @mixin svg_icon(
   $name,

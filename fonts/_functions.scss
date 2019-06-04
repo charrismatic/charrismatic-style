@@ -66,6 +66,13 @@
 }
 
 
+
+@mixin font_family ($font_family:sans-serif) {
+  font-family: $font_family, sans-serif;
+}
+
+
+
 //Font Weights
 @function _font_wt($input) {
   $font_wt_map: (

@@ -11,32 +11,31 @@
 @import 'functions/key_map_tools';
 @import 'functions/tuples';
 @import 'functions/window';
-// @import 'functions/url';
+@import 'functions/url';
 
-// DEFAULULT VAR AHD DEF MAPS
+///
+/// DEFAULTS
+///
 
 @import 'colors/functions';
 @import 'colors/var_schemes';
 @import 'colors/var_material';
 @import 'colors/var_greyscale';
 @import 'colors/var_translucent';
-@import 'layouts/var_size';
 
 
-/* /// LAYOUTS */
-@import 'layouts/mixin_widths';
-@import 'layouts/classes__base_layout';
-@import 'layouts/flex__template';
-@import 'layouts/flex_row__template';
-@import 'layouts/flex_extras__template';
-@import 'layouts/template_flex_grid';
-@import 'layouts/template__section_layouts';
+/// /* LAYOUTS */
 
-/* /// FONTS */
+@import "layouts/function__size";
+@import "layouts/mixin__widths";
+@import "layouts/mixin__flex";
+
+/// /* FONTS */
+
 @import "fonts/functions";
 @import "fonts/var_defaults";
 
-/* /// FORMATTING */
+/// /* FORMATTING */
 
 @import 'format/align';
 @import 'format/annotations';
@@ -44,17 +43,15 @@
 @import 'format/margin';
 @import 'format/padding';
 
-/* /// ICONS */
+/// /* ICONS */
 
-@import 'icons/lib/fontawesome';
 @import 'icons/functions';
 @import 'icons/mixins';
-@import 'icons/icons_core';
-@import 'icons/icons_htmlentities';
-@import 'icons/icons_social';
-@import 'icons/icon_map';
+@import 'icons/lib/fontawesome';
+@import "icons/icon_map";
 
-/* /// MOTION */
+
+/// /* MOTION */
 
 @import 'motion/var_easing';
 @import 'motion/defs__keyframes';
@@ -62,72 +59,53 @@
 @import 'motion/defs__animation_helpers';
 @import 'motion/defs__transitions_material';
 
-/* /// EFFECTS */
+/// /* EFFECTS */
 
-@import 'effects/gradients/deep_blues';
-@import 'effects/gradients/hatch_patthens';
-@import 'effects/bg_image';
-@import 'effects/depth';
-@import 'effects/fade_out';
-@import 'effects/gradient_mixins';
-@import 'effects/notifications';
-@import 'effects/preload_spinner';
-@import 'effects/scrollbar';
-@import 'effects/selection';
-@import 'effects/shadow_mixins';
+@import 'effects/mixin__shadow';
+@import 'effects/mixin__depth';
+@import 'effects/mixin__overlay';
+
+/// /* UTILITIES */
+
+@import "utilities/mixins__assistive_text";
 
 ///
 /// CLASSES
 ///
 
-@import 'layouts/template__section_extra_classes';
-@import 'layouts/flex__classes';
+@import 'default/layout';
+@import 'default/content';
+@import 'default/typography';
+@import 'default/reset';
+
+@import "utilities/classes__reset";
+@import "utilities/classes__accessibility";
+@import "utilities/classes__helpers";
+@import "utilities/classes__debug";
+
+// @import "layouts/classes__base_layout";
+@import "layouts/classes__aspect_ratio";
+@import "layouts/classes__section_layouts";
+@import "layouts/classes__width";
+@import "layouts/classes__flex";
+@import "layouts/classes__display";
+
 @import 'colors/color_classes';
 @import 'colors/form_classes';
 @import 'colors/material_classes';
 @import 'colors/theme_classes';
+
 @import "fonts/classes_size";
 @import "fonts/classes_headings";
 @import "fonts/classes_families";
-@import 'icons/utility_classes';
-@import 'layouts/classes__aspect_ratio';
-@import 'layouts/classes__display';
-@import 'layouts/classes__width';
-@import 'utilities/assistive_text';
-@import 'utilities/helpers';
-@import 'utilities/debug';
 
-// @import 'colors/color_swatch';
-// @import 'layouts/flex_columns__template';
-// @import 'colors/index';
-// @import 'layouts/index';
-// @import 'format/index';
-// @import 'functions/index';
-// @import 'icons/index';
-// @import 'motion/motion';
-// @import 'utilities/show_hide';
-// @import 'utilities/zoom';
-// @import 'layouts/classes__columns';
-// @import 'colors/examples';
-// @import 'colors/guidebook';
-// @import 'icons/archive/icon_factory_example';
-// @import 'icons/archive/simple-theme_icons_old';
-// @import 'icons/archive/ic_paths_font_awesome';
-// @import 'icons/archive/map_fontawesome_icons';
-// @import 'icons/archive/theme_icons';
-// @import 'icons/lib/iconicicons';
-// @import 'icons/lib/map_fontawesome5';
-// @import 'icons/lib/map_iconic_sprites';
-// @import 'icons/lib/map_typicons';
-// @import 'icons/docs/_icons-fa-old';
-// @import 'icons/docs/_icon_demo';
-// @import 'icons/docs/_social_icons_demo';
-// @import 'icons/docs/index';
-// @import 'icons/docs/iconguide';
-// @import 'icons/docs/iconguide-fa';
-// @import 'icons/docs/iconguide-html';
-// @import 'icons/docs/iconguide-iconic';
-// @import 'effects/index';
-// @import 'fonts/index';
-// @import 'functions/archive/font_face_bourbon';
-// @import 'functions/archive/font_loader_google';
+@import "icons/classes_icon";
+@import "icons/classes_icons_core";
+@import "icons/classes_icons_social";
+@import "icons/classes_icons_htmlentities";
+
+@import 'effects/classes__window';
+@import 'effects/classes__notifications';
+@import 'effects/classes__fadeout';
+@import 'effects/classes__depth';
+@import 'effects/classes__overlay';

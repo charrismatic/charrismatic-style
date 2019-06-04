@@ -1,0 +1,30 @@
+
+
+// http://lea.verou.me/css3patterns/
+// https://www.quackit.com/css/codes/patterns/css_background_stripes.cfm
+// https://iros.github.io/patternfills/sample_css.html
+.hatch_1 {
+  background-color: rgb(15, 20, 25);
+  background-image:
+    linear-gradient(rgba(0,0,0,0.115) 1px, transparent 1px),
+    linear-gradient(0, rgba(0,0,0,0.015) 2px, transparent 1px);
+  background-size: 10px 10px;
+  background-position: -1px -1px, -1px -1px;
+}
+
+.pattern_greys_striping {
+  background-image: repeating-linear-gradient(145deg, #1d252d, #151c22 30px, #151c22 30px, #151a1e 60px);
+  min-height: 50px;
+}
+
+.carbon_fiber {
+  background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0,
+    linear-gradient(27deg, #222222 5px, transparent 5px) 0 10px,
+    linear-gradient(207deg, #222222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  background-color: #131313;
+  background-size: 20px 20px;
+}

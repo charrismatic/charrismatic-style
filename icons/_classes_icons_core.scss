@@ -1,0 +1,48 @@
+$icon_prefix: 'icon';
+$icon_color: $grey_30;
+$icon_bgcolor: transparent;
+$default_icon_color: #444444;
+// ---
+.icon--caret-down                 {background-image: _icon('fontawesome','caret-down',           ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--caret-down.red             {background-image: _icon('fontawesome','caret-down',           ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--caret-down.lightorange     {background-image: _icon('fontawesome','caret-down',           ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--folder-open                {background-image: _icon('fontawesome','folder-open',          ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--tag                        {background-image: _icon('fontawesome','tag',                  ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--code                       {background-image: _icon('fontawesome','code',                 ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--link                       {background-image: _icon('fontawesome','link',                 ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--search                     {background-image: _icon('fontawesome','search',               ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--search--white              {background-image: _icon('fontawesome','search',               ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--angle-left                 {background-image: _icon('fontawesome','angle-left',           ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--angle-right                {background-image: _icon('fontawesome','angle-right',          ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--angle-down                 {background-image: _icon('fontawesome','angle-down',           ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--angle-up                   {background-image: _icon('fontawesome','angle-up',             ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--chevron-left               {background-image: _icon('fontawesome','chevron-left',         ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--chevron-up                 {background-image: _icon('fontawesome','chevron-up',           ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--chevron-down               {background-image: _icon('fontawesome','chevron-down',         ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--chevron-right              {background-image: _icon('fontawesome','chevron-right',        ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--chevron-circle-up          {background-image: _icon('fontawesome','chevron-circle-up',    ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--chevron-circle-right       {background-image: _icon('fontawesome','chevron-circle-right', ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--chevron-circle-down        {background-image: _icon('fontawesome','chevron-circle-down',  ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--chevron-circle-left        {background-image: _icon('fontawesome','chevron-circle-left',  ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--ui_indicator_next          {background-image: _icon('fontawesome','chevron-down',         ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--comment_bubbles            {background-image: _icon('fontawesome','comments',             ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--comment-bubbles-outline    {background-image: _icon('fontawesome','comments-o',           ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--report-url::before         {background-image: _icon('fontawesome','plus-square-o',        ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--collapsible .title::before {background-image: _icon('fontawesome','chevron-down',         ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--expandable:checked ~ .title::before {background-image: _icon('fontawesome','minus-square-o',       ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+
+// - ICONS 2.0
+// .icon--fa-phone         {color: inherit; background-image:_icon('fontawesome' , 'fa-phone'        ,  ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--fa-address-book  {color: inherit; background-image:_icon('fontawesome' , 'fa-address-book', ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--fa-envelope-o    {color: inherit; background-image:_icon('fontawesome' , 'fa-envelope-o'   ,  ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--fa-fax           {color: inherit; background-image:_icon('fontawesome' , 'fa-fax'          ,  ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--fa-phone-square  {color: inherit; background-image:_icon('fontawesome' , 'fa-phone-square' ,  ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+
+
+// // - ICONS 2.0
+// .icon--fa-address-book  {color: inherit; background-image: build_icon(map-get($icon_paths,'fa-address-book'), $icon_color,$icon_bgcolor,icon_style('stroke'),icon_style('css'),$icon_w,$icon_h,$icon_vb,'false')}
+// .icon--fa-envelope-o    {color: inherit; background-image: build_icon(map-get($icon_paths,'fa-envelope-o'),   $icon_color,$icon_bgcolor,icon_style('stroke'),icon_style('css'),$icon_w,$icon_h,$icon_vb,'false')}
+// .icon--fa-fax           {color: inherit; background-image: build_icon(map-get($icon_paths,'fa-fax'),          $icon_color,$icon_bgcolor,icon_style('stroke'),icon_style('css'),$icon_w,$icon_h,$icon_vb,'false')}
+// .icon--fa-envelope      {color: inherit; background-image: build_icon(map-get($icon_paths,'fa-envelope'),     $icon_color,$icon_bgcolor,icon_style('stroke'),icon_style('css'),$icon_w,$icon_h,$icon_vb,'false')}
+// .icon--fa-phone-square  {color: inherit; background-image: build_icon(map-get($icon_paths,'fa-phone-square'), $icon_color,$icon_bgcolor,icon_style('stroke'),icon_style('css'),$icon_w,$icon_h,$icon_vb,'false')}
+// .icon--fa-phone         {color: inherit; background-image: build_icon(map-get($icon_paths,'fa-phone'),        $icon_color,$icon_bgcolor,icon_style('stroke'),icon_style('css'),$icon_w,$icon_h,$icon_vb,'false')}

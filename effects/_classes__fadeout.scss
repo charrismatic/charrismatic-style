@@ -1,0 +1,38 @@
+$grad_start: rgba($white, 100%);
+$grad_end: rgba($white, 0%);
+$fadeout_start: $grad_start  0%;
+$fadeout_end: $grad_end 100%;
+
+.fadeout--sides {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: block;
+    z-index: 100;
+    border: 1px solid red;
+    background: -moz-linear-gradient(left, $fadeout_start, $fadeout_end);
+    background: -webkit-linear-gradient(left, $fadeout_start, $fadeout_end);
+    background: linear-gradient(to right, $fadeout_start, $fadeout_end);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    display: block;
+    z-index: 100;
+    border: 1px solid red;
+    background: -moz-linear-gradient(left, $fadeout_start, $fadeout_end);
+    background: -webkit-linear-gradient(left, $fadeout_start, $fadeout_end);
+    background: linear-gradient(to right, $fadeout_start, $fadeout_end);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+  }
+}

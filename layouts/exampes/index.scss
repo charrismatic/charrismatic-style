@@ -1,0 +1,33 @@
+@import "../functions";
+@import "../mixins";
+@import "../icon_map";
+
+@import "../utility_classes";
+@import "../../layouts/flex__classes";
+@import "../../layouts/flex__template";
+@import "../../layouts/flex_row__template";
+
+
+
+.icon,
+i.svg_icon {
+  @include svg_icon_base();
+}
+
+
+// CLASSES
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  > * {
+    flex: 1 1 0;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+
+.icon_card__caption {
+  font-size: .8em;
+}

@@ -1,137 +1,29 @@
 html,
 body {
+  @include font_family($default_font_body);
   font-size: $default_font_size;
   line-height: 1.375em;
 }
 
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  @include font_family($theme_font_family_heading);
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include font_family($default_font_heading);
+  font-size: 100%;
+  font-weight: normal;
+  margin: 0;
+  padding: 0
 }
 
-body,
-p {
-  @include font_family($theme_font_family_body);
-}
 
-// FROM WORDPRESS
-// .entry-title {
-//   color: $primary_title;
-// }
-// body,
-// button,
-// input,
-// select,
-// textarea {
-//   color: #333333;
-//   font-family: inherit;
-//   font-size: 15px;
-//   font-size: 0.9375rem;
-//   font-weight: 400;
-//   line-height: 1.66;
-// }
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//   clear: both;
-//   line-height: 1.4;
-//   margin: 0 0 0.75em;
-//   padding: 1.25em 0 0;
-//
-//   &:first-child {
-//     padding-top: 0;
-//   }
-// }
-
-// .home.blog .entry-title {
-//   color: #666666;
-// }
-
-.entry-content,
-.content-block,
-.content-container {
-  p {
-    margin: 0 0 1.5em;
-    padding: 0;
-  }
-
-  dfn,
-  cite,
-  em,
-  i {
-    font-style: italic;
-  }
-
-  blockquote {
-    color: #666666;
-    font-size: 18px;
-    font-size: 1.125rem;
-    font-style: italic;
-    line-height: 1.7;
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
-  }
-
-  blockquote cite {
-    display: block;
-    font-style: normal;
-    font-weight: 600;
-    margin-top: 0.5em;
-  }
-
-  address { margin: 0 0 1.5em; }
-
-  kbd,
-  tt,
-  var {
-    font-size: 15px;
-    font-size: 0.9375rem;
-  }
-
-  abbr,
-  acronym {
-    border-bottom: 1px dotted #666666;
-    cursor: help;
-  }
-
-  mark,
-  ins {
-    background: #eeeeee;
-    text-decoration: none;
-  }
-
-  big { font-size: 125%; }
-
-  blockquote { quotes: "" ""; }
-
-  q { quotes: "“" "”" "‘" "’"; }
-
-  blockquote::before,
-  blockquote::after {
-    content: "";
-  }
-
-  @media screen and (min-width: 30em) {
-    blockquote.alignleft,
-    blockquote.alignright {
-      font-size: 14px;
-      font-size: 0.875rem;
-    }
-
-    // Fix image alignment
-    img.alignleft {
-      float: left;
-      margin-right: 1.5em;
-    }
-
-    img.alignright {
-      float: right;
-      margin-left: 1.5em;
-    }
-  }
-}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 { @include font_family($default_font_heading) }

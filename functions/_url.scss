@@ -1,13 +1,26 @@
-
-// RETURNS URL GIVEN BASE URL AND FILE PATH
-// SET THEME URL VARIABLES IN THEME/URLS.SCSS
-//
-
-
-@function image_url($path,$base:null) {
-  @return url('#{$base}/#{$path}');
-}
+//* return "#{$protocol}:#{$slash}#{$slash}#{$path}" */
+//* return #{$protocol}:#{$slash}#{$slash}#{$path};  */
+//* Character Entity  */
+//* & `&amp;`  */
+//* < `&lt;`  */
+//* \> `&gt;`  */
+//* " `&quot;`  */
 
 // THEME SPECIFIC PATHS
 $imagesFolder: "../assets/images/" !default;
 $base_url: "/";
+
+
+// RETURNS URL GIVEN BASE URL AND FILE PATH
+// SET THEME URL VARIABLES IN THEME/URLS.SCSS
+@function image_url($path,$base:null) {
+  @return url('#{$base}/#{$path}');
+}
+
+// CONSTRUCT URL
+// GIVES PROTECTION FROM COMMENT PARSING IN
+// VARIOUS LANGUAGES THAT HANDLE THESE FILES
+@function _url($path, $protocol:'https') {
+  $slash: "/";
+  @return "#{$protocol}:\/\/#{$path}"
+}

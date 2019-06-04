@@ -1,0 +1,73 @@
+//  HELPER CLASSES
+
+.crisp-img {
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+.bold { font-weight: bold; }
+.block { display: block; }
+.inline { display: inline; }
+.price { white-space: nowrap; }
+
+.bg-img {
+  background-image: url('');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+.bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-contain {
+  background-size: contain;
+}
+
+// PREVENT SCROLLING WHILE AN ITEM IS FOCUSED SUCH AN OVERLAY
+// COULD BE COMBINED WITH HTML BODY PROPERTY
+// <body scroll="no" style="overflow: hidden">
+.noscroll {
+  overflow-y: hidden !important;
+  max-height: 100vh;
+}
+
+// PLACEHOLDERS
+// ELEMENT OR TEXT IS IS NOT ABLE TO BE SELECTED, HIGHLIGHTED, OR COPIED
+.no-select {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+
+// PREVENT GHOST DRAGGING ON BUTTONS AND UI ELEMENTS NOT MEANT FOR CLICK AND DRAG.
+.no-drag {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -o-user-drag: none;
+  -moz-user-drag: none;
+  user-select: none;
+}
+
+.cf {
+  zoom: 1;
+  &::after { clear: both; }
+
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+}

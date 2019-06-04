@@ -1,0 +1,195 @@
+///*---
+/// title: Size Variables
+/// section: Layout
+/// ---
+///
+/// | Device | Width | __    | Device | Width |
+/// | ------ | ----: | ----- | ------ | ----: |
+/// | hd_laptop | 1440px | | tablet_lg | 850px |
+/// | laptop    | 1280px | | tablet_sm | 660px |
+/// | ipad      | 768px  | | mobile_lg | 420px |
+/// | nexus7    | 600px  | | nexus6p   | 412px |
+/// | iphone6   | 375px  | | mobile_sm | 360px |
+/// | iphone5   | 320px  | | galaxys5  | 360px |
+/// */
+
+
+/// DEVICE SIZES
+///
+/// @group layout
+/// @name _size
+/// @param {string} $name [] - the name of the device size or breakpoint
+/// @property {variable} laptop_hd [ 1440px ]
+/// @property {variable} laptop_sd [ 1280px ]
+/// @property {variable} ipad      [ 768px ]
+/// @property {variable} nexus7    [ 600px ]
+/// @property {variable} iphone6   [ 375px ]
+/// @property {variable} iphone5   [ 320px ]
+/// @property {variable} galaxys5  [ 360px ]
+/// @property {variable} nexus6p   [ 412px ]
+/// @property {variable} tablet_lg [ 850px ] default
+/// @property {variable} tablet_sm [ 660px ]
+/// @property {variable} mobile_lg [ 420px ]
+/// @property {variable} mobile_sm [ 360px ]
+
+@function _size($name:'tablet_lg') {
+
+  $device_sizes: (
+    'laptop_hd': 1440px,
+    'laptop_sd': 1280px,
+    'tablet_lg': 850px,
+    'mobile_lg': 420px,
+    'mobile_sm': 360px,
+    'ipad'     : 768px,
+    'nexus7'   : 600px,
+    'nexus6p'  : 412px,
+    'iphone6'  : 375px,
+    'galaxys5' : 360px,
+    'iphone5'  : 320px,
+  );
+
+  @return map-get($device_sizes, $name);
+}
+////
+/// @group layout
+////
+
+///  Max Width
+///  @name max_width
+///  @param  {number} $width [max width to query
+///  @example
+///    .page-wrap {
+///      width: 90%;
+///      min-height: 0;
+///      padding: 1em 0;
+///      overflow: unset;
+///      // 700px
+///      @include max_width($tablet_size) {
+///        padding: 1em 0;
+///      }
+///      // > 490
+///      @include max_width($theme_mobile_xl) {
+///        width: auto;
+///        padding: 1em 1.5em;
+///      }
+///      // > 375
+///      @include max_width($width_mobile_md) {
+///        padding: 1em 1em;
+///      }
+///    }
+
+@mixin max_width($width) {
+  @media screen and (max-width: #{$width}) {
+    @content;
+  }
+}
+
+///
+///  [min_width description]
+///  @name min_width
+///  @param  {[type]} $width [description]
+@mixin min_width($width) {
+  @media screen and (min-width: #{$width}) {
+    @content;
+  }
+}
+
+
+///
+///  [range_width description]
+///  @name range_width
+///  @param  {[type]} $min_width [description]
+///  @param  {[type]} $max_width [description]
+@mixin range_width($min_width, $max_width) {
+  @media (min-width: #{$min_width}) and (max-width: #{$max_width}) {
+    @content;
+  }
+}
+//// ---
+/// title: Flex
+/// section: Layout
+/// ---
+///
+/// Flex Class Templates
+///
+/// These classes automatically modify the parent and children elements
+/// ### .flex
+///
+/// __flex (Parent)__
+///
+/// ```
+/// display: flex;
+/// ```
+///
+/// __flex > * (Direct Descendant Children)__
+///
+/// ```
+/// flex: 0 1 auto;
+/// margin: 0 1em;
+/// ```
+///
+/// EXAMPLE:
+///
+/// ```
+/// <div class="flex">
+///   <div class="box">1</div>
+///   <div class="box">2</div>
+///   <div class="box">3</div>
+/// </div>
+/// ```
+////
+
+
+// GENERAL FLEX CONTAINER
+@mixin flex($flex_child: "> *", $flex_properties:"" ) {
+  display: flex;
+
+  // @if ($flex_properties) {
+  // #{$flex_properties};
+  // }
+
+  #{$flex_child} {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+//* ---
+/// title: Flex Classes
+/// section: Layout
+/// ---
+///
+/// Flex Class Templates
+///
+/// ### flex-row
+///
+/// __flex-row (Parent)__
+///
+/// INTENDED FOR A SINGLE ROW OR ITEMS STRETCHING LEFT TO RIGHT
+///
+/// ```
+/// display: flex;
+/// flex-direction: row;
+/// ```
+///
+/// __flex-row > * (Direct Descendant Children)__
+///
+/// ```
+/// flex: 0 1 auto;
+/// margin: 0 1em;
+/// ```
+///
+/// */
+
+
+/// SINGLE ROW FLEX CONTAINER
+@mixin flex_row () {
+  display: flex;
+  flex-direction: row;
+
+  > * {
+    flex: 1 1 0%;
+    margin: 0 1em;
+    &:first-child { margin-left: 0; }
+    &:last-child { margin-right: 0; }
+  }
+}

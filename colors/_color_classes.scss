@@ -23,62 +23,63 @@
   &_white { background-color: $white; }
 }
 
-// .cl {
-//   &_navy     { color: _get($base_colors, "navy"); }
-//   &_blue     { color: _get($base_colors, "blue"); }
-//   &_aqua     { color: _get($base_colors, "aqua"); }
-//   &_teal     { color: _get($base_colors, "teal"); }
-//   &_olive    { color: _get($base_colors, "olive"); }
-//   &_green    { color: _get($base_colors, "green"); }
-//   &_lime     { color: _get($base_colors, "lime"); }
-//   &_yellow   { color: _get($base_colors, "yellow"); }
-//   &_orange   { color: _get($base_colors, "orange"); }
-//   &_red      { color: _get($base_colors, "red"); }
-//   &_fuchsia  { color: _get($base_colors, "fuchsia"); }
-//   &_purple   { color: _get($base_colors, "purple"); }
-//   &_maroon   { color: _get($base_colors, "maroon"); }
-//   &_silver   { color: _get($base_colors, "silver"); }
-// }
-//
-// .bg {
-//   &_navy     { background-color: _get($base_colors, "navy"); }
-//   &_blue     { background-color: _get($base_colors, "blue"); }
-//   &_aqua     { background-color: _get($base_colors, "aqua"); }
-//   &_teal     { background-color: _get($base_colors, "teal"); }
-//   &_olive    { background-color: _get($base_colors, "olive"); }
-//   &_green    { background-color: _get($base_colors, "green"); }
-//   &_lime     { background-color: _get($base_colors, "lime"); }
-//   &_yellow   { background-color: _get($base_colors, "yellow"); }
-//   &_orange   { background-color: _get($base_colors, "orange"); }
-//   &_red      { background-color: _get($base_colors, "red"); }
-//   &_fuchsia  { background-color: _get($base_colors, "fuchsia"); }
-//   &_purple   { background-color: _get($base_colors, "purple"); }
-//   &_maroon   { background-color: _get($base_colors, "maroon"); }
-//   &_silver   { background-color: _get($base_colors, "silver"); }
-// }
-//
-//
-// .bg {
-//   &_facebook    { background-color: _get($company_colors,'facebook'); }
-//   &_flikr_blue  { background-color: _get($company_colors,'flikr_blue'); }
-//   &_flikr_pink  { background-color: _get($company_colors,'flikr_pink'); }
-//   &_github      { background-color: _get($company_colors,'github'); }
-//   &_google_plus { background-color: _get($company_colors,'google_plus'); }
-//   &_linkedin    { background-color: _get($company_colors,'linkedin'); }
-//   &_twitter     { background-color: _get($company_colors,'twitter'); }
-//   &_youtube     { background-color: _get($company_colors,'youtube'); }
-// }
-// // SOCIAL
-// .cl {
-//   &_facebook    { color: _get($company_colors,'facebook'); }
-//   &_flikr_blue  { color: _get($company_colors,'flikr_blue'); }
-//   &_flikr_pink  { color: _get($company_colors,'flikr_pink'); }
-//   &_github      { color: _get($company_colors,'github'); }
-//   &_google_plus { color: _get($company_colors,'google_plus'); }
-//   &_linkedin    { color: _get($company_colors,'linkedin'); }
-//   &_twitter     { color: _get($company_colors,'twitter'); }
-//   &_youtube     { color: _get($company_colors,'youtube'); }
-// }
+/*
+/// .cl {
+///   &_navy     { color: _get($base_colors, "navy"); }
+///   &_blue     { color: _get($base_colors, "blue"); }
+///   &_aqua     { color: _get($base_colors, "aqua"); }
+///   &_teal     { color: _get($base_colors, "teal"); }
+///   &_olive    { color: _get($base_colors, "olive"); }
+///   &_green    { color: _get($base_colors, "green"); }
+///   &_lime     { color: _get($base_colors, "lime"); }
+///   &_yellow   { color: _get($base_colors, "yellow"); }
+///   &_orange   { color: _get($base_colors, "orange"); }
+///   &_red      { color: _get($base_colors, "red"); }
+///   &_fuchsia  { color: _get($base_colors, "fuchsia"); }
+///   &_purple   { color: _get($base_colors, "purple"); }
+///   &_maroon   { color: _get($base_colors, "maroon"); }
+///   &_silver   { color: _get($base_colors, "silver"); }
+/// }
+///
+/// .bg {
+///   &_navy     { background-color: _get($base_colors, "navy"); }
+///   &_blue     { background-color: _get($base_colors, "blue"); }
+///   &_aqua     { background-color: _get($base_colors, "aqua"); }
+///   &_teal     { background-color: _get($base_colors, "teal"); }
+///   &_olive    { background-color: _get($base_colors, "olive"); }
+///   &_green    { background-color: _get($base_colors, "green"); }
+///   &_lime     { background-color: _get($base_colors, "lime"); }
+///   &_yellow   { background-color: _get($base_colors, "yellow"); }
+///   &_orange   { background-color: _get($base_colors, "orange"); }
+///   &_red      { background-color: _get($base_colors, "red"); }
+///   &_fuchsia  { background-color: _get($base_colors, "fuchsia"); }
+///   &_purple   { background-color: _get($base_colors, "purple"); }
+///   &_maroon   { background-color: _get($base_colors, "maroon"); }
+///   &_silver   { background-color: _get($base_colors, "silver"); }
+/// }
+///
+/// .bg {
+///   &_facebook    { background-color: _get($company_colors,'facebook'); }
+///   &_flikr_blue  { background-color: _get($company_colors,'flikr_blue'); }
+///   &_flikr_pink  { background-color: _get($company_colors,'flikr_pink'); }
+///   &_github      { background-color: _get($company_colors,'github'); }
+///   &_google_plus { background-color: _get($company_colors,'google_plus'); }
+///   &_linkedin    { background-color: _get($company_colors,'linkedin'); }
+///   &_twitter     { background-color: _get($company_colors,'twitter'); }
+///   &_youtube     { background-color: _get($company_colors,'youtube'); }
+/// }
+/// // SOCIAL
+/// .cl {
+///   &_facebook    { color: _get($company_colors,'facebook'); }
+///   &_flikr_blue  { color: _get($company_colors,'flikr_blue'); }
+///   &_flikr_pink  { color: _get($company_colors,'flikr_pink'); }
+///   &_github      { color: _get($company_colors,'github'); }
+///   &_google_plus { color: _get($company_colors,'google_plus'); }
+///   &_linkedin    { color: _get($company_colors,'linkedin'); }
+///   &_twitter     { color: _get($company_colors,'twitter'); }
+///   &_youtube     { color: _get($company_colors,'youtube'); }
+/// }
+*/
 
 .cl {
   &_none { background-color: none !important; }
