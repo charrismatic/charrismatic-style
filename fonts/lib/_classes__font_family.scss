@@ -1,11 +1,3 @@
-
-$fonts_path: 'wp-content/themes/mytheme/assets/fonts';
-
-
-@mixin font_family ($font_family:sans-serif) {
-  font-family: $font_family, sans-serif;
-}
-
 /* open-sans-regular - latin : 400, 700, 800, italic, */
 @font-face {
   font-family: 'Open Sans';
