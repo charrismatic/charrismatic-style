@@ -30,30 +30,25 @@ __Special Behavior__
 
 */
 
+// INTENDED FOR A SINGLE ROW OR ITEMS STRETCHING LEFT TO RIGHT
+.flex-row {
+  @include flex-row;
 
-// SINGLE ROW FLEX CONTAINER
-@mixin _fl_row {
-  display: flex;
-  flex-direction: row;
-   > * {
-    flex: 0 1 auto;
+  // AUTOMATIC SPACING FOR ROW ITEMS
+  > .flex-item {
+    flex: 1 1 0%;
     margin: 0 1em;
     &:first-child { margin-left: 0; }
-    &:last-child { margin-right: 0;}
+    &:last-child { margin-right: 0; }
   }
-}
 
-// INTENDED FOR A SINGLE ROW OR ITEMS STRETCHING LEFT TO RIGHT
-.flex_row {
-  @include _fl_row;
+  &.flex-wrap {
+    > .flex-item {
+      margin: 0 1em;
 
-
-  &.flex_wrap {
-    > * {
-     margin: 0 1em;
-     // FIRST AND LAST ARE NO LONGER ROW START AND ROW END
-     &:first-child { margin-left: 1em; }
-     &:last-child { margin-right: 1em;}
-   }
+      // FIRST AND LAST ARE NO LONGER ROW START AND ROW END
+      &:first-child { margin-left: 1em; }
+      &:last-child { margin-right: 1em; }
+    }
   }
 }

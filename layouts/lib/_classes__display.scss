@@ -19,11 +19,9 @@
 ///
 ///*/
 
-.display {
-  &--block { display: block; }
-  &--inline { display: inline; }
-  &--inblock { display: inline-block; }
-}
+.block { display: block; }
+.inline { display: inline; }
+.inblock { display: inline-block; }
 
 .hide { display: none !important; }
 .invisible { visibility: hidden !important; }

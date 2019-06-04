@@ -29,8 +29,7 @@
 ///
 ///*/
 
-.aspect_ratio {
-  position: relative;
+.ratio {
   height: 0;
 
   &--16x9 { padding-bottom: 56.25%; }
@@ -51,8 +50,12 @@
     width: 100%;
     height: 0;
   }
+}
 
-  &--content {
+@mixin inner_outer () {
+  position: relative;
+
+  &::before {
     position: absolute;
     top: 0;
     right: 0;

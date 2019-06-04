@@ -1,4 +1,4 @@
-/*---
+/* ---
 title: Flex Classes
 section: Layout
 ---
@@ -25,15 +25,6 @@ margin: 0 1em;
 
 
 // GENERAL FLEX CONTAINER
-
-// PLACEHOLDER
-@mixin _flex {
-  display: flex;
-
-  > * {
-    margin: 0 1em;
-  }
-}
 
 // CLASSES
 .flex {
