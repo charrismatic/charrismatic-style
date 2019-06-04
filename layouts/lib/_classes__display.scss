@@ -1,0 +1,27 @@
+////*
+/// ---
+/// title: Display
+/// section: Layout
+/// ---
+///
+/// Display Helper Classes
+///
+/// OVERRIDE ITEMS DISPLAY TYPE
+///
+/// - display--block  - `block`
+/// - display--inline  - `inline`
+/// - display--inblock  - `inline-block`
+///
+/// ITEM VISIBILITY
+///
+/// - hide - `display: none`
+/// - invisible - `visibility: hidden`
+///
+///*/
+
+.block { display: block; }
+.inline { display: inline; }
+.inblock { display: inline-block; }
+
+.hide { display: none !important; }
+.invisible { visibility: hidden !important; }

@@ -49,6 +49,8 @@
   line-height: 0;
   height: 0;
   width: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
   left: -999em;
   top: -999em;
   overflow: hidden;

@@ -1,5 +1,3 @@
-// FUNCTIONS
-@import "lib/functions";
 
 // Sizes generated at http://www.modularscale.com
 // TYPOGRPHIC SCALES
@@ -10,8 +8,8 @@
       "h2":"1.5",         // h2 { font-size: 1.5em;   /* 16 x 1.500 = 24 */ }
       "h3":"1.125",       // h3 { font-size: 1.125em; /* 16 x 1.125 = 18 */ }
       "h4":"0.875",       // h4 { font-size: 0.875em; /* 16 x 0.875 = 14 */ }
-      "p": "0.75",        // p  { font-size: 0.75em;  /* 16 x 0.750 = 12 */ }
-      "body": "16",       // p  { font-size: 0.75em;  /* 16 x 0.750 = 12 */ }
+      "p":"0.75",        // p  { font-size: 0.75em;  /* 16 x 0.750 = 12 */ }
+      "body":"16",       // p  { font-size: 0.75em;  /* 16 x 0.750 = 12 */ }
     ),
     "fibonacci":(         // // Fibonacci Sequence
       "h1":"4.0",         // h1 { font-size: 4.0em; /* 16 x 4.0 = 64 */ }
@@ -25,7 +23,7 @@
       "h2":"4.1887",      // h1 { font-size:  6.7773em; /* 10 x 6.7773em = 67.773 */ }
       "h3":"2.5888",      // h3 { font-size:  2.5888em; /* 10 x 2.5888em = 25.888 */ }
       "p":"1.6000",       // p  { font-size:  1.6000em; /* 10 x 1.6 = 16   */ }
-      "body": "10px"      // body { font-size: 10px;   /*font-size: 62.5%;*/ }
+      "body":"10px"      // body { font-size: 10px;   /*font-size: 62.5%;*/ }
     )
   );
 
@@ -49,30 +47,23 @@
 // FONT FAMILY NAMES
 @function _font_family($input) {
   $font_fam_map: (
-    "default": "sans-serif",
-    "default-heading": "Lato",
-    "default-body": "sans-serif",
-    "playfair": "'Playfair Display SC', serif",
-    "proxima": "proxima-nova",
-    "lato": "Lato",
-    "OpenSans-Regular": "Open Sans Regular",
-    "OpenSans-Bold": "Open Sans Bold",
-    "OpenSans-ExtraBold": "Open Sans ExtraBold",
-    "OpenSans-Italic": "Open Sans Italic",
-    "ReenieBeanie": "Reenie Beanie" ,
-    "libre-franklin": "'Libre Franklin', sans-serif;" ,
+    "default-body":"sans-serif",
+    "default-heading":"Lato",
+    "default":"sans-serif",
+    "lato":"Lato",
+    "libre-franklin":"'Libre Franklin', sans-serif;",
+    "OpenSans-Bold":"Open Sans Bold",
+    "OpenSans-ExtraBold":"Open Sans ExtraBold",
+    "OpenSans-Italic":"Open Sans Italic",
+    "OpenSans-Regular":"Open Sans Regular",
+    "playfair":"'Playfair Display SC', serif",
+    "proxima":"proxima-nova",
+    "ReenieBeanie":"Reenie Beanie",
   );
   $font_string: map_get($font_fam_map, $input);
 
   @return #{$font_string};
 }
-
-
-
-@mixin font_family ($font_family:sans-serif) {
-  font-family: $font_family, sans-serif;
-}
-
 
 
 //Font Weights

@@ -1,0 +1,121 @@
+// GOALS:
+// SYSTEM SHOULD WRAP MAIN PAGE ELEMENTS INTO A SINGLE GROUP
+// PREVENT PAGES FROM COLLAPSING VERTICALLY WHEN CONTENT IS SHORTER THAN VIEWPORT
+// CLEANLY SEPERATE GROUPS AND UTILITY CLASSES
+// DO NOT USE IDS TO APPLY STYLE
+// MINIMIZE overlay SPECIFIC AND SINGLE INSTANCE ELEMENTS (USE ATOMIC CLASES OR MIXINS INSTEAD)
+// ------------------------------------------------------------------------
+
+
+// BASE
+
+
+html,
+body {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0;
+  // min-height: 100%;
+}
+
+
+// A SECTION IS A HIGH LEVEL SEMANTIC BLOCK
+// SECTIONS SHOULD SPAN 100% OF THE HORIZONTAL SPACE
+// OF ITS PARENT CONTAINER
+// HEADER AND FOOTER ARE SECTIONS WITH SPECIFIC CONTEXT
+header,
+footer,
+section {
+  display: block;
+  position: relative;
+  margin: initial;
+  max-width: 100%;
+}
+
+
+// NOTE: INCONSISTENT, USE ONLY WHEN NEEDED
+
+// HTML
+// html {
+//   height: 100vh;
+// }
+
+// BODY
+// body {
+//   height: 100%;
+//   min-width: 360px;
+// }
+
+// sticky footer
+// SITE CONTAINER
+// .site_container {
+//   // height: 100%;
+//   display: flex;
+//   min-height: 100%;
+//   flex-direction: column;
+//   justify-content: space-between;
+//
+//   .site__header  { flex: 0; }
+//   .site__content { flex: 1; }
+//   .site__footer  { flex: 0; }
+//
+//   .site__content {
+//     display: flex;
+//
+//     > .content_container {
+//       flex: 1;
+//     }
+//   }
+// }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// A ROW IS AN INNER WRAPPER THAT SETS LAYOUTS, BOUNDARIES, AND PADDING
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 90%;
+}
+
+.vpad { padding-top: 1em; padding-bottom: 1em; }
+.vpad2 { padding-top: 2em; padding-bottom: 2em; }
+.hpad { padding-left: 1em; padding-right: 1em; }
+.hpad2 { padding-left: 2em; padding-right: 2em; }
+
+
+// CONTENT BLOCKS ARE CONTAINERS THAT WRAP CMS / STATIC CONTENT
+// USUALLY THAT COME FROM WYSIWYG EDITOR
+// CHILD ELEMENTS WILL RENDER DEFAULT HTML STYLES INSTEAD OF
+// NORMAILZED OR RESET STYLES
+.content-block {
+  display: block;
+  padding: 1em;
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+}
+
+
+// SITE CONTENT CONTAINER
+.site__content {
+  display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  // color: white;
+
+  .sidebar { flex: 0 1 auto; }
+  .content { flex: 1 1 auto; }
+  .sidebar { order: 0; }
+  .content { order: 1; }
+
+  &.sidebar_right {
+    .sidebar { order: 1; }
+    .content { order: 0; }
+  }
+}

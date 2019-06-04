@@ -1,0 +1,36 @@
+// INCREMENTAL MODULAR SCALED TYPOGRAPHY SYSTEM
+// Minor Third Scale - 1.2 ratio
+// Sizes generated at http://www.modularscale.com
+
+// FONT SIZE
+.fs {
+  // INCREASING SCALE
+  &-0 { font-size: 1.000em; } // 16px
+  &-1 { font-size: 1.125em; } // 18px
+  &-2 { font-size: 1.266em; } // 20.25px
+  &-3 { font-size: 1.424em; } // 22.781px
+  &-4 { font-size: 1.602em; } // 25.629px
+  &-5 { font-size: 1.802em; } // 28.833px
+  &-6 { font-size: 2.027em; } // 32.437px
+  &-7 { font-size: 2.281em; } // 36.491px
+  &-8 { font-size: 2.566em; } // 41.053px
+  &-9 { font-size: 2.887em; } // 46.184px
+  &-10 { font-size: 3.247em; } // 51.957px
+  &-11 { font-size: 3.653em; } // 58.452px
+  &-12 { font-size: 4.110em; } // 65.758px
+  &-13 { font-size: 4.624em; } // 73.978px
+  &-14 { font-size: 5.202em; } // 83.225px
+  &-15 { font-size: 5.852em; } // 93.628px
+  &-16 { font-size: 6.583em; } // 105.332px
+
+  // DECREASING SCALE (MINUS)
+  &-m1 { font-size: 0.889em; }  // 14.222px
+  &-m2 { font-size: 0.791em; }  // 12.642px
+  &-m3 { font-size: 0.702em; }  // 11.237px
+  &-m4 { font-size: 0.624em; }  // 9.989px
+  &-m5 { font-size: 0.555em; }  // 8.879px
+  &-m6 { font-size: 0.493em; }  // 7.892px
+}
+
+.bigger { font-size: 1.7em; }
+.smaller { font-size: 0.8em; }

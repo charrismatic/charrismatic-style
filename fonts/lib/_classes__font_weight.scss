@@ -1,0 +1,24 @@
+/// ## FONT-WEIGHT
+///
+/// <p class="font-thin">Lato Thin</p>
+/// <p class="font-light">Lato Light</p>
+/// <p class="font-regular">Lato Light</p>
+/// <p class="font-bold">Lato Light</p>
+/// <p class="font-semibold">Lato Regular</p>
+/// <p class="font-extrabold">Lato Bold</p>
+///
+/// <p class="font-thin font-italic">Lato Thin Italic</p>
+/// <p class="font-light font-italic">Lato Light Italic</p>
+/// <p class="font-regular font-italic">Lato Regular Italic</p>
+/// <p class="font-bold font-italic">Lato Bold Italic</p>
+/// <p class="font-semibold font-italic">Lato Bold Italic</p>
+/// <p class="font-extrabold font-italic">Lato Heavy Italic</p>
+.font {
+  &-thin { font-weight: $font_weight_thin; }
+  &-light { font-weight: $font_weight_light; }
+  &-regular { font-weight: $font_weight_medium; }
+  &-bold { font-weight: $font_weight_bold; }
+  &-semibold { font-weight: $font_weight_semibold; }
+  &-extrabold { font-weight: $font_weight_extrabold; }
+  &-italic { font-style: italic; }
+}

@@ -1,12 +1,11 @@
+// ------------------------
 $icon_prefix: 'icon';
-$icon_color: $grey_30;
+$icon_color: currentColor;
 $icon_bgcolor: transparent;
 $default_icon_color: #444444;
 // ---
-.icon--caret-down                 {background-image: _icon('fontawesome','caret-down',           ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
-.icon--caret-down.red             {background-image: _icon('fontawesome','caret-down',           ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
-.icon--caret-down.lightorange     {background-image: _icon('fontawesome','caret-down',           ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
 .icon--folder-open                {background-image: _icon('fontawesome','folder-open',          ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--caret-down                 {background-image: _icon('fontawesome','caret-down',           ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
 .icon--tag                        {background-image: _icon('fontawesome','tag',                  ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
 .icon--code                       {background-image: _icon('fontawesome','code',                 ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
 .icon--link                       {background-image: _icon('fontawesome','link',                 ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
@@ -33,7 +32,7 @@ $default_icon_color: #444444;
 
 // - ICONS 2.0
 // .icon--fa-phone         {color: inherit; background-image:_icon('fontawesome' , 'fa-phone'        ,  ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
-.icon--fa-address-book  {color: inherit; background-image:_icon('fontawesome' , 'fa-address-book', ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
+.icon--fa-address-book  {color: inherit; background-image:_icon('fontawesome' , 'fa-address-book',  ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
 .icon--fa-envelope-o    {color: inherit; background-image:_icon('fontawesome' , 'fa-envelope-o'   ,  ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
 .icon--fa-fax           {color: inherit; background-image:_icon('fontawesome' , 'fa-fax'          ,  ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}
 .icon--fa-phone-square  {color: inherit; background-image:_icon('fontawesome' , 'fa-phone-square' ,  ('fill': $icon_color, 'bgcolor':$icon_bgcolor))}

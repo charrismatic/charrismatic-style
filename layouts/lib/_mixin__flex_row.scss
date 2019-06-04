@@ -1,0 +1,33 @@
+//* ---
+/// title: Flex Classes
+/// section: Layout
+/// ---
+///
+/// Flex Class Templates
+///
+/// ### flex-row
+///
+/// __flex-row (Parent)__
+///
+/// INTENDED FOR A SINGLE ROW OR ITEMS STRETCHING LEFT TO RIGHT
+///
+/// ```
+/// display: flex;
+/// flex-direction: row;
+/// ```
+///
+/// __flex-row > * (Direct Descendant Children)__
+///
+/// ```
+/// flex: 0 1 auto;
+/// margin: 0 1em;
+/// ```
+///
+/// */
+
+
+/// SINGLE ROW FLEX CONTAINER
+@mixin flex-row () {
+  display: flex;
+  flex-direction: row;
+}

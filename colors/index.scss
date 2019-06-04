@@ -11,12 +11,17 @@
 ///   __examples.scss
 ///   __debug_file_imports.scss
 
-/// VAR
+/// DEFS
+// @import 'var__color_schemes';
 
-@import 'var_translucent';
-@import 'var_schemes';
-@import 'var_material';
-@import 'var_greyscale';
+/// VAR
+// @import 'var__basic_colors';
+// @import 'var__greyscale';
+// @import 'var__translucent';
+
+// @import 'var__material';
+
+// @import 'var__theme_colors';
 
 /// FN
 
@@ -24,10 +29,13 @@
 
 /// CLASSES
 
-@import 'form_classes';
-@import 'color_classes';
-@import 'theme_classes';
-@import 'material_classes';
+// @import 'form_classes';
+// @import 'material_classes';
+// @import 'theme_classes';
+// @import 'color_classes';
+// @import '_crayola_classes';
 
+@import 'var__crayola_colors';
+@import '__example__crayola_colors';
 
 /// end index.scss

@@ -1,0 +1,142 @@
+/*
+/// # Color Schemes
+///
+/// ---
+/// title: Color Sets
+/// name: color_library
+/// ---
+///
+/// COLOR THEMES AND PALLETES
+/// DO NOT ASSIGN VARIABLES TO VALUES
+/// THIS FILE SHOULD NOT HAVE DEPENDENCIES
+///
+///
+/// Named Colors
+///
+/// ```example:color
+///   @color: rgb(250,76,6)   @name: anchor_link
+///   @color: rgb(19,198,7)   @name: form_good
+///   @color: #ff7e7e         @name: error
+///   @color: #68d388         @name: success
+///   @color: #3460a1         @name: facebook
+///   @color: #28aae1         @name: twitter
+///   @color: #136d9d         @name: linkedin
+///   @color: #de5543         @name: google_plus
+///   @color: #ee3138         @name: youtube
+/// ```
+*/
+
+$color_schemes: (
+  "greyscale": (
+    "grey-01": darken(rgb(255,255,255),01%),
+    "grey-02": darken(rgb(255,255,255),02%),
+    "grey-03": darken(rgb(255,255,255),03%),
+    "grey-04": darken(rgb(255,255,255),04%),
+    "grey-05": darken(rgb(255,255,255),05%),
+    "grey-10": darken(rgb(255,255,255),10%),
+    "grey-15": darken(rgb(255,255,255),15%),
+    "grey-20": darken(rgb(255,255,255),20%),
+    "grey-25": darken(rgb(255,255,255),25%),
+    "grey-30": darken(rgb(255,255,255),30%),
+    "grey-35": darken(rgb(255,255,255),35%),
+    "grey-40": darken(rgb(255,255,255),40%),
+    "grey-45": darken(rgb(255,255,255),45%),
+    "grey-50": darken(rgb(255,255,255),50%),
+    "grey-55": darken(rgb(255,255,255),55%),
+    "grey-60": darken(rgb(255,255,255),60%),
+    "grey-65": darken(rgb(255,255,255),65%),
+    "grey-70": darken(rgb(255,255,255),70%),
+    "grey-75": darken(rgb(255,255,255),75%),
+    "grey-80": darken(rgb(255,255,255),80%),
+    "grey-85": darken(rgb(255,255,255),85%),
+    "grey-90": darken(rgb(255,255,255),90%),
+    "grey-95": darken(rgb(255,255,255),95%),
+    "grey-96": darken(rgb(255,255,255),96%),
+    "grey-97": darken(rgb(255,255,255),97%),
+    "grey-98": darken(rgb(255,255,255),98%),
+    "grey-99": darken(rgb(255,255,255),99%),
+  ),
+  "reds": (
+    "r1": rgb(232,63,69),
+    "r2": rgb(185,34,40),
+    "r3": rgb(185,38,47),
+    "r4": rgb(154,42,49),
+    "r5": rgb(125,22,29),
+    "r6": rgb(154,42,49),
+    "r7": rgb(125,22,29),
+  ),
+  "yellows": (
+    "y1": rgb(250,76,6),
+    "y2": rgb(185,122,38),
+    "y3": rgb(253,123,64),
+    "y4": rgb(252,123,64),
+    "y5": rgb(253,166,48),
+    "y6": rgb(252,166,48),
+    "y7": rgb(255,205,85),
+    "y8": rgb(255,205,85),
+  ),
+  "base": (
+    "navy"    : #001f3f,
+    "blue"    : #0074d9,
+    "aqua"    : #7fdbff,
+    "teal"    : #39cccc,
+    "olive"   : #3d9970,
+    "green"   : #2ecc40,
+    "lime"    : #01ff70,
+    "yellow"  : #ffdc00,
+    "orange"  : #ff851b,
+    "red"     : #ff4136,
+    "fuchsia" : #f012be,
+    "purple"  : #b10dc9,
+    "maroon"  : #85144b,
+    "white"   : #ffffff,
+    "silver"  : #dddddd,
+    "gray"    : #aaaaaa,
+    "black"   : #111111,
+  ),
+  "messages": (
+    "success": #2ab27b,
+    "good": #3097d1,
+    "info": #8eb4cb,
+    "primary": #3097d1,
+    "notice": #3097d1,
+    "warning": #cbb956,
+    "error": #8eb4cb,
+    "danger": #bf5329,
+  ),
+  "mattharris": (
+    "blue_bright_highlight":   #1d88c7,
+    "blue_dark_bg":            #1b242e,
+    "blue_darker_bg":          #161b21,
+    "blue_grey_darker":        #13171b,
+    "blue_grey_light_bg":      #2a4b6d,
+    "blue_grey_light":         #717d8a,
+    "blue_grey_lightest":      #c4cdd6,
+    "blue_lighter_pale_text":  #446d84,
+    "blue_lighter_text":       #446d84,
+    "bright_blue_sky":         #33a8cf,
+    "dark_grey_blue":          #1d252d,
+    "dark_teal":               #046c69,
+    "deep_grey_blue":          #1b2024,
+    "deep_grey_header_bg":     #1b2024,
+    "elephant_grey":           #38516a,
+    "grey_blue":               #27323d,
+    "medium_elephant_grey":    #38414a,
+  ),
+  "sfp_theme": (
+    "accent_orange": rgb(238,133,54),
+    "dark": rgb(0,111,225),
+    "base": rgb(0,148,225),
+    "light": rgb(0,196,225),
+  ),
+  "brand_colors":(
+    "github": #000000,
+    "facebook": #3460a1,
+    "twitter": #1da1f2,
+    "linkedin": #136d9d,
+    "google_plus": #de5543,
+    "youtube": #ee3138,
+    "flikr_blue": #0063dc,
+    "flikr_pink": #ff0084,
+  )
+);

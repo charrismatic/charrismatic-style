@@ -21,8 +21,10 @@
 // $motion_and_animation_notes: #fff;
 
 
-@import 'var_easing';
+@import 'var__easing';
+@import 'var__defaults';
 @import 'defs__keyframes';
 @import 'defs__transition';
-@import 'defs__animation_helpers';
+@import 'defs__animation';
 @import 'defs__transitions_material';
+@import 'classes__animations';

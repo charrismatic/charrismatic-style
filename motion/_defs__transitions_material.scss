@@ -22,7 +22,6 @@
 
 
 
-
 /// Material Design Timing
 /// - mapping of material design standard durations
 /// - Material in motion is responsive and natural.
@@ -44,6 +43,7 @@
 /// @link https://material.io/guidelines/motion/duration-easing.html
 /// @see $_material_duration
 /// @see transition
+
 @function _material_duration( $name ) {
   $_material_duration: (
     mobile       : 300ms,
@@ -52,6 +52,7 @@
     mobile_exit  : 195ms,
     mobile_enter : 225ms,
   );
+
   @return map-get($_material_duration, $name);
 }
 
@@ -94,12 +95,14 @@
 ///  @link https://material.io/guidelines/motion/transforming-material.html
 ///  @see $_material_transition
 ///  @see transition
-@function _material_transition( $name ){
-$_material_transition:(
-       accel: cubic-bezier(0.4, 0.0, 1.0, 1),
-       decel: cubic-bezier(0.0, 0.0, 0.2, 1),
-    standard: cubic-bezier(0.4, 0.0, 0.2, 1),
-  sharp_exit: cubic-bezier(0.4, 0.0, 0.6, 1)
+
+@function _material_transition( $name ) {
+  $_material_transition:(
+    accel:      cubic-bezier(0.4, 0, 1.0, 1),
+    decel:      cubic-bezier(0.0, 0, 0.2, 1),
+    standard:   cubic-bezier(0.4, 0, 0.2, 1),
+    sharp_exit: cubic-bezier(0.4, 0, 0.6, 1)
   );
-  @return map-get( $_material_transition, $name );
+
+  @return map-get($_material_transition, $name);
 }

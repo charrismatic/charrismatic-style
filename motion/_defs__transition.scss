@@ -10,7 +10,8 @@
 /// - Include multiple transition with a single include
 ///
 /// @name transition
-/// @param { property | duration | transition | delay } transition - include multiple transitions using an array
+/// @param { property | duration | transition | delay } transition 
+///        - include multiple transitions using an array
 /// ```
 /// @example scss
 ///   .class {
@@ -42,6 +43,27 @@
 ///
 */
 
-@function _trans($prop: all, $dur: 600, $trans: ease-in-out, $delay: 0) {
+@function _trans(
+  $prop: all,
+  $dur: 600,
+  $trans: ease-in-out,
+  $delay: 0) {
   @return #{$prop} #{$dur}ms #{$trans} #{$delay}ms;
 }
+
+
+
+
+// // Scale transition
+// .scale-transition {
+//   &.scale-out {
+//     transform: scale(0);
+//     transition: transform .2s !important;
+//   }
+//
+//   &.scale-in {
+//     transform: scale(1);
+//   }
+//
+//   transition: transform .3s cubic-bezier(0.53, 0.01, 0.36, 1.63) !important;
+// }
