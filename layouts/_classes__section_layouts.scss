@@ -1,0 +1,238 @@
+.page_opts {
+  &--hide-page-header {
+    .entry__header { display: none; }
+  }
+  &--hide-page-title {
+    .entry-title { display: none; }
+  }
+  &--hide-page-meta {
+    .entry__meta { display: none; }
+  }
+}
+
+.banner_section {
+  .content_wrap,
+  .content_html,
+  .content_image {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.content_image {
+  .img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .img-contain {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.section_full {
+  .content_image {
+    background: rgb(220, 214, 206);
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+  }
+}
+
+.section {
+  &_default {}
+  &_split {}
+  &_flex {}
+  &_full { max-width: none !important; }
+}
+
+// CORE STRUCTURE
+.section {
+  // CHILD SELECTOR
+  &:first-child { .page-wrap { padding-top: 0; }}
+
+  // SIZING CLASSES
+  &_w-1000 { .section_wrap { max-width: 1000px; }}
+  &_w-1200 { .section_wrap { max-width: 1200px; }}
+  &_w-1100 { .section_wrap { max-width: 1100px; }}
+  &_w-1300 { .section_wrap { max-width: 1300px; }}
+  &_w-1400 { .section_wrap { max-width: 1400px; }}
+  &_w-full { .section_wrap { max-width: none; width: 100%; }}
+}
+
+.section_full {
+  > .row {
+    padding: 0;
+    margin: 0;
+    max-width: none;
+  }
+}
+
+.page-wrap {
+  width: 90%;
+  min-height: 0;
+  padding: 1em 0;
+  overflow: unset;
+
+  // 700
+  @include max_width(_size(tablet_lg)) {
+    padding: 1em 0;
+  }
+
+  // > 490
+  @include max_width(_size(tablet_sm)) {
+    width: auto;
+    padding: 1em 1.5em;
+  }
+
+  // > 375
+  @include max_width(_size(mobile_lg)) {
+    padding: 1em 1em;
+  }
+}
+
+// SECTION LAYOUT PLACEHOLDERS
+.section_split {
+  padding-top: 0;
+
+  .page-wrap {
+    display: block;
+
+    @include max_width(_size(tablet_sm)) {
+      width: auto;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .section_wrap {
+    width: auto;
+    margin: 1em 2em;
+  }
+
+  .section_wrap__img-wrap {
+    @include max_width( _size(tablet_sm)) {
+
+    }
+  }
+
+  // DESKTOP
+  @include min_width(_size(tablet_sm)) {
+    .page-wrap { display: flex; }
+
+    .section__image-wrap {
+      flex: 1 1 100%;
+      align-self: stretch;
+      margin: 0 1em 0 0;
+    }
+
+    .section__content-wrap {
+      align-self: center;
+      flex: 1 1 100%;
+      margin: 1em 0 0 2em;
+    }
+  }
+}
+
+
+// // SPLIT - IMAGE ON LEFT
+// .split_layout__img_left {
+//   @extend %section_layout--split;
+//   .lp-section-image-wrap { order: 0; }
+//   .lp-section-content-wrap { order: 1; }
+// }
+// // SPLIT - IMAGE ON RIGHT
+// .split_layout--img-right {
+//   @extend %section_layout--split;
+//   .lp-section-image-wrap { order: 2; }
+//   .lp-section-content-wrap { order: 1; }
+// }
+
+// FEATURED IMAGE WRAPPER
+.section__image-wrap {
+  display: block;
+  position: relative;
+  min-width: 200px;
+  padding-bottom: 50%;
+  height: auto;
+
+  .section__image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+
+// SECTION CONTENT WRAPPER
+.section__content-wrap {
+  display: block;
+  margin: 1.5em 0 0 0;
+}
+
+
+// SECTION BANNER LAYOUT
+.banner__image {
+  padding: 2em 0 1em;
+
+  @include max_width(_size(tablet_lg)) {
+    padding: 0;
+    .lp-section-image-wrap { margin: 0; }
+  }
+
+  .page-wrap {
+    padding: 0;
+
+    @include max_width(_size(tablet_sm)) {
+      width: 100%;
+    }
+  }
+  .section__content-wrap { display: none; }
+}
+
+// CENTERED
+.centered_content {
+  margin: auto;
+  text-align: center;
+}
+
+// FLEX GRID
+.flex-grid-section .lp-section-content-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+section.no_pad {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+
+  .page-wrap {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .section_content-wrap {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .card__title-card {
+    padding: .4em 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}

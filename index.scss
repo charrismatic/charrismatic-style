@@ -25,8 +25,9 @@
 
 /// /* LAYOUTS */
 
-@import "layouts/functions";
-@import "layouts/mixins";
+@import "layouts/function__size";
+@import "layouts/mixin__widths";
+@import "layouts/mixin__flex";
 
 /// /* FONTS */
 
@@ -62,10 +63,7 @@
 
 @import 'effects/mixin__shadow';
 @import 'effects/mixin__depth';
-@import 'effects/classes__window';
-@import 'effects/classes__notifications';
-@import 'effects/classes__fadeout';
-@import 'effects/classes__depth';
+@import 'effects/mixin__overlay';
 
 /// /* UTILITIES */
 
@@ -75,22 +73,39 @@
 /// CLASSES
 ///
 
+@import 'default/layout';
+@import 'default/content';
+@import 'default/typography';
+@import 'default/reset';
+
+@import "utilities/classes__reset";
+@import "utilities/classes__accessibility";
+@import "utilities/classes__helpers";
+@import "utilities/classes__debug";
+
+// @import "layouts/classes__base_layout";
+@import "layouts/classes__aspect_ratio";
+@import "layouts/classes__section_layouts";
+@import "layouts/classes__width";
+@import "layouts/classes__flex";
+@import "layouts/classes__display";
+
 @import 'colors/color_classes';
 @import 'colors/form_classes';
 @import 'colors/material_classes';
 @import 'colors/theme_classes';
-@import "fonts/classes";
+
+@import "fonts/classes_size";
+@import "fonts/classes_headings";
+@import "fonts/classes_families";
+
 @import "icons/classes_icon";
 @import "icons/classes_icons_core";
 @import "icons/classes_icons_social";
 @import "icons/classes_icons_htmlentities";
-@import "layouts/classes";
-@import "utilities/classes__accessibility";
-@import "utilities/classes__helpers";
-@import "utilities/classes__debug";
-@import "utilities/classes__reset";
 
-///
-/// TEMPLATES
-///
-@import "layouts/templates";
+@import 'effects/classes__window';
+@import 'effects/classes__notifications';
+@import 'effects/classes__fadeout';
+@import 'effects/classes__depth';
+@import 'effects/classes__overlay';

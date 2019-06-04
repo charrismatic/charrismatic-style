@@ -1,0 +1,107 @@
+// GOALS:
+// SYSTEM SHOULD WRAP MAIN PAGE ELEMENTS INTO A SINGLE GROUP
+// PREVENT PAGES FROM COLLAPSING VERTICALLY WHEN CONTENT IS SHORTER THAN VIEWPORT
+// CLEANLY SEPERATE GROUPS AND UTILITY CLASSES
+// DO NOT USE IDS TO APPLY STYLE
+// MINIMIZE OVERLY SPECIFIC AND SINGLE INSTANCE ELEMENTS (USE ATOMIC CLASES OR MIXINS INSTEAD)
+// ------------------------------------------------------------------------
+
+
+// BASE
+html,
+body {
+   position: relative;
+   display: block;
+   padding: 0;
+   margin: 0;
+}
+
+
+// A SECTION IS A HIGH LEVEL BLOCK USUALLY DIVIDING VERTICAL SPACE
+// - SECTIONS SHOULD SPAN 100% THE HORIZONTAL SPACE OF ITS PARENT
+// - HEADER AND FOOTER ARE SECTIONS WITH SPECIFIC CONTEXT
+header,
+footer,
+section {
+  display: block;
+  position: relative;
+  margin: initial;
+  max-width: 100%;
+}
+
+
+// CONTAINER HORIZONTALY CENTERS A GROUP
+// ALSO ACTS AS A GENERAL PLACEHOLDER TO
+// ADD ACCESSORY CLASSES AND STYLES
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// A ROW IS AN INNER WRAPPER THAT SETS LAYOUTS,
+// BOUNDARIES, AND PADDING
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 90%;
+}
+
+.wrapper {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.vpad { padding-top: 1em; padding-bottom: 1em; }
+.vpad2 { padding-top: 2em; padding-bottom: 2em; }
+.hpad { padding-left: 1em; padding-right: 1em; }
+.hpad2 { padding-left: 2em; padding-right: 2em; }
+
+
+// CONTENT BLOCKS ARE CONTAINERS THAT WRAP CMS / STATIC CONTENT
+// USUALLY THAT COME FROM WYSIWYG EDITOR
+// CHILD ELEMENTS WILL RENDER DEFAULT HTML STYLES INSTEAD OF
+// NORMAILZED OR RESET STYLES
+.content-block {
+  display: block;
+  padding: 1em;
+  &:first-of-type {
+    padding-top: 0;
+  }
+}
+
+// CONTENT CONTAINER {
+.site__content {
+  // LAYOUT MODIFIERS
+  .content_row { display: flex; justify-content: space-between; }
+  .content_grid { flex-wrap: wrap; }
+  // CONTENT - MAIN
+  .main_content { order: 1; }
+  .main_content { flex: 1 1 auto; }
+  .sidebar_right .main_content { order: 0; }
+  // CONTENT - SIDEBAR
+  .sidebar { order: 0; }
+  .sidebar { flex: 0 1 auto; }
+  .sidebar_right .sidebar { order: 1; }
+}
+
+// NOTE: INCONSISTENT, USE ONLY WHEN NEEDED
+// sticky footer
+// SITE CONTAINER
+// .site_container {
+//   // height: 100%;
+//   display: flex;
+//   min-height: 100%;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   .site__header  { flex: 0; }
+//   .site__content { flex: 1; }
+//   .site__footer  { flex: 0; }
+//   .site__content {
+//     display: flex;
+//     > .content_container {
+//       flex: 1;
+//     }
+//   }
+// }
