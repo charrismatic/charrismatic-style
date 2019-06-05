@@ -1,0 +1,29 @@
+////
+/// @group Motion
+////
+
+
+/*
+/// -----------------
+/// Transition
+/// - Generic multi argument transition builder
+/// - Include multiple transition with a single include
+///
+/// @name transition
+/// @param { property | duration | transition | delay } transition
+///        - include multiple transitions using an array
+/// ```
+/// @example scss
+///   .class {
+///     color: gray;
+///     @include transition(color .3s ease);
+///     &:hover {
+///       color: black;
+///     }
+///   }
+/// ```
+*/
+
+@mixin transition($args...) {
+  transition: $args;
+}

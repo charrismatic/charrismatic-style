@@ -5,19 +5,19 @@
   display: none !important;
 
   &--med {
-    @media (max-width: $banner_break_mid) {
+    @media (max-width: _size('medium')) {
       display: none !important;
     }
   }
 
   &--mob-lg {
-    @media (max-width: $width_mobile_device_l) {
+    @media (max-width: _size('small')) {
       display: none !important;
     }
   }
 
   &--mob-sm {
-    @media (max-width: $width_mobile_device_sm) {
+    @media (max-width: _size('micro')) {
       display: none !important;
     }
   }
@@ -25,6 +25,6 @@
 
 .show {
   &--desktop-only {
-    @include max_width($desktop_size) { display: none !important; }
+    @include max_width(_size('large')) { display: none !important; }
   }
 }

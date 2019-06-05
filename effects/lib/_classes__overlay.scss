@@ -1,0 +1,10 @@
+
+.overlay {
+  &_light {
+    @include _overlay('light', .15)
+  }
+
+  &_dark {
+    @include _overlay('dark', .15)
+  }
+}

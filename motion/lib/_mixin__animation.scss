@@ -1,0 +1,40 @@
+////
+/// @group Motion
+////
+
+/*
+/// Animation
+/// ----------
+///     Define animation from parameters
+/// @name animation
+/// @param {string}   $name       [null] - animation name
+/// @param {number}   $duration   [null] - animation duration
+/// @param {variable} $transition [null] - transition timing function
+/// @param {number}   $iteration  [null] - animation iteration count
+/// @link https://www.sassmeister.com/gist/8458511
+///
+/// @example scss
+///    .element {
+///       @include animation( block-1-animate, 300ms, ease-out, infinite );
+///    }
+///
+/// @example scss
+///    .element {
+///      width: 100px;
+///      height: 100px;
+///      background: black;
+///      @include animation('slide-down 5s 3');
+///    }
+*/
+
+@mixin animation(
+  $name,
+  $duration,
+  $transition,
+  $iteration
+) {
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-timing-function: $transition;
+  animation-iteration-count: $iteration;
+}

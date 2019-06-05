@@ -1,0 +1,67 @@
+/*
+///
+/// # WINDOW EFFECTS
+///
+/// - Scrollbar
+/// - Selection
+*/
+
+
+// WINDOW SCROLLBAR
+// $scrollbar_highlight: $scrollbar_highlight;
+
+$scrollbar_highlight: saturate($theme_primary, 10%);
+$scrollbar_highlight: lighten($scrollbar_highlight, 10%);
+$scrollbar_highlight: lighten($scrollbar_highlight, 10%);
+$scrollbar_highlight: lighten($scrollbar_highlight, 10%);
+$scrollbar_bg: transparentize($theme_primary, 0.5);
+$scrollbar_button_height: 4px;
+$scrollbar_button_width: 4px;
+
+///
+/// Scrollbar
+///
+
+::-webkit-resizer { background: $scrollbar_bg; }
+
+::-webkit-scrollbar {
+  background: $scrollbar_bg;
+  max-width: 10px;
+  max-height: 10px;
+
+  &-button {
+    background: none;
+    border-radius: 6px;
+    width: $scrollbar_button_width;
+    height: $scrollbar_button_height;
+  }
+
+  &-corner { background: $scrollbar_bg; }
+
+  &-thumb {
+    background: $scrollbar_highlight;
+    border-radius: 8px;
+  }
+
+  &-track  {}
+  &-track-piece {}
+}
+
+
+///
+/// TEXT SELECTION
+///
+
+$selection_color: invert($theme_complement);
+$selection_bg: darken($theme_primary, 5%);
+$selection_bg: desaturate($selection_bg, 20%);
+
+::-moz-selection {
+  color: $selection_color;
+  background: $selection_bg;
+}
+
+::selection {
+  color: $selection_color;
+  background: $selection_bg;
+}

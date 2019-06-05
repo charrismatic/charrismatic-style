@@ -8,101 +8,63 @@
 ///
 
 @import 'functions/index';
-
-///
-/// DEFAULTS
-///
-
 @import 'colors/functions';
-@import 'colors/var_schemes';
-@import 'colors/var_material';
-@import 'colors/var_greyscale';
-@import 'colors/var_translucent';
-
-
-/// /* LAYOUTS */
-@import "layouts/index";
-
-/// /* FLEX */
-@import "flex/index";
-
-/// /* FONTS */
-
 @import "fonts/functions";
-@import "fonts/variables";
+@import 'layouts/functions';
+@import 'icons/functions';
+
+///
+/// VARIABLES
+///
+
+@import 'colors/variables';
+@import 'flex/variables';
+@i conic-gradient(red, yellow, lime, aqua, blue, magenta, red);mport "fonts/variables";
+@import 'effects/variables';
+
+///
+/// MIXINS
+///
+
+@import 'layouts/mixins';
+@import 'flex/mixins';
 @import "fonts/mixins";
+@import 'effects/mixins';
+@import 'utilities/mixins';
+@import 'icons/mixins';
 
-/// /* FORMATTING */
-
-@import 'format/align';
-@import 'format/annotations';
-@import 'format/border';
-@import 'format/margin';
-@import 'format/padding';
+@import 'motion/index';
+@import 'format/index';
 
 /// /* ICONS */
-
-@import 'icons/functions';
-@import 'icons/mixins';
 @import 'icons/lib/fontawesome';
 @import "icons/icon_map";
 
 
-/// /* MOTION */
-
-@import 'motion/var__easing';
-@import 'motion/defs__keyframes';
-@import 'motion/defs__transition';
-@import 'motion/defs__animation';
-@import 'motion/defs__transitions_material';
-
-/// /* EFFECTS */
-
-@import 'effects/mixin__shadow';
-@import 'effects/mixin__depth';
-@import 'effects/mixin__overlay';
-
-/// /* UTILITIES */
-
-@import "utilities/mixins__assistive_text";
 
 ///
 /// CLASSES
 ///
 
+// CORE CLASSES
 @import 'default/layout';
 @import 'default/content';
 @import 'default/typography';
 @import 'default/reset';
 
-@import "utilities/classes__reset";
-@import "utilities/classes__accessibility";
-@import "utilities/classes__helpers";
-@import "utilities/classes__debug";
 
-// @import "layouts/classes__base_layout";
-@import "layouts/classes__aspect_ratio";
-@import "layouts/classes__section_layouts";
-@import "layouts/classes__width";
-@import "layouts/classes__flex";
-@import "layouts/classes__display";
-
-@import 'colors/color_classes';
-@import 'colors/form_classes';
-@import 'colors/material_classes';
-@import 'colors/theme_classes';
-
-@import "fonts/classes_size";
-@import "fonts/classes_headings";
-@import "fonts/classes_families";
-
+// ICONS
 @import "icons/classes_icon";
 @import "icons/classes_icons_core";
 @import "icons/classes_icons_social";
 @import "icons/classes_icons_htmlentities";
 
-@import 'effects/classes__window';
-@import 'effects/classes__notifications';
-@import 'effects/classes__fadeout';
-@import 'effects/classes__depth';
-@import 'effects/classes__overlay';
+@import 'colors/classes';
+@import "fonts/classes";
+@import "utilities/classes";
+@import 'layouts/classes';
+@import 'flex/classes';
+@import 'effects/classes';
+
+@import 'layouts/templates';
+@import 'flex/templates';

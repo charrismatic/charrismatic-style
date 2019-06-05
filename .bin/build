@@ -1,0 +1,72 @@
+#!/bin/bash
+
+## node-sass index.scss \
+# --output-style expanded | postcss --no-map -u autoprefixer \
+# -u postcss-discard-comments -u postcss-single-line \
+# | format.stripemptylines > .dist/charrismatic-style.css
+
+#./piplines/run/stye-dev
+BASE_DIR="$(npm prefix)"
+
+
+INPUT=${1?"error input required"}
+
+STYLESHEET_PATH="$(dirname ${INPUT})"
+STYLESHEET_FILE="$(basename ${INPUT})"           # index.scss
+STYLESHEET_NAME="$(basename -s .scss ${INPUT})"
+
+# OUTPUT_DIR=${2:?"error output directory"}
+OUTPUT_DIR=".dist"
+STYLESHEET_DIST=".dist"
+
+STYLEBUILD_SRC=${BASE_DIR}/${STYLESHEET_PATH}/${STYLESHEET_FILE}
+STYLEBUILD_DEST_PATH="${BASE_DIR}/${STYLESHEET_DIST}/${STYLESHEET_NAME}.css"
+
+NODESASS_BUILD_STYLE="expanded" # nested | expanded | compact | compressed
+# NODESASS_BUILD_FLAGS="--no-map"
+POSTCSS_BUILD_FLAGS="--no-map"
+
+no_emptylines () {
+  grep -v -e "^[[:space:]]*$"
+}
+select_lines () {
+  grep "^/\*\?//"
+}
+strip_markers () {
+  sed -r 's/^[*\/]+\s?//g; s/\*\/$/  /g'
+}
+
+scss_to_css () {
+  node-sass $STYLEBUILD_SRC \
+  --output-style $NODESASS_BUILD_STYLE \
+  | postcss \
+    ${POSTCSS_BUILD_FLAGS} \
+    -u autoprefixer \
+    -u postcss-discard-comments \
+    -u postcss-single-line
+      # | no_emptylines
+}
+
+# MAIN ---
+
+scss_to_css | tee $STYLEBUILD_DEST/.build/${OUTPUT_DIR}/${INPUT}.css
+
+#   | select_lines \
+#   | strip_markers \
+#   | tee $PWD/.build/$OUTPUT_DIR/index.md \
+#   | markdown --html4tags \
+#     > .build/$OUTPUT_DIR/.build.html
+#
+# postcss $PWD/.build/$OUTPUT_DIR/.build.css --no-map -u postcss-discard-comments \
+#   | tee $PWD/.build/$OUTPUT_DIR/index.css \
+#   | postcss -u cssnano --no-map \
+#     > $PWD/.build/$OUTPUT_DIR/index.min.css
+#
+#
+# node-sass \
+#     --watch \
+#     --recursive \
+#     --output-style expanded \
+#     --output ${BASE_DIR}/${TMP_DIR}/${PUBLIC_DIR}/${STYLE_DEST_PATH} \
+#      ${BASE_DIR}/${STYLE_SRC_PATH}/${STYLE_SRC_FILE}
+# #!/bin/bash

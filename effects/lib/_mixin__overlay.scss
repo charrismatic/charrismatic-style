@@ -4,14 +4,18 @@
 /// # OVERLAY
 /// overlay ($shade: 'light', $strength:5% )
 */
-@mixin overlay($shade:"light", $strength:5%) {
+
+@mixin _overlay($shade:'light', $strength:5%) {
   $bgcolor: red;
+
   @if ($shade == 'light'){
     $bgcolor: rgba(255,255,255,$strength);
   }
+
   @else if ($shade == 'dark'){
     $bgcolor: rgba(0,0,0,(1 * $strength));
   }
+
  @else {
     $bgcolor: $shade;
   }

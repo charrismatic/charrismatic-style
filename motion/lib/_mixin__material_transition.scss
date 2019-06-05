@@ -1,0 +1,21 @@
+////
+///  @group Motion
+////
+
+/// -------------------------------------
+/// Material Design Motion and Animation
+/// MATERIAL DESIGN STANDARD GUIDLINES FOR MOVEMENT AND MOTION DURATION
+/// Mixin transitions with Material design standard parameters
+/// @name $material_transition
+/// @param {string} $prop [property] The name of the css property
+/// @param {variable} $timing [$material_duration.mobile] timing function
+/// @param {variable} $trans [$material_transition.standard] transtion function
+/// @param {number} $delay [0ms] description
+///
+@mixin material_transition(
+  $prop,
+  $timing: _material_duration( mobile ),
+  $trans: _material_transition( standard ),
+  $delay: 0ms ) {
+  transition: $prop _material_duration($timing) _material_transition( $trans ) $delay;
+}

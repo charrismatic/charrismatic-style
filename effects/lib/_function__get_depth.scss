@@ -28,55 +28,32 @@
 /// @returns {string} css style for box-shadow for given z_depth
 */
 
-@function get_z_depth_map($depth) {
+@function depth_map($depth) {
 
-  $color14: rgba(0, 0, 0, .14);
-  $color12: rgba(0, 0, 0, .12);
-  $color2:  rgba(0, 0, 0, .2);
-  $color3:  rgba(0, 0, 0, .3);
+  $color14: rgba(0,0,0,.14);
+  $color12: rgba(0,0,0,.12);
+   $color2: rgba(0,0,0,.2);
+   $color3: rgba(0,0,0,.3);
 
   $depth_map: (
-    "z0":"none !important",
      "0":"none !important",
-    "z1":"0  2px  2px 0   #{$color14}, 0 1px  5px 0   #{$color12}, 0 3px  1px -2px #{$color2}",
      "1":"0  2px  2px 0   #{$color14}, 0 1px  5px 0   #{$color12}, 0 3px  1px -2px #{$color2}",
-   "z1p":"0  3px  3px 0   #{$color14}, 0 1px  7px 0   #{$color12}, 0 3px  1px -1px #{$color2}",
      "2":"0  3px  3px 0   #{$color14}, 0 1px  7px 0   #{$color12}, 0 3px  1px -1px #{$color2}",
-    "z2":"0  4px  5px 0   #{$color14}, 0 1px 10px 0   #{$color12}, 0 2px  4px -1px #{$color3}",
      "3":"0  4px  5px 0   #{$color14}, 0 1px 10px 0   #{$color12}, 0 2px  4px -1px #{$color3}",
-    "z3":"0  6px 10px 0   #{$color14}, 0 1px 18px 0   #{$color12}, 0 3px  5px -1px #{$color3}",
      "4":"0  6px 10px 0   #{$color14}, 0 1px 18px 0   #{$color12}, 0 3px  5px -1px #{$color3}",
-    "z4":"0  8px 10px 1px #{$color14}, 0 3px 14px 2px #{$color12}, 0 5px  5px -3px #{$color3}",
      "5":"0  8px 10px 1px #{$color14}, 0 3px 14px 2px #{$color12}, 0 5px  5px -3px #{$color3}",
-    "z5":"0 16px 24px 2px #{$color14}, 0 6px 30px 5px #{$color12}, 0 8px 10px -5px #{$color3}",
      "6":"0 16px 24px 2px #{$color14}, 0 6px 30px 5px #{$color12}, 0 8px 10px -5px #{$color3}",
+
+    "z0":"none !important",
+    "z1":"0  2px  2px 0   #{$color14}, 0 1px  5px 0   #{$color12}, 0 3px  1px -2px #{$color2}",
+   "z1p":"0  3px  3px 0   #{$color14}, 0 1px  7px 0   #{$color12}, 0 3px  1px -1px #{$color2}",
+    "z2":"0  4px  5px 0   #{$color14}, 0 1px 10px 0   #{$color12}, 0 2px  4px -1px #{$color3}",
+    "z3":"0  6px 10px 0   #{$color14}, 0 1px 18px 0   #{$color12}, 0 3px  5px -1px #{$color3}",
+    "z4":"0  8px 10px 1px #{$color14}, 0 3px 14px 2px #{$color12}, 0 5px  5px -3px #{$color3}",
+    "z5":"0 16px 24px 2px #{$color14}, 0 6px 30px 5px #{$color12}, 0 8px 10px -5px #{$color3}",
   );
 
   $depth_str: map-get($depth_map,$depth);
 
   @return unquote(#{$depth_str});
-}
-
-/*
-/// Depth Mixin
-/// @param {string} $depth [depth_1] - Height of the shadow
-/// @requires {function} get_z_depth_map
-/// @link http://materializecss.com/shadow.html
-*/
-@mixin z_depth( $depth:"z1", $hover: false ) {
-  box-shadow: get_z_depth_map($depth);
-}
-
-
-/*
-/// HOVER DEPTH Mixin
-/// @see {mixin} z_depth
-/// @link http://materializecss.com/shadow.html
-*/
-@mixin z_hover() {
-  transition: box-shadow 225ms;
-
-  &:hover {
-    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
-  }
 }

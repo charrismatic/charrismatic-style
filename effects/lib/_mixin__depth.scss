@@ -1,0 +1,11 @@
+
+
+/*
+/// Depth Mixin
+/// @param {string} $depth [depth_1] - Height of the shadow
+/// @requires {function} get_z_depth_map
+/// @link http://materializecss.com/shadow.html
+*/
+@mixin depth( $depth:"2", $hover: false ) {
+  box-shadow: depth_map($depth);
+}

@@ -1,0 +1,9 @@
+@function _font_size($scale, $tag, $units:"em") {
+  $size: map-get($scale, $tag);
+
+  @if $size == null {
+    @return "1em";
+  }
+
+  @return #{$size}#{$units};
+}

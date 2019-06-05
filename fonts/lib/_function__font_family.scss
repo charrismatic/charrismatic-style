@@ -1,0 +1,22 @@
+// <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700" rel="stylesheet">
+// https://fonts.googleapis.com/css?family=Lato|Marvel|Megrim|Miriam+Libre|Open+Sans+Condensed:300|Reenie+Beanie|Roboto:100,700
+// FONT FAMILY NAMES
+@function _font_family($input) {
+  $font_fam_map:(
+    "default":"sans-serif",
+    "default-body":"sans-serif",
+    "default-heading":"Lato",
+    "lato":"Lato",
+    "libre-franklin":"'Libre Franklin', sans-serif;",
+    "proxima":"proxima-nova",
+    "playfair":"'Playfair Display SC', serif",
+    "opensans-bold":"Open Sans Bold",
+    "opensans-extrabold":"Open Sans ExtraBold",
+    "opensans-italic":"Open Sans Italic",
+    "opensans-regular":"Open Sans Regular",
+    "reeniebeanie":"Reenie Beanie" ,
+  );
+  $font_string:map_get($font_fam_map, $input);
+
+  @return #{$font_string};
+}

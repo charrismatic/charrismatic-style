@@ -1,0 +1,16 @@
+// SET FONT DEFAULTS
+@mixin font_style($font_family, $font_wt, $font_color) {
+  color: $font_color;
+  font-family: $font_family;
+  font-size: $font_size;
+  font-weight: $font_wt;
+}
+
+@mixin font_family ($font_family:sans-serif) {
+  font-family: $font_family, sans-serif;
+}
+
+@mixin font_smoothing () {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

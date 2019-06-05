@@ -14,23 +14,23 @@
 */
 
 .cl-ui {
-  &-danger { color: _get($message_colors, "danger"); }
-  &-error { color: _get($message_colors, "error"); }
-  &-form_good { color: _get($message_colors, "good"); }
-  &-info { color: _get($message_colors, "info"); }
-  &-notice { color: _get($message_colors, "notice"); }
-  &-primary { color: _get($message_colors, "primary"); }
-  &-success { color: _get($message_colors, "success"); }
-  &-warning { color: _get($message_colors, "warning"); }
+  &-danger {     color: color_scheme($color_schemes, 'messages', 'danger'  ); }
+  &-error {      color: color_scheme($color_schemes, 'messages', 'error'   ); }
+  &-good {       color: color_scheme($color_schemes, 'messages', 'good'    ); }
+  &-info {       color: color_scheme($color_schemes, 'messages', 'info'    ); }
+  &-notice {     color: color_scheme($color_schemes, 'messages', 'notice'  ); }
+  &-primary {    color: color_scheme($color_schemes, 'messages', 'primary' ); }
+  &-success {    color: color_scheme($color_schemes, 'messages', 'success' ); }
+  &-warning {    color: color_scheme($color_schemes, 'messages', 'warning' ); }
 }
 
 .bg-ui {
-  &-danger { color: _get($message_colors, "danger"); }
-  &-error { color: _get($message_colors, "error"); }
-  &-form_good { color: _get($message_colors, "good"); }
-  &-info { color: _get($message_colors, "info"); }
-  &-notice { color: _get($message_colors, "notice"); }
-  &-primary { color: _get($message_colors, "primary"); }
-  &-success { color: _get($message_colors, "success"); }
-  &-warning { color: _get($message_colors, "warning"); }
+  &-danger {     background-color: color_scheme($color_schemes, 'messages', 'danger'  ); }
+  &-error {      background-color: color_scheme($color_schemes, 'messages', 'error'   ); }
+  &-good {       background-color: color_scheme($color_schemes, 'messages', 'good'    ); }
+  &-info {       background-color: color_scheme($color_schemes, 'messages', 'info'    ); }
+  &-notice {     background-color: color_scheme($color_schemes, 'messages', 'notice'  ); }
+  &-primary {    background-color: color_scheme($color_schemes, 'messages', 'primary' ); }
+  &-success {    background-color: color_scheme($color_schemes, 'messages', 'success' ); }
+  &-warning {    background-color: color_scheme($color_schemes, 'messages', 'warning' ); }
 }
