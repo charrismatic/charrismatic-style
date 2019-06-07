@@ -1,0 +1,19 @@
+
+// to avoid to repeating map-get($colors, ...)
+@function color_scheme($scheme_set, $color_scheme, $color:"") {
+  @if map-has-key($scheme_set, $color_scheme) {
+    $scheme: map-get($scheme_set, $color_scheme);
+
+    @if $color {
+      @if map-has-key($scheme, $color) {
+        @return map-get($scheme, $color);
+      }
+    }
+
+    @return $scheme;
+  }
+
+  @warn "Unknown `#{$scheme_set}` - `#{$color_scheme}` in $colors.";
+
+  @return null;
+}

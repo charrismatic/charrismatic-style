@@ -1,0 +1,36 @@
+/*
+/// ### UI Feedback Color Classes
+///
+/// <div class="color_swatch_group">
+///   <div class="swatch cl-ui-danger"><span class="swatch__name"></span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl-ui-error"><span class="swatch__name"></span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl-ui-form_good"><span class="swatch__name"></span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl-ui-info"><span class="swatch__name"></span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl-ui-notice"><span class="swatch__name"></span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl-ui-primary"><span class="swatch__name"></span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl-ui-success"><span class="swatch__name"></span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+///   <div class="swatch cl-ui-warning"><span class="swatch__name"></span><span class="swatch__color" data-color="#######"></span><span class="swatch__bg_color" data-color="#######"></span></div>
+/// </div>
+*/
+
+.cl-ui {
+  &-danger {     color: color_scheme($color_schemes, 'messages', 'danger'  ); }
+  &-error {      color: color_scheme($color_schemes, 'messages', 'error'   ); }
+  &-good {       color: color_scheme($color_schemes, 'messages', 'good'    ); }
+  &-info {       color: color_scheme($color_schemes, 'messages', 'info'    ); }
+  &-notice {     color: color_scheme($color_schemes, 'messages', 'notice'  ); }
+  &-primary {    color: color_scheme($color_schemes, 'messages', 'primary' ); }
+  &-success {    color: color_scheme($color_schemes, 'messages', 'success' ); }
+  &-warning {    color: color_scheme($color_schemes, 'messages', 'warning' ); }
+}
+
+.bg-ui {
+  &-danger {     background-color: color_scheme($color_schemes, 'messages', 'danger'  ); }
+  &-error {      background-color: color_scheme($color_schemes, 'messages', 'error'   ); }
+  &-good {       background-color: color_scheme($color_schemes, 'messages', 'good'    ); }
+  &-info {       background-color: color_scheme($color_schemes, 'messages', 'info'    ); }
+  &-notice {     background-color: color_scheme($color_schemes, 'messages', 'notice'  ); }
+  &-primary {    background-color: color_scheme($color_schemes, 'messages', 'primary' ); }
+  &-success {    background-color: color_scheme($color_schemes, 'messages', 'success' ); }
+  &-warning {    background-color: color_scheme($color_schemes, 'messages', 'warning' ); }
+}

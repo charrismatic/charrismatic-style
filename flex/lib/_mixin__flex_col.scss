@@ -1,0 +1,38 @@
+////*---
+/// title: Flex Classes
+/// section: Layout
+/// ---
+///
+/// __Flex Column Layout__
+///
+/// Parent and child elements that will layout in flexible column layout
+///
+/// ### .flex-col
+///   - Col Parent
+///   - Col Child
+///
+/// __Special Behavior__
+///
+/// - .child:first-child   Tries to align flush with the left end
+/// - .child:last   Tries to align flush with the right end
+///
+/// *This works best for single row layouts
+////
+
+
+// VERTICAL FLEXIBLE BOX
+@mixin _fl_col-parent {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5em 0 0 0;
+  padding: 0;
+}
+
+@mixin _fl_col-child {
+  position: relative;
+  flex: 0 1 auto;
+  margin: 0 auto;
+  padding: 0.5em 0;
+  width: 94%;
+}

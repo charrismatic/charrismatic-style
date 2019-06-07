@@ -1,0 +1,48 @@
+//// ---
+/// title: Flex
+/// section: Layout
+/// ---
+///
+/// Flex Class Templates
+///
+/// These classes automatically modify the parent and children elements
+/// ### .flex
+///
+/// __flex (Parent)__
+///
+/// ```
+/// display: flex;
+/// ```
+///
+/// __flex > * (Direct Descendant Children)__
+///
+/// ```
+/// flex: 0 1 auto;
+/// margin: 0 1em;
+/// ```
+///
+/// EXAMPLE:
+///
+/// ```
+/// <div class="flex">
+///   <div class="box">1</div>
+///   <div class="box">2</div>
+///   <div class="box">3</div>
+/// </div>
+/// ```
+////
+
+
+// GENERAL FLEX CONTAINER
+@mixin flex($flex_child: $flex_child_class, $flex_property:1) {
+  display: flex;
+
+  // @if ($flex_properties) {{$flex_properties};}
+  @if ($flex_child) {
+    > #{$flex_child} {
+      flex: $flex_property;
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+  }
+}

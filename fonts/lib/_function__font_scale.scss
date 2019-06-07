@@ -1,0 +1,33 @@
+// Sizes generated at http://www.modularscale.com
+// TYPOGRPHIC SCALES
+@function _font_scale($scale) {
+  $font_scales:(
+
+    "century16":(       // ## 16th century scale --------------------------
+      "h1":"2.250",     // h1 { font-size: 2.250em;  /* 16 x 2.250 = 36 */ }
+      "h2":"1.500",     // h2 { font-size: 1.500em;  /* 16 x 1.500 = 24 */ }
+      "h3":"1.125",     // h3 { font-size: 1.125em;  /* 16 x 1.125 = 18 */ }
+      "h4":"0.875",     // h4 { font-size: 0.875em;  /* 16 x 0.875 = 14 */ }
+       "p":"0.750",     // p  { font-size: 0.750em;  /* 16 x 0.750 = 12 */ }
+    "body":"16",        // p  { font-size: 0.750em;  /* 16 x 0.750 = 12 */ }
+    ),
+
+    "fibonacci":(       // ## Fibonacci Sequence ----------------------
+      "h1":"4.0",       // h1 { font-size: 4.0em; /* 16 x 4.0 = 64 */ }
+      "h2":"2.5",       // h2 { font-size: 2.5em; /* 16 x 2.5 = 40 */ }
+      "h3":"1.5",       // h3 { font-size: 1.5em; /* 16 x 1.5 = 24 */ }
+       "p":"1.0",       // p  { font-size: 1.0em; /* 16 x 1.9 = 16 */ }
+    "body":"12px"       // p  { font-size: 1.0em; /* 16 x 1.9 = 16 */ }
+    ),
+
+    "glolden_ratio":(   // ## Golden Ratio (in Base 10) -----------------------------
+      "h1":"6.7773",    // h2   { font-size: 4.1887em; /* 10 x 4.1887em = 41.887 */ }
+      "h2":"4.1887",    // h1   { font-size: 6.7773em; /* 10 x 6.7773em = 67.773 */ }
+      "h3":"2.5888",    // h3   { font-size: 2.5888em; /* 10 x 2.5888em = 25.888 */ }
+       "p":"1.6000",    // p    { font-size: 1.6000em; /* 10 x 1.6 = 16     */ }
+    "body":"10px"       // body { font-size: 10px;     /* font-size: 62.5%; */ }
+    )
+  );
+
+  @return map-get($font_scales, $scale);
+}

@@ -1,0 +1,27 @@
+/// ### flex-col
+///
+/// CHANGE FLEX DIRECTION FROM ROW TO COLUMN AND ADJUST CHILD PROPERTIES TO PREVENT
+/// VERTICAL COLLAPSE
+///
+///*/
+
+
+.flex-col-templ {
+  @include _fl_col-parent;
+
+  // FLEX COLUMN CHILD
+  > .flex-col-item {
+    @include _fl_col-child;
+
+    // FIRST ELEMENT STICKY TO TOP
+    &:first-child {
+      flex: 0 0 auto;
+      padding-bottom: 0.5em;
+    }
+    // LAST ELEMENT STICKY TO BOTTOM
+    &:last-child {
+      flex: 0 0 auto;
+      padding-top: 0.5em;
+    }
+  }
+}

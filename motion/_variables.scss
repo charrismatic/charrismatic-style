@@ -1,0 +1,19 @@
+@import 'lib/var__easing';
+
+// RECOMMENDED DURATIONS
+$material_timing_mobile: 300ms;
+$material_timing_mobile_enter: 225ms;
+$material_timing_mobile_exit: 195ms;
+$material_timing_tablet: 390ms;
+$material_timing_desktop: 200ms;
+
+// CURVES
+$material_standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+$material_decel: cubic-bezier(0.0, 0.0, 0.2, 1);
+$material_accel: cubic-bezier(0.4, 0.0, 1, 1);
+$material_sharp_exit: cubic-bezier(0.4, 0.0, 0.6, 1);
+
+// DURATION
+$anim_length_exit: $material_timing_mobile_exit !default;
+$anim_length_enter: $material_timing_mobile_enter !default;
+$anim_timing_function: $material_standard !default;

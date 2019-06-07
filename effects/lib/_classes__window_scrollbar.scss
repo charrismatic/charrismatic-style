@@ -1,0 +1,36 @@
+
+///
+/// Scrollbar
+///
+
+$window_scrollbar_button_h: 4px;
+$window_scrollbar_button_w: 4px;
+$window_scrollbar_bg: transparentize($theme_primary, 0.5);
+$window_scrollbar_highlight: saturate($theme_primary, 10%);
+$window_scrollbar_highlight: lighten($window_scrollbar_highlight, 10%);
+$window_scrollbar_highlight: lighten($window_scrollbar_highlight, 10%);
+$window_scrollbar_highlight: lighten($window_scrollbar_highlight, 10%);
+
+
+::-webkit-scrollbar {
+  background: $window_scrollbar_bg;
+  max-width: 10px;
+  max-height: 10px;
+
+  &-button {
+    background: none;
+    border-radius: 6px;
+    width: $window_scrollbar_button_w;
+    height: $window_scrollbar_button_h;
+  }
+
+  &-corner { background: $window_scrollbar_bg; }
+
+  &-thumb {
+    background: $window_scrollbar_highlight;
+    border-radius: 8px;
+  }
+
+  &-track  {}
+  &-track-piece {}
+}

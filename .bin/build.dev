@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#./piplines/run/stye-dev
+BASE_DIR="$(npm prefix)"
+
+STYLE_SRC_PATH="./"
+STYLE_SRC_FILE=index.scss
+
+TMP_DIR=".tmp"
+PUBLIC_DIR="public"
+STYLE_DEST_PATH="assets/styles"
+
+node-sass ${BASE_DIR}/${STYLE_SRC_PATH}/${STYLE_SRC_FILE}
+
+#if [ $0 ]
+
+node-sass \
+    --watch \
+    --recursive \
+    --output-style expanded \
+    --output ${BASE_DIR}/${TMP_DIR}/${PUBLIC_DIR}/${STYLE_DEST_PATH} \
+     ${BASE_DIR}/${STYLE_SRC_PATH}/${STYLE_SRC_FILE}

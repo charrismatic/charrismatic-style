@@ -1,0 +1,60 @@
+// =============================================================================
+// Fonts
+// =============================================================================
+//
+// Cross-browser support for @font-face. Supports IE,playfair' Gecko, Webkit, Opera.
+// * $name is required, arbitrary, and what you will use in font stacks.
+// * $font-files is required using font-files('relative/location', 'format').
+//   for best results use this order: woff, opentype/truetype, svg
+// * $eot is required by IE, and is a relative location of the eot file.
+// * $weight shows if the font is bold, defaults to normal
+// * $style defaults to normal, might be also italic
+// * For android 2.2 Compatiblity, please ensure that your web page has
+//   a meta viewport tag.
+// * To support iOS < 4.2, an SVG file must be provided
+//
+// If you need to generate other formats check out the Font Squirrel
+// [font generator](http://www.fontsquirrel.com/fontface/generator)
+//
+//
+// In order to refer to a specific style of the font in your stylesheets as
+// e.g. "font-style: italic;",  you may add a couple of @font-face includes
+// containing the respective font files for each style and specying
+// respective the $style parameter.
+//
+// Order of the includes matters, and it is: normal, bold, italic, bold+italic.
+@mixin font-face(
+  $name,
+  $path,
+  $weight: false,
+  $style: false,
+  $exts: eot woff2 woff ttf svg
+) {
+
+  $src: null;
+
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($name, " ", "_")
+  );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    src: $src;
+
+    @if $weight { font-weight: $weight; }
+
+    @if $style { font-style: $style; }
+  }
+}

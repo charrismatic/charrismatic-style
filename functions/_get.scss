@@ -1,0 +1,11 @@
+
+// Alias function for map-get
+@function _get($set, $target) {
+  @if map-has-key($set, $target) {
+    @return map-get($set, $target);
+  }
+
+  @warn "Unknown `#{$set}` - `#{$target}` ";
+
+  @return null;
+}

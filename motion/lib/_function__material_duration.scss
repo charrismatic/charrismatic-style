@@ -1,0 +1,33 @@
+/// Material Design Timing
+/// - mapping of material design standard durations
+/// - Material in motion is responsive and natural.
+/// - Rather than using a single duration for all animations,
+/// - adjust each duration to accommodate the distance travelled, an element's velocity, and surface changes.
+/// *Mobile*
+/// Transitions on mobile typically occur over 300ms, within this margin of variance:
+/// Large, complex, full-screen transitions may have longer durations, occurring over 375ms
+/// - Elements entering the screen occur over 225ms
+/// - Elements leaving the screen occur over 195ms
+/// - Transitions that exceed 400ms may feel too slow.
+/// - Objects leaving the screen may have shorter durations, as they require less attention.
+/// Desktop
+/// Desktop animations should be faster and simpler than their mobile counterparts.
+/// These animations should last 150ms to 200ms.
+/// Because desktop transitions may be less noticeable,
+/// they should be immediately responsive and faster than their mobile counterparts.
+/// @name $material_duration
+/// @link https://material.io/guidelines/motion/duration-easing.html
+/// @see $_material_duration
+/// @see transition
+
+@function _material_duration( $name ) {
+  $_material_duration: (
+    mobile       : 300ms,
+    tablet       : 390ms,
+    desktop      : 200ms,
+    mobile_exit  : 195ms,
+    mobile_enter : 225ms,
+  );
+
+  @return map-get($_material_duration, $name);
+}

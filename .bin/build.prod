@@ -1,0 +1,56 @@
+#!/bin/bash
+
+#./piplines/run/
+BASEDIR="$(npm prefix)"
+STYLES_DIR=styles
+STYLES_SRC=coze.scss
+STYLES_NAME=coze
+DESTDIR="deploy/assets/$STYLES_DIR"
+
+# ===========
+# FORMATTERS
+# ===========
+no_emptylines () {
+  grep -v -e "^[[:space:]]*$"
+}
+select_lines () {
+  grep "^/\*\?//"
+}
+strip_inline_comments () {
+  sed 's/[\/][\/].*//;; '
+select_inline_comments () {
+}
+  grep -E '/[\/][\/].*//'
+}
+functions_on_newline () {
+  sed 's/^\@/\n\@/'
+}
+newline_after_function_close () {
+  sed 's/^\}/\}\n/'
+}
+strip_block_comments () {
+  tr -d '\n' \
+  | sed 's/\([\/][\*][[:space:][:alnum:]!@#$%\^&\*()_+-= ]*[\*][\/]\)/\n\n__STARTCOM__\1__ENDCOM__\n\n/g;' \
+  | grep -v '__STARTCOM__/\*\*/__ENDCOM__'
+}
+fix_multiple_spaces () {
+  sed -E 's/\s\s+/ /g'
+}
+
+#mkdir .tmp/deploy/assets/styles
+
+node-sass \
+  --output-style expanded \
+  "$BASEDIR/src/${STYLES_DIR}/${STYLES_SRC}"  \
+      | strip_inline_comments \
+      | no_emptylines > "$BASEDIR/src/${STYLES_DIR}/${STYLES_SRC}.css" \
+
+# postcss -u cssnano --no-map \
+
+#postcss -u postcss-single-line
+  #  | tee "$BASEDIR/.tmp/$DESTDIR/$STYLES_NAME.css" \
+  #  | postcss --no-map \
+  #    --env production \
+  #    -u autoprefixer \
+  #    -u postcss-csso \
+  #    -o "$BASEDIR/.tmp/$DESTDIR/$STYLES_NAME.min.css"

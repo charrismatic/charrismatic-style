@@ -35,18 +35,28 @@
 @function _size($name:'tablet_lg') {
 
   $device_sizes: (
-    'laptop_hd': 1440px,
-    'laptop_sd': 1280px,
-    'tablet_lg': 850px,
-    'mobile_lg': 420px,
-    'mobile'   : 360px,
-    'mobile_sm': 320px,
-    'ipad'     : 768px,
-    'nexus7'   : 600px,
-    'nexus6p'  : 412px,
-    'iphone6'  : 375px,
+  // GENERAL DEVICE SIZES
+   'laptop_hd' : 1440px,
+   'laptop_sd' : 1280px,
+   'tablet_lg' : 850px,
+   'mobile_lg' : 420px,
+      'mobile' : 360px,
+   'mobile_sm' : 320px,
+
+  // NAMED DEVICES
+        'ipad' : 768px,
+      'nexus7' : 600px,
+     'nexus6p' : 412px,
+     'iphone6' : 375px,
     'galaxys5' : 360px,
-    'iphone5'  : 320px,
+     'iphone5' : 320px,
+
+  // CONECPTUAL SIZES
+  'superlarge' : 2000px,
+       'large' : 1200px,
+      'medium' : 800px,
+       'small' : 430px,
+       'micro' : 320px,
   );
 
   @return map-get($device_sizes, $name);

@@ -1,0 +1,25 @@
+// ### Material Color Classes
+
+// Color Classes
+@each $color_name, $color in $material_colors {
+  @each $color_type, $color_value in $color {
+    @if $color_type == "base" { .bg-#{$color_name} { background-color: $color_value !important; } }
+
+    @else if $color_name != "shades" { .bg-#{$color_name}-#{$color_type} { background-color: $color_value !important; } }
+  }
+}
+
+
+// Color Classes
+@each $color_name, $color in $material_colors {
+  @each $color_type, $color_value in $color {
+    @if $color_type == "base" { .cl-#{$color_name} { color: $color_value !important; } }
+    @else if $color_name != "shades" { .cl-#{$color_name}-#{$color_type} { color: $color_value !important; } }
+  }
+}
+
+
+// Shade classes
+@each $color, $color_value in $material_shades { .bg-#{$color} { background-color: $color_value !important; } }
+
+@each $color, $color_value in $material_shades { .cl-#{$color} { color: $color_value !important; } }

@@ -1,0 +1,60 @@
+///
+///  [Inserts media content when less than target width]
+///  @name max_width
+///  @param  {number} $width [max width value]
+///  @example
+///    .page-wrap {
+///      width: 90%;
+///      padding: 1em 0;
+///      @include max_width(700px) {
+///        padding: 1em 0;
+///      }
+///      @include max_width(490px) {
+///        padding: 1em 1.5em;
+///      }
+///      @include max_width(375px) {
+///        padding: 1em 1em;
+///      }
+///    }
+
+@mixin stretchbox_parent () {
+  position: relative;
+  z-index: 1;
+}
+
+
+// LEFT THE CHILD ELEMENT UN Z-INDEXED FOR FLEXIBILITY
+@mixin stretchbox_child () {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// USED ON A CHILD ELEMENT OR ::BEFORE/::AFTER
+// $is_before | 'before' | 'after' | false
+@mixin stretchbox ($is_before:"before") {
+  @if ($is_before != true) {
+    @include stretchbox_child();
+  }
+
+  @else {
+    @include stretchbox_parent();
+
+    @if ($is_before == "before") {
+      &::before {
+        @include stretchbox_child();
+      }
+    }
+
+    @if ($is_before == "after") {
+      &::after {
+        @include stretchbox_child();
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+// ### Crayloa Color Classes
+
+// Color Classes
+@each $color_scheme, $scheme_colors in $crayola_color_scheme {
+
+    // Color BG Classes
+    @each $color_name, $color_value in $scheme_colors {
+      .bg-#{$color_name} { background-color: $color_value !important; }
+    }
+
+    // Color Classes
+    @each $color_name, $color_value in $color_scheme {
+      .cl-#{$color_name} { color: $color_value !important; }
+    }
+}

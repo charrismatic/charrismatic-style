@@ -1,0 +1,40 @@
+
+/*
+/// ---
+/// # OVERLAY
+/// overlay ($shade: 'light', $strength:5% )
+*/
+
+@mixin _overlay($shade:'light', $strength:5%) {
+  $bgcolor: red;
+
+  @if ($shade == 'light'){
+    $bgcolor: rgba(255,255,255,$strength);
+  }
+
+  @else if ($shade == 'dark'){
+    $bgcolor: rgba(0,0,0,(1 * $strength));
+  }
+
+ @else {
+    $bgcolor: $shade;
+  }
+
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin: 0 0 0 0;
+    padding: 0;
+    background-color: $bgcolor;
+    top: 0 ;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+}

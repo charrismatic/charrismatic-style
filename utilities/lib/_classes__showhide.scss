@@ -1,0 +1,30 @@
+
+
+// SHOW / HIDE
+.hide {
+  display: none !important;
+
+  &--med {
+    @media (max-width: _size('medium')) {
+      display: none !important;
+    }
+  }
+
+  &--mob-lg {
+    @media (max-width: _size('small')) {
+      display: none !important;
+    }
+  }
+
+  &--mob-sm {
+    @media (max-width: _size('micro')) {
+      display: none !important;
+    }
+  }
+}
+
+.show {
+  &--desktop-only {
+    @include max_width(_size('large')) { display: none !important; }
+  }
+}

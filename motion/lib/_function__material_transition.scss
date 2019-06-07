@@ -1,0 +1,48 @@
+///  ------------------
+///  Material Deisgn Movement
+///  - Easing curves
+///  - Standard curve
+///  - Deceleration curve
+///  - Acceleration curve
+///  - Sharp curve
+///  Relative movement
+///  Entering or exiting elements that move other on-screen elements do so
+///  along a smooth easing curve, so that they remain minimally disruptive
+///  and avoid eye-catching, dramatic movement.
+///  The standard curve is used for moving elements both in and out of the
+///  bounds of the screen. This curve has a slightly longer duration compared
+///  to independent elements.
+///  ---
+///  Entering the screen
+///  Elements entering the screen use the deceleration curve for a speedy entrance,
+///  indicating that they had been travelling at peak velocity.
+///  ---
+///  Permanently leaving the screen
+///  Elements permanently leaving the screen use the acceleration curve
+///  to speed off-screen over a slightly shorter duration,
+///  as they will not be returning and require less user focus.
+///  ---
+///  Temporarily leaving the screen
+///  Elements temporarily leaving the screen should use the sharp curve,
+///  as they may return to the screen at any time and should appear nearby
+///  and within reach.
+///  ---
+///  @property standard [cubic-bezier(0.4, 0.0, 0.2, 1)] -  Material Standard ease-in-out curve for exits and general use
+///  @property decel [cubic-bezier(0.0, 0.0, 0.2, 1)] - (Entering) Deceleration curve
+///  @property accel [cubic-bezier(0.4, 0.0, 1, 1)] - (Exiting) Acceleration curve
+///  @property sharp_exit [cubic-bezier(0.4, 0.0, 0.6, 1)] - (Termporary Exit) Sharp Acceleration
+///  @link https://material.io/guidelines/motion/movement.html
+///  @link https://material.io/guidelines/motion/transforming-material.html
+///  @see $_material_transition
+///  @see transition
+
+@function _material_transition( $name ) {
+  $_material_transition:(
+    accel:      cubic-bezier(0.4, 0, 1.0, 1),
+    decel:      cubic-bezier(0.0, 0, 0.2, 1),
+    standard:   cubic-bezier(0.4, 0, 0.2, 1),
+    sharp_exit: cubic-bezier(0.4, 0, 0.6, 1)
+  );
+
+  @return map-get($_material_transition, $name);
+}
