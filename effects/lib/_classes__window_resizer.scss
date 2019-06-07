@@ -1,0 +1,10 @@
+
+///
+/// RESIZER
+///
+
+$window_resizer_bg: transparentize($theme_primary, 0.5);
+
+::-webkit-resizer {
+  background: $window_resizer_bg;
+ }
