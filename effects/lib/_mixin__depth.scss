@@ -7,5 +7,7 @@
 /// @link http://materializecss.com/shadow.html
 */
 @mixin depth( $depth:"2", $hover: false ) {
-  box-shadow: depth_map($depth);
+  $shadow: depth_map($depth);
+
+  box-shadow: $shadow;
 }

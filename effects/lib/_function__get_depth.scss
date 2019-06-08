@@ -53,7 +53,7 @@
     "z5":"0 16px 24px 2px #{$color14}, 0 6px 30px 5px #{$color12}, 0 8px 10px -5px #{$color3}",
   );
 
-  $depth_str: map-get($depth_map,$depth);
+  $depth_str: map-get($depth_map, $depth);
 
   @return unquote(#{$depth_str});
 }

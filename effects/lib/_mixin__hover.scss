@@ -4,7 +4,7 @@
 /// @see {mixin} z_depth
 /// @link http://materializecss.com/shadow.html
 */
-@mixin z_hover() {
+@mixin hover() {
   transition: box-shadow 225ms;
 
   &:hover {

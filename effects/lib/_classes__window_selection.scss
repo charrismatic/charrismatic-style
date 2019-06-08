@@ -3,9 +3,9 @@
 /// TEXT SELECTION
 ///
 
-$window_selection_color: invert($theme_complement);
 $window_selection_bg: darken($theme_primary, 5%);
-$window_selection_bg: desaturate($selection_bg, 20%);
+$window_selection_color: invert($theme_complement);
+$window_selection_bg: desaturate($window_selection_bg, 20%);
 
 ::-moz-selection {
   color: $window_selection_color;
