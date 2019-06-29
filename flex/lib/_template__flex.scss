@@ -4,8 +4,10 @@
 /// ---
 ///
 
-
 // INTENDED FOR A AUTO FIT AND EQUAL SPACED BLOCKS INSIDE THE FLEX BOX
+$flex_child: "> .flex-item";
+$flex_child_flex_prop: 0 1 auto;
+
 .flex {
-  @include flex($flex_child_class, $flex_child_flex_prop);
+  @include flex($flex_child, $flex_child_flex_prop);
 }
