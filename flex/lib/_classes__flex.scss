@@ -26,20 +26,16 @@
   // -------
   /// SIZING
   // -------
-
-
-  /// SIZING
-  ///
-  ///- flex-grow           - flex-grow: 1
-  ///- flex-shrink         - flex-shrink: 1
-  ///- flex-equal         - flex-basis: 0
-  ///- flex-fill          - flex-basis: 100%
-  ///- flex-auto          - flex-basis: auto
-  ///- flex-grow         - flex-grow: 1
-  ///- flex-shrink       - flex-shrink: 1
-  ///- flex-basis-none   - flex-basis: 0;
-  ///- flex-basis-max    - flex-basis: 100%
-  ///- flexible          - flex: 1 1 auto
+  ///- flex-grow       - flex-grow: 1
+  ///- flex-shrink     - flex-shrink: 1
+  ///- flex-equal      - flex-basis: 0
+  ///- flex-fill       - flex-basis: 100%
+  ///- flex-auto       - flex-basis: auto
+  ///- flex-grow       - flex-grow: 1
+  ///- flex-shrink     - flex-shrink: 1
+  ///- flex-basis-none - flex-basis: 0;
+  ///- flex-basis-max  - flex-basis: 100%
+  ///- flexible        - flex: 1 1 auto
   ///
   ///FLEX BASIS
   ///
@@ -65,16 +61,16 @@
   ///*/
 
   // FLEX BY WEIGHT
-  &-0 { flex: 0; }
-  &-1 { flex: 1; }
-  &-2 { flex: 2; }
-  &-3 { flex: 3; }
-  &-4 { flex: 4; }
-  &-5 { flex: 5; }
-  &-6 { flex: 6; }
-  &-7 { flex: 7; }
-  &-8 { flex: 8; }
-  &-9 { flex: 9; }
+  &-0 { flex: 0 !important; }
+  &-1 { flex: 1 !important; }
+  &-2 { flex: 2 !important; }
+  &-3 { flex: 3 !important; }
+  &-4 { flex: 4 !important; }
+  &-5 { flex: 5 !important; }
+  &-6 { flex: 6 !important; }
+  &-7 { flex: 7 !important; }
+  &-8 { flex: 8 !important; }
+  &-9 { flex: 9 !important; }
 
   // FLEX BY PERCENT WIDTH
   &-10p { flex-basis: 10% !important; }
@@ -122,7 +118,7 @@
   ///   REACHES 100%, IT ALSO RESETS THE FIRST AND LAST CHILD MARGINS TO MATCH THE
   ///   REST OF THE ELEMENTS
   ///
-  /// WRAP
+  /// `.flex-wrap`
   /// - flex-wrap { flex-wrap: wrap; }
   /// - flex-nowrap { flex-wrap: nowrap; }
   ///
@@ -201,7 +197,6 @@
   &-spread { justify-content: space-between; }
   &-start { justify-content: flex-start; }
 }
-
 
 .flex-self {
   &-end { justify-self: flex-end; }

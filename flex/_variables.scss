@@ -1,11 +1,7 @@
 // ALTERNATIVELY USE "> *" TO AUTO FLEX CHILD ELEMENTS
 // * CAN CAUSE ISSUES ON LARGER SITES WITH LOTS OF STYLES
-$flex_child_class: '.flex-item' !default;
+
 $flex_child: "> .flex-item";
-
-$flex_child_flex_prop: 0 1 auto;
-$flex_row_child_flex_prop: 1 1 0%;
-
-$flex_child_class: '.flex-item';
+$flex_child_class: '.flex-item' !default;
 $flex_child_flex_prop: 0 1 auto;
 $flex_row_child_flex_prop: 1 1 0%;

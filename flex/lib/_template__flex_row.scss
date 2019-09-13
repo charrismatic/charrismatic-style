@@ -1,37 +1,38 @@
-/*---
-title: Flex Row
-section: Flex
----
-
-Flex Class Templates
-
-### .flex-row
-
-__flex-row (Parent)__
-
-INTENDED FOR A SINGLE ROW OR ITEMS STRETCHING LEFT TO RIGHT
-
-```
-display: flex;
-flex-direction: row;
-```
-
-__flex-row > * (Direct Descendant Children)__
-
-```
-flex: 0 1 auto;
-margin: 0 1em;
-```
-
-__Special Behavior__
-
- - .child:first-child   Tries to align flush with the left end
- - .child:last   Tries to align flush with the right end
-
-*/
-
+////*---
+/// title: Flex Row
+/// section: Flex
+/// ---
+///
+/// Flex Class Templates
+///
+/// ### .flex-row
+///
+/// __flex-row (Parent)__
+///
+/// INTENDED FOR A SINGLE ROW OR ITEMS STRETCHING LEFT TO RIGHT
+///
+/// ```
+/// display: flex;
+/// flex-direction: row;
+/// ```
+///
+/// __flex-row > * (Direct Descendant Children)__
+///
+/// ```
+/// flex: 0 1 auto;
+/// margin: 0 1em;
+/// ```
+///
+/// __Special Behavior__
+///
+///  - .child:first-child   Tries to align flush with the left end
+///  - .child:last   Tries to align flush with the right end
+///
+///*/
 
 // INTENDED FOR A SINGLE ROW OR ITEMS STRETCHING LEFT TO RIGHT
+$flex_child: "> .flex-item";
+$flex_row_child_flex_prop: 1 1 0%;
 .flex-row {
-  @include flex-row($flex_child_class, $flex_row_child_flex_prop);
+  @include flex-row($flex_child, $flex_row_child_flex_prop);
 }
