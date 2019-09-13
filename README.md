@@ -1,6 +1,5 @@
 
-# charrismatic-style-library
-
+# @Charrismatic/style-library
 
 > standard style utilities and sass functions 
 
