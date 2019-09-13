@@ -11,7 +11,9 @@
     "type": "git",
     "url": "git@github.com:charrismatic/charrismatic-style.git"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/@charrismatic" }
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@charrismatic"
+  },
   "author": "Matt Harris <charrismatic@protonmail.com> (https://charrismatic.github.io/)",
   "license": "MIT"
 }
