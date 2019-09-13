@@ -18,8 +18,8 @@
   src:
     local('Open Sans Italic'),
     local('OpenSans-Italic'),
-    url("#{$fonts_path}/open-sans-v15-latin-italic.woff2") format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url("#{$fonts_path}/open-sans-v15-latin-italic.woff") format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("#{$fonts_path}/open-sans-v15-latin-italic.woff2") format('woff2'),
+    url("#{$fonts_path}/open-sans-v15-latin-italic.woff") format('woff');
 }
 
 /* open-sans-700 - latin */
@@ -28,8 +28,8 @@
   font-style: normal;
   font-weight: 700;
   src: local('Open Sans Bold'), local('OpenSans-Bold'),
-       url("#{$fonts_path}/open-sans-v15-latin-700.woff2") format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url("#{$fonts_path}/open-sans-v15-latin-700.woff") format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url("#{$fonts_path}/open-sans-v15-latin-700.woff2") format('woff2'), 
+       url("#{$fonts_path}/open-sans-v15-latin-700.woff") format('woff'); 
 }
 
 /* open-sans-800 - latin */
@@ -38,8 +38,8 @@
   font-style: normal;
   font-weight: 800;
   src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'),
-       url("#{$fonts_path}/open-sans-v15-latin-800.woff2") format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url("#{$fonts_path}/open-sans-v15-latin-800.woff") format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url("#{$fonts_path}/open-sans-v15-latin-800.woff2") format('woff2'), 
+       url("#{$fonts_path}/open-sans-v15-latin-800.woff") format('woff'); 
 }
 
 // /* reenie-beanie-regular - latin */
@@ -48,6 +48,6 @@
 //   font-style: normal;
 //   font-weight: 400;
 //   src: local('Reenie Beanie'), local('ReenieBeanie'),
-//        url("#{$fonts_path}/reenie-beanie-v8-latin-regular.woff2") format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-//        url("#{$fonts_path}/reenie-beanie-v8-latin-regular.woff") format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+//        url("#{$fonts_path}/reenie-beanie-v8-latin-regular.woff2") format('woff2'),
+//        url("#{$fonts_path}/reenie-beanie-v8-latin-regular.woff") format('woff');  
 // }
