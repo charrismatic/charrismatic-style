@@ -1,0 +1,16 @@
+{
+  "name": "charrismatic-style-library",
+  "version": "1.0.0",
+  "description": "standard style utilities and sass functions ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@code.soyo.soy:tools/charrismatic-style.git"
+  },
+  "author": "Matt Harris <charrismatic@protonmail.com> (https://charrismatic.github.io/)",
+  "license": "MIT"
+}
