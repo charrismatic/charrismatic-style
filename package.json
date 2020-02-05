@@ -1,5 +1,5 @@
 {
-  "name": "@charrismatic/charrismatic-style",
+  "name": "@charrismatic/fonts",
   "version": "1.0.0",
   "description": "standard style utilities and sass functions ",
   "main": "index.js",
@@ -9,10 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:charrismatic/charrismatic-style.git"
+    "url": "git@github.com:charrismatic/fonts.git",
+    "directory": "@fonts"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@charrismatic"
+    "registry": "https://npm.pkg.github.com"
   },
   "author": "Matt Harris <charrismatic@protonmail.com> (https://charrismatic.github.io/)",
   "license": "MIT"
