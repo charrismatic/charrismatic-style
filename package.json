@@ -1,5 +1,5 @@
 {
-  "name": "@charrismatic/fonts",
+  "name": "charrismatic-style",
   "version": "1.0.0",
   "description": "standard style utilities and sass functions ",
   "main": "index.js",
@@ -9,8 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:charrismatic/fonts.git",
-    "directory": "@fonts"
+    "url": "git@github.com:charrismatic/charristmatic-style.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
