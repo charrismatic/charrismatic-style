@@ -1,6 +1,6 @@
 {
   "name": "@charrismatic/charrismatic-style",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "standard style utilities and sass functions ",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@charrismatic"
   },
- "author": {
+  "author": {
     "name": "Matt Harris",
     "email": "charrismatic@protonmail.com",
     "url": "https://charrismatic.github.io/"
