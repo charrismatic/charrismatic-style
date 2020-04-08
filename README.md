@@ -1,5 +1,5 @@
 
-# @Charrismatic-styles/fonts
+# Charrismatic Style Library
 
 > stylesheet font utilities and stylesheet
 
@@ -10,7 +10,7 @@ Topics: fonts, sass, scss, stylesheet
 
 ## About
 
-Submodule repo for \@Charrismatic-styles library
+
 
 ### Author
 
