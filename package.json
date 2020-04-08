@@ -1,5 +1,5 @@
 {
-  "name": "charrismatic-style",
+  "name": "@charrismatic/charrismatic-style",
   "version": "1.0.1",
   "description": "standard style utilities and sass functions ",
   "main": "index.js",
