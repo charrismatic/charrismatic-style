@@ -1,4 +1,4 @@
-/*
+///*
 /// ---
 /// title: Colors - Greyscale
 /// name: color_library
@@ -30,7 +30,7 @@
 ///   @color: #0d0d0d  @name: grey_95
 ///   @color: #000000  @name: black
 /// ```
-*/
+//*/
 
 $greyscale_colors: _get($color_schemes, 'greyscale');
 $black: rgba(0, 0, 0, 1);

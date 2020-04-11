@@ -2,7 +2,7 @@
 /// @group effects
 ////
 
-/*
+//*
 ///  -----------------------------
 ///  Material Design Shadow Effect
 ///  DEPTH PLACEHOLDERS BORROWED FROM THE MATERIALIZE LIBRARY
@@ -26,7 +26,7 @@
 /// @property {string} z4  [0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px  5px -3px rgba(0, 0, 0, 0.3)]
 /// @property {string} z5  [0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3)]
 /// @returns {string} css style for box-shadow for given z_depth
-*/
+// */
 
 @function depth_map($depth) {
 
@@ -45,11 +45,11 @@
      "6":"0 16px 24px 2px #{$color14}, 0 6px 30px 5px #{$color12}, 0 8px 10px -5px #{$color3}",
 
     "z0":"none !important",
-    "z1":"0  2px  2px 0   #{$color14}, 0 1px  5px 0   #{$color12}, 0 3px  1px -2px #{$color2}",
-   "z1p":"0  3px  3px 0   #{$color14}, 0 1px  7px 0   #{$color12}, 0 3px  1px -1px #{$color2}",
-    "z2":"0  4px  5px 0   #{$color14}, 0 1px 10px 0   #{$color12}, 0 2px  4px -1px #{$color3}",
-    "z3":"0  6px 10px 0   #{$color14}, 0 1px 18px 0   #{$color12}, 0 3px  5px -1px #{$color3}",
-    "z4":"0  8px 10px 1px #{$color14}, 0 3px 14px 2px #{$color12}, 0 5px  5px -3px #{$color3}",
+    "z1":"0 02px 02px 0   #{$color14}, 0 1px  5px 0   #{$color12}, 0 3px  1px -2px #{$color2}",
+   "z1p":"0 03px 03px 0   #{$color14}, 0 1px  7px 0   #{$color12}, 0 3px  1px -1px #{$color2}",
+    "z2":"0 04px 05px 0   #{$color14}, 0 1px 10px 0   #{$color12}, 0 2px  4px -1px #{$color3}",
+    "z3":"0 06px 10px 0   #{$color14}, 0 1px 18px 0   #{$color12}, 0 3px  5px -1px #{$color3}",
+    "z4":"0 08px 10px 1px #{$color14}, 0 3px 14px 2px #{$color12}, 0 5px  5px -3px #{$color3}",
     "z5":"0 16px 24px 2px #{$color14}, 0 6px 30px 5px #{$color12}, 0 8px 10px -5px #{$color3}",
   );
 

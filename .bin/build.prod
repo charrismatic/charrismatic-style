@@ -37,8 +37,6 @@ fix_multiple_spaces () {
   sed -E 's/\s\s+/ /g'
 }
 
-#mkdir .tmp/deploy/assets/styles
-
 node-sass \
   --output-style expanded \
   "$BASEDIR/src/${STYLES_DIR}/${STYLES_SRC}"  \

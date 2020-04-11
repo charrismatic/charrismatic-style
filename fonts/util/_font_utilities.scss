@@ -1,0 +1,16 @@
+
+
+// CSS VARIABLE UTILITY CLASSES
+
+.logo-font {
+  font-family: var(--logo-font);
+}
+
+.body-font {
+  font-family: var(--body-font);
+}
+
+.title-font,
+.heading-font {
+  font-family: var(--heading-font);
+}

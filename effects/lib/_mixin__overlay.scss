@@ -1,9 +1,8 @@
-
-/*
+// /*
 /// ---
 /// # OVERLAY
 /// overlay ($shade: 'light', $strength:5% )
-*/
+// */
 
 @mixin _overlay($shade:'light', $strength:5%) {
   $bgcolor: red;

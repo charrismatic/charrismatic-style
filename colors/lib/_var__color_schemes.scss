@@ -1,4 +1,4 @@
-/*
+////*
 /// # Color Schemes
 ///
 /// ---
@@ -24,7 +24,7 @@
 ///   @color: #de5543         @name: google_plus
 ///   @color: #ee3138         @name: youtube
 /// ```
-*/
+///*/
 
 $color_schemes: (
   "base": (
@@ -138,5 +138,12 @@ $color_schemes: (
     "youtube": #ee3138,
     "flikr_blue": #0063dc,
     "flikr_pink": #ff0084,
+  ),
+
+  color_parings: (
+    Cyano_Mirage : (
+      cyan: 'Cyano',
+      background: 'mirage'
+    ),
   )
 );

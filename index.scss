@@ -10,7 +10,7 @@
 @import 'functions/index';
 @import 'colors/functions';
 @import "fonts/functions";
-@import 'layouts/functions';
+// @import 'layouts/functions';
 @import 'icons/functions';
 
 ///
@@ -25,18 +25,17 @@
 /// MIXINS
 ///
 
-@import 'layouts/mixins';
+// @import 'layouts/mixins';
 @import 'flex/mixins';
 @import "fonts/mixins";
 @import 'effects/mixins';
 @import 'utilities/mixins';
 @import 'icons/mixins';
-
 @import 'motion/index';
 @import 'format/index';
 
 /// /* ICONS */
-@import 'icons/lib/fontawesome';
+@import '../vendor/fontawesome';
 @import "icons/icon_map";
 @import 'effects/variables';
 
@@ -58,13 +57,12 @@
 @import "icons/classes_icons_core";
 @import "icons/classes_icons_social";
 @import "icons/classes_icons_htmlentities";
-
 @import 'colors/classes';
 @import "fonts/classes";
 @import "utilities/classes";
-@import 'layouts/classes';
+// @import 'layouts/classes';
 @import 'flex/classes';
 @import 'effects/classes';
 
-@import 'layouts/templates';
+// @import 'layouts/templates';
 @import 'flex/templates';

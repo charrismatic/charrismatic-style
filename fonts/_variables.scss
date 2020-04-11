@@ -1,16 +1,26 @@
+/// ----------------------------------------------
+/// FONTS
+/// ----------------------------------------------
 
-// Sizes generated at http://www.modularscale.com
-// TYPOGRPHIC SCALES
-
-$fonts_path: 'content/themes/fnh/assets/fonts';
-$default_font_scale: _font_scale("century16");
-$default_font_size: 16px !default;
-
-// <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700" rel="stylesheet">
-// https://fonts.googleapis.com/css?family=Lato|Marvel|Megrim|Miriam+Libre|Open+Sans+Condensed:300|Reenie+Beanie|Roboto:100,700
 // FONT FAMILY NAMES
-$default_font_heading:  _font_family("playfair");
-$default_font_body:     _font_family("lato");
+
+$default_body_font      :  _font_family("sans-serif");
+$default_font_body      :  $default_body_font;
+
+$default_heading_font   :  _font_family("monospace");
+$default_font_heading   :  $default_heading_font;
+
+$default_title_font     :  _font_family("serif");
+$default_font_title     :  $default_title_font;
+
+
+// TYPOGRPHIC SCALES
+//   Sizes generated at http:/ww.modularscale.com
+
+
+$default_font_scale :     _font_scale("century16");
+$default_font_size :      16px !default;
+
 
 //Font Weights
 $font_weight_thin:      _font_wt("thin");
@@ -20,5 +30,3 @@ $font_weight_medium:    _font_wt("medium");
 $font_weight_semibold:  _font_wt("semibold");
 $font_weight_bold:      _font_wt("bold");
 $font_weight_extrabold: _font_wt("extrabold");
-
-$fonts_path: '/assets/fonts';
