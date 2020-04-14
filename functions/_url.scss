@@ -22,5 +22,5 @@ $base_url: "/";
 // VARIOUS LANGUAGES THAT HANDLE THESE FILES
 @function _url($path, $protocol:'https') {
   $slash: "/";
-  @return "#{$protocol}:\/\/#{$path}"
+  @return "#{$protocol}:#{$slash}#{$slash}#{$path}"
 }
