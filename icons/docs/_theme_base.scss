@@ -1,0 +1,89 @@
+////
+/// @group Theme
+////
+
+// INDEPENDENT - VARIABLES
+@import "theme_urls";
+
+
+/*---
+title: Theme Color Classes
+section: Theme
+---
+
+Theme Color Utility Classses
+
+Theme Color and BG Colors
+- bg-color
+- color
+
+*/
+
+
+// @import "theme_fonts";
+
+
+/*---
+title: Theme Icons
+section: Theme
+---
+
+Theme Specific Icon Set
+
+Theme Specific Variables and Settings
+
+<section class="styleguide_section">
+  <div class="flex-row flex-wrap">
+    <i class="svg_icon icon--twitter-square"></i>
+    <i class="svg_icon icon--twitter"></i>
+    <i class="svg_icon icon--facebook"></i>
+    <i class="svg_icon icon--linkedin"></i>
+    <i class="svg_icon icon--linkedin-square"></i>
+    <i class="svg_icon icon--googleplus"></i>
+    <i class="svg_icon icon--folder-open"></i>
+    <i class="svg_icon icon--link"></i>
+    <i class="svg_icon icon--tag"></i>
+    <i class="svg_icon ic-caret-down"></i>
+    <i class="svg_icon ic-caret-down red"></i>
+    <i class="svg_icon ic-caret-down orange-light"></i>
+    <i class="svg_icon ic-chevron-circle-up"></i>
+    <i class="svg_icon ic-chevron-circle-up:hover"></i>
+  </div>
+  <div class="flex-row flex-wrap">
+    <i class="svg_icon comment-bubbles"></i>
+    <i class="svg_icon icon--github"></i>
+    <i class="svg_icon icon--github-square"></i>
+    <i class="svg_icon icon--github-alt"></i>
+    <i class="svg_icon icon--flikr"></i>
+    <i class="svg_icon icon--npm"></i>
+    <i class="svg_icon icon--angle-down"></i>
+    <i class="svg_icon icon--angle-left"></i>
+    <i class="svg_icon icon --angle-right"></i>
+    <i class="svg_icon icon--angle-up"></i>
+    <i class="svg_icon icon--folder-open"></i>
+    <i class="svg_icon icon--tag"></i>
+    <i class="svg_icon icon--code"></i>
+    <i class="svg_icon icon--search"></i>
+  </div>
+  <div class="flex-row flex-wrap">
+    <i class="svg_icon icon--chevron-circle-up"></i>
+    <i class="svg_icon icon--chevron-circle-right"></i>
+    <i class="svg_icon icon--chevron-circle-down"></i>
+    <i class="svg_icon icon--chevron-circle-left"></i>
+    <i class="svg_icon icon--chevron-down"></i>
+    <i class="svg_icon icon--chevron-left"></i>
+    <i class="svg_icon icon--chevron-right"></i>
+    <i class="svg_icon icon--chevron-up"></i>
+  </div>
+</section>
+
+*/
+
+
+
+
+
+
+@import "theme_icons";
+
+@import "theme_templates";
