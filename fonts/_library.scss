@@ -7,11 +7,11 @@
 @import "variables";
 
 // FUNCTIONS
-@import 'lib/function__font_size';
-@import 'lib/function__font_family';
-@import 'lib/function__font_weight';
-@import 'lib/function__font_scale';
+@import 'lib/_font_size';
+@import 'lib/_font_family';
+@import 'lib/_font_weight';
+// @import 'lib/_font_scale';
 
 // MIXINS
-@import "lib/mixin__font_face";
-@import "lib/mixin__font_utilities";
+// @import "lib/mixin__font_face";
+@import "lib/_font_utilities";
